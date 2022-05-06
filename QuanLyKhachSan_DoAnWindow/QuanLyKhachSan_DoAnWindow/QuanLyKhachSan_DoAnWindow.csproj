@@ -46,16 +46,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DataProvider\DataProvider.cs" />
+    <Compile Include="Form\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Form\Thue_Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Thue_Phong.Designer.cs">
+      <DependentUpon>Thue_Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Doi_MK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Doi_MK.Designer.cs">
+      <DependentUpon>Doi_MK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Dat_Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dat_Phong.Designer.cs">
+      <DependentUpon>Dat_Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Quan_Ly_Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Quan_Ly_Phong.Designer.cs">
+      <DependentUpon>Quan_Ly_Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Thong_Tin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Thong_Tin.Designer.cs">
+      <DependentUpon>Thong_Tin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Thue_Phong.resx">
+      <DependentUpon>Thue_Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Doi_MK.resx">
+      <DependentUpon>Doi_MK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dat_Phong.resx">
+      <DependentUpon>Dat_Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Quan_Ly_Phong.resx">
+      <DependentUpon>Quan_Ly_Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Thong_Tin.resx">
+      <DependentUpon>Thong_Tin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +124,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class\" />
+    <Folder Include="DAO\" />
+    <Folder Include="Query SQL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
