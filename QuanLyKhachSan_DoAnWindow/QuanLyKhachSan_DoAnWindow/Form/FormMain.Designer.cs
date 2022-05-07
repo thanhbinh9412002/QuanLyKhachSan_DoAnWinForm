@@ -127,7 +127,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(5, 138);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 16);
+            this.label7.Size = new System.Drawing.Size(116, 16);
             this.label7.TabIndex = 3;
             this.label7.Text = "Số phòng đã thuê:";
             // 
@@ -136,7 +136,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(5, 92);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 16);
+            this.label6.Size = new System.Drawing.Size(110, 16);
             this.label6.TabIndex = 2;
             this.label6.Text = "Số phòng đã đặt:";
             // 
@@ -145,7 +145,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(5, 43);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 16);
+            this.label5.Size = new System.Drawing.Size(102, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "Số phòng trống:";
             // 
@@ -190,11 +190,10 @@
             // 
             // lblUser
             // 
-            this.lblUser.AutoSize = true;
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblUser.Location = new System.Drawing.Point(16, 43);
+            this.lblUser.Location = new System.Drawing.Point(16, 31);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(52, 16);
+            this.lblUser.Size = new System.Drawing.Size(173, 28);
             this.lblUser.TabIndex = 6;
             this.lblUser.Text = "Hi user!";
             // 

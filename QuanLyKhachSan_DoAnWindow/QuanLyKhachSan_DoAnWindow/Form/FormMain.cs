@@ -22,6 +22,8 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormDatPhong fmDP;
         public FormThuePhong fmTP;
         public FormNguoiDung fmND;
+        public FormVatTu fmVT;
+        public FormDi
 
         public String musername = null;
         public String mfullname = null;
@@ -91,11 +93,7 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void mnDangxuat_Click(object sender, EventArgs e)
         {
-            lblUser.Text = "Hi!";
-            MainNoEnabled(); 
-            fmLogin = new FormLogin();
-            fmLogin.fmMain = this;
-            fmLogin.ShowDialog();
+            Application.Restart();
         }
         private void mnDoimatkhau_Click(object sender, EventArgs e)
         {
@@ -145,6 +143,9 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void mnVattu_Click(object sender, EventArgs e)
         {
+            fmVT = new FormVatTu();
+            fmVT.fmMain = this;
+            fmVT.ShowDialog();
 
         }
         private void mnDichvu_Click(object sender, EventArgs e)
