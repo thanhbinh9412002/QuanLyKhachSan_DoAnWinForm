@@ -260,7 +260,7 @@ insert into vattu Values('VT09','coc')
 insert into vattu Values('VT10','ao')
 go
 create table dbo.chitietvattu(
-		mavattu char(5), 
+		mavattu char(5) references chitietvattu(mavattu), 
 		maloaiphong char(5) references loaiphong(maloai),
 		soluong int NULL,
 		PRIMARY KEY (mavattu, maloaiphong)
