@@ -23,7 +23,10 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormThuePhong fmTP;
         public FormNguoiDung fmND;
         public FormVatTu fmVT;
-        public FormDi
+        public FormDichVu fmDV;
+        public FormNhanVien fmNV;
+        public FormBaoCao fmBC;
+        public FormInHoaDon fmIHD;
 
         public String musername = null;
         public String mfullname = null;
@@ -154,19 +157,27 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void mnDichvu_Click(object sender, EventArgs e)
         {
-
+            fmDV = new FormDichVu();
+            fmDV.fmMain = this;
+            fmDV.ShowDialog();
         }
         private void mnNhanvien_Click(object sender, EventArgs e)
         {
-
+            fmNV = new FormNhanVien();
+            fmNV.fmMain = this;
+            fmNV.ShowDialog();
         }
         private void mnBaocao_Click(object sender, EventArgs e)
         {
-
+            fmBC = new FormBaoCao();
+            fmBC.fmMain = this;
+            fmBC.ShowDialog();
         }
         private void mnInhoadon_Click(object sender, EventArgs e)
         {
-
+            fmIHD = new FormInHoaDon();
+            fmIHD.fmMain = this;
+            fmIHD.ShowDialog();
         }
     }
 }
