@@ -74,6 +74,12 @@
     <Compile Include="DAO\Thue_Phong_DAO.cs" />
     <Compile Include="DAO\Vat_Tu_DAO.cs" />
     <Compile Include="DataProvider\DataProvider.cs" />
+    <Compile Include="Form\FormDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDichVu.Designer.cs">
+      <DependentUpon>FormDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>

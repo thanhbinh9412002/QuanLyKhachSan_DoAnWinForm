@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyKhachSan_DoAnWindow.DataProvider;
 using QuanLyKhachSan_DoAnWindow.Class;
+using System.Data.SqlClient;
 
 namespace QuanLyKhachSan_DoAnWindow.DAO
 {
