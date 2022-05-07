@@ -29,22 +29,22 @@ namespace QuanLyKhachSan_DoAnWindow
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Thống kê", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Thống kê", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
             "Mã loại phòng:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
             "Mã vật tư:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
             "Tên vật tư:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem(new string[] {
             "Số lượng:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,11 +53,11 @@ namespace QuanLyKhachSan_DoAnWindow
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label8 = new System.Windows.Forms.Label();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_Xoa = new System.Windows.Forms.Button();
+            this.btn_Sua = new System.Windows.Forms.Button();
+            this.btn_Them = new System.Windows.Forms.Button();
+            this.btn_TimKiem = new System.Windows.Forms.Button();
+            this.btn_ThongKe = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -96,9 +96,9 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -114,6 +114,13 @@ namespace QuanLyKhachSan_DoAnWindow
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cơ sở vật chất :";
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(133, 74);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(169, 22);
+            this.textBox3.TabIndex = 10;
+            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(133, 140);
@@ -128,21 +135,19 @@ namespace QuanLyKhachSan_DoAnWindow
             this.textBox1.Size = new System.Drawing.Size(169, 22);
             this.textBox1.TabIndex = 8;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(133, 72);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(169, 24);
-            this.comboBox2.TabIndex = 7;
-            // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "L-Vip",
+            "L-Normal",
+            "L-Cheap"});
             this.comboBox1.Location = new System.Drawing.Point(133, 42);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(169, 24);
             this.comboBox1.TabIndex = 6;
+            this.comboBox1.Text = "L-Vip";
             // 
             // label6
             // 
@@ -183,21 +188,21 @@ namespace QuanLyKhachSan_DoAnWindow
             this.lsvKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvKH.FullRowSelect = true;
             this.lsvKH.GridLines = true;
-            listViewGroup3.Header = "Thống kê";
-            listViewGroup3.Name = "lsvgKH";
+            listViewGroup7.Header = "Thống kê";
+            listViewGroup7.Name = "lsvgKH";
             this.lsvKH.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3});
+            listViewGroup7});
             this.lsvKH.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lsvKH.HideSelection = false;
-            listViewItem9.Group = listViewGroup3;
-            listViewItem10.Group = listViewGroup3;
-            listViewItem11.Group = listViewGroup3;
-            listViewItem12.Group = listViewGroup3;
+            listViewItem25.Group = listViewGroup7;
+            listViewItem26.Group = listViewGroup7;
+            listViewItem27.Group = listViewGroup7;
+            listViewItem28.Group = listViewGroup7;
             this.lsvKH.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem25,
+            listViewItem26,
+            listViewItem27,
+            listViewItem28});
             this.lsvKH.Location = new System.Drawing.Point(347, 45);
             this.lsvKH.MultiSelect = false;
             this.lsvKH.Name = "lsvKH";
@@ -228,77 +233,82 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label8.Text = "Quản lý cơ sở vật chất";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnXoa
+            // btn_Xoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.MintCream;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.Maroon;
-            this.btnXoa.Location = new System.Drawing.Point(249, 271);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(85, 35);
-            this.btnXoa.TabIndex = 69;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.BackColor = System.Drawing.Color.MintCream;
+            this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xoa.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_Xoa.Location = new System.Drawing.Point(249, 271);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(85, 35);
+            this.btn_Xoa.TabIndex = 69;
+            this.btn_Xoa.Text = "Xóa";
+            this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
-            // button1
+            // btn_Sua
             // 
-            this.button1.BackColor = System.Drawing.Color.MintCream;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(135, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 35);
-            this.button1.TabIndex = 70;
-            this.button1.Text = "Sửa";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Sua.BackColor = System.Drawing.Color.MintCream;
+            this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sua.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_Sua.Location = new System.Drawing.Point(135, 271);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(85, 35);
+            this.btn_Sua.TabIndex = 70;
+            this.btn_Sua.Text = "Sửa";
+            this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
-            // button2
+            // btn_Them
             // 
-            this.button2.BackColor = System.Drawing.Color.MintCream;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Maroon;
-            this.button2.Location = new System.Drawing.Point(21, 271);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 35);
-            this.button2.TabIndex = 71;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Them.BackColor = System.Drawing.Color.MintCream;
+            this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_Them.Location = new System.Drawing.Point(21, 271);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(85, 35);
+            this.btn_Them.TabIndex = 71;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // button3
+            // btn_TimKiem
             // 
-            this.button3.BackColor = System.Drawing.Color.MintCream;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Maroon;
-            this.button3.Location = new System.Drawing.Point(67, 327);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 35);
-            this.button3.TabIndex = 72;
-            this.button3.Text = "Tìm kiếm";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_TimKiem.BackColor = System.Drawing.Color.MintCream;
+            this.btn_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimKiem.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_TimKiem.Location = new System.Drawing.Point(67, 327);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(85, 35);
+            this.btn_TimKiem.TabIndex = 72;
+            this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.UseVisualStyleBackColor = false;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
-            // button4
+            // btn_ThongKe
             // 
-            this.button4.BackColor = System.Drawing.Color.MintCream;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Maroon;
-            this.button4.Location = new System.Drawing.Point(195, 327);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 35);
-            this.button4.TabIndex = 73;
-            this.button4.Text = "Thống kê";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_ThongKe.BackColor = System.Drawing.Color.MintCream;
+            this.btn_ThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongKe.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_ThongKe.Location = new System.Drawing.Point(195, 327);
+            this.btn_ThongKe.Name = "btn_ThongKe";
+            this.btn_ThongKe.Size = new System.Drawing.Size(85, 35);
+            this.btn_ThongKe.TabIndex = 73;
+            this.btn_ThongKe.Text = "Thống kê";
+            this.btn_ThongKe.UseVisualStyleBackColor = false;
+            this.btn_ThongKe.Click += new System.EventHandler(this.btn_ThongKe_Click);
             // 
-            // vattu
+            // FormVatTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(781, 417);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btn_ThongKe);
+            this.Controls.Add(this.btn_TimKiem);
+            this.Controls.Add(this.btn_Them);
+            this.Controls.Add(this.btn_Sua);
+            this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lsvKH);
             this.Controls.Add(this.dataGridView1);
@@ -306,7 +316,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "vattu";
+            this.Name = "FormVatTu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Tài Sản";
             this.groupBox1.ResumeLayout(false);
@@ -326,18 +336,18 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ListView lsvKH;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_Xoa;
+        private System.Windows.Forms.Button btn_Sua;
+        private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.Button btn_TimKiem;
+        private System.Windows.Forms.Button btn_ThongKe;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

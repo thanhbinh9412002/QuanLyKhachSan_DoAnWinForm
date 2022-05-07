@@ -22,6 +22,8 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormDatPhong fmDP;
         public FormThuePhong fmTP;
         public FormNguoiDung fmND;
+        public FormVatTu fmVT;
+        public FormDi
 
         public String musername = null;
         public String mfullname = null;
@@ -141,6 +143,9 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void mnVattu_Click(object sender, EventArgs e)
         {
+            fmVT = new FormVatTu();
+            fmVT.fmMain = this;
+            fmVT.ShowDialog();
 
         }
         private void mnDichvu_Click(object sender, EventArgs e)

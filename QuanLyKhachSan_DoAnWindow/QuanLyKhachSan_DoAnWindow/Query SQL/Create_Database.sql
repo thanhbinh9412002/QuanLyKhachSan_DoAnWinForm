@@ -66,7 +66,7 @@ create table dbo.hoadon(
 		ngaythanhtoan date NULL,
 		tongtien varchar(30) NULL,
 		maphieuthue char(5) NULL,
-		makhachang char(5) NULL,
+		makhachhang char(5) NULL,
 		username varchar(30) NULL
 )
 go
