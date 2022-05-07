@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace vattu
+namespace QuanLyKhachSan_DoAnWindow
 {
-    public partial class thuephong : Form
+    public partial class FormDoiMK : Form
     {
-        public thuephong()
+        public FormMain fmMain;
+        public FormDoiMK()
         {
             InitializeComponent();
         }

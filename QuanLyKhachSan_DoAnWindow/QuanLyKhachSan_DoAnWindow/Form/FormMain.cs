@@ -14,15 +14,14 @@ namespace QuanLyKhachSan_DoAnWindow
 {
     public partial class FormMain : Form
     {
-        /*public FormLogin frmLogin;
-        public FormDoiMK frmDoiMK;
-        public FormKhachHang frmKH;
-        public FormThongTin frmTT;
-        public FormPhong frmP;
-        public FormDatPhong frmDP;
-        public FormThuePhong frmTP;
-        public FormNguoiDung frmND;
-        public FormBaoCao frmBC;*/
+        public FormLogin fmLogin;
+        public FormDoiMK fmDoiMK;
+        public FormKhachHang fmKH;
+        public FormThongTin fmTT;
+        public FormQLPhong fmP;
+        public FormDatPhong fmDP;
+        public FormThuePhong fmTP;
+        public FormNguoiDung fmND;
 
         public String musername = null;
         public String mfullname = null;
@@ -34,10 +33,10 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            /*MainNoEnabled();
-            frmLogin = new FormLogin();
-            frmLogin.frmMain = this;
-            frmLogin.ShowDialog();
+            MainNoEnabled();
+            fmLogin = new FormLogin();
+            fmLogin.fmMain = this;
+            fmLogin.ShowDialog();
             if (mchucvu == "Nhân viên")
             {
                 MainEnNhanVien();
@@ -57,66 +56,18 @@ namespace QuanLyKhachSan_DoAnWindow
 
             lblUser.Text = "Hi " + mfullname + " !";
             ThongKe();
-            LoadSDP();*/
+            LoadSDP();
 
         }
         public void ThongKe()
         {
-            /*SqlConnection con = DataBase.GetConnection();
-            SqlCommand cmd = new SqlCommand("ThongKe", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            using (SqlDataReader reader = cmd.ExecuteReader())
-            {
-                reader.Read();
-                lbpt.Text = reader["phongtrong"].ToString();
-                lbpd.Text = reader["phongdadat"].ToString();
-                lbpdt.Text = reader["phongdanhan"].ToString();
-            }*/
+           
         }
         public void LoadSDP()
         {
-            /*lvPhong.Items.Clear();
-            SqlConnection con = DataBase.GetConnection();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tblphong", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            if (dt.Rows.Count > 0)
-            {
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    ListViewItem item = new ListViewItem(dt.Rows[i]["maphong"].ToString());
-                    ListViewItem.ListViewSubItem subitem = new ListViewItem.ListViewSubItem(item, dt.Rows[i]["maphong"].ToString());
-                    String dat = "";
-                    String nhan = "";
-                    dat = dt.Rows[i]["dadat"].ToString();
-                    nhan = dt.Rows[i]["danhan"].ToString();
-                    if (dat == "0" && nhan == "0")
-                    {
-                        item.SubItems.Add(subitem);
-                        lvPhong.Items.Add(item);
-                        item.ImageIndex = 0;
-                    }
-                    else if (dat == "1" && nhan == "0")
-                    {
-                        item.SubItems.Add(subitem);
-                        lvPhong.Items.Add(item);
-                        item.ImageIndex = 1;
-                    }
-                    else if (dat == "0" && nhan == "1")
-                    {
-                        item.SubItems.Add(subitem);
-                        lvPhong.Items.Add(item);
-                        item.ImageIndex = 2;
-                    }
-                }
-            }
-            else
-                MessageBox.Show("Không có dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);*/
+            
         }
-        /*private void MainEnabled()
+        private void MainEnabled()
         {
             mnQuanly.Enabled = true;
             mnDoimatkhau.Enabled = true;
@@ -151,35 +102,12 @@ namespace QuanLyKhachSan_DoAnWindow
             mnDatphong1.Enabled = true;
             mnBaocao.Enabled = false;
             mnDangxuat.Enabled = true;
-        }*/
-        /*static string Mahoa(MD5 md5Hash, string input)
-        {
-            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-            StringBuilder sBuilder = new StringBuilder();
-            for (int i = 0; i < data.Length; i++)
-            {
-                sBuilder.Append(data[i].ToString("x2"));
-            }
-            return sBuilder.ToString();
         }
-        static bool Giaima(MD5 md5Hash, string input, string hash)
-        {
-            string hashOfInput = Mahoa(md5Hash, input);
-            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
-            if (0 == comparer.Compare(hashOfInput, hash))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }*/
         private void mnDangnhap_Click(object sender, EventArgs e)
         {
-            /*frmLogin = new FormLogin();
-            frmLogin.frmMain = this;
-            frmLogin.ShowDialog();
+            fmLogin = new FormLogin();
+            fmLogin.fmMain = this;
+            fmLogin.ShowDialog();
             if (mchucvu == "admin")
             {
                 MainEnabled();
@@ -192,20 +120,21 @@ namespace QuanLyKhachSan_DoAnWindow
             {
                 MainEnNhanVien();
             }
-            lblUser.Text = "Hi " + mfullname + " !";*/
+            lblUser.Text = "Hi " + mfullname + " !";
         }
         private void mnDangxuat_Click(object sender, EventArgs e)
         {
-            /*lblUser.Text = "Hi!";
-            MainNoEnabled(); frmLogin = new FormLogin();
-            frmLogin.frmMain = this;
-            frmLogin.ShowDialog();*/
+            lblUser.Text = "Hi!";
+            MainNoEnabled(); 
+            fmLogin = new FormLogin();
+            fmLogin.fmMain = this;
+            fmLogin.ShowDialog();
         }
         private void mnDoimatkhau_Click(object sender, EventArgs e)
         {
-            /*frmDoiMK = new FormDoiMK();
-            frmDoiMK.frmMain = this;
-            frmDoiMK.ShowDialog();*/
+            fmDoiMK = new FormDoiMK();
+            fmDoiMK.fmMain = this;
+            fmDoiMK.ShowDialog();
         }
         private void mnThoat_Click(object sender, EventArgs e)
         {
@@ -213,31 +142,39 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void mnKhachhang_Click(object sender, EventArgs e)
         {
-            /*frmKH = new FormKhachHang();
-            frmKH.frmMain = this;
-            frmKH.ShowDialog();*/
-        }
-        private void mnInhoadon_Click(object sender, EventArgs e)
-        {
-
+            fmKH = new FormKhachHang();
+            fmKH.fmMain = this;
+            fmKH.ShowDialog();
         }
         private void mnDatphong_Click(object sender, EventArgs e)
         {
-            /*frmDP = new FormDatPhong();
-            frmDP.frmMain = this;
-            frmDP.ShowDialog();*/
+            fmDP = new FormDatPhong();
+            fmDP.fmMain = this;
+            fmDP.ShowDialog();
         }
         private void mnThuephong_Click(object sender, EventArgs e)
         {
-            /*frmTP = new FormThuePhong();
-            frmTP.frmMain = this;
-            frmTP.ShowDialog();*/
+            fmTP = new FormThuePhong();
+            fmTP.fmMain = this;
+            fmTP.ShowDialog();
         }
         private void mnPhong_Click(object sender, EventArgs e)
         {
-            /*frmP = new FormPhong();
-            frmP.frmMain = this;
-            frmP.ShowDialog();*/
+            fmP = new FormQLPhong();
+            fmP.fmMain = this;
+            fmP.ShowDialog();
+        }
+        private void mnNguoidung_Click(object sender, EventArgs e)
+        {
+            fmND = new FormNguoiDung();
+            fmND.fmMain = this;
+            fmND.ShowDialog();
+        }
+        private void mnThongtin_Click(object sender, EventArgs e)
+        {
+            fmTT = new FormThongTin();
+            fmTT.fmMain = this;
+            fmTT.ShowDialog();
         }
         private void mnVattu_Click(object sender, EventArgs e)
         {
@@ -251,27 +188,11 @@ namespace QuanLyKhachSan_DoAnWindow
         {
 
         }
-        private void mnNguoidung_Click(object sender, EventArgs e)
-        {
-            /*frmND = new FormNguoiDung();
-            frmND.frmMain = this;
-            frmND.ShowDialog();*/
-        }
-        private void mnThongtin_Click(object sender, EventArgs e)
-        {
-            /*frmTT = new FormThongTin();
-            frmTT.frmMain = this;
-            frmTT.ShowDialog();*/
-        }
-
         private void mnBaocao_Click(object sender, EventArgs e)
         {
-            /*frmBC = new FormBaoCao();
-            frmBC.frmMain = this;
-            frmBC.ShowDialog();*/
-        }
 
-        private void toolStripSeparator1_Click(object sender, EventArgs e)
+        }
+        private void mnInhoadon_Click(object sender, EventArgs e)
         {
 
         }

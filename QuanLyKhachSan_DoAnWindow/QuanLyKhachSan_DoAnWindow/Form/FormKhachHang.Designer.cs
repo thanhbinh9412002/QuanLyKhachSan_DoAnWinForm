@@ -240,7 +240,6 @@
             this.gvKhachhang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvKhachhang.Size = new System.Drawing.Size(684, 199);
             this.gvKhachhang.TabIndex = 62;
-            this.gvKhachhang.Click += new System.EventHandler(this.gvKhachhang_Click);
             // 
             // txtTimkiem
             // 
@@ -249,7 +248,6 @@
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(186, 26);
             this.txtTimkiem.TabIndex = 63;
-            this.txtTimkiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimkiem_KeyUp);
             // 
             // label8
             // 
@@ -298,7 +296,6 @@
             this.btnSua.TabIndex = 67;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -310,7 +307,6 @@
             this.btnXoa.TabIndex = 68;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -322,7 +318,6 @@
             this.btnThem.TabIndex = 69;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // FormKhachHang
             // 

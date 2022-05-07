@@ -137,6 +137,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.bt_login.TabIndex = 5;
             this.bt_login.Text = "Đăng nhập";
             this.bt_login.UseVisualStyleBackColor = true;
+            this.bt_login.Click += new System.EventHandler(this.bt_login_Click);
             // 
             // bt_exit
             // 

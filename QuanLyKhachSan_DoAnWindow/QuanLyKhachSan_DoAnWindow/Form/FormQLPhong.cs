@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
-    public partial class vattu : Form
+    public partial class FormQLPhong : Form
     {
-        public vattu()
+        public FormMain fmMain;
+        public FormQLPhong()
         {
             InitializeComponent();
         }

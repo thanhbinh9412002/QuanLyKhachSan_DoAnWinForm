@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan_DoAnWindow
 {
-    partial class Dat_Phong
+    partial class FormDatPhong
     {
         /// <summary>
         /// Required designer variable.

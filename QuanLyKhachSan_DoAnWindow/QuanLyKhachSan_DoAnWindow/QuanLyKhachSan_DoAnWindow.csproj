@@ -71,12 +71,6 @@
     <Compile Include="DAO\Phong_DAO.cs" />
     <Compile Include="DAO\Vat_Tu_DAO.cs" />
     <Compile Include="DataProvider\DataProvider.cs" />
-    <Compile Include="Form\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,41 +95,41 @@
     <Compile Include="Form\FormNguoiDung.designer.cs">
       <DependentUpon>FormNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Form_QLPhong.cs">
+    <Compile Include="Form\FormQLPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Form_QLPhong.designer.cs">
-      <DependentUpon>Form_QLPhong.cs</DependentUpon>
+    <Compile Include="Form\FormQLPhong.designer.cs">
+      <DependentUpon>FormQLPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Form_ThuePhong.cs">
+    <Compile Include="Form\FormThuePhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Form_ThuePhong.designer.cs">
-      <DependentUpon>Form_ThuePhong.cs</DependentUpon>
+    <Compile Include="Form\FormThuePhong.designer.cs">
+      <DependentUpon>FormThuePhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Doi_MK.cs">
+    <Compile Include="Form\FormDoiMK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Doi_MK.Designer.cs">
-      <DependentUpon>Doi_MK.cs</DependentUpon>
+    <Compile Include="Form\FormDoiMK.Designer.cs">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Dat_Phong.cs">
+    <Compile Include="Form\FormDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Dat_Phong.Designer.cs">
-      <DependentUpon>Dat_Phong.cs</DependentUpon>
+    <Compile Include="Form\FormDatPhong.Designer.cs">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Thong_Tin.cs">
+    <Compile Include="Form\FormThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Thong_Tin.Designer.cs">
-      <DependentUpon>Thong_Tin.cs</DependentUpon>
+    <Compile Include="Form\FormThongTin.Designer.cs">
+      <DependentUpon>FormThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Form_Vattu.cs">
+    <Compile Include="Form\FormVatTtu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Form_Vattu.designer.cs">
-      <DependentUpon>Form_Vattu.cs</DependentUpon>
+    <Compile Include="Form\FormVatTtu.designer.cs">
+      <DependentUpon>FormVatTtu.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,23 +139,23 @@
     <EmbeddedResource Include="Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form_QLPhong.resx">
-      <DependentUpon>Form_QLPhong.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormQLPhong.resx">
+      <DependentUpon>FormQLPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form_ThuePhong.resx">
-      <DependentUpon>Form_ThuePhong.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormThuePhong.resx">
+      <DependentUpon>FormThuePhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Doi_MK.resx">
-      <DependentUpon>Doi_MK.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormDoiMK.resx">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Dat_Phong.resx">
-      <DependentUpon>Dat_Phong.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormDatPhong.resx">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Thong_Tin.resx">
-      <DependentUpon>Thong_Tin.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormThongTin.resx">
+      <DependentUpon>FormThongTin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form_Vattu.resx">
-      <DependentUpon>Form_Vattu.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormVatTtu.resx">
+      <DependentUpon>FormVatTtu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,7 +1,7 @@
 ﻿
-namespace giaodien
+namespace QuanLyKhachSan_DoAnWindow
 {
-    partial class quanlyphong
+    partial class FormQLPhong
     {
         /// <summary>
         /// Required designer variable.

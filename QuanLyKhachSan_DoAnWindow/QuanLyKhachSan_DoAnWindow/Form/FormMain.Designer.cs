@@ -38,12 +38,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lvPhong = new System.Windows.Forms.ListView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.lblUser = new System.Windows.Forms.Label();
             this.lbllogo = new System.Windows.Forms.Label();
             this.mnHethong = new System.Windows.Forms.ToolStripMenuItem();
             this.mnDangnhap = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnDangxuat = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -64,7 +64,7 @@
             this.mnTrogiup = new System.Windows.Forms.ToolStripMenuItem();
             this.mnThongtin = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.mnDangxuat = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -176,6 +176,12 @@
             this.lvPhong.TabIndex = 2;
             this.lvPhong.UseCompatibleStateImageBehavior = false;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(0, 68);
@@ -223,18 +229,10 @@
             this.mnDangnhap.Text = "Đăng nhập";
             this.mnDangnhap.Click += new System.EventHandler(this.mnDangnhap_Click);
             // 
-            // mnDangxuat
-            // 
-            this.mnDangxuat.Name = "mnDangxuat";
-            this.mnDangxuat.Size = new System.Drawing.Size(180, 22);
-            this.mnDangxuat.Text = "Đăng xuất";
-            this.mnDangxuat.Click += new System.EventHandler(this.mnDangxuat_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            this.toolStripSeparator1.Click += new System.EventHandler(this.toolStripSeparator1_Click);
             // 
             // mnDoimatkhau
             // 
@@ -386,11 +384,12 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // imageList1
+            // mnDangxuat
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.mnDangxuat.Name = "mnDangxuat";
+            this.mnDangxuat.Size = new System.Drawing.Size(180, 22);
+            this.mnDangxuat.Text = "Đăng xuất";
+            this.mnDangxuat.Click += new System.EventHandler(this.mnDangxuat_Click);
             // 
             // FormMain
             // 
@@ -407,7 +406,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.MinimumSize = new System.Drawing.Size(0, 500);
+            this.MinimumSize = new System.Drawing.Size(16, 500);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống quản lý khách sạn";
@@ -438,7 +437,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ToolStripMenuItem mnHethong;
         private System.Windows.Forms.ToolStripMenuItem mnDangnhap;
-        private System.Windows.Forms.ToolStripMenuItem mnDangxuat;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem mnDoimatkhau;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
@@ -459,6 +457,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnTrogiup;
         private System.Windows.Forms.ToolStripMenuItem mnThongtin;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mnDangxuat;
     }
 }
 

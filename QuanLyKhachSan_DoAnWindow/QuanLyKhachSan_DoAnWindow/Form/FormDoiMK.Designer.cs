@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan_DoAnWindow
 {
-    partial class Doi_MK
+    partial class FormDoiMK
     {
         /// <summary>
         /// Required designer variable.

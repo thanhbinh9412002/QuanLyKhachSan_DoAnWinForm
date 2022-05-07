@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyKhachSan_DoAnWindow
 {
-    partial class Thong_Tin
+    partial class FormThongTin
     {
         /// <summary>
         /// Required designer variable.

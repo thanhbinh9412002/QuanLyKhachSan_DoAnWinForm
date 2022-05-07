@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyKhachSan_DoAnWindow
 {
-    partial class vattu
+    partial class FormVatTu
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
-    public partial class Thong_Tin : Form
+    public partial class FormVatTu : Form
     {
-        public Thong_Tin()
+        public FormVatTu()
         {
             InitializeComponent();
         }

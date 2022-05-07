@@ -1,7 +1,7 @@
 ﻿
-namespace vattu
+namespace QuanLyKhachSan_DoAnWindow
 {
-    partial class thuephong
+    partial class FormThuePhong
     {
         /// <summary>
         /// Required designer variable.

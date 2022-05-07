@@ -13,7 +13,7 @@ namespace QuanLyKhachSan_DoAnWindow
 {
     public partial class FormNguoiDung : Form
     {
-        /*public FormMain frmMain;*/
+        public FormMain fmMain;
         public FormNguoiDung()
         {
             InitializeComponent();
@@ -25,12 +25,7 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void LoadDataUser()
         {
-           /* SqlCommand cmd = new SqlCommand("SELECT * FROM tbluser", DataBase.GetConnection());
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable tb = new DataTable();
-            adapter.Fill(tb);
-            dataGridView1.DataSource = tb;
-            dataGridView1.ClearSelection();*/
+
         }
     }
 }

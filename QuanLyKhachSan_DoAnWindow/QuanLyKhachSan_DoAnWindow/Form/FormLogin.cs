@@ -12,9 +12,15 @@ namespace QuanLyKhachSan_DoAnWindow
 {
     public partial class FormLogin : Form
     {
+        public FormMain fmMain;
         public FormLogin()
         {
             InitializeComponent();
+        }
+
+        private void bt_login_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

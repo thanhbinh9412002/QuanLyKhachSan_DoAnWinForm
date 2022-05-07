@@ -16,7 +16,7 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
         public DBConnection()
         {
             adapter = new SqlDataAdapter();
-            connection = new SqlConnection(Properties.Settings.Default.cnnStr);
+            connection = new SqlConnection(/*Properties.Settings.Default.cnnStr*/);
         }
         private SqlConnection openConnection()
         {

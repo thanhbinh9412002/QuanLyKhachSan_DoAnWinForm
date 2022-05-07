@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
-    public partial class Doi_MK : Form
+    public partial class FormDatPhong : Form
     {
-        public Doi_MK()
+        public FormMain fmMain;
+        public FormDatPhong()
         {
             InitializeComponent();
         }
