@@ -27,6 +27,7 @@ namespace QuanLyKhachSan_DoAnWindow
             if (pass == password)
             {
                 MessageBox.Show("Đăng nhập thành công!");
+                fmMain.musername = txt_username.Text;
                 fmMain.mchucvu = "admin";
                 fmMain.mfullname = htBUS.Lay_Ten_Nhan_Vien(txt_username.Text);
                 this.Close();

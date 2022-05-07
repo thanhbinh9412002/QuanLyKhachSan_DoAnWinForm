@@ -63,6 +63,7 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void MainEnabled()
         {
+            mnDangnhap.Enabled = false;
             mnQuanly.Enabled = true;
             mnDoimatkhau.Enabled = true;
             mnKhachhang1.Enabled = true;
