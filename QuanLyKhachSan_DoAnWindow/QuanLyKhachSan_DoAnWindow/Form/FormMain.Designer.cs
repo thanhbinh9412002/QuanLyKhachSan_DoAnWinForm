@@ -44,6 +44,7 @@
             this.lbllogo = new System.Windows.Forms.Label();
             this.mnHethong = new System.Windows.Forms.ToolStripMenuItem();
             this.mnDangnhap = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnDangxuat = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnDoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -64,7 +65,6 @@
             this.mnTrogiup = new System.Windows.Forms.ToolStripMenuItem();
             this.mnThongtin = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mnDangxuat = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -84,7 +84,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.groupBox1.Size = new System.Drawing.Size(171, 177);
+            this.groupBox1.Size = new System.Drawing.Size(249, 177);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thống kê";
@@ -94,7 +94,7 @@
             this.lbpdt.AutoSize = true;
             this.lbpdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbpdt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbpdt.Location = new System.Drawing.Point(111, 136);
+            this.lbpdt.Location = new System.Drawing.Point(126, 136);
             this.lbpdt.Name = "lbpdt";
             this.lbpdt.Size = new System.Drawing.Size(54, 18);
             this.lbpdt.TabIndex = 6;
@@ -105,7 +105,7 @@
             this.lbpd.AutoSize = true;
             this.lbpd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbpd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbpd.Location = new System.Drawing.Point(111, 90);
+            this.lbpd.Location = new System.Drawing.Point(120, 90);
             this.lbpd.Name = "lbpd";
             this.lbpd.Size = new System.Drawing.Size(46, 18);
             this.lbpd.TabIndex = 5;
@@ -116,7 +116,7 @@
             this.lbpt.AutoSize = true;
             this.lbpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbpt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbpt.Location = new System.Drawing.Point(111, 41);
+            this.lbpt.Location = new System.Drawing.Point(112, 43);
             this.lbpt.Name = "lbpt";
             this.lbpt.Size = new System.Drawing.Size(46, 18);
             this.lbpt.TabIndex = 4;
@@ -127,7 +127,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(5, 138);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 16);
+            this.label7.Size = new System.Drawing.Size(115, 16);
             this.label7.TabIndex = 3;
             this.label7.Text = "Số phòng đã thuê:";
             // 
@@ -136,7 +136,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(5, 92);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 16);
+            this.label6.Size = new System.Drawing.Size(109, 16);
             this.label6.TabIndex = 2;
             this.label6.Text = "Số phòng đã đặt:";
             // 
@@ -145,7 +145,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(5, 43);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 16);
+            this.label5.Size = new System.Drawing.Size(101, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "Số phòng trống:";
             // 
@@ -184,7 +184,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(0, 68);
+            this.monthCalendar1.Location = new System.Drawing.Point(18, 68);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 5;
             // 
@@ -194,7 +194,7 @@
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblUser.Location = new System.Drawing.Point(16, 43);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(53, 16);
+            this.lblUser.Size = new System.Drawing.Size(52, 16);
             this.lblUser.TabIndex = 6;
             this.lblUser.Text = "Hi user!";
             // 
@@ -225,31 +225,38 @@
             // mnDangnhap
             // 
             this.mnDangnhap.Name = "mnDangnhap";
-            this.mnDangnhap.Size = new System.Drawing.Size(180, 22);
+            this.mnDangnhap.Size = new System.Drawing.Size(164, 22);
             this.mnDangnhap.Text = "Đăng nhập";
             this.mnDangnhap.Click += new System.EventHandler(this.mnDangnhap_Click);
+            // 
+            // mnDangxuat
+            // 
+            this.mnDangxuat.Name = "mnDangxuat";
+            this.mnDangxuat.Size = new System.Drawing.Size(164, 22);
+            this.mnDangxuat.Text = "Đăng xuất";
+            this.mnDangxuat.Click += new System.EventHandler(this.mnDangxuat_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(161, 6);
             // 
             // mnDoimatkhau
             // 
             this.mnDoimatkhau.Name = "mnDoimatkhau";
-            this.mnDoimatkhau.Size = new System.Drawing.Size(180, 22);
+            this.mnDoimatkhau.Size = new System.Drawing.Size(164, 22);
             this.mnDoimatkhau.Text = "Đổi mật khẩu";
             this.mnDoimatkhau.Click += new System.EventHandler(this.mnDoimatkhau_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(161, 6);
             // 
             // mnThoat
             // 
             this.mnThoat.Name = "mnThoat";
-            this.mnThoat.Size = new System.Drawing.Size(180, 22);
+            this.mnThoat.Size = new System.Drawing.Size(164, 22);
             this.mnThoat.Text = "Thoát";
             this.mnThoat.Click += new System.EventHandler(this.mnThoat_Click);
             // 
@@ -265,14 +272,14 @@
             // mnKhachhang
             // 
             this.mnKhachhang.Name = "mnKhachhang";
-            this.mnKhachhang.Size = new System.Drawing.Size(180, 22);
+            this.mnKhachhang.Size = new System.Drawing.Size(154, 22);
             this.mnKhachhang.Text = "Khách hàng";
             this.mnKhachhang.Click += new System.EventHandler(this.mnKhachhang_Click);
             // 
             // mnInhoadon
             // 
             this.mnInhoadon.Name = "mnInhoadon";
-            this.mnInhoadon.Size = new System.Drawing.Size(180, 22);
+            this.mnInhoadon.Size = new System.Drawing.Size(154, 22);
             this.mnInhoadon.Text = "In hóa đơn";
             this.mnInhoadon.Click += new System.EventHandler(this.mnInhoadon_Click);
             // 
@@ -288,14 +295,14 @@
             // mnDatphong
             // 
             this.mnDatphong.Name = "mnDatphong";
-            this.mnDatphong.Size = new System.Drawing.Size(180, 22);
+            this.mnDatphong.Size = new System.Drawing.Size(154, 22);
             this.mnDatphong.Text = "Đặt phòng";
             this.mnDatphong.Click += new System.EventHandler(this.mnDatphong_Click);
             // 
             // mnThuephong
             // 
             this.mnThuephong.Name = "mnThuephong";
-            this.mnThuephong.Size = new System.Drawing.Size(180, 22);
+            this.mnThuephong.Size = new System.Drawing.Size(154, 22);
             this.mnThuephong.Text = "Thuê phòng";
             this.mnThuephong.Click += new System.EventHandler(this.mnThuephong_Click);
             // 
@@ -314,35 +321,35 @@
             // mnPhong
             // 
             this.mnPhong.Name = "mnPhong";
-            this.mnPhong.Size = new System.Drawing.Size(180, 22);
+            this.mnPhong.Size = new System.Drawing.Size(151, 22);
             this.mnPhong.Text = "Phòng";
             this.mnPhong.Click += new System.EventHandler(this.mnPhong_Click);
             // 
             // mnVattu
             // 
             this.mnVattu.Name = "mnVattu";
-            this.mnVattu.Size = new System.Drawing.Size(180, 22);
+            this.mnVattu.Size = new System.Drawing.Size(151, 22);
             this.mnVattu.Text = "Vật tư";
             this.mnVattu.Click += new System.EventHandler(this.mnVattu_Click);
             // 
             // mnDichvu
             // 
             this.mnDichvu.Name = "mnDichvu";
-            this.mnDichvu.Size = new System.Drawing.Size(180, 22);
+            this.mnDichvu.Size = new System.Drawing.Size(151, 22);
             this.mnDichvu.Text = "Dịch vụ";
             this.mnDichvu.Click += new System.EventHandler(this.mnDichvu_Click);
             // 
             // mnNhanvien
             // 
             this.mnNhanvien.Name = "mnNhanvien";
-            this.mnNhanvien.Size = new System.Drawing.Size(180, 22);
+            this.mnNhanvien.Size = new System.Drawing.Size(151, 22);
             this.mnNhanvien.Text = "Nhân viên";
             this.mnNhanvien.Click += new System.EventHandler(this.mnNhanvien_Click);
             // 
             // mnNguoidung
             // 
             this.mnNguoidung.Name = "mnNguoidung";
-            this.mnNguoidung.Size = new System.Drawing.Size(180, 22);
+            this.mnNguoidung.Size = new System.Drawing.Size(151, 22);
             this.mnNguoidung.Text = "Người dùng";
             this.mnNguoidung.Click += new System.EventHandler(this.mnNguoidung_Click);
             // 
@@ -364,13 +371,14 @@
             // mnThongtin
             // 
             this.mnThongtin.Name = "mnThongtin";
-            this.mnThongtin.Size = new System.Drawing.Size(180, 22);
+            this.mnThongtin.Size = new System.Drawing.Size(137, 22);
             this.mnThongtin.Text = "Thông tin";
             this.mnThongtin.Click += new System.EventHandler(this.mnThongtin_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnHethong,
             this.mnKhachhang1,
@@ -383,13 +391,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(984, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // mnDangxuat
-            // 
-            this.mnDangxuat.Name = "mnDangxuat";
-            this.mnDangxuat.Size = new System.Drawing.Size(180, 22);
-            this.mnDangxuat.Text = "Đăng xuất";
-            this.mnDangxuat.Click += new System.EventHandler(this.mnDangxuat_Click);
             // 
             // FormMain
             // 
@@ -406,7 +407,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.MinimumSize = new System.Drawing.Size(16, 500);
+            this.MinimumSize = new System.Drawing.Size(18, 500);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống quản lý khách sạn";

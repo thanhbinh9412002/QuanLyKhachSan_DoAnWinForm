@@ -19,5 +19,10 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return htDAO.Check_Tai_Khoan(username);
         }
+
+        public string Lay_Ten_Nhan_Vien(string username)
+        {
+            return htDAO.Lay_Ten_Nhan_Vien(username);
+        }
     }
 }

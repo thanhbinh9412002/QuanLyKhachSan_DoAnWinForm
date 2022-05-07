@@ -28,6 +28,7 @@ namespace QuanLyKhachSan_DoAnWindow
             {
                 MessageBox.Show("Đăng nhập thành công!");
                 fmMain.mchucvu = "admin";
+                fmMain.mfullname = htBUS.Lay_Ten_Nhan_Vien(txt_username.Text);
                 this.Close();
             }
             else

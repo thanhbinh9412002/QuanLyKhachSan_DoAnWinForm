@@ -25,5 +25,15 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             object password = conn.executeScalar(sql, sqlParameters);
             return Convert.ToString(password);
         }
+
+        public string Lay_Ten_Nhan_Vien(string username)
+        {
+            const string sql = "select nhanvien.tennhanvien from nhanvien, hethong where hethong.username = @username and hethong.manhanvien = nhanvien.manhanvien";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@username", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(username);
+            object fullname = conn.executeScalar(sql, sqlParameters);
+            return Convert.ToString(fullname);
+        }
     }
 }
