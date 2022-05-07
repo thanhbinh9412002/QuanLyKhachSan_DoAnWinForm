@@ -260,7 +260,7 @@ insert into vattu Values('VT09','coc')
 insert into vattu Values('VT10','ao')
 go
 create table dbo.chitietvattu(
-		mavattu char(5) references chitietvattu(mavattu), 
+		mavattu char(5), 
 		maloaiphong char(5) references loaiphong(maloai),
 		soluong int NULL,
 		PRIMARY KEY (mavattu, maloaiphong)
@@ -278,4 +278,6 @@ insert into chitietvattu Values('VT09', 'L03', 2)
 insert into chitietvattu Values('VT10', 'L02', 3)
 go
 Alter table chitietvattu WITH CHECK ADD FOREIGN KEY(maloaiphong) REFERENCES loaiphong(maloai)
+go
+Alter table chitietvattu WITH CHECK ADD FOREIGN KEY(mavattu) REFERENCES vattu(mavattu)
 go
