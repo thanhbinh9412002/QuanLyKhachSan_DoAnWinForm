@@ -256,7 +256,7 @@ insert into vattu Values('VT10','ao')
 go
 create table dbo.chitietvattu(
 		mavattu char(5), 
-		maloaiphong char(10) references loaiphong(maloai),
+		maloaiphong char(10),
 		soluong int NULL,
 		PRIMARY KEY (mavattu, maloaiphong)
 )
