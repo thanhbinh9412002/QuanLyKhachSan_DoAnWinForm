@@ -46,15 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\Dat_Phong_BUS.cs" />
+    <Compile Include="BUS\Dich_Vu_BUS.cs" />
+    <Compile Include="BUS\He_Thong_BUS.cs" />
+    <Compile Include="BUS\Hoa_Don_BUS.cs" />
     <Compile Include="BUS\Khach_Hang_BUS.cs" />
     <Compile Include="BUS\Nhan_Vien_BUS.cs" />
     <Compile Include="BUS\Phong_BUS.cs" />
+    <Compile Include="BUS\Vat_Tu_BUS.cs" />
+    <Compile Include="Class\Dat_Phong.cs" />
+    <Compile Include="Class\Dich_Vu.cs" />
+    <Compile Include="Class\He_Thong.cs" />
+    <Compile Include="Class\Hoa_Don.cs" />
     <Compile Include="Class\Khach_Hang.cs" />
     <Compile Include="Class\Nhan_Vien.cs" />
     <Compile Include="Class\Phong.cs" />
+    <Compile Include="Class\Vat_Tu.cs" />
+    <Compile Include="DAO\Dat_Phong_DAO.cs" />
+    <Compile Include="DAO\Dich_Vu_DAO.cs" />
+    <Compile Include="DAO\He_Thong_DAO.cs" />
+    <Compile Include="DAO\Hoa_Don_DAO.cs" />
     <Compile Include="DAO\Khach_Hang_DAO.cs" />
     <Compile Include="DAO\Nhan_Vien_DAO.cs" />
     <Compile Include="DAO\Phong_DAO.cs" />
+    <Compile Include="DAO\Vat_Tu_DAO.cs" />
     <Compile Include="DataProvider\DataProvider.cs" />
     <Compile Include="Form\Form1.cs">
       <SubType>Form</SubType>
