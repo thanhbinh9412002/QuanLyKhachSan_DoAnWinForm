@@ -101,11 +101,17 @@
     <Compile Include="Form\FormNguoiDung.designer.cs">
       <DependentUpon>FormNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Thue_Phong.cs">
+    <Compile Include="Form\Form_QLPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Thue_Phong.Designer.cs">
-      <DependentUpon>Thue_Phong.cs</DependentUpon>
+    <Compile Include="Form\Form_QLPhong.designer.cs">
+      <DependentUpon>Form_QLPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_ThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_ThuePhong.designer.cs">
+      <DependentUpon>Form_ThuePhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Doi_MK.cs">
       <SubType>Form</SubType>
@@ -118,12 +124,6 @@
     </Compile>
     <Compile Include="Form\Dat_Phong.Designer.cs">
       <DependentUpon>Dat_Phong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Quan_Ly_Phong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Quan_Ly_Phong.Designer.cs">
-      <DependentUpon>Quan_Ly_Phong.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Thong_Tin.cs">
       <SubType>Form</SubType>
@@ -145,17 +145,17 @@
     <EmbeddedResource Include="Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Thue_Phong.resx">
-      <DependentUpon>Thue_Phong.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Form_QLPhong.resx">
+      <DependentUpon>Form_QLPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_ThuePhong.resx">
+      <DependentUpon>Form_ThuePhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Doi_MK.resx">
       <DependentUpon>Doi_MK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Dat_Phong.resx">
       <DependentUpon>Dat_Phong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Quan_Ly_Phong.resx">
-      <DependentUpon>Quan_Ly_Phong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Thong_Tin.resx">
       <DependentUpon>Thong_Tin.cs</DependentUpon>

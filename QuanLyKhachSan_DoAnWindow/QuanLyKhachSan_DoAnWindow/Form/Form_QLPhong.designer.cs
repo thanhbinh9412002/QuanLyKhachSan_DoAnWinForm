@@ -1,6 +1,7 @@
-﻿namespace QuanLyKhachSan_DoAnWindow
+﻿
+namespace giaodien
 {
-    partial class Quan_Ly_Phong
+    partial class quanlyphong
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMaloai = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaphong = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.txtgia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,28 +50,36 @@
             this.gvlp = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtSonguoi = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.txtMaloai = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvlp)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvlp)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtMaloai
+            // tabControl1
             // 
-            this.txtMaloai.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtMaloai.Location = new System.Drawing.Point(124, 56);
-            this.txtMaloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMaloai.Name = "txtMaloai";
-            this.txtMaloai.Size = new System.Drawing.Size(161, 24);
-            this.txtMaloai.TabIndex = 9;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(12, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(669, 438);
+            this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage1.Controls.Add(this.button7);
+            this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.cbLoaiPhong);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.button3);
@@ -79,11 +89,11 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.txtMaphong);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(768, 393);
+            this.tabPage1.Size = new System.Drawing.Size(661, 410);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản lý phòng";
             // 
@@ -93,7 +103,7 @@
             this.cbLoaiPhong.FormattingEnabled = true;
             this.cbLoaiPhong.Location = new System.Drawing.Point(133, 115);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
-            this.cbLoaiPhong.Size = new System.Drawing.Size(161, 26);
+            this.cbLoaiPhong.Size = new System.Drawing.Size(161, 23);
             this.cbLoaiPhong.TabIndex = 9;
             // 
             // label3
@@ -101,9 +111,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(251, 14);
+            this.label3.Location = new System.Drawing.Point(214, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(265, 36);
+            this.label3.Size = new System.Drawing.Size(214, 29);
             this.label3.TabIndex = 8;
             this.label3.Text = "Danh sách phòng";
             // 
@@ -150,13 +160,12 @@
             this.gvp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvp.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.gvp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvp.Location = new System.Drawing.Point(314, 64);
+            this.gvp.Location = new System.Drawing.Point(300, 64);
             this.gvp.MultiSelect = false;
             this.gvp.Name = "gvp";
             this.gvp.ReadOnly = true;
-            this.gvp.RowHeadersWidth = 51;
             this.gvp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvp.Size = new System.Drawing.Size(435, 308);
+            this.gvp.Size = new System.Drawing.Size(345, 317);
             this.gvp.TabIndex = 4;
             // 
             // label2
@@ -185,8 +194,32 @@
             this.txtMaphong.Location = new System.Drawing.Point(133, 63);
             this.txtMaphong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaphong.Name = "txtMaphong";
-            this.txtMaphong.Size = new System.Drawing.Size(161, 24);
+            this.txtMaphong.Size = new System.Drawing.Size(161, 21);
             this.txtMaphong.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.txtgia);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.gvlp);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.txtSonguoi);
+            this.tabPage2.Controls.Add(this.txtMaloai);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Size = new System.Drawing.Size(661, 410);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Quản lý loại phòng";
             // 
             // label7
             // 
@@ -204,7 +237,7 @@
             this.txtgia.Location = new System.Drawing.Point(124, 162);
             this.txtgia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtgia.Name = "txtgia";
-            this.txtgia.Size = new System.Drawing.Size(161, 24);
+            this.txtgia.Size = new System.Drawing.Size(161, 21);
             this.txtgia.TabIndex = 18;
             // 
             // label4
@@ -212,9 +245,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(300, 4);
+            this.label4.Location = new System.Drawing.Point(241, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 36);
+            this.label4.Size = new System.Drawing.Size(143, 29);
             this.label4.TabIndex = 17;
             this.label4.Text = "Loại phòng";
             // 
@@ -265,9 +298,8 @@
             this.gvlp.MultiSelect = false;
             this.gvlp.Name = "gvlp";
             this.gvlp.ReadOnly = true;
-            this.gvlp.RowHeadersWidth = 51;
             this.gvlp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvlp.Size = new System.Drawing.Size(443, 317);
+            this.gvlp.Size = new System.Drawing.Size(339, 335);
             this.gvlp.TabIndex = 13;
             // 
             // label5
@@ -290,71 +322,100 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Mã loại :";
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.LightGray;
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.txtgia);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.gvlp);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.txtSonguoi);
-            this.tabPage2.Controls.Add(this.txtMaloai);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(768, 393);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Quản lý loại phòng";
-            // 
             // txtSonguoi
             // 
             this.txtSonguoi.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtSonguoi.Location = new System.Drawing.Point(124, 108);
             this.txtSonguoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSonguoi.Name = "txtSonguoi";
-            this.txtSonguoi.Size = new System.Drawing.Size(161, 24);
+            this.txtSonguoi.Size = new System.Drawing.Size(161, 21);
             this.txtSonguoi.TabIndex = 10;
             // 
-            // tabControl1
+            // txtMaloai
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 13);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 424);
-            this.tabControl1.TabIndex = 2;
+            this.txtMaloai.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtMaloai.Location = new System.Drawing.Point(124, 56);
+            this.txtMaloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaloai.Name = "txtMaloai";
+            this.txtMaloai.Size = new System.Drawing.Size(161, 21);
+            this.txtMaloai.TabIndex = 9;
             // 
-            // Quan_Ly_Phong
+            // button6
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.button6.BackColor = System.Drawing.Color.MintCream;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Maroon;
+            this.button6.Location = new System.Drawing.Point(164, 269);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 30);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Thống kê";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.MintCream;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Maroon;
+            this.button7.Location = new System.Drawing.Point(52, 269);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 30);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "Tìm kiếm";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.MintCream;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Maroon;
+            this.button8.Location = new System.Drawing.Point(64, 305);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 30);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "Tìm kiếm";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.MintCream;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Maroon;
+            this.button9.Location = new System.Drawing.Point(176, 305);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 30);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "Thống kê";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // quanlyphong
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 443);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(693, 447);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Quan_Ly_Phong";
-            this.Text = "Form1";
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "quanlyphong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý phòng";
+            this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvlp)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gvlp)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtMaloai;
+        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ComboBox cbLoaiPhong;
         private System.Windows.Forms.Label label3;
@@ -365,6 +426,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaphong;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtgia;
         private System.Windows.Forms.Label label4;
@@ -374,8 +436,12 @@
         private System.Windows.Forms.DataGridView gvlp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtSonguoi;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TextBox txtMaloai;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
+

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyKhachSan_DoAnWindow
+namespace giaodien
 {
-    public partial class Thue_Phong : Form
+    public partial class quanlyphong : Form
     {
-        public Thue_Phong()
+        public quanlyphong()
         {
             InitializeComponent();
         }
