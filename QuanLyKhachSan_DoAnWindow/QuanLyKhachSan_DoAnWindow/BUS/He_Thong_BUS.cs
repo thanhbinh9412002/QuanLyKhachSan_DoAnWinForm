@@ -24,5 +24,10 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return htDAO.Lay_Ten_Nhan_Vien(username);
         }
+
+        public void Doi_Mat_Khau(string username, string password)
+        {
+            htDAO.Doi_Mat_Khau(username, password);
+        }
     }
 }

@@ -35,5 +35,16 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             object fullname = conn.executeScalar(sql, sqlParameters);
             return Convert.ToString(fullname);
         }
+
+        public void Doi_Mat_Khau(string username, string password)
+        {
+            const string sql = "update hethong set passwordtk = @password where username = @username";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@password", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(password);
+            sqlParameters[1] = new SqlParameter("@username", System.Data.SqlDbType.VarChar);
+            sqlParameters[1].Value = Convert.ToString(username);
+            conn.executeInsertQuery(sql, sqlParameters);
+        }
     }
 }
