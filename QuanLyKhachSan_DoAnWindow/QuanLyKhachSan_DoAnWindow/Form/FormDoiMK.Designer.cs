@@ -43,6 +43,7 @@
             this.batloi = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.batloi)).BeginInit();
             this.SuspendLayout();
+            
             // 
             // txtMkm2
             // 
@@ -77,9 +78,9 @@
             this.lblUser.Location = new System.Drawing.Point(192, 67);
             this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(44, 16);
+            this.lblUser.Size = new System.Drawing.Size(86, 16);
             this.lblUser.TabIndex = 18;
-            this.lblUser.Text = "label6";
+            this.lblUser.Text = "txt_username";
             // 
             // label5
             // 
@@ -152,12 +153,13 @@
             this.btnXacnhan.TabIndex = 11;
             this.btnXacnhan.Text = "Xác nhận";
             this.btnXacnhan.UseVisualStyleBackColor = true;
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // batloi
             // 
             this.batloi.ContainerControl = this;
             // 
-            // Form1
+            // FormDoiMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,16 +175,16 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXacnhan);
-            this.Name = "Form1";
+            this.Name = "FormDoiMK";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.batloi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.Load += new System.EventHandler(this.FormDoiMK_Load);
 
         }
 
         #endregion
-
         private System.Windows.Forms.TextBox txtMkm2;
         private System.Windows.Forms.TextBox txtMkm;
         private System.Windows.Forms.TextBox txtMkc;
@@ -195,5 +197,7 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnXacnhan;
         private System.Windows.Forms.ErrorProvider batloi;
+
+        
     }
 }

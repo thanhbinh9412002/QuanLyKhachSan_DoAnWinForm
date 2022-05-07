@@ -65,7 +65,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tableLayoutPanel1.Controls.Add(this.txt_password, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label_username, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(83, 203);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -92,7 +92,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_username.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.Location = new System.Drawing.Point(182, 29);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(4);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(341, 31);
             this.txt_username.TabIndex = 2;
@@ -102,8 +102,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_password.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(182, 120);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(341, 31);
             this.txt_password.TabIndex = 3;
             // 
@@ -139,7 +140,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // bt_login
             // 
             this.bt_login.Location = new System.Drawing.Point(401, 425);
-            this.bt_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_login.Margin = new System.Windows.Forms.Padding(4);
             this.bt_login.Name = "bt_login";
             this.bt_login.Size = new System.Drawing.Size(155, 39);
             this.bt_login.TabIndex = 5;
@@ -150,7 +151,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // bt_exit
             // 
             this.bt_exit.Location = new System.Drawing.Point(141, 425);
-            this.bt_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_exit.Margin = new System.Windows.Forms.Padding(4);
             this.bt_exit.Name = "bt_exit";
             this.bt_exit.Size = new System.Drawing.Size(155, 39);
             this.bt_exit.TabIndex = 6;
@@ -169,7 +170,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Controls.Add(this.label_login);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.title);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
