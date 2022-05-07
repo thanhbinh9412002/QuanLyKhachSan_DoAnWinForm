@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using QuanLyKhachSan_DoAnWindow.DataProvider;
 
 namespace QuanLyKhachSan_DoAnWindow.DAO
@@ -13,6 +14,16 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         public He_Thong_DAO()
         {
             conn = new DBConnection();
+        }
+
+        public string Check_Tai_Khoan(string username)
+        {
+            const string sql = "select passwordtk from hethong where username = @username";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@username", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(username);
+            object password = conn.executeScalar(sql, sqlParameters);
+            return Convert.ToString(password);
         }
     }
 }

@@ -124,7 +124,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.lbllogo.Text = "Hệ thống quản lý khách sạn";
             this.lbllogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // thong_tin
+            // FormThongTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,8 +137,8 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbllogo);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "thong_tin";
-            this.Text = "Form1";
+            this.Name = "FormThongTin";
+            this.Text = "Trợ giúp";
             this.ResumeLayout(false);
 
         }

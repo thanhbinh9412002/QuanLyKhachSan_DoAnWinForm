@@ -16,7 +16,7 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
         public DBConnection()
         {
             adapter = new SqlDataAdapter();
-            connection = new SqlConnection(/*Properties.Settings.Default.cnnStr*/);
+            connection = new SqlConnection(Properties.Settings.Default.cnnStr);
         }
         private SqlConnection openConnection()
         {
@@ -46,6 +46,29 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
                 {
                     connection.Close();
                 }
+            }
+        }
+
+        public object executeScalar(String query, SqlParameter[] sqlParameter)
+        {
+            using (SqlCommand sqlCommand = new SqlCommand(query, openConnection()))
+            {
+                sqlCommand.CommandType = CommandType.Text;
+                sqlCommand.Parameters.AddRange(sqlParameter);
+                object result = new object();
+                try
+                {
+                    result = sqlCommand.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                return result;
             }
         }
     }

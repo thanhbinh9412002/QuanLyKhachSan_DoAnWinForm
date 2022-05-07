@@ -14,5 +14,10 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             htDAO = new He_Thong_DAO();
         }
+
+        public string Check_Tai_Khoan(string username)
+        {
+            return htDAO.Check_Tai_Khoan(username);
+        }
     }
 }

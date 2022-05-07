@@ -37,21 +37,13 @@ namespace QuanLyKhachSan_DoAnWindow
             fmLogin = new FormLogin();
             fmLogin.fmMain = this;
             fmLogin.ShowDialog();
-            if (mchucvu == "Nhân viên")
-            {
-                MainEnNhanVien();
-            }
-            else if (mchucvu == "admin")
+            if (mchucvu == "admin")
             {
                 MainEnabled();
             }
-            else if (mchucvu == "Quản lý")
-            {
-                MainEnQuanLy();
-            }
             else
             {
-                Application.Exit();
+                MainNoEnabled();
             }
 
             lblUser.Text = "Hi " + mfullname + " !";
@@ -85,24 +77,6 @@ namespace QuanLyKhachSan_DoAnWindow
             mnBaocao.Enabled = false;
             mnDangxuat.Enabled = false;
         }
-        private void MainEnQuanLy()
-        {
-            mnQuanly.Enabled = true;
-            mnDoimatkhau.Enabled = true;
-            mnKhachhang1.Enabled = true;
-            mnDatphong1.Enabled = true;
-            mnBaocao.Enabled = true;
-            mnDangxuat.Enabled = true;
-        }
-        private void MainEnNhanVien()
-        {
-            mnQuanly.Enabled = false;
-            mnDoimatkhau.Enabled = true;
-            mnKhachhang1.Enabled = true;
-            mnDatphong1.Enabled = true;
-            mnBaocao.Enabled = false;
-            mnDangxuat.Enabled = true;
-        }
         private void mnDangnhap_Click(object sender, EventArgs e)
         {
             fmLogin = new FormLogin();
@@ -111,14 +85,6 @@ namespace QuanLyKhachSan_DoAnWindow
             if (mchucvu == "admin")
             {
                 MainEnabled();
-            }
-            else if (mchucvu == "Quản lý")
-            {
-                MainEnQuanLy();
-            }
-            else
-            {
-                MainEnNhanVien();
             }
             lblUser.Text = "Hi " + mfullname + " !";
         }
