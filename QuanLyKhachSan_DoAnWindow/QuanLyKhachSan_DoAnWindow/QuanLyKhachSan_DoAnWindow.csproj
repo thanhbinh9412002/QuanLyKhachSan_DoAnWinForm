@@ -46,9 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\Class1.cs" />
+    <Compile Include="BUS\Khach_Hang_BUS.cs" />
+    <Compile Include="BUS\Nhan_Vien_BUS.cs" />
+    <Compile Include="BUS\Phong_BUS.cs" />
+    <Compile Include="Class\Khach_Hang.cs" />
     <Compile Include="Class\Nhan_Vien.cs" />
+    <Compile Include="Class\Phong.cs" />
+    <Compile Include="DAO\Khach_Hang_DAO.cs" />
     <Compile Include="DAO\Nhan_Vien_DAO.cs" />
+    <Compile Include="DAO\Phong_DAO.cs" />
     <Compile Include="DataProvider\DataProvider.cs" />
     <Compile Include="Form\Form1.cs">
       <SubType>Form</SubType>

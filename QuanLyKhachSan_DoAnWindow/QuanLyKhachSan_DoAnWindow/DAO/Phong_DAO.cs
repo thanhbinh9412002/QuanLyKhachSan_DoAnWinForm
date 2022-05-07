@@ -8,10 +8,10 @@ using QuanLyKhachSan_DoAnWindow.Class;
 
 namespace QuanLyKhachSan_DoAnWindow.DAO
 {
-    internal class Nhan_Vien_DAO
+    internal class Phong_DAO
     {
         private DBConnection conn;
-        public Nhan_Vien_DAO()
+        public Phong_DAO()
         {
             conn = new DBConnection();
         }
