@@ -96,11 +96,7 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void mnDangxuat_Click(object sender, EventArgs e)
         {
-            lblUser.Text = "Hi!";
-            MainNoEnabled(); 
-            fmLogin = new FormLogin();
-            fmLogin.fmMain = this;
-            fmLogin.ShowDialog();
+            Application.Restart();
         }
         private void mnDoimatkhau_Click(object sender, EventArgs e)
         {
