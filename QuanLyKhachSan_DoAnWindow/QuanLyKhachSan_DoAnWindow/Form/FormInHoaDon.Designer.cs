@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyKhachSan_DoAnWindow
 {
-    partial class FormDichVu
+    partial class FormInHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Text = "FormInHoaDon";
         }
 
         #endregion

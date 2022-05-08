@@ -74,6 +74,24 @@
     <Compile Include="DAO\Thue_Phong_DAO.cs" />
     <Compile Include="DAO\Vat_Tu_DAO.cs" />
     <Compile Include="DataProvider\DataProvider.cs" />
+    <Compile Include="Form\FormInHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormInHoaDon.Designer.cs">
+      <DependentUpon>FormInHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormBaoCao.Designer.cs">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormNhanVien.Designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormDichVu.cs">
       <SubType>Form</SubType>
     </Compile>

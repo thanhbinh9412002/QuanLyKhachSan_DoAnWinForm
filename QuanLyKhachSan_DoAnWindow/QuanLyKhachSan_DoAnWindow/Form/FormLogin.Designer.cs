@@ -47,10 +47,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.title.BackColor = System.Drawing.Color.Silver;
             this.title.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.title.Location = new System.Drawing.Point(75, 49);
-            this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.title.Location = new System.Drawing.Point(56, 40);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(587, 40);
+            this.title.Size = new System.Drawing.Size(465, 32);
             this.title.TabIndex = 0;
             this.title.Text = "CHƯƠNG TRÌNH QUẢN LÝ KHÁCH SẠN";
             this.title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -64,13 +63,12 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tableLayoutPanel1.Controls.Add(this.txt_username, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txt_password, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label_username, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(83, 203);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(62, 165);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(527, 181);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(395, 147);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label_password
@@ -79,10 +77,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label_password.AutoSize = true;
             this.label_password.BackColor = System.Drawing.Color.Linen;
             this.label_password.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_password.Location = new System.Drawing.Point(4, 124);
-            this.label_password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_password.Location = new System.Drawing.Point(3, 100);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(170, 23);
+            this.label_password.Size = new System.Drawing.Size(127, 19);
             this.label_password.TabIndex = 1;
             this.label_password.Text = "Mật khẩu:";
             this.label_password.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,21 +88,19 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             this.txt_username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_username.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.Location = new System.Drawing.Point(182, 29);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_username.Location = new System.Drawing.Point(136, 23);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(341, 31);
+            this.txt_username.Size = new System.Drawing.Size(256, 26);
             this.txt_username.TabIndex = 2;
             // 
             // txt_password
             // 
             this.txt_password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_password.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.Location = new System.Drawing.Point(182, 120);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_password.Location = new System.Drawing.Point(136, 97);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(341, 31);
+            this.txt_password.Size = new System.Drawing.Size(256, 26);
             this.txt_password.TabIndex = 3;
             // 
             // label_username
@@ -114,10 +109,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label_username.AutoSize = true;
             this.label_username.BackColor = System.Drawing.Color.Linen;
             this.label_username.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_username.Location = new System.Drawing.Point(4, 33);
-            this.label_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_username.Location = new System.Drawing.Point(3, 27);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(170, 23);
+            this.label_username.Size = new System.Drawing.Size(127, 19);
             this.label_username.TabIndex = 0;
             this.label_username.Text = "Tài khoản:";
             this.label_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,20 +123,18 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label_login.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_login.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label_login.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_login.Location = new System.Drawing.Point(256, 128);
-            this.label_login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_login.Location = new System.Drawing.Point(192, 104);
             this.label_login.Name = "label_login";
-            this.label_login.Size = new System.Drawing.Size(188, 40);
+            this.label_login.Size = new System.Drawing.Size(150, 32);
             this.label_login.TabIndex = 2;
             this.label_login.Text = "Đăng nhập";
             this.label_login.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // bt_login
             // 
-            this.bt_login.Location = new System.Drawing.Point(401, 425);
-            this.bt_login.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_login.Location = new System.Drawing.Point(301, 345);
             this.bt_login.Name = "bt_login";
-            this.bt_login.Size = new System.Drawing.Size(155, 39);
+            this.bt_login.Size = new System.Drawing.Size(116, 32);
             this.bt_login.TabIndex = 5;
             this.bt_login.Text = "Đăng nhập";
             this.bt_login.UseVisualStyleBackColor = true;
@@ -150,10 +142,9 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // bt_exit
             // 
-            this.bt_exit.Location = new System.Drawing.Point(141, 425);
-            this.bt_exit.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_exit.Location = new System.Drawing.Point(106, 345);
             this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(155, 39);
+            this.bt_exit.Size = new System.Drawing.Size(116, 32);
             this.bt_exit.TabIndex = 6;
             this.bt_exit.Text = "Thoát";
             this.bt_exit.UseVisualStyleBackColor = true;
@@ -161,16 +152,20 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(769, 506);
+            this.ClientSize = new System.Drawing.Size(577, 411);
+            this.ControlBox = false;
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_login);
             this.Controls.Add(this.label_login);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.title);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

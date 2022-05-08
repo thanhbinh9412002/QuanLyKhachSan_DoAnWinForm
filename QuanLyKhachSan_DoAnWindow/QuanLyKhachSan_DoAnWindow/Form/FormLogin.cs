@@ -24,7 +24,7 @@ namespace QuanLyKhachSan_DoAnWindow
             var htBUS = new He_Thong_BUS();
             string password = htBUS.Check_Tai_Khoan(txt_username.Text);
             string pass = txt_password.Text;
-            if (pass == password)
+            if (pass == password && pass != "" && password != "")
             {
                 MessageBox.Show("Đăng nhập thành công!");
                 fmMain.musername = txt_username.Text;
@@ -32,9 +32,13 @@ namespace QuanLyKhachSan_DoAnWindow
                 fmMain.mfullname = htBUS.Lay_Ten_Nhan_Vien(txt_username.Text);
                 this.Close();
             }
+            //else if( password != "" && pass == )
             else
             {
                 MessageBox.Show("Đăng nhập không thành công! Vui lòng kiểm tra lại");
+                txt_username.ResetText();
+                txt_password.ResetText();
+                txt_username.Focus();
             }
                 
             
@@ -42,7 +46,7 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void bt_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }
