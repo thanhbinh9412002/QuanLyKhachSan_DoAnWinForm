@@ -56,7 +56,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
             conn.executeInsertQuery(sql, sqlParameters);
         }
-        public void capnhatKH(string maKH, string tenKH, string gtKH, string cmnd, string address, string coquan, string sdt, string email)
+        public void capnhatKhachHang(string maKH, string tenKH, string gtKH, string cmnd, string address, string coquan, string sdt, string email)
         {
             const string sql = "update khachhang set tenkhachhang = @name, gioitinh = @sex," +
                 " cmnd_passport = @cmnd, diachi = @address, coquan = @coquan, sodienthoai = @sdt, email = @email where makhachhang = @makh ";
@@ -86,6 +86,12 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             sqlParameters[7].Value = email;
 
             conn.executeInsertQuery(sql, sqlParameters);
+        }
+
+        public void loadData()
+        {
+            string query = "select * from khachhang";
+            
         }
     }
 }

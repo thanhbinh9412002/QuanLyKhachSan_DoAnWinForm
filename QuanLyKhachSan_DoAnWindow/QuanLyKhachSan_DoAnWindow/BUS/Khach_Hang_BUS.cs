@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyKhachSan_DoAnWindow.DAO;
+using System.Windows.Forms;
 
 namespace QuanLyKhachSan_DoAnWindow.BUS
 {
@@ -13,6 +14,22 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         public Khach_Hang_BUS()
         {
             khDAO = new Khach_Hang_DAO();
+        }
+        public void themKH(string maKH, string tenKH, string gtKH, string cmnd, string address, string coquan, string sdt, string email)
+        {
+            khDAO.themKhachHang(maKH, tenKH, gtKH, cmnd, address, coquan, sdt, email);
+        }
+        public void xoaKH(string maKH)
+        {
+            khDAO.xoaKhachHang(maKH);
+        }
+        public void capnhatKH(string maKH, string tenKH, string gtKH, string cmnd, string address, string coquan, string sdt, string email)
+        {
+            khDAO.capnhatKhachHang(maKH, tenKH, gtKH, cmnd, address, coquan, sdt, email);
+        }
+        public void LoadData(DataGridView data)
+        {
+            data.DataSource = khDAO.loadData();
         }
     }
 }

@@ -35,5 +35,14 @@ namespace QuanLyKhachSan_DoAnWindow.Class
             this.so_dien_thoai = so_dien_thoai;
             this.email = email;
         }
+
+        public string Ma_khach_hang { get => ma_khach_hang; set => ma_khach_hang = value; }
+        public string Ten_khach_hang { get => ten_khach_hang; set => ten_khach_hang = value; }
+        public string Gioi_tinh { get => gioi_tinh; set => gioi_tinh = value; }
+        public string Cmnd_passport { get => cmnd_passport; set => cmnd_passport = value; }
+        public string Dia_chi { get => dia_chi; set => dia_chi = value; }
+        public string Co_quan { get => co_quan; set => co_quan = value; }
+        public string So_dien_thoai { get => so_dien_thoai; set => so_dien_thoai = value; }
+        public string Email { get => email; set => email = value; }
     }
 }
