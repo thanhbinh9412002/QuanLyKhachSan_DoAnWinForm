@@ -27,9 +27,9 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             khDAO.capnhatKhachHang(maKH, tenKH, gtKH, cmnd, address, coquan, sdt, email);
         }
-        public void LoadData(DataGridView data)
+       /* public void LoadData(DataGridView data)
         {
             data.DataSource = khDAO.loadData();
-        }
+        }*/
     }
 }

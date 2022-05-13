@@ -88,10 +88,10 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             conn.executeInsertQuery(sql, sqlParameters);
         }
 
-        public void loadData()
+        /*public void loadData()
         {
             string query = "select * from khachhang";
-            
-        }
+
+        }*/
     }
 }

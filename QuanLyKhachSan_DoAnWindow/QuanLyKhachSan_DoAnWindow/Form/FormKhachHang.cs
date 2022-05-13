@@ -14,15 +14,15 @@ namespace QuanLyKhachSan_DoAnWindow
 {
     public partial class FormKhachHang : Form
     {
-        private Khach_Hang_BUS KHBUS;
+       //private Khach_Hang_BUS KHBUS;
         public FormMain fmMain;
         public FormKhachHang()
         {
             InitializeComponent();
         }
-        private void FormKhachHang_Load(object sender, EventArgs e)
+        /*private void FormKhachHang_Load(object sender, EventArgs e)
         {
             KHBUS.LoadData(gvKhachhang);
-        }
+        }*/
     }
 }
