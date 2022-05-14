@@ -26,9 +26,9 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return dvDAO.Lay_Du_lieu_2();
         }
 
-        public DataTable Lay_Data_Bang()
+        public DataTable Tim_Phieu_Thue_Phong(string maphieuthue)
         {
-            return dvDAO.Lay_Data_Bang();
+            return dvDAO.Tim_Phieu_Thue_Phong(maphieuthue);
         }
 
         public DataTable Lay_Data_Bang_2()

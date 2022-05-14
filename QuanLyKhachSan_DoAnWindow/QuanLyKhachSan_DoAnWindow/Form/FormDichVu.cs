@@ -39,7 +39,7 @@ namespace QuanLyKhachSan_DoAnWindow
             combo_madichvu.DisplayMember = "madichvu";
             combo_madichvu.ValueMember = "madichvu";
             combo_madichvu.BindingContext = this.BindingContext;
-            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+            this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
             this.dataGridView2.DataSource = dvBUS.Lay_Data_Bang_2();
         }
 
@@ -57,7 +57,7 @@ namespace QuanLyKhachSan_DoAnWindow
             txt_soluong.Text = dulieu;
             dulieu = dvBUS.Lay_Ten_DV(dvBUS.Lay_Ma_Dich_Vu(maphieu));
             txt_tendichvu.Text = dulieu;
-            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+            this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 
         private void combo_madichvu_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,28 +66,28 @@ namespace QuanLyKhachSan_DoAnWindow
             string madichvu = combo_madichvu.SelectedValue.ToString();
             string dulieu = dvBUS.Lay_Ten_DV(madichvu);
             txt_tendichvu.Text = dulieu;
-            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+            this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 
         private void button_themdvphong_Click(object sender, EventArgs e)
         {
             var dvBUS = new Dich_Vu_BUS();
             dvBUS.Them_DV_Phong(combo_maphieuthue.Text, txt_maphong.Text, combo_madichvu.Text, txt_date.Text, txt_soluong.Text);
-            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+            this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 
         private void button_suadvphong_Click(object sender, EventArgs e)
         {
             var dvBUS = new Dich_Vu_BUS();
             dvBUS.Sua_DV_Phong(combo_maphieuthue.Text, txt_maphong.Text, combo_madichvu.Text, txt_date.Text, txt_soluong.Text);
-            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+            this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 
         private void button_xoadvphong_Click(object sender, EventArgs e)
         {
             var dvBUS = new Dich_Vu_BUS();
             dvBUS.Xoa_DV_Phong(combo_maphieuthue.Text, txt_maphong.Text);
-            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+            this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 
         private void button_themdv_Click(object sender, EventArgs e)
@@ -109,6 +109,18 @@ namespace QuanLyKhachSan_DoAnWindow
             var dvBUS = new Dich_Vu_BUS();
             dvBUS.Xoa_DV(txt_madichvu2.Text);
             this.dataGridView2.DataSource = dvBUS.Lay_Data_Bang_2();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dr = this.dataGridView1.Rows[e.RowIndex];
+            combo_maphieuthue.Text = dr.Cells[0].Value.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var dvBUS = new Dich_Vu_BUS();
+            this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text); 
         }
     }
 }

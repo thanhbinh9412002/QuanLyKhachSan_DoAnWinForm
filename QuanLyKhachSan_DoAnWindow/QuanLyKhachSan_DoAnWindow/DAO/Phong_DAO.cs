@@ -7,6 +7,7 @@ using QuanLyKhachSan_DoAnWindow.DataProvider;
 using QuanLyKhachSan_DoAnWindow.Class;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace QuanLyKhachSan_DoAnWindow.DAO
 {
@@ -63,7 +64,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         public void Xoa_Phong(string maphong)
         {
             const string sql = "delete from chitietthuephong where maphong=@maphong; " +
-                               "delete from chitietdatphong where maphong = @maphong; " +
+                               "delete from chitietdatphong where maphong =@maphong; " +
                                "delete from trangthaiphong where maphong = @maphong;" +
                                "delete from phong where maphong = @maphong; ";
             SqlParameter[] sqlParameters = new SqlParameter[1];
@@ -76,11 +77,94 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
         public DataTable Tim_Phong(string maphong)
         {
-            const string sql = "select * from phong where maphong=@maphong";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@maphong", System.Data.SqlDbType.VarChar);
-            sqlParameters[0].Value = Convert.ToString(maphong);
+            string sql = "select * from phong where maphong like '%"+maphong+"%'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable bang= new DataTable();
+            bang = conn.executeReader(sql, sqlParameters);
+            return bang;
+        }
+
+        public void Them_Loai_Phong(string maloai, string gia, string songuoi)
+        {
+            const string sql = "insert into loaiphong(maloai, gia, songuoi) values(@maloai, @gia, @songuoi)";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+            sqlParameters[0] = new SqlParameter("@maloai", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(maloai);
+
+            sqlParameters[1] = new SqlParameter("@gia", System.Data.SqlDbType.VarChar);
+            sqlParameters[1].Value = Convert.ToString(gia);
+
+            sqlParameters[2] = new SqlParameter("@songuoi", System.Data.SqlDbType.VarChar);
+            sqlParameters[2].Value = Convert.ToString(songuoi);
+
+            conn.executeInsertQuery(sql, sqlParameters);
+        }
+
+        public void Sua_Loai_Phong(string maloai, string gia, string songuoi)
+        {
+            const string sql = "update loaiphong set gia=@gia, songuoi=@songuoi where maloai=@maloai";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+            sqlParameters[0] = new SqlParameter("@gia", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(gia);
+
+            sqlParameters[1] = new SqlParameter("@songuoi", System.Data.SqlDbType.VarChar);
+            sqlParameters[1].Value = Convert.ToString(songuoi);
+
+            sqlParameters[2] = new SqlParameter("@maloai", System.Data.SqlDbType.VarChar);
+            sqlParameters[2].Value = Convert.ToString(maloai);
+
+            conn.executeInsertQuery(sql, sqlParameters);
+        }
+
+        public string Lay_Ma_Phong(string maloai)
+        {
+            const string sql = "select maphong from phong where maloai=@maloai";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@maloai", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(maloai);
+            object temp = conn.executeScalar(sql, sqlParameters);
+            return Convert.ToString(temp);
+        }
+
+        public string Lay_Ma_Vat_Tu(string maloai)
+        {
+            const string sql = "select mavattu from chitietvattu where maloaiphong=@maloai";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@maloai", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(maloai);
+            object temp = conn.executeScalar(sql, sqlParameters);
+            return Convert.ToString(temp);
+        }
+
+        public void Xoa_Loai_Phong(string maloai)
+        {
+            string maphong = Lay_Ma_Phong(maloai);
+            var pgBUS = new Phong_DAO();
+            if (maphong != null)
+            {
+                MessageBox.Show("Bạn chưa xoá các phòng liên quan đến loại phòng này!");
+            }
+            string mavattu = Lay_Ma_Vat_Tu(maloai);
+            var vtBUS = new Vat_Tu_DAO();
+            if (mavattu != null)
+            {
+                MessageBox.Show("Bạn chưa xoá các vật tư liên quan đến loại phòng này!");
+            }
+
+            const string sql = "delete from loaiphong where maloai=@maloai;";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@maloai", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(maloai);
+
+            conn.executeInsertQuery(sql, sqlParameters);
+        }
+
+        public DataTable Tim_Loai_Phong(string maloai)
+        {
+            string sql = "select * from loaiphong where maloai like '%" + maloai + "%'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            DataTable bang = new DataTable();
             bang = conn.executeReader(sql, sqlParameters);
             return bang;
         }

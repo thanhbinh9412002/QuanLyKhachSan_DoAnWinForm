@@ -40,5 +40,25 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return pgDAO.Tim_Phong(maphong);
         }
+
+        public void Them_Loai_Phong(string maloai, string gia, string songuoi)
+        {
+            pgDAO.Them_Loai_Phong(maloai, gia, songuoi);
+        }
+
+        public DataTable Tim_Loai_Phong(string maloai)
+        {
+            return pgDAO.Tim_Loai_Phong(maloai);
+        }
+
+        public void Sua_Loai_Phong(string maloai, string gia, string songuoi)
+        {
+            pgDAO.Sua_Loai_Phong(maloai, gia, songuoi);
+        }
+
+        public void Xoa_Loai_Phong(string maloai)
+        {
+            pgDAO.Xoa_Loai_Phong(maloai);
+        }
     }
 }

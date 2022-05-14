@@ -35,9 +35,9 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             return dichvu;
         }
 
-        public DataTable Lay_Data_Bang()
+        public DataTable Tim_Phieu_Thue_Phong(string maphieuthue)
         {
-            const string sql = "select * from chitietthuephong";
+            string sql = "select * from chitietthuephong where maphieuthue like '%" + maphieuthue + "%'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable bang = new DataTable();
             bang = conn.executeReader(sql, sqlParameters);

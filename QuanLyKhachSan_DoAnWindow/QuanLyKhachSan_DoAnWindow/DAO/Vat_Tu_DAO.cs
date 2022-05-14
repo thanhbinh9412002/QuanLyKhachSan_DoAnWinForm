@@ -16,5 +16,17 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         {
             conn = new DBConnection();
         }
+
+        public void Xoa_Vat_Tu(string mavattu)
+        {
+            const string sql = "delete from chitietvattu where mavattu=@mavattu; " +
+                               "delete from vattu where mavattu=@mavattu; ";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@mavattu", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(mavattu);
+
+            conn.executeInsertQuery(sql, sqlParameters);
+        }
     }
 }

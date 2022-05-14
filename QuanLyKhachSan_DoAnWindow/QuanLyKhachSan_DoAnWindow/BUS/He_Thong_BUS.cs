@@ -46,9 +46,9 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return htDAO.Dem_Phong_Thue();
         }
 
-       /* public DataTable Lay_Data_phong()
+        public DataTable Lay_Data_phong()
         {
             return htDAO.Lay_Data_Phong();
-        }*/
+        }
     }
 }
