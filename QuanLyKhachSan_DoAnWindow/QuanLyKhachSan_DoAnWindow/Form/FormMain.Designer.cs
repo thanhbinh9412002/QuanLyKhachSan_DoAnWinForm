@@ -37,7 +37,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lvPhong = new System.Windows.Forms.ListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.lblUser = new System.Windows.Forms.Label();
@@ -65,9 +64,11 @@
             this.mnTrogiup = new System.Windows.Forms.ToolStripMenuItem();
             this.mnThongtin = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -153,7 +154,7 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.lvPhong);
+            this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(264, 68);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.groupBox2.Name = "groupBox2";
@@ -162,19 +163,6 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SƠ ĐỒ PHÒNG";
-            // 
-            // lvPhong
-            // 
-            this.lvPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvPhong.GridLines = true;
-            this.lvPhong.HideSelection = false;
-            this.lvPhong.LargeImageList = this.imageList1;
-            this.lvPhong.Location = new System.Drawing.Point(2, 23);
-            this.lvPhong.Name = "lvPhong";
-            this.lvPhong.Scrollable = false;
-            this.lvPhong.Size = new System.Drawing.Size(705, 353);
-            this.lvPhong.TabIndex = 2;
-            this.lvPhong.UseCompatibleStateImageBehavior = false;
             // 
             // imageList1
             // 
@@ -391,6 +379,17 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(698, 354);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -416,6 +415,7 @@
             this.groupBox2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,7 +427,6 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lbllogo;
-        private System.Windows.Forms.ListView lvPhong;
         private System.Windows.Forms.Label txt_useroom;
         private System.Windows.Forms.Label txt_hireroom;
         private System.Windows.Forms.Label txt_emptyroom;
@@ -458,6 +457,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnThongtin;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mnDangxuat;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

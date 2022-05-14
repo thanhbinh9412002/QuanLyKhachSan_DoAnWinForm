@@ -71,5 +71,30 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
                 return result;
             }
         }
+
+        public DataTable executeReader(String query, SqlParameter[] sqlParameter)
+        {
+            using (SqlCommand sqlCommand = new SqlCommand(query, openConnection()))
+            {
+                connection = new SqlConnection("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand(query, connection);
+                DataTable dt = new DataTable();
+                try
+                {
+                    connection.Open();
+                    SqlDataReader dataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                    dt.Load(dataReader);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                return dt;
+            }
+        }
     }
 }

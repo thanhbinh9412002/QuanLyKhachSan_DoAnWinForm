@@ -54,7 +54,7 @@ namespace QuanLyKhachSan_DoAnWindow
 
             lblUser.Text = "Hi " + mfullname + " !";
             ThongKe();
-            LoadSDP();
+            LoadData();
 
         }
         public void ThongKe()
@@ -67,9 +67,11 @@ namespace QuanLyKhachSan_DoAnWindow
             room = htBUS.Dem_Phong_Dat();
             txt_useroom.Text = room;
         }
-        public void LoadSDP()
+        public void LoadData()
         {
-            
+            var htBUS = new He_Thong_BUS();
+            DataTable room = htBUS.Lay_Data_phong();
+            this.dataGridView1.DataSource = room;
         }
         private void MainEnabled()
         {

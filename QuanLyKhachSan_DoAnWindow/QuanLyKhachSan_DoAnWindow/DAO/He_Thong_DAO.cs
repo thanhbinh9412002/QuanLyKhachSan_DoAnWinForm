@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 using QuanLyKhachSan_DoAnWindow.DataProvider;
 
 namespace QuanLyKhachSan_DoAnWindow.DAO
@@ -69,6 +70,15 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             SqlParameter[] sqlParameters = new SqlParameter[0];
             object room = conn.executeScalar(sql, sqlParameters);
             return Convert.ToString(room);
+        }
+
+        public DataTable Lay_Data_Phong()
+        {
+            const string sql = "select * from phong";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            DataTable dt = new DataTable();
+            dt = conn.executeReader(sql, sqlParameters);
+            return dt;
         }
     }
 }
