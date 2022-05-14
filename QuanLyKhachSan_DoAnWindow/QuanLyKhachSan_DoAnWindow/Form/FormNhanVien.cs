@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
@@ -16,6 +17,15 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormNhanVien()
         {
             InitializeComponent();
+        }
+
+        private void FormNhanVien_Load(object sender, EventArgs e)
+        {
+            LoadDataUser();
+        }
+        private void LoadDataUser()
+        {
+
         }
     }
 }

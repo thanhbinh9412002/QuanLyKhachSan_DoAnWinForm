@@ -22,7 +22,7 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormQLPhong fmP;
         public FormDatPhong fmDP;
         public FormThuePhong fmTP;
-        public FormNguoiDung fmND;
+        //public FormNguoiDung fmND;
         public FormVatTu fmVT;
         public FormDichVu fmDV;
         public FormNhanVien fmNV;
@@ -141,12 +141,6 @@ namespace QuanLyKhachSan_DoAnWindow
             fmP.fmMain = this;
             fmP.ShowDialog();
         }
-        private void mnNguoidung_Click(object sender, EventArgs e)
-        {
-            fmND = new FormNguoiDung();
-            fmND.fmMain = this;
-            fmND.ShowDialog();
-        }
         private void mnThongtin_Click(object sender, EventArgs e)
         {
             fmTT = new FormThongTin();
@@ -166,12 +160,14 @@ namespace QuanLyKhachSan_DoAnWindow
             fmDV.fmMain = this;
             fmDV.ShowDialog();
         }
-        private void mnNhanvien_Click(object sender, EventArgs e)
+
+        private void mnNhanVien_Click(object sender, EventArgs e)
         {
             fmNV = new FormNhanVien();
             fmNV.fmMain = this;
             fmNV.ShowDialog();
         }
+
         private void mnBaocao_Click(object sender, EventArgs e)
         {
             fmBC = new FormBaoCao();
@@ -184,5 +180,7 @@ namespace QuanLyKhachSan_DoAnWindow
             fmIHD.fmMain = this;
             fmIHD.ShowDialog();
         }
+
+       
     }
 }
