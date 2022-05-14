@@ -76,13 +76,14 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
         {
             using (SqlCommand sqlCommand = new SqlCommand(query, openConnection()))
             {
+                sqlCommand.CommandType = CommandType.Text;
+                sqlCommand.Parameters.AddRange(sqlParameter);
                 connection = new SqlConnection("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
-                SqlCommand cmd = new SqlCommand(query, connection);
                 DataTable dt = new DataTable();
                 try
                 {
                     connection.Open();
-                    SqlDataReader dataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                    SqlDataReader dataReader = sqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
                     dt.Load(dataReader);
                 }
                 catch (Exception ex)
