@@ -29,7 +29,6 @@ namespace QuanLyKhachSan_DoAnWindow
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.combo_maphieuthue = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,12 +43,14 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_xoadvphong = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_maphong = new System.Windows.Forms.TextBox();
             this.txt_tendichvu = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.combo_madichvu = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_madichvu2 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_donvi = new System.Windows.Forms.TextBox();
@@ -61,17 +62,11 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_xoadv = new System.Windows.Forms.Button();
             this.button_suadv = new System.Windows.Forms.Button();
             this.button_themdv = new System.Windows.Forms.Button();
-            this.quanLyKhachSanDataSet = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSet();
-            this.phieuthuephongBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.phieuthuephongTableAdapter = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSetTableAdapters.phieuthuephongTableAdapter();
-            this.txt_maphong = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuthuephongBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // combo_maphieuthue
@@ -137,11 +132,11 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(260, 17);
+            this.dataGridView1.Location = new System.Drawing.Point(260, 22);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(740, 243);
+            this.dataGridView1.Size = new System.Drawing.Size(740, 238);
             this.dataGridView1.TabIndex = 10;
             // 
             // button1
@@ -162,6 +157,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_themdvphong.TabIndex = 18;
             this.button_themdvphong.Text = "Thêm dịch vụ phòng";
             this.button_themdvphong.UseVisualStyleBackColor = true;
+            this.button_themdvphong.Click += new System.EventHandler(this.button_themdvphong_Click);
             // 
             // button_suadvphong
             // 
@@ -171,6 +167,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_suadvphong.TabIndex = 19;
             this.button_suadvphong.Text = "Sửa dịch vụ phòng";
             this.button_suadvphong.UseVisualStyleBackColor = true;
+            this.button_suadvphong.Click += new System.EventHandler(this.button_suadvphong_Click);
             // 
             // button_xoadvphong
             // 
@@ -180,6 +177,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_xoadvphong.TabIndex = 20;
             this.button_xoadvphong.Text = "Xoá dịch vụ phòng";
             this.button_xoadvphong.UseVisualStyleBackColor = true;
+            this.button_xoadvphong.Click += new System.EventHandler(this.button_xoadvphong_Click);
             // 
             // tabControl1
             // 
@@ -193,6 +191,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.txt_maphong);
             this.tabPage1.Controls.Add(this.txt_tendichvu);
             this.tabPage1.Controls.Add(this.label10);
@@ -216,6 +215,22 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dịch vụ phòng";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(533, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(199, 16);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Bảng dịch vụ theo phòng hiện tại";
+            // 
+            // txt_maphong
+            // 
+            this.txt_maphong.Location = new System.Drawing.Point(6, 111);
+            this.txt_maphong.Name = "txt_maphong";
+            this.txt_maphong.Size = new System.Drawing.Size(121, 22);
+            this.txt_maphong.TabIndex = 26;
             // 
             // txt_tendichvu
             // 
@@ -255,7 +270,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.txt_madichvu2);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.txt_donvi);
@@ -275,15 +290,16 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage2.Text = "Dịch vụ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txt_madichvu2
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 22);
-            this.textBox1.TabIndex = 45;
+            this.txt_madichvu2.Location = new System.Drawing.Point(26, 47);
+            this.txt_madichvu2.Name = "txt_madichvu2";
+            this.txt_madichvu2.Size = new System.Drawing.Size(167, 22);
+            this.txt_madichvu2.TabIndex = 45;
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(211, 10);
             this.dataGridView2.Name = "dataGridView2";
@@ -357,6 +373,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_xoadv.TabIndex = 35;
             this.button_xoadv.Text = "Xoá dịch vụ";
             this.button_xoadv.UseVisualStyleBackColor = true;
+            this.button_xoadv.Click += new System.EventHandler(this.button_xoadv_Click);
             // 
             // button_suadv
             // 
@@ -366,6 +383,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_suadv.TabIndex = 34;
             this.button_suadv.Text = "Sửa dịch vụ";
             this.button_suadv.UseVisualStyleBackColor = true;
+            this.button_suadv.Click += new System.EventHandler(this.button_suadv_Click);
             // 
             // button_themdv
             // 
@@ -375,27 +393,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_themdv.TabIndex = 33;
             this.button_themdv.Text = "Thêm dịch vụ";
             this.button_themdv.UseVisualStyleBackColor = true;
-            // 
-            // quanLyKhachSanDataSet
-            // 
-            this.quanLyKhachSanDataSet.DataSetName = "QuanLyKhachSanDataSet";
-            this.quanLyKhachSanDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // phieuthuephongBindingSource
-            // 
-            this.phieuthuephongBindingSource.DataMember = "phieuthuephong";
-            this.phieuthuephongBindingSource.DataSource = this.quanLyKhachSanDataSet;
-            // 
-            // phieuthuephongTableAdapter
-            // 
-            this.phieuthuephongTableAdapter.ClearBeforeFill = true;
-            // 
-            // txt_maphong
-            // 
-            this.txt_maphong.Location = new System.Drawing.Point(6, 111);
-            this.txt_maphong.Name = "txt_maphong";
-            this.txt_maphong.Size = new System.Drawing.Size(121, 22);
-            this.txt_maphong.TabIndex = 26;
+            this.button_themdv.Click += new System.EventHandler(this.button_themdv_Click);
             // 
             // FormDichVu
             // 
@@ -414,8 +412,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuthuephongBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,10 +448,8 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.ComboBox combo_madichvu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label txt_tendichvu;
-        private System.Windows.Forms.TextBox textBox1;
-        private QuanLyKhachSanDataSet quanLyKhachSanDataSet;
-        private System.Windows.Forms.BindingSource phieuthuephongBindingSource;
-        private QuanLyKhachSanDataSetTableAdapters.phieuthuephongTableAdapter phieuthuephongTableAdapter;
+        private System.Windows.Forms.TextBox txt_madichvu2;
         private System.Windows.Forms.TextBox txt_maphong;
+        private System.Windows.Forms.Label label11;
     }
 }

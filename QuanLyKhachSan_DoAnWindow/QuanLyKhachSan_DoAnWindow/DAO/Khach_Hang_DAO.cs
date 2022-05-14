@@ -94,21 +94,24 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         // load data day du
         public DataTable loadData()
         {
-            string query = "select * from khachhang";
-            return conn.executeLoadData(query);
+            //string query = "select * from khachhang";
+            //return conn.executeLoadData(query);
+            return null;
         }
         //load data theo ten khach hang tim kiem
         public DataTable loadData(string tenkh)
         {
-            string query = "select * from khachhang where tenkhachhang like '%" + tenkh +"%'";
-            return conn.executeLoadData(query);
+            //string query = "select * from khachhang where tenkhachhang like '%" + tenkh +"%'";
+            //return conn.executeLoadData(query);
+            return null;
         }
 
         // tra ve so luong khach hang hien co
         public int coutKH()
         {
-            string query = "select count(*) from khachhang";
-            return conn.executeCount(query);
+            //string query = "select count(*) from khachhang";
+            //return conn.executeCount(query);
+            return 0;
         }
     }
 }

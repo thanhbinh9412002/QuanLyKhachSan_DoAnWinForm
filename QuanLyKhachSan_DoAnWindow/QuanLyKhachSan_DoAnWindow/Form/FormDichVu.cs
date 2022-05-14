@@ -21,13 +21,12 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void FormDichVu_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLyKhachSanDataSet.phieuthuephong' table. You can move, or remove it, as needed.
-            //this.phieuthuephongTableAdapter.Fill();
             var dvBUS = new Dich_Vu_BUS();
             DataTable dt = new DataTable();
             dt = dvBUS.Lay_Du_lieu();
@@ -35,7 +34,13 @@ namespace QuanLyKhachSan_DoAnWindow
             combo_maphieuthue.DisplayMember = "maphieuthue";
             combo_maphieuthue.ValueMember = "maphieuthue";
             combo_maphieuthue.BindingContext = this.BindingContext;
+            dt = dvBUS.Lay_Du_lieu_2();
+            combo_madichvu.DataSource = dt;
+            combo_madichvu.DisplayMember = "madichvu";
+            combo_madichvu.ValueMember = "madichvu";
+            combo_madichvu.BindingContext = this.BindingContext;
             this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+            this.dataGridView2.DataSource = dvBUS.Lay_Data_Bang_2();
         }
 
         private void combo_maphieuthue_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,11 +57,58 @@ namespace QuanLyKhachSan_DoAnWindow
             txt_soluong.Text = dulieu;
             dulieu = dvBUS.Lay_Ten_DV(dvBUS.Lay_Ma_Dich_Vu(maphieu));
             txt_tendichvu.Text = dulieu;
+            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
         }
 
         private void combo_madichvu_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var dvBUS = new Dich_Vu_BUS();
+            string madichvu = combo_madichvu.SelectedValue.ToString();
+            string dulieu = dvBUS.Lay_Ten_DV(madichvu);
+            txt_tendichvu.Text = dulieu;
+            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+        }
 
+        private void button_themdvphong_Click(object sender, EventArgs e)
+        {
+            var dvBUS = new Dich_Vu_BUS();
+            dvBUS.Them_DV_Phong(combo_maphieuthue.Text, txt_maphong.Text, combo_madichvu.Text, txt_date.Text, txt_soluong.Text);
+            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+        }
+
+        private void button_suadvphong_Click(object sender, EventArgs e)
+        {
+            var dvBUS = new Dich_Vu_BUS();
+            dvBUS.Sua_DV_Phong(combo_maphieuthue.Text, txt_maphong.Text, combo_madichvu.Text, txt_date.Text, txt_soluong.Text);
+            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+        }
+
+        private void button_xoadvphong_Click(object sender, EventArgs e)
+        {
+            var dvBUS = new Dich_Vu_BUS();
+            dvBUS.Xoa_DV_Phong(combo_maphieuthue.Text, txt_maphong.Text);
+            this.dataGridView1.DataSource = dvBUS.Lay_Data_Bang();
+        }
+
+        private void button_themdv_Click(object sender, EventArgs e)
+        {
+            var dvBUS = new Dich_Vu_BUS();
+            dvBUS.Them_DV(txt_madichvu2.Text, txt_tendichvu2.Text, txt_gia.Text, txt_donvi.Text);
+            this.dataGridView2.DataSource = dvBUS.Lay_Data_Bang_2();
+        }
+
+        private void button_suadv_Click(object sender, EventArgs e)
+        {
+            var dvBUS = new Dich_Vu_BUS();
+            dvBUS.Sua_DV(txt_madichvu2.Text, txt_tendichvu2.Text, txt_gia.Text, txt_donvi.Text);
+            this.dataGridView2.DataSource = dvBUS.Lay_Data_Bang_2();
+        }
+
+        private void button_xoadv_Click(object sender, EventArgs e)
+        {
+            var dvBUS = new Dich_Vu_BUS();
+            dvBUS.Xoa_DV(txt_madichvu2.Text);
+            this.dataGridView2.DataSource = dvBUS.Lay_Data_Bang_2();
         }
     }
 }
