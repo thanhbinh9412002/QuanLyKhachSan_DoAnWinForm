@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using QuanLyKhachSan_DoAnWindow.DAO;
 
 namespace QuanLyKhachSan_DoAnWindow.BUS
@@ -28,6 +29,26 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         public void Doi_Mat_Khau(string username, string password)
         {
             htDAO.Doi_Mat_Khau(username, password);
+        }
+
+        public string Dem_Phong_Trong()
+        {
+            return htDAO.Dem_Phong_Trong();
+        }
+
+        public string Dem_Phong_Dat()
+        {
+            return htDAO.Dem_Phong_Dat();
+        }
+
+        public string Dem_Phong_Thue()
+        {
+            return htDAO.Dem_Phong_Thue();
+        }
+
+        public DataTable Lay_Data_phong()
+        {
+            return htDAO.Lay_Data_Phong();
         }
     }
 }

@@ -31,6 +31,8 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -41,6 +43,8 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaphong = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtgia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,10 +56,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label6 = new System.Windows.Forms.Label();
             this.txtSonguoi = new System.Windows.Forms.TextBox();
             this.txtMaloai = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvp)).BeginInit();
@@ -78,6 +79,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage1.Controls.Add(this.button10);
             this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.cbLoaiPhong);
@@ -96,6 +98,30 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage1.Size = new System.Drawing.Size(661, 410);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản lý phòng";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.MintCream;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Maroon;
+            this.button7.Location = new System.Drawing.Point(52, 269);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 30);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "Tìm kiếm";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.MintCream;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Maroon;
+            this.button6.Location = new System.Drawing.Point(164, 269);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 30);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Thống kê";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // cbLoaiPhong
             // 
@@ -221,6 +247,30 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản lý loại phòng";
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.MintCream;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Maroon;
+            this.button8.Location = new System.Drawing.Point(64, 305);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 30);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "Tìm kiếm";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.MintCream;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Maroon;
+            this.button9.Location = new System.Drawing.Point(176, 305);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 30);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "Thống kê";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,55 +390,19 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txtMaloai.Size = new System.Drawing.Size(161, 21);
             this.txtMaloai.TabIndex = 9;
             // 
-            // button6
+            // button10
             // 
-            this.button6.BackColor = System.Drawing.Color.MintCream;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Maroon;
-            this.button6.Location = new System.Drawing.Point(164, 269);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 30);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Thống kê";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button10.BackColor = System.Drawing.Color.MintCream;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.Maroon;
+            this.button10.Location = new System.Drawing.Point(111, 328);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 30);
+            this.button10.TabIndex = 12;
+            this.button10.Text = "Quay lại";
+            this.button10.UseVisualStyleBackColor = false;
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.MintCream;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Maroon;
-            this.button7.Location = new System.Drawing.Point(52, 269);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 30);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Tìm kiếm";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.MintCream;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Maroon;
-            this.button8.Location = new System.Drawing.Point(64, 305);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 30);
-            this.button8.TabIndex = 21;
-            this.button8.Text = "Tìm kiếm";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.MintCream;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Maroon;
-            this.button9.Location = new System.Drawing.Point(176, 305);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 30);
-            this.button9.TabIndex = 20;
-            this.button9.Text = "Thống kê";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // quanlyphong
+            // FormQLPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -399,7 +413,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "quanlyphong";
+            this.Name = "FormQLPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý phòng";
             this.tabControl1.ResumeLayout(false);
@@ -442,6 +456,7 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 

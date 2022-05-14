@@ -169,6 +169,9 @@
     <EmbeddedResource Include="Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormNguoiDung.resx">
+      <DependentUpon>FormNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormQLPhong.resx">
       <DependentUpon>FormQLPhong.cs</DependentUpon>
     </EmbeddedResource>

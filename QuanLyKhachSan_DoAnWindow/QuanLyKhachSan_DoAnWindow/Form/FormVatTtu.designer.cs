@@ -29,14 +29,14 @@ namespace QuanLyKhachSan_DoAnWindow
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Thống kê", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Thống kê", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Mã loại phòng:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Mã vật tư:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Tên vật tư:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Số lượng:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_Them = new System.Windows.Forms.Button();
             this.btn_TimKiem = new System.Windows.Forms.Button();
             this.btn_ThongKe = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -188,21 +189,21 @@ namespace QuanLyKhachSan_DoAnWindow
             this.lsvKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvKH.FullRowSelect = true;
             this.lsvKH.GridLines = true;
-            listViewGroup7.Header = "Thống kê";
-            listViewGroup7.Name = "lsvgKH";
+            listViewGroup1.Header = "Thống kê";
+            listViewGroup1.Name = "lsvgKH";
             this.lsvKH.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup7});
+            listViewGroup1});
             this.lsvKH.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lsvKH.HideSelection = false;
-            listViewItem25.Group = listViewGroup7;
-            listViewItem26.Group = listViewGroup7;
-            listViewItem27.Group = listViewGroup7;
-            listViewItem28.Group = listViewGroup7;
+            listViewItem1.Group = listViewGroup1;
+            listViewItem2.Group = listViewGroup1;
+            listViewItem3.Group = listViewGroup1;
+            listViewItem4.Group = listViewGroup1;
             this.lsvKH.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem25,
-            listViewItem26,
-            listViewItem27,
-            listViewItem28});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.lsvKH.Location = new System.Drawing.Point(347, 45);
             this.lsvKH.MultiSelect = false;
             this.lsvKH.Name = "lsvKH";
@@ -298,12 +299,25 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_ThongKe.UseVisualStyleBackColor = false;
             this.btn_ThongKe.Click += new System.EventHandler(this.btn_ThongKe_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MintCream;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Maroon;
+            this.button1.Location = new System.Drawing.Point(135, 370);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 35);
+            this.button1.TabIndex = 74;
+            this.button1.Text = "Quay lại";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FormVatTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(781, 417);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_ThongKe);
             this.Controls.Add(this.btn_TimKiem);
             this.Controls.Add(this.btn_Them);
@@ -348,6 +362,7 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Button btn_TimKiem;
         private System.Windows.Forms.Button btn_ThongKe;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

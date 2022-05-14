@@ -17,5 +17,6 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             InitializeComponent();
         }
+
     }
 }
