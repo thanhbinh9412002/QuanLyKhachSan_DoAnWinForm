@@ -72,14 +72,19 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
             }
         }
 
-        public int executeCount(string query)           // trả về số lượng 
+        public DataTable executeReader(String query, SqlParameter[] sqlParameter)
         {
-            int cout = 0;
             using (SqlCommand sqlCommand = new SqlCommand(query, openConnection()))
             {
+                sqlCommand.CommandType = CommandType.Text;
+                sqlCommand.Parameters.AddRange(sqlParameter);
+                connection = new SqlConnection("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+                DataTable dt = new DataTable();
                 try
                 {
-                    cout = (Int32)sqlCommand.ExecuteScalar();
+                    connection.Open();
+                    SqlDataReader dataReader = sqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
+                    dt.Load(dataReader);
                 }
                 catch (Exception ex)
                 {
@@ -89,32 +94,7 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
                 {
                     connection.Close();
                 }
-                return cout;
-            }
-        }
-
-        public DataTable executeLoadData(string query)      // trả về bảng dữ liệu
-        {
-            using (SqlCommand command = new SqlCommand(query, openConnection()))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    DataTable dt = new DataTable();
-                    try
-                    {
-                        dt.Load(reader);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        connection.Close();
-                        reader.Close();
-                    }
-                    return dt;
-                }
+                return dt;
             }
         }
     }
