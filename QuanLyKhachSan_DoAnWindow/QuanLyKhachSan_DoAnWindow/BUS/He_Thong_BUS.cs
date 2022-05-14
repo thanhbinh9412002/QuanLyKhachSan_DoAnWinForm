@@ -29,5 +29,20 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             htDAO.Doi_Mat_Khau(username, password);
         }
+
+        public string Dem_Phong_Trong()
+        {
+            return htDAO.Dem_Phong_Trong();
+        }
+
+        public string Dem_Phong_Dat()
+        {
+            return htDAO.Dem_Phong_Dat();
+        }
+
+        public string Dem_Phong_Thue()
+        {
+            return htDAO.Dem_Phong_Thue();
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using QuanLyKhachSan_DoAnWindow.BUS;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
@@ -58,7 +59,13 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         public void ThongKe()
         {
-           
+            var htBUS = new He_Thong_BUS();
+            string room = htBUS.Dem_Phong_Trong();
+            txt_emptyroom.Text = room;
+            room = htBUS.Dem_Phong_Dat();
+            txt_hireroom.Text = room;
+            room = htBUS.Dem_Phong_Dat();
+            txt_useroom.Text = room;
         }
         public void LoadSDP()
         {
