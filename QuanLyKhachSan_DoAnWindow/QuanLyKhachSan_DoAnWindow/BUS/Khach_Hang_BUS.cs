@@ -31,5 +31,13 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             data.DataSource = khDAO.loadData();
         }
+        public int CoutKH()
+        {
+            return khDAO.coutKH();
+        }
+        public void TimKiemKH(DataGridView data, string tenKH)
+        {
+            data.DataSource = khDAO.loadData(tenKH);
+        }
     }
 }
