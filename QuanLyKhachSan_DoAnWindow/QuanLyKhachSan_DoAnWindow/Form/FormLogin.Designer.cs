@@ -63,7 +63,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tableLayoutPanel1.Controls.Add(this.txt_username, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txt_password, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label_username, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(62, 165);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(62, 149);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -123,7 +123,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label_login.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_login.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label_login.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_login.Location = new System.Drawing.Point(192, 104);
+            this.label_login.Location = new System.Drawing.Point(192, 95);
             this.label_login.Name = "label_login";
             this.label_login.Size = new System.Drawing.Size(150, 32);
             this.label_login.TabIndex = 2;
@@ -132,7 +132,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // bt_login
             // 
-            this.bt_login.Location = new System.Drawing.Point(301, 345);
+            this.bt_login.Location = new System.Drawing.Point(301, 379);
             this.bt_login.Name = "bt_login";
             this.bt_login.Size = new System.Drawing.Size(116, 32);
             this.bt_login.TabIndex = 5;
@@ -142,7 +142,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // bt_exit
             // 
-            this.bt_exit.Location = new System.Drawing.Point(106, 345);
+            this.bt_exit.Location = new System.Drawing.Point(107, 379);
             this.bt_exit.Name = "bt_exit";
             this.bt_exit.Size = new System.Drawing.Size(116, 32);
             this.bt_exit.TabIndex = 6;
@@ -155,7 +155,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(577, 411);
+            this.ClientSize = new System.Drawing.Size(577, 450);
             this.ControlBox = false;
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_login);

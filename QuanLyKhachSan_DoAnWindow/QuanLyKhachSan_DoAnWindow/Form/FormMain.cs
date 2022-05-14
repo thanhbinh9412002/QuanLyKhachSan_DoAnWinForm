@@ -70,8 +70,8 @@ namespace QuanLyKhachSan_DoAnWindow
         public void LoadData()
         {
             var htBUS = new He_Thong_BUS();
-            DataTable room = htBUS.Lay_Data_phong();
-            this.dataGridView1.DataSource = room;
+            /*DataTable room = htBUS.Lay_Data_phong();
+            this.dataGridView1.DataSource = room;*/
         }
         private void MainEnabled()
         {
@@ -181,6 +181,6 @@ namespace QuanLyKhachSan_DoAnWindow
             fmIHD.ShowDialog();
         }
 
-       
+
     }
 }

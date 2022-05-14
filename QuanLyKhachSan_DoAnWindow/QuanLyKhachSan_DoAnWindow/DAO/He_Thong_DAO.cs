@@ -72,13 +72,13 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             return Convert.ToString(room);
         }
 
-        public DataTable Lay_Data_Phong()
+        /*public DataTable Lay_Data_Phong()
         {
             const string sql = "select * from phong";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable dt = new DataTable();
-            dt = conn.executeReader(sql, sqlParameters);
-            return dt;
-        }
+            //dt = conn.executeReader(sql, sqlParameters);
+           // return dt;
+        }*/
     }
 }

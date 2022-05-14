@@ -18,5 +18,24 @@ namespace QuanLyKhachSan_DoAnWindow
             InitializeComponent();
         }
 
+        private void txt_timkiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_xuathoadon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_quaylai_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_inhoadon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

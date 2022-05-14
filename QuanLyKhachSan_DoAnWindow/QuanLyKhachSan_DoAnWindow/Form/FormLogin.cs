@@ -20,7 +20,7 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void bt_login_Click(object sender, EventArgs e)
         {
-            
+
             var htBUS = new He_Thong_BUS();
             string password = htBUS.Check_Tai_Khoan(txt_username.Text);
             string pass = txt_password.Text;
@@ -40,8 +40,8 @@ namespace QuanLyKhachSan_DoAnWindow
                 txt_password.ResetText();
                 txt_username.Focus();
             }
-                
-            
+
+
         }
 
         private void bt_exit_Click(object sender, EventArgs e)

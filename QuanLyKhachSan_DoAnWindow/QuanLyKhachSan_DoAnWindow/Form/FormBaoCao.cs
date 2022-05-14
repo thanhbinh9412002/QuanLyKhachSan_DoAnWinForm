@@ -17,5 +17,26 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             InitializeComponent();
         }
+
+        private void btn_thongke_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_timkiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_quaylai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
+
+        private void btn_tongket_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
