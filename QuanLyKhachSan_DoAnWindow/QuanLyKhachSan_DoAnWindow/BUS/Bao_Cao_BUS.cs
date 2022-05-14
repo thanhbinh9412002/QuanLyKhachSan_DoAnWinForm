@@ -9,10 +9,10 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
 {
     internal class Bao_Cao
     {
-        private Bao_Cao_DAO bcDAO;
-        public string Xuat_So_Hoa_Don()
+        //private Bao_Cao_DAO bcDAO;
+       /* public string Xuat_So_Hoa_Don()
         {
             return bcDAO.Xuat_So_Hoa_Don();
-        }
+        }*/
     }
 }

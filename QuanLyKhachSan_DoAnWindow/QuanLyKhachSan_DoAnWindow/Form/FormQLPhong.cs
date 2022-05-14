@@ -23,8 +23,8 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             // TODO: This line of code loads data into the 'quanLyKhachSanDataSet3.phong' table. You can move, or remove it, as needed.
             var htBUS = new He_Thong_BUS();
-            DataTable room = htBUS.Lay_Data_phong();
-            this.dataGriwView1.DataSource = room;
+            //DataTable room = htBUS.Lay_Data_phong();
+           // this.dataGriwView1.DataSource = room;
             var pgBUS = new Phong_BUS();
             DataTable dt = new DataTable();
             dt = pgBUS.Lay_Ma_Loai();
@@ -39,8 +39,8 @@ namespace QuanLyKhachSan_DoAnWindow
             var pgBUS = new Phong_BUS();
             pgBUS.Them_Phong(txt_maphong.Text, combo_loaiphong.Text);
             var htBUS = new He_Thong_BUS();
-            DataTable room = htBUS.Lay_Data_phong();
-            this.dataGriwView1.DataSource = room;
+            //DataTable room = htBUS.Lay_Data_phong();
+            //this.dataGriwView1.DataSource = room;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -48,8 +48,8 @@ namespace QuanLyKhachSan_DoAnWindow
             var pgBUS = new Phong_BUS();
             pgBUS.Sua_Phong(txt_maphong.Text, combo_loaiphong.Text, txt_dadat.Text, txt_danhan.Text);
             var htBUS = new He_Thong_BUS();
-            DataTable room = htBUS.Lay_Data_phong();
-            this.dataGriwView1.DataSource = room;
+            //DataTable room = htBUS.Lay_Data_phong();
+            //this.dataGriwView1.DataSource = room;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -57,8 +57,8 @@ namespace QuanLyKhachSan_DoAnWindow
             var pgBUS = new Phong_BUS();
             pgBUS.Xoa_Phong(txt_maphong.Text);
             var htBUS = new He_Thong_BUS();
-            DataTable room = htBUS.Lay_Data_phong();
-            this.dataGriwView1.DataSource = room;
+            //DataTable room = htBUS.Lay_Data_phong();
+            //this.dataGriwView1.DataSource = room;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -71,8 +71,8 @@ namespace QuanLyKhachSan_DoAnWindow
         private void button6_Click(object sender, EventArgs e)
         {
             var htBUS = new He_Thong_BUS();
-            DataTable room = htBUS.Lay_Data_phong();
-            this.dataGriwView1.DataSource = room;
+           // DataTable room = htBUS.Lay_Data_phong();
+            //this.dataGriwView1.DataSource = room;
         }
 
         private void button10_Click(object sender, EventArgs e)

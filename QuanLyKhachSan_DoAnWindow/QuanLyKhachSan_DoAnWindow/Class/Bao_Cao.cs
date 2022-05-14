@@ -8,5 +8,6 @@ namespace QuanLyKhachSan_DoAnWindow.Class
 {
     internal class Bao_Cao
     {
+
     }
 }
