@@ -86,12 +86,6 @@
     <Compile Include="Form\FormBaoCao.Designer.cs">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FormNhanVien.Designer.cs">
-      <DependentUpon>FormNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FormDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,11 +110,11 @@
     <Compile Include="Form\FormMain.designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormNguoiDung.cs">
+    <Compile Include="Form\FormNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FormNguoiDung.designer.cs">
-      <DependentUpon>FormNguoiDung.cs</DependentUpon>
+    <Compile Include="Form\FormNhanVien.designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormQLPhong.cs">
       <SubType>Form</SubType>
@@ -178,8 +172,8 @@
     <EmbeddedResource Include="Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormNguoiDung.resx">
-      <DependentUpon>FormNguoiDung.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormNhanVien.resx">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormQLPhong.resx">
       <DependentUpon>FormQLPhong.cs</DependentUpon>
