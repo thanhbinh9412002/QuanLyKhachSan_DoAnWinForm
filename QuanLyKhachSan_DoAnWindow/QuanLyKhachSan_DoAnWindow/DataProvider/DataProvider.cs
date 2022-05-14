@@ -72,18 +72,14 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
             }
         }
 
-        public DataTable executeReader(String query, SqlParameter[] sqlParameter)
+        public int executeCount(string query)           // trả về số lượng 
         {
+            int cout = 0;
             using (SqlCommand sqlCommand = new SqlCommand(query, openConnection()))
             {
-                connection = new SqlConnection("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
-                SqlCommand cmd = new SqlCommand(query, connection);
-                DataTable dt = new DataTable();
                 try
                 {
-                    connection.Open();
-                    SqlDataReader dataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-                    dt.Load(dataReader);
+                    cout = (Int32)sqlCommand.ExecuteScalar();
                 }
                 catch (Exception ex)
                 {
@@ -93,7 +89,32 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
                 {
                     connection.Close();
                 }
-                return dt;
+                return cout;
+            }
+        }
+
+        public DataTable executeLoadData(string query)      // trả về bảng dữ liệu
+        {
+            using (SqlCommand command = new SqlCommand(query, openConnection()))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    DataTable dt = new DataTable();
+                    try
+                    {
+                        dt.Load(reader);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                        reader.Close();
+                    }
+                    return dt;
+                }
             }
         }
     }
