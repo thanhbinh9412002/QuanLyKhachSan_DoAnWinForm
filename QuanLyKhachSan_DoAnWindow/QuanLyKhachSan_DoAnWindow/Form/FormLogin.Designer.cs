@@ -102,7 +102,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(256, 26);
             this.txt_password.TabIndex = 3;
-            this.txt_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_password_KeyDown);
             // 
             // label_username
             // 

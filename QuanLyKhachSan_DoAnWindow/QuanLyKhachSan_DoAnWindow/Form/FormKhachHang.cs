@@ -41,7 +41,6 @@ namespace QuanLyKhachSan_DoAnWindow
             string gt = (rdNam.Checked ? rdNam.Text : rdNu.Text);
             KHBUS.themKH(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text,
                 txtCoquan.Text, txtSodt.Text, txtEmail.Text);
-            LoadView();
         }
             
         private void btnSua_Click(object sender, EventArgs e)           // cập nhật khách  hàng
@@ -49,13 +48,11 @@ namespace QuanLyKhachSan_DoAnWindow
             string gt = (rdNam.Checked ? rdNam.Text : rdNu.Text);
             KHBUS.capnhatKH(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text,
                 txtCoquan.Text, txtSodt.Text, txtEmail.Text);
-            LoadView();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)       // xóa khách hàng
         {
             KHBUS.xoaKH(txtMkh.Text);
-            LoadView();
         }
 
         private void gvKhachhang_CellClick(object sender, DataGridViewCellEventArgs e)        // click vào girbview các textbox sẽ hiển thị nội dung
@@ -66,9 +63,9 @@ namespace QuanLyKhachSan_DoAnWindow
             string gt = row.Cells[2].Value.ToString();
             if (gt == "nam")
             {
-                rdNam.Checked = true;
+                rdNam.Enabled = true;
             }
-            else rdNu.Checked = true;
+            else rdNu.Enabled = true;
             txtCmnd.Text = row.Cells[3].Value.ToString();
             txtDiachi.Text = row.Cells[4].Value.ToString();
             txtCoquan.Text = row.Cells[5].Value.ToString();
@@ -88,17 +85,17 @@ namespace QuanLyKhachSan_DoAnWindow
             LoadView();
         }
 
-<<<<<<< Updated upstream
         private void gvKhachhang_KeyDown(object sender, KeyEventArgs e)  
         {
             
         }
 
-=======
->>>>>>> Stashed changes
         private void txtTimkiem_KeyDown(object sender, KeyEventArgs e)  //enter se tim kiem   
         {
-            KHBUS.TimKiemKH(gvKhachhang, txtTimkiem.Text);
+            if (e.KeyCode == Keys.Enter)
+            {
+                KHBUS.TimKiemKH(gvKhachhang, txtTimkiem.Text);
+            }
         }
 
         private void txtCmnd_KeyDown(object sender, KeyEventArgs e) // enter chuyen sang textbox diachi
