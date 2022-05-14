@@ -60,7 +60,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            /*this.button1 = new System.Windows.Forms.Button();*/
             ((System.ComponentModel.ISupportInitialize)(this.gvKhachhang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -411,14 +411,14 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            /*this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(606, 183);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 30);
             this.button1.TabIndex = 70;
             this.button1.Text = "Quay lại";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = true;*/
             // 
             // FormKhachHang
             // 
