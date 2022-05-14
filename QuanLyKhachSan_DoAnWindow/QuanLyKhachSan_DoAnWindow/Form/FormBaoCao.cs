@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyKhachSan_DoAnWindow.BUS;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
@@ -20,7 +21,8 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void btn_thongke_Click(object sender, EventArgs e)
         {
-
+            /*var bcBUS = new Bao_Cao_BUS();
+            txt_sohoadon.Text = bcBUS.Xuat_So_Hoa_Don();*/
         }
 
         private void btn_timkiem_Click(object sender, EventArgs e)
@@ -34,9 +36,5 @@ namespace QuanLyKhachSan_DoAnWindow
             
         }
 
-        private void btn_tongket_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
