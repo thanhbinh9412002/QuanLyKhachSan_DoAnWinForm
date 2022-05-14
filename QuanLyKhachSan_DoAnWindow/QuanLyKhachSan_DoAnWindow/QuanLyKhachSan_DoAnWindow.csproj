@@ -169,6 +169,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyKhachSanDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyKhachSanDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\FormBaoCao.resx">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +260,17 @@
     </None>
     <None Include="QuanLyKhachSanDataSet2.xss">
       <DependentUpon>QuanLyKhachSanDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet3.xsc">
+      <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhachSanDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhachSanDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhachSanDataSet3.xss">
+      <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
