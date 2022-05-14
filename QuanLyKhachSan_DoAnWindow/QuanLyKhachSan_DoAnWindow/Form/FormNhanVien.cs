@@ -27,9 +27,9 @@ namespace QuanLyKhachSan_DoAnWindow
             nvBUS.upNV(gvNhanvien);
             LoadManv();
         }
-        private void LoadManv()
+        private void LoadManv()     //cap nhat ma nhan vien
         {
-            txtMaNV.Text = nvBUS.updateMa();
+            txtMaNV.Text = "NV" + nvBUS.updateMa();
             txtMaNV.Enabled = false;
         }
         private void bt_QLTK_Click(object sender, EventArgs e)      //chuyen qua form QLTKNV
@@ -64,13 +64,13 @@ namespace QuanLyKhachSan_DoAnWindow
             nvBUS.upNV(gvNhanvien, txtTimkiem.Text);
         }
 
-        private void gvNhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void gvNhanvien_CellClick(object sender, DataGridViewCellEventArgs e)   // dua du lieu xuong cac testbox
         {
             DataGridViewRow row = this.gvNhanvien.Rows[e.RowIndex];
 
             txtMaNV.Text = row.Cells[0].Value.ToString();
             txtTenNV.Text = row.Cells[1].Value.ToString();
-            dtngaysinh.Value = DateTime.ParseExact(row.Cells[2].Value);
+            dtngaysinh.Text = row.Cells[2].Value.ToString();
             string gt = row.Cells[3].Value.ToString();
             if (gt == "nam" || gt == "Nam")
             {
@@ -82,9 +82,15 @@ namespace QuanLyKhachSan_DoAnWindow
             txtchucvu.Text = row.Cells[6].Value.ToString();
         }
 
-        private void FormNhanVien_Click(object sender, EventArgs e)
+        private void FormNhanVien_Click(object sender, EventArgs e)     //chuyen ve form ban dau
         {
-
+            LoadNV();
+            txtTenNV.Text = "";
+            dtngaysinh.Value = DateTime.Today;
+            rbnam.Checked = true;
+            txtsdt.Text = "";
+            txtdiachi.Text = "";
+            txtchucvu.Text = "";
         }
     }
 }

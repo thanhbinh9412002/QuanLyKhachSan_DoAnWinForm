@@ -37,7 +37,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             sqlParameter[4].Value = diachi;
             sqlParameter[5] = new SqlParameter("@phone", SqlDbType.VarChar);
             sqlParameter[5].Value = sdt;
-            sqlParameter[6] = new SqlParameter("@ma", SqlDbType.VarChar);
+            sqlParameter[6] = new SqlParameter("@chucvu", SqlDbType.VarChar);
             sqlParameter[6].Value = chucvu;
 
             conn.executeInsertQuery(sql, sqlParameter);
@@ -47,7 +47,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         public void capnhatNV(string ma, string ten, string gt, DateTime date, string diachi, string sdt, string chucvu)
         {
             string sql = "update nhanvien set tennhanvien = @ten, ngaysinh = @date, phai = @gt, diachi = @diachi, phone = @phone, chucvu = @chucvu" +
-                "where manhanvien = @ma";
+                " where manhanvien = @ma";
 
             SqlParameter[] sqlParameter = new SqlParameter[7];
 
@@ -63,7 +63,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             sqlParameter[4].Value = diachi;
             sqlParameter[5] = new SqlParameter("@phone", SqlDbType.VarChar);
             sqlParameter[5].Value = sdt;
-            sqlParameter[6] = new SqlParameter("@ma", SqlDbType.VarChar);
+            sqlParameter[6] = new SqlParameter("@chucvu", SqlDbType.VarChar);
             sqlParameter[6].Value = chucvu;
 
             conn.executeInsertQuery(sql, sqlParameter);

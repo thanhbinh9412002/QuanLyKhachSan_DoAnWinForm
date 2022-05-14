@@ -365,6 +365,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gvNhanvien);
             this.Name = "FormNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân viên";
             this.Click += new System.EventHandler(this.FormNhanVien_Click);
             ((System.ComponentModel.ISupportInitialize)(this.gvNhanvien)).EndInit();
