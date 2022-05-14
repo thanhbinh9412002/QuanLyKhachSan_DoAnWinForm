@@ -33,11 +33,10 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_theomahoadon = new System.Windows.Forms.TextBox();
             this.txt_theomakhachhang = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_timkiem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_quaylai = new System.Windows.Forms.Button();
-            this.txt_xuathoadon = new System.Windows.Forms.Button();
-            this.txt_inhoadon = new System.Windows.Forms.Button();
+            this.btn_quaylai = new System.Windows.Forms.Button();
+            this.btn_xuathoadon = new System.Windows.Forms.Button();
+            this.btn_inhoadon = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -65,6 +64,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_theomahoadon.Name = "txt_theomahoadon";
             this.txt_theomahoadon.Size = new System.Drawing.Size(124, 20);
             this.txt_theomahoadon.TabIndex = 1;
+            this.txt_theomahoadon.TextChanged += new System.EventHandler(this.txt_theomahoadon_TextChanged);
             // 
             // txt_theomakhachhang
             // 
@@ -72,6 +72,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_theomakhachhang.Name = "txt_theomakhachhang";
             this.txt_theomakhachhang.Size = new System.Drawing.Size(124, 20);
             this.txt_theomakhachhang.TabIndex = 3;
+            this.txt_theomakhachhang.TextChanged += new System.EventHandler(this.txt_theomakhachhang_TextChanged);
             // 
             // label2
             // 
@@ -82,16 +83,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label2.Size = new System.Drawing.Size(163, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tìm kiếm mã khách hàng :";
-            // 
-            // txt_timkiem
-            // 
-            this.txt_timkiem.Location = new System.Drawing.Point(369, 28);
-            this.txt_timkiem.Name = "txt_timkiem";
-            this.txt_timkiem.Size = new System.Drawing.Size(79, 36);
-            this.txt_timkiem.TabIndex = 4;
-            this.txt_timkiem.Text = "Tìm kiếm";
-            this.txt_timkiem.UseVisualStyleBackColor = true;
-            this.txt_timkiem.Click += new System.EventHandler(this.txt_timkiem_Click);
             // 
             // groupBox1
             // 
@@ -106,46 +97,45 @@ namespace QuanLyKhachSan_DoAnWindow
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
-            // txt_quaylai
+            // btn_quaylai
             // 
-            this.txt_quaylai.Location = new System.Drawing.Point(473, 28);
-            this.txt_quaylai.Name = "txt_quaylai";
-            this.txt_quaylai.Size = new System.Drawing.Size(79, 36);
-            this.txt_quaylai.TabIndex = 6;
-            this.txt_quaylai.Text = "Quay lại";
-            this.txt_quaylai.UseVisualStyleBackColor = true;
-            this.txt_quaylai.Click += new System.EventHandler(this.txt_quaylai_Click);
+            this.btn_quaylai.Location = new System.Drawing.Point(473, 28);
+            this.btn_quaylai.Name = "btn_quaylai";
+            this.btn_quaylai.Size = new System.Drawing.Size(79, 36);
+            this.btn_quaylai.TabIndex = 6;
+            this.btn_quaylai.Text = "Quay lại";
+            this.btn_quaylai.UseVisualStyleBackColor = true;
+            this.btn_quaylai.Click += new System.EventHandler(this.btn_quaylai_Click);
             // 
-            // txt_xuathoadon
+            // btn_xuathoadon
             // 
-            this.txt_xuathoadon.Location = new System.Drawing.Point(369, 77);
-            this.txt_xuathoadon.Name = "txt_xuathoadon";
-            this.txt_xuathoadon.Size = new System.Drawing.Size(79, 36);
-            this.txt_xuathoadon.TabIndex = 7;
-            this.txt_xuathoadon.Text = "Xuất hóa đơn";
-            this.txt_xuathoadon.UseVisualStyleBackColor = true;
-            this.txt_xuathoadon.Click += new System.EventHandler(this.txt_xuathoadon_Click);
+            this.btn_xuathoadon.Location = new System.Drawing.Point(369, 77);
+            this.btn_xuathoadon.Name = "btn_xuathoadon";
+            this.btn_xuathoadon.Size = new System.Drawing.Size(79, 36);
+            this.btn_xuathoadon.TabIndex = 7;
+            this.btn_xuathoadon.Text = "Xuất hóa đơn";
+            this.btn_xuathoadon.UseVisualStyleBackColor = true;
+            this.btn_xuathoadon.Click += new System.EventHandler(this.btn_xuathoadon_Click);
             // 
-            // txt_inhoadon
+            // btn_inhoadon
             // 
-            this.txt_inhoadon.Location = new System.Drawing.Point(473, 81);
-            this.txt_inhoadon.Name = "txt_inhoadon";
-            this.txt_inhoadon.Size = new System.Drawing.Size(79, 36);
-            this.txt_inhoadon.TabIndex = 8;
-            this.txt_inhoadon.Text = "In hóa đơn";
-            this.txt_inhoadon.UseVisualStyleBackColor = true;
-            this.txt_inhoadon.Click += new System.EventHandler(this.txt_inhoadon_Click);
+            this.btn_inhoadon.Location = new System.Drawing.Point(473, 81);
+            this.btn_inhoadon.Name = "btn_inhoadon";
+            this.btn_inhoadon.Size = new System.Drawing.Size(79, 36);
+            this.btn_inhoadon.TabIndex = 8;
+            this.btn_inhoadon.Text = "In hóa đơn";
+            this.btn_inhoadon.UseVisualStyleBackColor = true;
+            this.btn_inhoadon.Click += new System.EventHandler(this.txt_inhoadon_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txt_inhoadon);
-            this.panel1.Controls.Add(this.txt_xuathoadon);
-            this.panel1.Controls.Add(this.txt_quaylai);
+            this.panel1.Controls.Add(this.btn_inhoadon);
+            this.panel1.Controls.Add(this.btn_xuathoadon);
+            this.panel1.Controls.Add(this.btn_quaylai);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.txt_timkiem);
             this.panel1.Location = new System.Drawing.Point(4, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(632, 153);
+            this.panel1.Size = new System.Drawing.Size(607, 153);
             this.panel1.TabIndex = 9;
             // 
             // panel2
@@ -153,7 +143,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Location = new System.Drawing.Point(4, 175);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(631, 339);
+            this.panel2.Size = new System.Drawing.Size(607, 328);
             this.panel2.TabIndex = 10;
             // 
             // groupBox2
@@ -161,7 +151,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(5, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(625, 330);
+            this.groupBox2.Size = new System.Drawing.Size(588, 310);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hóa đơn :";
@@ -171,14 +161,14 @@ namespace QuanLyKhachSan_DoAnWindow
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(613, 301);
+            this.dataGridView1.Size = new System.Drawing.Size(569, 274);
             this.dataGridView1.TabIndex = 0;
             // 
             // FormInHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 524);
+            this.ClientSize = new System.Drawing.Size(629, 524);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormInHoaDon";
@@ -199,11 +189,10 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.TextBox txt_theomahoadon;
         private System.Windows.Forms.TextBox txt_theomakhachhang;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button txt_timkiem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button txt_quaylai;
-        private System.Windows.Forms.Button txt_xuathoadon;
-        private System.Windows.Forms.Button txt_inhoadon;
+        private System.Windows.Forms.Button btn_quaylai;
+        private System.Windows.Forms.Button btn_xuathoadon;
+        private System.Windows.Forms.Button btn_inhoadon;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox2;

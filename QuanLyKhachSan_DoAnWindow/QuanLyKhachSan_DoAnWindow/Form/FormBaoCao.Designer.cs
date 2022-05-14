@@ -239,7 +239,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_tongket.TabIndex = 4;
             this.btn_tongket.Text = "Tổng kết ";
             this.btn_tongket.UseVisualStyleBackColor = true;
-            this.btn_tongket.Click += new System.EventHandler(this.btn_tongket_Click);
             // 
             // txt_sotien
             // 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\Bao_Cao_BUS.cs" />
     <Compile Include="BUS\Dat_Phong_BUS.cs" />
     <Compile Include="BUS\Dich_Vu_BUS.cs" />
     <Compile Include="BUS\He_Thong_BUS.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="BUS\Phong_BUS.cs" />
     <Compile Include="BUS\Thue_Phong_BUS.cs" />
     <Compile Include="BUS\Vat_Tu_BUS.cs" />
+    <Compile Include="Class\Bao_Cao.cs" />
     <Compile Include="Class\Dat_Phong.cs" />
     <Compile Include="Class\Dich_Vu.cs" />
     <Compile Include="Class\He_Thong.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Class\Phong.cs" />
     <Compile Include="Class\Thue_Phong.cs" />
     <Compile Include="Class\Vat_Tu.cs" />
+    <Compile Include="DAO\Bao_Cao_DAO.cs" />
     <Compile Include="DAO\Dat_Phong_DAO.cs" />
     <Compile Include="DAO\Dich_Vu_DAO.cs" />
     <Compile Include="DAO\He_Thong_DAO.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="DAO\Thue_Phong_DAO.cs" />
     <Compile Include="DAO\Vat_Tu_DAO.cs" />
     <Compile Include="DataProvider\DataProvider.cs" />
+    <Compile Include="Form\Bao_Cao_BUS.cs" />
     <Compile Include="Form\FormInHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
