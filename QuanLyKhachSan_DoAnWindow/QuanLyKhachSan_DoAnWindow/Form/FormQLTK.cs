@@ -7,23 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
-    public partial class FormNhanVien : Form
+    public partial class FormQLTK : Form
     {
-        public FormQLTK fmQLTK;
         public FormMain fmMain;
-        public FormNhanVien()
+        public FormNhanVien fmNhanVien;
+        public FormQLTK()
         {
             InitializeComponent();
         }
 
-        private void bt_QLTK_Click(object sender, EventArgs e)
+        private void FormQLTK_Load(object sender, EventArgs e)
         {
-            fmQLTK = new FormQLTK();
-            fmQLTK.fmNhanVien = this;
-            fmQLTK.ShowDialog();
+            LoadDataUser();
+        }
+        private void LoadDataUser()
+        {
+
         }
     }
 }

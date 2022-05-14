@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QuanLyKhachSan_DoAnWindow.BUS;
+using System;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using QuanLyKhachSan_DoAnWindow.BUS;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
@@ -42,7 +34,7 @@ namespace QuanLyKhachSan_DoAnWindow
             KHBUS.themKH(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text,
                 txtCoquan.Text, txtSodt.Text, txtEmail.Text);
         }
-            
+
         private void btnSua_Click(object sender, EventArgs e)           // cập nhật khách  hàng
         {
             string gt = (rdNam.Checked ? rdNam.Text : rdNu.Text);
@@ -85,9 +77,9 @@ namespace QuanLyKhachSan_DoAnWindow
             LoadView();
         }
 
-        private void gvKhachhang_KeyDown(object sender, KeyEventArgs e)  
+        private void gvKhachhang_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void txtTimkiem_KeyDown(object sender, KeyEventArgs e)  //enter se tim kiem   
