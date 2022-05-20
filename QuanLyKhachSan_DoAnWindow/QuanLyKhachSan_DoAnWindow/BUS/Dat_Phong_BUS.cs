@@ -16,9 +16,19 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             dpDAO = new Dat_Phong_DAO();
         }
 
+        public int Count_Ma_Phieu()
+        {
+            return dpDAO.Count_Ma_Phieu();
+        }
+
         public DataTable Tim_Phong_Trong()
         {
             return dpDAO.Tim_Phong_Trong();
+        }
+
+        public DataTable Hien_Thi_DS()
+        {
+            return dpDAO.Hien_Thi_DS();
         }
     }
 }
