@@ -16,11 +16,7 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
-            Application.Run(new FormBaoCao());
-=======
-            Application.Run(new FormNhanVien());
->>>>>>> Stashed changes
+            Application.Run(new FormMain());
         }
     }
 }

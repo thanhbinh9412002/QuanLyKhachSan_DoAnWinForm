@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyKhachSan_DoAnWindow.DataProvider;
 using QuanLyKhachSan_DoAnWindow.Class;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace QuanLyKhachSan_DoAnWindow.DAO
 {
@@ -15,8 +17,6 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         {
             conn = new DBConnection();
         }
-<<<<<<< Updated upstream
-=======
         //them nhan vien
         public void themNV(string ma, string ten, string gt, DateTime date, string diachi, string sdt, string chucvu)
         {
@@ -105,6 +105,5 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
                 return true;
             return false;
         }
->>>>>>> Stashed changes
     }
 }

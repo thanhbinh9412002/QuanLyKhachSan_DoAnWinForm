@@ -87,7 +87,6 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void FormKhachHang_Click(object sender, EventArgs e)        // click vào form để trở về form ban đầu
         {
-<<<<<<< Updated upstream
             txtTenkh.Text = "";
             rdNam.Enabled = true;
             txtCmnd.Text = "";
@@ -100,10 +99,7 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void gvKhachhang_KeyDown(object sender, KeyEventArgs e)  
         {
-            
-=======
             Load_ThongTin();
->>>>>>> Stashed changes
         }
 
         private void txtTimkiem_KeyDown(object sender, KeyEventArgs e)  //enter se tim kiem   

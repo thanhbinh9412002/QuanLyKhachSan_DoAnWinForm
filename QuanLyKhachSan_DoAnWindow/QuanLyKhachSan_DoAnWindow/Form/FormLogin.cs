@@ -48,5 +48,13 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             Application.Exit();
         }
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                bt_login.PerformClick();
+            }
+        }
     }
 }

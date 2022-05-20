@@ -7,18 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using QuanLyKhachSan_DoAnWindow.BUS;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
     public partial class FormNhanVien : Form
     {
+        public FormQLTK fmQLTK;
         public FormMain fmMain;
+        private Nhan_Vien_BUS nvBUS = new Nhan_Vien_BUS();
         public FormNhanVien()
         {
             InitializeComponent();
-<<<<<<< Updated upstream
-=======
             LoadNV();
         }
         
@@ -47,24 +47,17 @@ namespace QuanLyKhachSan_DoAnWindow
             fmQLTK = new FormQLTK();
             fmQLTK.fmNhanVien = this;
             fmQLTK.ShowDialog();
->>>>>>> Stashed changes
         }
 
-        private void FormNhanVien_Load(object sender, EventArgs e)
+        private void btThem_Click(object sender, EventArgs e)       // them nhan vien
         {
-<<<<<<< Updated upstream
-            LoadDataUser();
-=======
             string gt = (rbnam.Checked ? rbnam.Text : rbnu.Text);
             nvBUS.ThemNV(txtMaNV.Text, txtTenNV.Text, gt, dtngaysinh.Value, txtdiachi.Text, txtsdt.Text, txtchucvu.Text);
             Load_ThongTin();
->>>>>>> Stashed changes
         }
-        private void LoadDataUser()
-        {
-<<<<<<< Updated upstream
 
-=======
+        private void btsua_Click(object sender, EventArgs e)        //cap nhat nhan vien
+        {
             string gt = (rbnam.Checked ? rbnam.Text : rbnu.Text);
             nvBUS.CapNhatNV(txtMaNV.Text, txtTenNV.Text, gt, dtngaysinh.Value, txtdiachi.Text, txtsdt.Text, txtchucvu.Text);
             Load_ThongTin();
@@ -102,7 +95,6 @@ namespace QuanLyKhachSan_DoAnWindow
         private void FormNhanVien_Click(object sender, EventArgs e)     //chuyen ve form ban dau
         {
             Load_ThongTin();
->>>>>>> Stashed changes
         }
     }
 }
