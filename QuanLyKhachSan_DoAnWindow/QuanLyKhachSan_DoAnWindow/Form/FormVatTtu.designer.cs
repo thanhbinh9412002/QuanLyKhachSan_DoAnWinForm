@@ -29,14 +29,14 @@ namespace QuanLyKhachSan_DoAnWindow
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Thống kê", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Thống kê", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Mã loại phòng:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Mã vật tư:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Tên vật tư:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Số lượng:"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))), System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -112,9 +112,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.groupBox1.Location = new System.Drawing.Point(16, 80);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(429, 231);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -124,7 +124,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             this.txt_mavattu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mavattu.Location = new System.Drawing.Point(177, 91);
-            this.txt_mavattu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_mavattu.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mavattu.Name = "txt_mavattu";
             this.txt_mavattu.Size = new System.Drawing.Size(224, 27);
             this.txt_mavattu.TabIndex = 10;
@@ -133,7 +133,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             this.txt_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_soluong.Location = new System.Drawing.Point(177, 172);
-            this.txt_soluong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_soluong.Margin = new System.Windows.Forms.Padding(4);
             this.txt_soluong.Name = "txt_soluong";
             this.txt_soluong.Size = new System.Drawing.Size(224, 27);
             this.txt_soluong.TabIndex = 9;
@@ -142,7 +142,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             this.txt_tenvattu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tenvattu.Location = new System.Drawing.Point(177, 129);
-            this.txt_tenvattu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_tenvattu.Margin = new System.Windows.Forms.Padding(4);
             this.txt_tenvattu.Name = "txt_tenvattu";
             this.txt_tenvattu.Size = new System.Drawing.Size(224, 27);
             this.txt_tenvattu.TabIndex = 8;
@@ -156,11 +156,10 @@ namespace QuanLyKhachSan_DoAnWindow
             "L-Normal",
             "L-Cheap"});
             this.combo_maloaiphong.Location = new System.Drawing.Point(177, 52);
-            this.combo_maloaiphong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combo_maloaiphong.Margin = new System.Windows.Forms.Padding(4);
             this.combo_maloaiphong.Name = "combo_maloaiphong";
             this.combo_maloaiphong.Size = new System.Drawing.Size(224, 28);
             this.combo_maloaiphong.TabIndex = 6;
-            this.combo_maloaiphong.Text = "L-Vip";
             this.combo_maloaiphong.SelectedIndexChanged += new System.EventHandler(this.combo_maloaiphong_SelectedIndexChanged);
             // 
             // label6
@@ -192,7 +191,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(463, 209);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(563, 278);
@@ -208,23 +207,23 @@ namespace QuanLyKhachSan_DoAnWindow
             this.lsvKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvKH.FullRowSelect = true;
             this.lsvKH.GridLines = true;
-            listViewGroup5.Header = "Thống kê";
-            listViewGroup5.Name = "lsvgKH";
+            listViewGroup2.Header = "Thống kê";
+            listViewGroup2.Name = "lsvgKH";
             this.lsvKH.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup5});
+            listViewGroup2});
             this.lsvKH.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lsvKH.HideSelection = false;
-            listViewItem17.Group = listViewGroup5;
-            listViewItem18.Group = listViewGroup5;
-            listViewItem19.Group = listViewGroup5;
-            listViewItem20.Group = listViewGroup5;
+            listViewItem5.Group = listViewGroup2;
+            listViewItem6.Group = listViewGroup2;
+            listViewItem7.Group = listViewGroup2;
+            listViewItem8.Group = listViewGroup2;
             this.lsvKH.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem17,
-            listViewItem18,
-            listViewItem19,
-            listViewItem20});
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8});
             this.lsvKH.Location = new System.Drawing.Point(463, 55);
-            this.lsvKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvKH.Margin = new System.Windows.Forms.Padding(4);
             this.lsvKH.MultiSelect = false;
             this.lsvKH.Name = "lsvKH";
             this.lsvKH.Scrollable = false;
@@ -261,7 +260,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.ForeColor = System.Drawing.Color.Maroon;
             this.btn_Xoa.Location = new System.Drawing.Point(332, 334);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(113, 43);
             this.btn_Xoa.TabIndex = 69;
@@ -275,7 +274,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.ForeColor = System.Drawing.Color.Maroon;
             this.btn_Sua.Location = new System.Drawing.Point(180, 334);
-            this.btn_Sua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Sua.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(113, 43);
             this.btn_Sua.TabIndex = 70;
@@ -289,7 +288,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ForeColor = System.Drawing.Color.Maroon;
             this.btn_Them.Location = new System.Drawing.Point(28, 334);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(113, 43);
             this.btn_Them.TabIndex = 71;
@@ -303,12 +302,13 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Maroon;
             this.button1.Location = new System.Drawing.Point(5, 3);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 29);
+            this.button1.Size = new System.Drawing.Size(90, 29);
             this.button1.TabIndex = 74;
             this.button1.Text = "Quay lại";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -344,7 +344,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormVatTu";

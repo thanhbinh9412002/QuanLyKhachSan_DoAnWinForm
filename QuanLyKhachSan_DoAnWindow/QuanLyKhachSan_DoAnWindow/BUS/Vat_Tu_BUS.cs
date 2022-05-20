@@ -21,6 +21,21 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return vtDAO.Lay_Du_lieu();
         }
 
+        public void Them_Vat_Tu(string maloaiphong, string mavattu, string tenvattu, string soluong)
+        {
+            vtDAO.Them_Vat_Tu(maloaiphong, mavattu, tenvattu, soluong);
+        }
+
+        public void Sua_Vat_Tu(string maloaiphong, string mavattu, string tenvattu, string soluong)
+        {
+            vtDAO.Sua_Vat_Tu(maloaiphong, mavattu, tenvattu, soluong);
+        }
+
+        public void Xoa_Vat_Tu(string mavattu, string maloaiphong)
+        {
+            vtDAO.Xoa_Vat_Tu(mavattu, maloaiphong);
+        }
+
         public DataTable Tim_Vat_Tu(string maloaiphong, string mavattu)
         {
             return vtDAO.Tim_Vat_Tu(maloaiphong, mavattu);
