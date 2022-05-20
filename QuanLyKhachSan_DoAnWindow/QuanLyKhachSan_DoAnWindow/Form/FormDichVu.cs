@@ -122,5 +122,11 @@ namespace QuanLyKhachSan_DoAnWindow
             var dvBUS = new Dich_Vu_BUS();
             this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text); 
         }
+
+        private void txt_timkiem2_TextChanged(object sender, EventArgs e)
+        {
+            var dvBUS = new Dich_Vu_BUS();
+            this.dataGridView2.DataSource = dvBUS.Tim_Dich_Vu(txt_timkiem2.Text);
+        }
     }
 }

@@ -44,6 +44,15 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             return bang;
         }
 
+        public DataTable Tim_Dich_Vu(string madichvu)
+        {
+            string sql = "select * from dichvu where madichvu like '%" + madichvu + "%'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            DataTable bang = new DataTable();
+            bang = conn.executeReader(sql, sqlParameters);
+            return bang;
+        }
+
         public DataTable Lay_Data_Bang_2()
         {
             const string sql = "select * from dichvu";

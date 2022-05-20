@@ -64,3 +64,5 @@ C:\Users\Hl10a\OneDrive\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachS
 C:\Users\Hl10a\OneDrive\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormInHoaDon.resources
 C:\Users\Hl10a\OneDrive\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormNhanVien.resources
 C:\Users\Hl10a\OneDrive\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormQLTK.resources
+C:\Users\Acer\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormNhanVien.resources
+C:\Users\Acer\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormQLTK.resources

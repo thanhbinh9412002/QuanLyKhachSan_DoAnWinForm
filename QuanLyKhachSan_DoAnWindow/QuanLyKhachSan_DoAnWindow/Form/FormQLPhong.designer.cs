@@ -192,7 +192,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(71, 52);
             this.button3.TabIndex = 7;
-            this.button3.Text = "Xoá phòng";
+            this.button3.Text = "Xoá";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -205,7 +205,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 52);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Sửa phòng";
+            this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -218,7 +218,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(74, 52);
             this.btnThem.TabIndex = 5;
-            this.btnThem.Text = "Thêm phòng";
+            this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -320,7 +320,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(71, 61);
             this.button5.TabIndex = 22;
-            this.button5.Text = "Xoá loại phòng";
+            this.button5.Text = "Xoá";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -333,7 +333,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(70, 61);
             this.button8.TabIndex = 21;
-            this.button8.Text = "Sửa loại phòng";
+            this.button8.Text = "Sửa";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -346,7 +346,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(74, 61);
             this.button9.TabIndex = 20;
-            this.button9.Text = "Thêm loại phòng";
+            this.button9.Text = "Thêm";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
