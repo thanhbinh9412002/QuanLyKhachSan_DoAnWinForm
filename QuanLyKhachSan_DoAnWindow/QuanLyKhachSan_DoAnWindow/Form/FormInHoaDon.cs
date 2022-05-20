@@ -17,6 +17,8 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormInHoaDon()
         {
             InitializeComponent();
+            var hdBUS = new Hoa_Don_BUS();
+            this.dataGridView1.DataSource = hdBUS.Lay_Du_Lieu(txt_theomahoadon.Text);
         }
 
         

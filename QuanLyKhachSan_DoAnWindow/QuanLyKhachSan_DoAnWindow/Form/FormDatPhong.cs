@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyKhachSan_DoAnWindow.BUS;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
@@ -16,6 +17,14 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormDatPhong()
         {
             InitializeComponent();
+            var dpBUS = new Dat_Phong_BUS();
+            this.DataGridView1.DataSource = dpBUS.Tim_Phong_Trong();
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            var dpBUS = new Dat_Phong_BUS();
+            this.DataGridView1.DataSource = dpBUS.Tim_Phong_Trong();
         }
     }
 }

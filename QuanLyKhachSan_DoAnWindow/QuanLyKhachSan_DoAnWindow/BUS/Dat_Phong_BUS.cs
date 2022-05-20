@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyKhachSan_DoAnWindow.DAO;
+using System.Data;
 
 namespace QuanLyKhachSan_DoAnWindow.BUS
 {
@@ -13,6 +14,11 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         public Dat_Phong_BUS()
         {
             dpDAO = new Dat_Phong_DAO();
+        }
+
+        public DataTable Tim_Phong_Trong()
+        {
+            return dpDAO.Tim_Phong_Trong();
         }
     }
 }
