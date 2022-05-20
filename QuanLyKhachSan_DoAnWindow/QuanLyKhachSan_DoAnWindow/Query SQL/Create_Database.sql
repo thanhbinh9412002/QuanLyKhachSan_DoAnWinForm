@@ -22,19 +22,20 @@ go
 create table dbo.hethong(
 		username varchar(30) PRIMARY KEY,
 		manhanvien char(5) NULL,
+		machucvu char(5) NULL,  --loc them
 		passwordtk varchar(30) NULL
 )
 go
-insert into hethong Values('thanha@', 'NV01', '04521386')
-insert into hethong Values('nguyenha@', 'NV02', '07425386')
-insert into hethong Values('vanb@', 'NV03', '04584386')
-insert into hethong Values('lenguyen@', 'NV04', '07191386')
-insert into hethong Values('levan@', 'NV05', '09421386')
-insert into hethong Values('pvtquang@', 'NV06', '0123456')
-insert into hethong Values('thloc@', 'NV07', '0123456')
-insert into hethong Values('thanhab@', 'NV08', '7542153')
-insert into hethong Values('ntbinh@', 'NV09', '3456789')
-insert into hethong Values('hothanh@', 'NV10', '4751439')
+insert into hethong Values('thanha@', 'NV01','NV' ,'04521386')
+insert into hethong Values('nguyenha@', 'NV02', 'NV','07425386')
+insert into hethong Values('vanb@', 'NV03', 'NV','04584386')
+insert into hethong Values('lenguyen@', 'NV04', 'NV','07191386')
+insert into hethong Values('levan@', 'NV05', 'NV','09421386')
+insert into hethong Values('pvtquang@', 'NV06', 'QL','0123456')
+insert into hethong Values('thloc@', 'NV07', 'QL','123')
+insert into hethong Values('thanhab@', 'NV08', 'QL','7542153')
+insert into hethong Values('ntbinh@', 'NV09', 'NV','3456789')
+insert into hethong Values('hothanh@', 'NV10', 'NV','4751439')
 go
 Alter table phieuthuephong WITH CHECK ADD FOREIGN KEY(username) REFERENCES hethong(username)
 go

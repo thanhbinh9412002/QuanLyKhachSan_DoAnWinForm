@@ -54,6 +54,7 @@
     <Compile Include="BUS\Khach_Hang_BUS.cs" />
     <Compile Include="BUS\Nhan_Vien_BUS.cs" />
     <Compile Include="BUS\Phong_BUS.cs" />
+    <Compile Include="BUS\Tai_Khoan_BUS.cs" />
     <Compile Include="BUS\Thue_Phong_BUS.cs" />
     <Compile Include="BUS\Vat_Tu_BUS.cs" />
     <Compile Include="Class\Bao_Cao.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="DAO\Khach_Hang_DAO.cs" />
     <Compile Include="DAO\Nhan_Vien_DAO.cs" />
     <Compile Include="DAO\Phong_DAO.cs" />
+    <Compile Include="DAO\Tai_Khoan_DAO.cs" />
     <Compile Include="DAO\Thue_Phong_DAO.cs" />
     <Compile Include="DAO\Vat_Tu_DAO.cs" />
     <Compile Include="DataProvider\DataProvider.cs" />

@@ -36,23 +36,35 @@ namespace QuanLyKhachSan_DoAnWindow
             txtMkh.Enabled = false;
         }
 
+        private void Load_ThongTin()
+        {
+            txtTenkh.Text = "";
+            rdNam.Enabled = true;
+            txtCmnd.Text = "";
+            txtDiachi.Text = "";
+            txtCoquan.Text = "";
+            txtSodt.Text = "";
+            txtEmail.Text = "";
+            LoadView();
+        }
         private void btnThem_Click(object sender, EventArgs e)          // thêm khách hàng
         {
             string gt = (rdNam.Checked ? rdNam.Text : rdNu.Text);
-            KHBUS.themKH(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text,
-                txtCoquan.Text, txtSodt.Text, txtEmail.Text);
+            KHBUS.themKH(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text, txtCoquan.Text, txtSodt.Text, txtEmail.Text);
+            Load_ThongTin();
         }
             
         private void btnSua_Click(object sender, EventArgs e)           // cập nhật khách  hàng
         {
             string gt = (rdNam.Checked ? rdNam.Text : rdNu.Text);
-            KHBUS.capnhatKH(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text,
-                txtCoquan.Text, txtSodt.Text, txtEmail.Text);
+            KHBUS.capnhatKH(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text, txtCoquan.Text, txtSodt.Text, txtEmail.Text);
+            Load_ThongTin();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)       // xóa khách hàng
         {
             KHBUS.xoaKH(txtMkh.Text);
+            Load_ThongTin();
         }
 
         private void gvKhachhang_CellClick(object sender, DataGridViewCellEventArgs e)        // click vào girbview các textbox sẽ hiển thị nội dung
@@ -75,6 +87,7 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void FormKhachHang_Click(object sender, EventArgs e)        // click vào form để trở về form ban đầu
         {
+<<<<<<< Updated upstream
             txtTenkh.Text = "";
             rdNam.Enabled = true;
             txtCmnd.Text = "";
@@ -88,6 +101,9 @@ namespace QuanLyKhachSan_DoAnWindow
         private void gvKhachhang_KeyDown(object sender, KeyEventArgs e)  
         {
             
+=======
+            Load_ThongTin();
+>>>>>>> Stashed changes
         }
 
         private void txtTimkiem_KeyDown(object sender, KeyEventArgs e)  //enter se tim kiem   
