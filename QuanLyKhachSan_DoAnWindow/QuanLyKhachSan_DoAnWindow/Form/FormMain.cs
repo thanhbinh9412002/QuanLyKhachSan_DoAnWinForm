@@ -22,7 +22,6 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormQLPhong fmP;
         public FormDatPhong fmDP;
         public FormThuePhong fmTP;
-        //public FormNguoiDung fmND;
         public FormVatTu fmVT;
         public FormDichVu fmDV;
         public FormNhanVien fmNV;
@@ -53,10 +52,14 @@ namespace QuanLyKhachSan_DoAnWindow
             }
 
             lblUser.Text = "Hi " + mfullname + " !";
+
+            loadthongtin();
+        }
+        private void loadthongtin()
+        {
             ThongKe();
             LoadData();
-
-        }
+        }    
         public void ThongKe()
         {
             var htBUS = new He_Thong_BUS();
@@ -122,24 +125,28 @@ namespace QuanLyKhachSan_DoAnWindow
             fmKH = new FormKhachHang();
             fmKH.fmMain = this;
             fmKH.ShowDialog();
+            loadthongtin();
         }
         private void mnDatphong_Click(object sender, EventArgs e)
         {
             fmDP = new FormDatPhong();
             fmDP.fmMain = this;
             fmDP.ShowDialog();
+            loadthongtin();
         }
         private void mnThuephong_Click(object sender, EventArgs e)
         {
             fmTP = new FormThuePhong();
             fmTP.fmMain = this;
             fmTP.ShowDialog();
+            loadthongtin();
         }
         private void mnPhong_Click(object sender, EventArgs e)
         {
             fmP = new FormQLPhong();
             fmP.fmMain = this;
             fmP.ShowDialog();
+            loadthongtin();
         }
         private void mnThongtin_Click(object sender, EventArgs e)
         {
@@ -179,8 +186,19 @@ namespace QuanLyKhachSan_DoAnWindow
             fmIHD = new FormInHoaDon();
             fmIHD.fmMain = this;
             fmIHD.ShowDialog();
+            loadthongtin();
         }
 
-
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                        e.RowIndex >= 0)                // kiem tra co click vao button ko
+            {
+                fmDP = new FormDatPhong();
+                fmDP.fmMain = this;
+                fmDP.ShowDialog();
+            }    
+        }
     }
 }

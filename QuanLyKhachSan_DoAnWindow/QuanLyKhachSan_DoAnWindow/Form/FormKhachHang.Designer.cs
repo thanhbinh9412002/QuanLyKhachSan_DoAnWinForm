@@ -44,6 +44,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gvKhachhang = new System.Windows.Forms.DataGridView();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_newMa = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.bt_datphong = new System.Windows.Forms.Button();
+            this.bt_thuephong = new System.Windows.Forms.Button();
+            this.bt_Traphong = new System.Windows.Forms.Button();
             this.makhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenkhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,15 +64,6 @@
             this.coquan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTimkiem = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            /*this.button1 = new System.Windows.Forms.Button();*/
             ((System.ComponentModel.ISupportInitialize)(this.gvKhachhang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -150,7 +153,7 @@
             this.txtMkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMkh.Location = new System.Drawing.Point(130, 20);
             this.txtMkh.Name = "txtMkh";
-            this.txtMkh.Size = new System.Drawing.Size(186, 24);
+            this.txtMkh.Size = new System.Drawing.Size(107, 24);
             this.txtMkh.TabIndex = 61;
             // 
             // rdNu
@@ -236,7 +239,7 @@
             this.coquan,
             this.sodienthoai,
             this.email});
-            this.gvKhachhang.Location = new System.Drawing.Point(12, 213);
+            this.gvKhachhang.Location = new System.Drawing.Point(12, 266);
             this.gvKhachhang.MultiSelect = false;
             this.gvKhachhang.Name = "gvKhachhang";
             this.gvKhachhang.ReadOnly = true;
@@ -245,73 +248,10 @@
             this.gvKhachhang.TabIndex = 62;
             this.gvKhachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvKhachhang_CellClick);
             // 
-            // makhachhang
-            // 
-            this.makhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.makhachhang.DataPropertyName = "makhachhang";
-            this.makhachhang.HeaderText = "Mã KH";
-            this.makhachhang.Name = "makhachhang";
-            this.makhachhang.ReadOnly = true;
-            // 
-            // tenkhachhang
-            // 
-            this.tenkhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenkhachhang.DataPropertyName = "tenkhachhang";
-            this.tenkhachhang.HeaderText = "Họ và tên";
-            this.tenkhachhang.Name = "tenkhachhang";
-            this.tenkhachhang.ReadOnly = true;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Giới tính";
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.ReadOnly = true;
-            // 
-            // cmnd_passport
-            // 
-            this.cmnd_passport.DataPropertyName = "cmnd_passport";
-            this.cmnd_passport.HeaderText = "CMND, passport";
-            this.cmnd_passport.Name = "cmnd_passport";
-            this.cmnd_passport.ReadOnly = true;
-            // 
-            // diachi
-            // 
-            this.diachi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.diachi.DataPropertyName = "diachi";
-            this.diachi.HeaderText = "Địa chỉ";
-            this.diachi.Name = "diachi";
-            this.diachi.ReadOnly = true;
-            // 
-            // coquan
-            // 
-            this.coquan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.coquan.DataPropertyName = "coquan";
-            this.coquan.HeaderText = "Cơ quan";
-            this.coquan.Name = "coquan";
-            this.coquan.ReadOnly = true;
-            // 
-            // sodienthoai
-            // 
-            this.sodienthoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sodienthoai.DataPropertyName = "sodienthoai";
-            this.sodienthoai.HeaderText = "SĐT";
-            this.sodienthoai.Name = "sodienthoai";
-            this.sodienthoai.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
             // txtTimkiem
             // 
             this.txtTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTimkiem.Location = new System.Drawing.Point(142, 181);
+            this.txtTimkiem.Location = new System.Drawing.Point(142, 221);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(186, 24);
             this.txtTimkiem.TabIndex = 63;
@@ -322,7 +262,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label8.Location = new System.Drawing.Point(17, 184);
+            this.label8.Location = new System.Drawing.Point(17, 224);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 18);
             this.label8.TabIndex = 64;
@@ -330,6 +270,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.bt_newMa);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtMkh);
@@ -353,6 +294,16 @@
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // bt_newMa
+            // 
+            this.bt_newMa.Location = new System.Drawing.Point(270, 19);
+            this.bt_newMa.Name = "bt_newMa";
+            this.bt_newMa.Size = new System.Drawing.Size(46, 23);
+            this.bt_newMa.TabIndex = 64;
+            this.bt_newMa.Text = "New";
+            this.bt_newMa.UseVisualStyleBackColor = true;
+            this.bt_newMa.Click += new System.EventHandler(this.bt_newMa_Click);
             // 
             // txtEmail
             // 
@@ -409,23 +360,115 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // button1
+            // bt_datphong
             // 
-            /*this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(606, 183);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 30);
-            this.button1.TabIndex = 70;
-            this.button1.Text = "Quay lại";
-            this.button1.UseVisualStyleBackColor = true;*/
+            this.bt_datphong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bt_datphong.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bt_datphong.Location = new System.Drawing.Point(368, 221);
+            this.bt_datphong.Name = "bt_datphong";
+            this.bt_datphong.Size = new System.Drawing.Size(90, 30);
+            this.bt_datphong.TabIndex = 70;
+            this.bt_datphong.Text = "Đặt phòng";
+            this.bt_datphong.UseVisualStyleBackColor = true;
+            this.bt_datphong.Click += new System.EventHandler(this.bt_datphong_Click);
+            // 
+            // bt_thuephong
+            // 
+            this.bt_thuephong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bt_thuephong.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bt_thuephong.Location = new System.Drawing.Point(478, 221);
+            this.bt_thuephong.Name = "bt_thuephong";
+            this.bt_thuephong.Size = new System.Drawing.Size(90, 30);
+            this.bt_thuephong.TabIndex = 71;
+            this.bt_thuephong.Text = "Thuê phòng";
+            this.bt_thuephong.UseVisualStyleBackColor = true;
+            this.bt_thuephong.Click += new System.EventHandler(this.bt_thuephong_Click);
+            // 
+            // bt_Traphong
+            // 
+            this.bt_Traphong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bt_Traphong.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bt_Traphong.Location = new System.Drawing.Point(584, 221);
+            this.bt_Traphong.Name = "bt_Traphong";
+            this.bt_Traphong.Size = new System.Drawing.Size(90, 30);
+            this.bt_Traphong.TabIndex = 72;
+            this.bt_Traphong.Text = "Trả phòng";
+            this.bt_Traphong.UseVisualStyleBackColor = true;
+            this.bt_Traphong.Click += new System.EventHandler(this.bt_Traphong_Click);
+            // 
+            // makhachhang
+            // 
+            this.makhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.makhachhang.DataPropertyName = "makhachhang";
+            this.makhachhang.HeaderText = "Mã KH";
+            this.makhachhang.Name = "makhachhang";
+            this.makhachhang.ReadOnly = true;
+            this.makhachhang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // tenkhachhang
+            // 
+            this.tenkhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenkhachhang.DataPropertyName = "tenkhachhang";
+            this.tenkhachhang.HeaderText = "Họ và tên";
+            this.tenkhachhang.Name = "tenkhachhang";
+            this.tenkhachhang.ReadOnly = true;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.HeaderText = "Giới tính";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
+            // 
+            // cmnd_passport
+            // 
+            this.cmnd_passport.DataPropertyName = "cmnd_passport";
+            this.cmnd_passport.HeaderText = "CMND, passport";
+            this.cmnd_passport.Name = "cmnd_passport";
+            this.cmnd_passport.ReadOnly = true;
+            // 
+            // diachi
+            // 
+            this.diachi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
+            // 
+            // coquan
+            // 
+            this.coquan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.coquan.DataPropertyName = "coquan";
+            this.coquan.HeaderText = "Cơ quan";
+            this.coquan.Name = "coquan";
+            this.coquan.ReadOnly = true;
+            // 
+            // sodienthoai
+            // 
+            this.sodienthoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sodienthoai.DataPropertyName = "sodienthoai";
+            this.sodienthoai.HeaderText = "SĐT";
+            this.sodienthoai.Name = "sodienthoai";
+            this.sodienthoai.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // FormKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(706, 431);
+            this.ClientSize = new System.Drawing.Size(706, 493);
+            this.Controls.Add(this.bt_Traphong);
+            this.Controls.Add(this.bt_thuephong);
+            this.Controls.Add(this.bt_datphong);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -436,7 +479,6 @@
             this.Name = "FormKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin khách hàng";
-            this.Click += new System.EventHandler(this.FormKhachHang_Click);
             ((System.ComponentModel.ISupportInitialize)(this.gvKhachhang)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -469,6 +511,12 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button bt_newMa;
+        private System.Windows.Forms.Button bt_datphong;
+        private System.Windows.Forms.Button bt_thuephong;
+        private System.Windows.Forms.Button bt_Traphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn makhachhang;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenkhachhang;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
@@ -477,7 +525,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn coquan;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label11;
     }
 }

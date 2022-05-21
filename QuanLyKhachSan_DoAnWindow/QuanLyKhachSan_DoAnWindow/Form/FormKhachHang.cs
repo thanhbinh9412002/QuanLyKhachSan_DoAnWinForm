@@ -16,7 +16,8 @@ namespace QuanLyKhachSan_DoAnWindow
     {
         private Khach_Hang_BUS KHBUS = new Khach_Hang_BUS();
         public FormMain fmMain;
-
+        public FormDatPhong fmDP;
+        public FormThuePhong fmTP;
         public FormKhachHang()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             KHBUS.LoadData(gvKhachhang);
             Load_MaKH();
+            gvKhachhang.Sort(gvKhachhang.Columns[0], ListSortDirection.Ascending);
         }
 
         private void Load_MaKH()        // Load mã khách hàng
@@ -69,23 +71,31 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void gvKhachhang_CellClick(object sender, DataGridViewCellEventArgs e)        // click vào girbview các textbox sẽ hiển thị nội dung
         {
-            DataGridViewRow row = this.gvKhachhang.Rows[e.RowIndex];
-            txtMkh.Text = row.Cells[0].Value.ToString();
-            txtTenkh.Text = row.Cells[1].Value.ToString();
-            string gt = row.Cells[2].Value.ToString();
-            if (gt == "nam")
+            try
             {
-                rdNam.Enabled = true;
+                DataGridViewRow row = this.gvKhachhang.Rows[e.RowIndex];
+                txtMkh.Text = row.Cells[0].Value.ToString();
+                txtTenkh.Text = row.Cells[1].Value.ToString();
+                string gt = row.Cells[2].Value.ToString();
+                if (gt == "nam")
+                {
+                    rdNam.Enabled = true;
+                }
+                else rdNu.Enabled = true;
+                txtCmnd.Text = row.Cells[3].Value.ToString();
+                txtDiachi.Text = row.Cells[4].Value.ToString();
+                txtCoquan.Text = row.Cells[5].Value.ToString();
+                txtSodt.Text = row.Cells[6].Value.ToString();
+                txtEmail.Text = row.Cells[7].Value.ToString();
             }
-            else rdNu.Enabled = true;
-            txtCmnd.Text = row.Cells[3].Value.ToString();
-            txtDiachi.Text = row.Cells[4].Value.ToString();
-            txtCoquan.Text = row.Cells[5].Value.ToString();
-            txtSodt.Text = row.Cells[6].Value.ToString();
-            txtEmail.Text = row.Cells[7].Value.ToString();
+            catch
+            {
+                MessageBox.Show("Error: " + e);
+            }
+            gvKhachhang.Sort(gvKhachhang.Columns[0], ListSortDirection.Ascending);
         }
 
-        private void FormKhachHang_Click(object sender, EventArgs e)        // click vào form để trở về form ban đầu
+        private void reLoadinfo()       // click vào form để trở về form ban đầu
         {
             txtTenkh.Text = "";
             rdNam.Enabled = true;
@@ -143,5 +153,36 @@ namespace QuanLyKhachSan_DoAnWindow
             }
         }
 
+        private void bt_newMa_Click(object sender, EventArgs e)
+        {
+            reLoadinfo();
+        }
+
+        private void bt_datphong_Click(object sender, EventArgs e)
+        {
+            fmDP = new FormDatPhong();
+            if (!string.IsNullOrEmpty(txtSodt.Text))
+            {
+                fmDP.laythongtinKH(txtSodt.Text);
+                fmDP.fmKH = this;
+                fmDP.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Hiện chưa có số điện thoại");
+            }
+        }
+
+        private void bt_thuephong_Click(object sender, EventArgs e)
+        {
+            fmTP = new FormThuePhong();
+            //fmTP.fmKH = this;
+            fmTP.ShowDialog();
+        }
+
+        private void bt_Traphong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
