@@ -44,22 +44,22 @@ create table dbo.phieudatphong(
 		makhachhang char(5) NULL,
 		ngayden date NULL,
 		ngaydi date NULL,
-		sotiendatcoc char(30) NULL,
+		sotiendatcoc int NULL,
 		username varchar(30) NULL,
 		tinhtrang varchar(30) NULL,
 		songuoi int NULL
 )
 go
-insert into phieudatphong Values('PD01', 'KH01', '2021-10-04', '2021-10-14', '100000', 'thanha@', 'tot', 2)
-insert into phieudatphong Values('PD02', 'KH02', '2022-04-20', '2022-04-30', '500000', 'nguyenha@', 'binh thuong', 3)
-insert into phieudatphong Values('PD03', 'KH03', '2022-01-10', '2022-01-14', '240000', 'vanb@', 'tot', 4)
-insert into phieudatphong Values('PD04', 'KH04', '2022-03-05', '2022-03-20', '150000', 'lenguyen@', 'binh thuong', 6)
-insert into phieudatphong Values('PD05', 'KH05', '2022-04-29', '2022-05-01', '250000', 'levan@', 'tot', 4)
-insert into phieudatphong Values('PD06', 'KH06', '2022-02-15', '2022-02-20', '300000', 'pvtquang@', 'cuc ki tot', 5)
-insert into phieudatphong Values('PD07', 'KH07', '2022-03-09', '2022-03-12', '150000', 'thloc@', 'tot', 2)
-insert into phieudatphong Values('PD08', 'KH08', '2022-01-07', '2022-01-10', '120000', 'thanha@', 'kem', 1)
-insert into phieudatphong Values('PD09', 'KH09', '2021-12-22', '2021-12-29', '300000', 'ntbinh@', 'tot', 4)
-insert into phieudatphong Values('PD10', 'KH10', '2021-10-19', '2021-10-25', '200000', 'hothanh@', 'binh thuong', 3)
+insert into phieudatphong Values('PD01', 'KH01', '2021-10-04', '2021-10-14', 100000, 'thanha@', 'tot', 2)
+insert into phieudatphong Values('PD02', 'KH02', '2022-04-20', '2022-04-30', 500000, 'nguyenha@', 'binh thuong', 3)
+insert into phieudatphong Values('PD03', 'KH03', '2022-01-10', '2022-01-14', 240000, 'vanb@', 'tot', 4)
+insert into phieudatphong Values('PD04', 'KH04', '2022-03-05', '2022-03-20', 150000, 'lenguyen@', 'binh thuong', 6)
+insert into phieudatphong Values('PD05', 'KH05', '2022-04-29', '2022-05-01', 250000 , 'levan@', 'tot', 4)
+insert into phieudatphong Values('PD06', 'KH06', '2022-02-15', '2022-02-20', 300000, 'pvtquang@', 'cuc ki tot', 5)
+insert into phieudatphong Values('PD07', 'KH07', '2022-03-09', '2022-03-12', 150000, 'thloc@', 'tot', 2)
+insert into phieudatphong Values('PD08', 'KH08', '2022-01-07', '2022-01-10', 120000, 'thanha@', 'kem', 1)
+insert into phieudatphong Values('PD09', 'KH09', '2021-12-22', '2021-12-29', 300000, 'ntbinh@', 'tot', 4)
+insert into phieudatphong Values('PD10', 'KH10', '2021-10-19', '2021-10-25', 200000, 'hothanh@', 'binh thuong', 3)
 go
 Alter table phieuthuephong WITH CHECK ADD FOREIGN KEY(maphieudat) REFERENCES phieudatphong(maphieudat)
 go
@@ -100,22 +100,22 @@ go
 create table dbo.hoadon(
 		mahoadon char(5) PRIMARY KEY,
 		ngaythanhtoan date NULL,
-		tongtien varchar(30) NULL,
+		tongtien int NULL,
 		maphieuthue char(5) NULL,
 		makhachhang char(5) Null,
 		username varchar(30) not NULL
 )
 go
-insert into hoadon Values('HD01','2021-10-14', '300000' , 'PT01', 'KH01', 'thanha@')
-insert into hoadon Values('HD02','2022-04-30','450000' , 'PT02', 'KH02', 'nguyenha@')
-insert into hoadon Values('HD03','2022-01-14', '600000' , 'PT03', 'KH03', 'vanb@')
-insert into hoadon Values('HD04','2022-03-20', '350000' , 'PT04', 'KH04', 'lenguyen@')
-insert into hoadon Values('HD05','2022-05-01', '450000' , 'PT05', 'KH05', 'levan@')
-insert into hoadon Values('HD06','2022-02-20', '700000' , 'PT06', 'KH06', 'pvtquang@')
-insert into hoadon Values('HD07','2022-03-12', '250000' , 'PT07', 'KH07', 'thloc@')
-insert into hoadon Values('HD08','2022-01-10', '650000' , 'PT08', 'KH08', 'thanhab@')
-insert into hoadon Values('HD09','2021-12-29', '550000' , 'PT09', 'KH09', 'ntbinh@')
-insert into hoadon Values('HD10','2021-10-19', '460000' , 'PT10', 'KH10', 'hothanh@')
+insert into hoadon Values('HD01','2021-10-14', 300000 , 'PT01', 'KH01', 'thanha@')
+insert into hoadon Values('HD02','2022-04-30',450000 , 'PT02', 'KH02', 'nguyenha@')
+insert into hoadon Values('HD03','2022-01-14', 600000 , 'PT03', 'KH03', 'vanb@')
+insert into hoadon Values('HD04','2022-03-20', 350000 , 'PT04', 'KH04', 'lenguyen@')
+insert into hoadon Values('HD05','2022-05-01', 450000 , 'PT05', 'KH05', 'levan@')
+insert into hoadon Values('HD06','2022-02-20', 700000 , 'PT06', 'KH06', 'pvtquang@')
+insert into hoadon Values('HD07','2022-03-12', 250000 , 'PT07', 'KH07', 'thloc@')
+insert into hoadon Values('HD08','2022-01-10', 650000 , 'PT08', 'KH08', 'thanhab@')
+insert into hoadon Values('HD09','2021-12-29', 550000 , 'PT09', 'KH09', 'ntbinh@')
+insert into hoadon Values('HD10','2021-10-19', 460000 , 'PT10', 'KH10', 'hothanh@')
 go
 Alter table hoadon WITH CHECK ADD FOREIGN KEY(maphieuthue) REFERENCES phieuthuephong(maphieuthue)
 go
@@ -140,20 +140,20 @@ go
 create table dbo.dichvu(
 		madichvu char(5) PRIMARY KEY,
 		tendichvu varchar(30) NULL,
-		gia char(20) NULL,
+		gia int NULL,
 		donvitinh char(5) NULL
 )
 go
-insert into dichvu Values('DV01', 'nuoc loc', '5000', 'dong')
-insert into dichvu Values('DV02', 'nuoc pepsi', '20000', 'dong')
-insert into dichvu Values('DV03', 'banh quy', '50000', 'dong')
-insert into dichvu Values('DV04', 'bia', '300000', 'dong')
-insert into dichvu Values('DV05', 'giac ui', '70000', 'dong')
-insert into dichvu Values('DV06', 've sinh', '20000', 'dong')
-insert into dichvu Values('DV07', 'khan giay', '10000', 'dong')
-insert into dichvu Values('DV08', 'banh gao', '30000', 'dong')
-insert into dichvu Values('DV09', 'ga ran', '100000', 'dong')
-insert into dichvu Values('DV10', 'sua', '20000', 'dong')
+insert into dichvu Values('DV01', 'nuoc loc', 5000, 'dong')
+insert into dichvu Values('DV02', 'nuoc pepsi', 20000, 'dong')
+insert into dichvu Values('DV03', 'banh quy', 50000, 'dong')
+insert into dichvu Values('DV04', 'bia', 300000, 'dong')
+insert into dichvu Values('DV05', 'giac ui', 70000, 'dong')
+insert into dichvu Values('DV06', 've sinh', 20000, 'dong')
+insert into dichvu Values('DV07', 'khan giay', 10000 , 'dong')
+insert into dichvu Values('DV08', 'banh gao', 30000, 'dong')
+insert into dichvu Values('DV09', 'ga ran', 100000 , 'dong')
+insert into dichvu Values('DV10', 'sua', 20000, 'dong')
 go
 create table dbo.phong(
 		maphong char(5) PRIMARY KEY,
@@ -212,13 +212,13 @@ insert into chitietdatphong Values('PD10', 'P202')
 go
 create table dbo.loaiphong(
 		maloai char(10) PRIMARY KEY,
-		gia char(20) NULL,
+		gia int NULL,
 		songuoi int NULL
 )
 go
-insert into loaiphong Values('L-Vip', '500000', 4)
-insert into loaiphong Values('L-Normal', '250000', 2)
-insert into loaiphong Values('L-Cheap', '150000', 1)
+insert into loaiphong Values('L-Vip', 500000, 4)
+insert into loaiphong Values('L-Normal', 250000 , 2)
+insert into loaiphong Values('L-Cheap', 150000 , 1)
 go
 Alter table phong WITH CHECK ADD FOREIGN KEY(maloai) REFERENCES loaiphong(maloai)
 go

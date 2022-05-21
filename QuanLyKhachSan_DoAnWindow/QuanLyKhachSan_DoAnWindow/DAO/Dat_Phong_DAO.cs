@@ -32,6 +32,18 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             return bang;
         }
 
+        public DataTable Tim_Phong_Theo_Ma_Phong(string maphong)
+        {
+            string sql = "select phong.maphong, phong.maloai, loaiphong.gia, loaiphong.songuoi, trangthaiphong.trangthai from phong, loaiphong, trangthaiphong " +
+                "where phong.maphong = @maphong and phong.maloai = loaiphong.maloai and trangthaiphong.maphong = phong.maphong";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@maphong", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(maphong);
+            DataTable bang = new DataTable();
+            bang = conn.executeReader(sql, sqlParameters);
+            return bang;
+        }
+
         public DataTable Hien_Thi_DS()
         {
             string sql = "select maphieudat, makhachhang, ngayden, ngaydi, songuoi from phieudatphong";
@@ -40,7 +52,6 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             bang = conn.executeReader(sql, sqlParameters);
             return bang;
         }
-
         public DataTable loadpagechitiet(string makh)           // tao ra bang thong tin chi tiet nhu tren form
         {
             string query = "select khachhang.makhachhang, tenkhachhang, gioitinh, cmnd_passport, diachi, sodienthoai, ngayden, ngaydi, songuoi, sotiendatcoc " +
