@@ -64,6 +64,11 @@ C:\Users\Hl10a\OneDrive\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachS
 C:\Users\Hl10a\OneDrive\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormInHoaDon.resources
 C:\Users\Hl10a\OneDrive\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormNhanVien.resources
 C:\Users\Hl10a\OneDrive\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormQLTK.resources
+<<<<<<< HEAD
 E:\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormNhanVien.resources
 E:\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormQLTK.resources
 E:\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.csproj.ResolveComReference.cache
+=======
+C:\Users\Acer\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormNhanVien.resources
+C:\Users\Acer\Documents\GitHub\QuanLyKhachSan_DoAnWinForm\QuanLyKhachSan_DoAnWindow\QuanLyKhachSan_DoAnWindow\obj\Debug\QuanLyKhachSan_DoAnWindow.FormQLTK.resources
+>>>>>>> 9de72a054ca9fa1f5ccb992793340b7fca6dabba

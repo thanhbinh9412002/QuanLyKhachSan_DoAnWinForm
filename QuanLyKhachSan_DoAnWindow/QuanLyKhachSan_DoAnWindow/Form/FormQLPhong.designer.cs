@@ -77,7 +77,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(669, 417);
+            this.tabControl1.Size = new System.Drawing.Size(806, 417);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -102,7 +102,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(661, 386);
+            this.tabPage1.Size = new System.Drawing.Size(798, 386);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản lý phòng";
             // 
@@ -177,7 +177,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(214, 13);
+            this.label3.Location = new System.Drawing.Point(282, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(265, 36);
             this.label3.TabIndex = 8;
@@ -192,7 +192,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(71, 52);
             this.button3.TabIndex = 7;
-            this.button3.Text = "Xoá phòng";
+            this.button3.Text = "Xoá";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -205,7 +205,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 52);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Sửa phòng";
+            this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -218,7 +218,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(74, 52);
             this.btnThem.TabIndex = 5;
-            this.btnThem.Text = "Thêm phòng";
+            this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -235,7 +235,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.dataGriwView1.ReadOnly = true;
             this.dataGriwView1.RowHeadersWidth = 51;
             this.dataGriwView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGriwView1.Size = new System.Drawing.Size(345, 317);
+            this.dataGriwView1.Size = new System.Drawing.Size(492, 317);
             this.dataGriwView1.TabIndex = 4;
             this.dataGriwView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGriwView1_CellClick);
             // 
@@ -288,7 +288,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(661, 386);
+            this.tabPage2.Size = new System.Drawing.Size(798, 386);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản lý loại phòng";
             // 
@@ -320,7 +320,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(71, 61);
             this.button5.TabIndex = 22;
-            this.button5.Text = "Xoá loại phòng";
+            this.button5.Text = "Xoá";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -333,7 +333,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(70, 61);
             this.button8.TabIndex = 21;
-            this.button8.Text = "Sửa loại phòng";
+            this.button8.Text = "Sửa";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -346,7 +346,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(74, 61);
             this.button9.TabIndex = 20;
-            this.button9.Text = "Thêm loại phòng";
+            this.button9.Text = "Thêm";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -374,7 +374,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(241, 4);
+            this.label4.Location = new System.Drawing.Point(296, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(175, 36);
             this.label4.TabIndex = 17;
@@ -393,7 +393,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.dataGriwView2.ReadOnly = true;
             this.dataGriwView2.RowHeadersWidth = 51;
             this.dataGriwView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGriwView2.Size = new System.Drawing.Size(339, 323);
+            this.dataGriwView2.Size = new System.Drawing.Size(490, 323);
             this.dataGriwView2.TabIndex = 13;
             this.dataGriwView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGriwView2_CellClick);
             // 
@@ -453,7 +453,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(693, 472);
+            this.ClientSize = new System.Drawing.Size(830, 472);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button10);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

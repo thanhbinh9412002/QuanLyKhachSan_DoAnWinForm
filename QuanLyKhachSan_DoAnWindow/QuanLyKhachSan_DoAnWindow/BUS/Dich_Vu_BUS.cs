@@ -31,6 +31,11 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return dvDAO.Tim_Phieu_Thue_Phong(maphieuthue);
         }
 
+        public DataTable Tim_Dich_Vu(string madichvu)
+        {
+            return dvDAO.Tim_Dich_Vu(madichvu);
+        }
+
         public DataTable Lay_Data_Bang_2()
         {
             return dvDAO.Lay_Data_Bang_2();
