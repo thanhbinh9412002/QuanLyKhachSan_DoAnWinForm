@@ -162,16 +162,34 @@ create table dbo.phong(
 		danhan char(5) NULL
 )
 go
+insert into phong Values('P101', 'L-Normal', 'khong', 'khong')
 insert into phong Values('P102', 'L-Vip', 'co', 'co')
-insert into phong Values('P302', 'L-Normal', 'co', 'khong')
+insert into phong Values('P103', 'L-Vip', 'khong', 'khong')
+insert into phong Values('P104', 'L-Cheap', 'khong', 'khong')
 insert into phong Values('P105', 'L-Cheap', 'co', 'co')
-insert into phong Values('P206', 'L-Vip', 'co', 'co')
-insert into phong Values('P405', 'L-Cheap', 'co', 'co')
-insert into phong Values('P301', 'L-Normal', 'co', 'khong')
-insert into phong Values('P406', 'L-Normal', 'khong', 'khong')
-insert into phong Values('P401', 'L-Vip', 'co', 'co')
-insert into phong Values('P305', 'L-Cheap', 'co', 'khong')
+insert into phong Values('P106', 'L-Normal', 'khong', 'khong')
+
+
+insert into phong Values('P201', 'L-Cheap', 'khong', 'khong')
 insert into phong Values('P202', 'L-Normal', 'co', 'khong')
+insert into phong Values('P203', 'L-Vip', 'khong', 'khong')
+insert into phong Values('P204', 'L-Cheap', 'khong', 'khong')
+insert into phong Values('P205', 'L-Normal', 'khong', 'khong')
+insert into phong Values('P206', 'L-Vip', 'co', 'co')
+
+insert into phong Values('P301', 'L-Normal', 'co', 'khong')
+insert into phong Values('P302', 'L-Normal', 'co', 'khong')
+insert into phong Values('P303', 'L-Vip', 'khong', 'khong')
+insert into phong Values('P304', 'L-Cheap', 'khong', 'khong')
+insert into phong Values('P305', 'L-Cheap', 'co', 'khong')
+insert into phong Values('P306', 'L-Vip', 'khong', 'khong')
+
+insert into phong Values('P401', 'L-Vip', 'co', 'co')
+insert into phong Values('P402', 'L-Normal', 'khong', 'khong')
+insert into phong Values('P403', 'L-Vip', 'khong', 'khong')
+insert into phong Values('P404', 'L-Cheap', 'khong', 'khong')
+insert into phong Values('P405', 'L-Cheap', 'co', 'co')
+insert into phong Values('P406', 'L-Normal', 'khong', 'khong')
 go
 create table dbo.chitietthuephong(
 		maphieuthue char(5) references phieuthuephong(maphieuthue),

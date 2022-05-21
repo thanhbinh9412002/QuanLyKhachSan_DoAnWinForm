@@ -79,6 +79,12 @@
     <Compile Include="DAO\Thue_Phong_DAO.cs" />
     <Compile Include="DAO\Vat_Tu_DAO.cs" />
     <Compile Include="DataProvider\DataProvider.cs" />
+    <Compile Include="Form\FormDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDatPhong.designer.cs">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormInHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,12 +151,6 @@
     <Compile Include="Form\FormDoiMK.Designer.cs">
       <DependentUpon>FormDoiMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormDatPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FormDatPhong.Designer.cs">
-      <DependentUpon>FormDatPhong.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FormThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +193,9 @@
     <EmbeddedResource Include="Form\FormBaoCao.resx">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormDatPhong.resx">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormDichVu.resx">
       <DependentUpon>FormDichVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,9 +225,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormDoiMK.resx">
       <DependentUpon>FormDoiMK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormDatPhong.resx">
-      <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormThongTin.resx">
       <DependentUpon>FormThongTin.cs</DependentUpon>

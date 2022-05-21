@@ -16,7 +16,7 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormInHoaDon());
+            Application.Run(new FormMain());
         }
     }
 }
