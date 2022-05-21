@@ -19,9 +19,9 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return hdDAO.Lay_Du_Lieu(mahoadon);
         }
-        public DataTable Lay_Du_Lieu_2(string makhachhang)
+        public DataTable Chitiethoadon(string mahoadon)
         {
-            return hdDAO.Lay_Du_Lieu_2(makhachhang);
+            return hdDAO.Chitiethoadon(mahoadon);
         }
     }
 }

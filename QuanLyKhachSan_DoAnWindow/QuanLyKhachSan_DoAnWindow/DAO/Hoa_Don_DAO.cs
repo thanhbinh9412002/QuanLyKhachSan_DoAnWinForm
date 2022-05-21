@@ -24,9 +24,15 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             hoadon = conn.executeReader(sql, sqlParameters);
             return hoadon;
         }
-        public DataTable Lay_Du_Lieu_2(string makhachhang)  // lấy dữ liệu để thực hiện việc tìm kiếm theo mã khách hàng
+        public DataTable Chitiethoadon(string mahoadon)
         {
-            string sql = "select mahoadon, ngaythanhtoan, tongtien, maphieuthue, makhachhang  from hoadon where makhachhang like '%" + makhachhang + "%'";
+            string sql = "select a.mahoadon, d.tenkhachhang , d.cmnd_passport, b.maphong, c.tendichvu, c.gia, e.sotiendatcoc" +
+                "from hoadon a" +
+                "join chitietthuephong b on a.maphieuthue = b.maphieuthue " +
+                "join dichvu c on b.madichvu = c.madichvu" +
+                "join khachhang d on a.makhachhang = d.makhachhang" +
+                "join phieudatphong e on a.makhachhang = e.makhachhang" +
+                "where a.mahoadon = mahoadon";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable hoadon = new DataTable();
             hoadon = conn.executeReader(sql, sqlParameters);
