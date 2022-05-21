@@ -30,5 +30,26 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return dpDAO.Hien_Thi_DS();
         }
+
+        public DataTable Tim_Kiem_DS(string maphieudat)
+        {
+            return dpDAO.Tim_Kiem_DS(maphieudat);
+        }
+
+        public DataTable Lay_Ma_Phieu()
+        {
+            return dpDAO.Lay_Ma_Phieu();
+        }
+
+        public DataTable Lay_Thong_Tin(string maphieudat)
+        {
+            return dpDAO.Lay_Thong_Tin(maphieudat);
+        }
+
+        public DataTable Tim_Phong_Theo_Ma_Phong(string maphong)
+        {
+            return dpDAO.Tim_Phong_Theo_Ma_Phong(maphong);
+        }
+
     }
 }
