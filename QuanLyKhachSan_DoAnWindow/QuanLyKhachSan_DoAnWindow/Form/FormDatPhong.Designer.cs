@@ -290,7 +290,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 18);
             this.label3.TabIndex = 4;
-            this.label3.Text = "CMND/CCCD:";
+            this.label3.Text = "SĐT khách hàng:";
             // 
             // groupBox2
             // 
@@ -299,6 +299,8 @@
             this.groupBox2.Controls.Add(this.txtmapd);
             this.groupBox2.Controls.Add(this.txt_tiencoc);
             this.groupBox2.Controls.Add(this.txt_songuoi);
+            this.groupBox2.Controls.Add(this.date_ngaydi);
+            this.groupBox2.Controls.Add(this.date_ngayden);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
@@ -342,7 +344,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPage2.Controls.Add(this.txt_timkiem);
+            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.bt_quaylai);
             this.tabPage2.Controls.Add(this.bt_them);
@@ -650,6 +652,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.DataGridView DataGridView1;
+        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button bt_MaPD;
         private System.Windows.Forms.TabPage tabPage3;
