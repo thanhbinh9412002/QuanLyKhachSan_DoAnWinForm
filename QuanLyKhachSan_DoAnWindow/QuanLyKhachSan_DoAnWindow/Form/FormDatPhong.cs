@@ -14,13 +14,14 @@ namespace QuanLyKhachSan_DoAnWindow
     public partial class FormDatPhong : Form
     {
         public FormMain fmMain;
-        public FormKhachHang fmKH;
+        public FormKhachHang fmKH = new FormKhachHang();
         private Dat_Phong_BUS dpBUS = new Dat_Phong_BUS();
         public FormDatPhong()
         {
             InitializeComponent();
             this.DataGridView1.DataSource = dpBUS.Tim_Phong_Trong();
             this.gvdanhsach.DataSource = dpBUS.Hien_Thi_DS();
+            date_ngayden.Value = DateTime.Today;
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -36,7 +37,6 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void clearInfo()
         {
-            txt_sdtkh.Text = "";
             txt_songuoi.Text = "";
             txt_tiencoc.Text = "";
             date_ngayden.Value = DateTime.Today;
@@ -45,53 +45,47 @@ namespace QuanLyKhachSan_DoAnWindow
         }
 
         //loc code
-        private void DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gvdanhsach_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
             DataGridViewRow row = this.gvdanhsach.Rows[e.RowIndex];                 //lay ma phieu dat va ma khach hang tu bang
-            string makh = row.Cells[2].Value.ToString();
-            string mapd = row.Cells[1].Value.ToString();
-
-            var senderGrid = (DataGridView)sender;                              
+            string maphong = row.Cells[2].Value.ToString();
+            var senderGrid = (DataGridView)sender;
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                         e.RowIndex >= 0)                // kiem tra co click vao button ko
             {
                 tabControl1.SelectedTab = tabPage3;         // chuyen qua xem chi tiet
-                loadthongtin(makh, mapd);
+                loadthongtin(maphong);
             }
         }
-        public void loadthongtin(string makh, string mapd)
+        public void loadthongtin(string maphong)
         {
-            loadpage(makh);           // load thong tin chi tiet
-            loadinfoRoom(mapd);       // load thong tin phong
+            loadpage(maphong);           // load thong tin chi tiet
+            loadinfoRoom(maphong);       // load thong tin phong
         }
-        private void loadpage(string makh)          //load thong tin chi tiet khach hang da dat phong
+        private void loadpage(string maphong)          //load thong tin chi tiet khach hang da dat phong
         {
-            dpBUS.load_chitiet(lsvChiTiet, makh);
-        }
-
-        private void loadinfoRoom(string mapd)  // load thong tin phong cua khach hang
-        {
-            dpBUS.load_inforoom(lvdp , mapd);
-        }
-        private void gvdanhsach_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            DataGridViewRow row = this.gvdanhsach.Rows[e.RowIndex];
-            txtmapd.Text = row.Cells[1].Value.ToString();
-            string makh = row.Cells[2].Value.ToString();
-            date_ngayden.Text = row.Cells[3].Value.ToString();
-            date_ngaydi.Text = row.Cells[4].Value.ToString();
-
-            // cap nhat page chi tiet va phong theo ma 
-            loadthongtin(makh, txtmapd.Text);
-            //lay thong tin tu page chi tiet
-            txt_sdtkh.Text = lsvChiTiet.Items[5].SubItems[1].Text;      
-            txt_songuoi.Text = lsvChiTiet.Items[8].SubItems[1].Text;    
-            txt_tiencoc.Text = lsvChiTiet.Items[9].SubItems[1].Text;
+            dpBUS.load_chitiet(lsvChiTiet, maphong);
         }
 
-        public void laythongtinKH(string sdt)       //lay so dien thoai cua khach hang
+        private void loadinfoRoom(string maphong)  // load thong tin phong cua khach hang
+        {
+            dpBUS.load_inforoom(lvdp , maphong);
+        }
+        private void gvdanhsach_CellClick(object sender, DataGridViewCellEventArgs e)   // khi nhan vao bang thi page chitiet cap nhat
+        {
+            try
+            {
+                DataGridViewRow row = this.gvdanhsach.Rows[e.RowIndex];
+                string maphong = row.Cells[2].Value.ToString();
+                loadthongtin(maphong);
+            }
+            catch
+            {
+                MessageBox.Show("Đừng nhấn vào dòng tiêu đề");
+            }
+        }
+
+        public void laythongtinKH(string sdt)       //lay so dien thoai khi từ form khach hang sang form datphoong
         {
             txt_sdtkh.Text = sdt;
         }
@@ -101,9 +95,68 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Close();
         }
 
+        private int timphong()
+        {
+            int index = -1;
+
+            /*foreach (DataGridViewRow row in DataGridView1.Rows)
+            {
+                if (row.Cells[radiobutton.Index].Value != null && (bool)row.Cells[radiobutton.Index].Value)
+                {
+                    index = row.Index;
+                }
+            }*/
+
+            return index;
+        }
         private void bt_Them_Click(object sender, EventArgs e)
         {
+            int index = timphong();
+            try
+            {
+                if(index != -1)
+                {
+                    string hinhthuc = (radio_offline.Checked ? radio_offline.Text : radio_online.Text);
 
+                    DataGridViewRow row = this.DataGridView1.Rows[index];
+                    string maphong = row.Cells[phongcol1.Index].Value.ToString();
+                    string maloai = row.Cells[maloaicol.Index].Value.ToString();
+                    string dadat = row.Cells[dadatcol.Index].Value.ToString();
+                    string danhan = row.Cells[danhancol.Index].Value.ToString();
+                    MessageBox.Show(maphong + maloai + danhan + dadat);
+                    if (fmKH.checksdt(txt_sdtkh.Text))
+                    {
+                        dpBUS.Phieudat(txtmapd.Text, maphong, fmMain.musername, hinhthuc);
+                        dpBUS.chitietphieu(txtmapd.Text, txt_sdtkh.Text, txt_songuoi.Text, txt_tiencoc.Text, date_ngaydi.Value, date_ngayden.Value);
+                        MessageBox.Show("Bạn đã thêm thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số điện thoại này chưa có trong dữ liệu khách hàng");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa chọn phòng!");
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi ở đâu rồi con trai ta!");
+            }
+        }
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*foreach(DataGridViewRow row in DataGridView1.Rows)
+            {
+                if(row.Cells[radiobutton.Index].Value == null || (bool)row.Cells[radiobutton.Index].Value)
+                {
+                    row.Cells[radiobutton.Index].Value = 0;
+                }    
+            }
+            DataGridView1.Rows[e.RowIndex].Cells[radiobutton.Index].Value = 1;*/
         }
     }
 }

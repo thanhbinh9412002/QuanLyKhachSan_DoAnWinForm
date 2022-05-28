@@ -12,9 +12,11 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
     internal class Dat_Phong_BUS
     {
         private Dat_Phong_DAO dpDAO;
+        private Khach_Hang_DAO khDAO;
         public Dat_Phong_BUS()
         {
             dpDAO = new Dat_Phong_DAO();
+            khDAO = new Khach_Hang_DAO();
         }
 
         public int Count_Ma_Phieu()
@@ -31,10 +33,10 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return dpDAO.Hien_Thi_DS();
         }
-        public void load_chitiet(ListView chitiet, string makh)
+        public void load_chitiet(ListView chitiet, string maphong)
         {
             DataTable data = new DataTable();
-            data = dpDAO.loadpagechitiet(makh);
+            data = dpDAO.loadpagechitiet(maphong);
 
             foreach (DataRow row in data.Rows)
             {
@@ -44,10 +46,10 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
                 }
             }
         }
-        public void load_inforoom(ListView tbphong, string mapd)
+        public void load_inforoom(ListView tbphong, string maphong)
         {
             DataTable data = new DataTable();
-            data = dpDAO.lay_bangPhong(mapd);
+            data = dpDAO.lay_bangPhong(maphong);
 
             tbphong.Items.Clear();
 
@@ -61,6 +63,16 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
                 tbphong.Items.Add(item);
             }
             data.Clear();
+        }
+        public void Phieudat(string mapd, string maphong, string username, string hinhthuc)
+        {
+            dpDAO.Themphieu(mapd, maphong, username);
+            dpDAO.upPhong(maphong, hinhthuc);
+        }
+        public void chitietphieu(string maphieu, string sdt, string songuoi, string tiencoc, DateTime di, DateTime den)
+        {
+            string makh = khDAO.PickMakh(sdt);
+            dpDAO.themchitiet(maphieu, makh, songuoi, tiencoc, di, den);
         }
     }
 }

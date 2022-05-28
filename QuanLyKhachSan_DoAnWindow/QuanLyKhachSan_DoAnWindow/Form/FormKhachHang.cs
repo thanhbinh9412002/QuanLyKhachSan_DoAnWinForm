@@ -90,21 +90,9 @@ namespace QuanLyKhachSan_DoAnWindow
             }
             catch
             {
-                MessageBox.Show("Error: " + e);
+                MessageBox.Show("Đừng nhấn vào dòng tiêu đề");
             }
             gvKhachhang.Sort(gvKhachhang.Columns[0], ListSortDirection.Ascending);
-        }
-
-        private void reLoadinfo()       // click vào form để trở về form ban đầu
-        {
-            txtTenkh.Text = "";
-            rdNam.Enabled = true;
-            txtCmnd.Text = "";
-            txtDiachi.Text = "";
-            txtCoquan.Text = "";
-            txtSodt.Text = "";
-            txtEmail.Text = "";
-            LoadView();
         }
 
         private void gvKhachhang_KeyDown(object sender, KeyEventArgs e)  
@@ -155,7 +143,14 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void bt_newMa_Click(object sender, EventArgs e)
         {
-            reLoadinfo();
+            Load_ThongTin();
+        }
+
+        public bool checksdt(string sdt)
+        {
+            if (KHBUS.Checksdt(sdt))
+                return true;
+            return false;
         }
 
         private void bt_datphong_Click(object sender, EventArgs e)

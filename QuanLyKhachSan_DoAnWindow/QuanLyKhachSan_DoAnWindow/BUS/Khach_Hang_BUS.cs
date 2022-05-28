@@ -39,5 +39,13 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             data.DataSource = khDAO.loadData(tenKH);
         }
+        public bool Checksdt(string sdt)
+        {
+            if(sdt == khDAO.Picksdt(sdt))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

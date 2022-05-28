@@ -110,5 +110,21 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             string query = "select count(*) from khachhang";
             return conn.executeCount(query);
         }
+        public string Picksdt(string sdt)
+        {
+            string query = "select sodienthoai from khachhang where sodienthoai = @sdt";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@sdt", SqlDbType.VarChar);
+            sqlParameters[0].Value = sdt;
+            return Convert.ToString(conn.executeScalar(query, sqlParameters));
+        }
+        public string PickMakh(string sdt)
+        {
+            string sql = "select makhachhang from khachhang where sodienthoai = @sdt";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@sdt", SqlDbType.VarChar);
+            sqlParameters[0].Value = sdt;
+            return Convert.ToString(conn.executeScalar(sql, sqlParameters));
+        }
     }
 }
