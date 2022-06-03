@@ -26,6 +26,16 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return tpDAO.Hien_Thi_Danh_Sach();
         }
 
+        public DataTable Hien_Thi_Danh_Sach(string maphieu)
+        {
+            return tpDAO.Hien_Thi_Danh_Sach(maphieu);
+        }
+
+        public DataTable Hien_Thi_Phong(string maphong)
+        {
+            return tpDAO.Hien_Thi_Phong(maphong);
+        }
+
         public int Dem_Ma_Phieu_Dat()
         {
             return tpDAO.Dem_Ma_Phieu_Dat();
