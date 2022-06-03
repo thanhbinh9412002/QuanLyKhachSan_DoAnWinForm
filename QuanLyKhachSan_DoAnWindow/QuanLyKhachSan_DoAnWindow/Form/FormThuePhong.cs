@@ -48,6 +48,7 @@ namespace QuanLyKhachSan_DoAnWindow
             if (radio_dadat.Checked == true)
             {
                 txt_maphieudat.Enabled = true;
+                button_maphieudat.Enabled = true;
                 txt_maphieuthue.Enabled = false;
                 button_maphieuthue.Enabled = false;
                 txt_maphieuthue.Clear();
@@ -59,6 +60,7 @@ namespace QuanLyKhachSan_DoAnWindow
             if (radio_chuadat.Checked == true)
             {
                 txt_maphieudat.Enabled = false;
+                button_maphieudat.Enabled = false;
                 txt_maphieuthue.Enabled = true;
                 button_maphieuthue.Enabled = true;
                 txt_maphieudat.Clear();
@@ -95,14 +97,32 @@ namespace QuanLyKhachSan_DoAnWindow
             {
                 txt_maphieudat.Text = dr.Cells[1].Value.ToString();
                 radio_dadat.Checked = true;
+                txt_maphieudat2.Text = dr.Cells[1].Value.ToString();
+                txt_maphieuthue2.Text = "NULL";
+                txt_ngaythue2.Text = dr.Cells[4].Value.ToString();
+                txt_tiencoc2.Text = dr.Cells[5].Value.ToString();
+                txt_songuoi2.Text = dr.Cells[6].Value.ToString();
             }
                 
             else
             {
                 txt_maphieuthue.Text = dr.Cells[1].Value.ToString();
                 radio_chuadat.Checked = true;
+                txt_maphieuthue2.Text = dr.Cells[1].Value.ToString();
+                txt_maphieudat2.Text = "NULL";
+                txt_ngaythue2.Text = dr.Cells[4].Value.ToString();
+                txt_tiencoc2.Text = dr.Cells[5].Value.ToString();
+                txt_songuoi2.Text = dr.Cells[6].Value.ToString();
+
             }
                 
+            txt_maphong.Text = dr.Cells[2].Value.ToString();
+            txt_tiencoc.Text = dr.Cells[5].Value.ToString();
+            txt_songuoi.Text = dr.Cells[6].Value.ToString();
+            var date = DateTime.Parse(dr.Cells[4].Value.ToString());
+            date_ngaythuephong.Value = date;
+            txt_sdtkh.Text = tpBUS.Lay_SDT_KH(dr.Cells[3].Value.ToString());
+
 
         }
 

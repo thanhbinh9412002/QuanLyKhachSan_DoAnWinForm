@@ -45,5 +45,10 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return tpDAO.Dem_Ma_Phieu_Thue();
         }
+
+        public string Lay_SDT_KH(string makhachhang)
+        {
+            return tpDAO.Lay_SDT_KH(makhachhang);
+        }
     }
 }

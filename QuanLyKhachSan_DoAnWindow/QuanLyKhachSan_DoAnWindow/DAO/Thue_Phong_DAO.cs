@@ -17,6 +17,16 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             conn = new DBConnection();
         }
 
+        public string Lay_SDT_KH(string makhachhang)
+        {
+            const string sql = "select sodienthoai from khachhang where khachhang.makhachhang = @makhachhang";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@makhachhang", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(makhachhang);
+            object temp = conn.executeScalar(sql, sqlParameters);
+            return Convert.ToString(temp);
+        }
+
         public DataTable Tim_Phong_Trong()
         {
             string sql = "select * from phong where danhan='khong'";
