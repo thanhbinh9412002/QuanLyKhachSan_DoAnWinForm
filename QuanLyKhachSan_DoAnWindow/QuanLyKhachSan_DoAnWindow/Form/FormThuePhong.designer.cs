@@ -29,36 +29,36 @@ namespace QuanLyKhachSan_DoAnWindow
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("KHÁCH HÀNG", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ĐẶT PHÒNG", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("KHÁCH HÀNG", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("ĐẶT PHÒNG", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem41 = new System.Windows.Forms.ListViewItem(new string[] {
             "Mã khách hàng",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem42 = new System.Windows.Forms.ListViewItem(new string[] {
             "Tên khách hàng",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem43 = new System.Windows.Forms.ListViewItem(new string[] {
             "Giới tính",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem44 = new System.Windows.Forms.ListViewItem(new string[] {
             "CMND/Passport",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem45 = new System.Windows.Forms.ListViewItem(new string[] {
             "Địa chỉ",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem46 = new System.Windows.Forms.ListViewItem(new string[] {
             "Điện thoại",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem47 = new System.Windows.Forms.ListViewItem(new string[] {
             "Ngày đến",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem48 = new System.Windows.Forms.ListViewItem(new string[] {
             "Ngày đi",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem49 = new System.Windows.Forms.ListViewItem(new string[] {
             "Số người",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem50 = new System.Windows.Forms.ListViewItem(new string[] {
             "Tiền cọc",
             ""}, -1);
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -66,14 +66,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label2 = new System.Windows.Forms.Label();
             this.bt_quaylai = new System.Windows.Forms.Button();
             this.bt_them = new System.Windows.Forms.Button();
-            this.gvdanhsach = new System.Windows.Forms.DataGridView();
-            this.maphieucol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phongcol2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Datagriwview_danhsach = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -89,7 +82,11 @@ namespace QuanLyKhachSan_DoAnWindow
             this.gt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSua = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.DataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Datagridview_phong = new System.Windows.Forms.DataGridView();
+            this.phongcol1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maloaicol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dadatcol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.danhancol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_tim = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button_maphieudat = new System.Windows.Forms.Button();
@@ -101,6 +98,8 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_maphong = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.radio_chuadat = new System.Windows.Forms.RadioButton();
             this.radio_dadat = new System.Windows.Forms.RadioButton();
             this.button_maphieuthue = new System.Windows.Forms.Button();
@@ -109,17 +108,18 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_songuoi = new System.Windows.Forms.TextBox();
             this.date_ngaythuephong = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_maphong = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.phongcol1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maloaicol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dadatcol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.danhancol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maphieucol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phongcol2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvdanhsach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Datagriwview_danhsach)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Datagridview_phong)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -131,7 +131,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.bt_quaylai);
             this.tabPage2.Controls.Add(this.bt_them);
-            this.tabPage2.Controls.Add(this.gvdanhsach);
+            this.tabPage2.Controls.Add(this.Datagriwview_danhsach);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
@@ -181,103 +181,32 @@ namespace QuanLyKhachSan_DoAnWindow
             this.bt_them.Text = "Thêm";
             this.bt_them.UseVisualStyleBackColor = true;
             // 
-            // gvdanhsach
+            // Datagriwview_danhsach
             // 
-            this.gvdanhsach.AllowUserToAddRows = false;
-            this.gvdanhsach.AllowUserToDeleteRows = false;
-            this.gvdanhsach.AllowUserToResizeColumns = false;
-            this.gvdanhsach.AllowUserToResizeRows = false;
-            this.gvdanhsach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvdanhsach.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.gvdanhsach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvdanhsach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Datagriwview_danhsach.AllowUserToAddRows = false;
+            this.Datagriwview_danhsach.AllowUserToDeleteRows = false;
+            this.Datagriwview_danhsach.AllowUserToResizeColumns = false;
+            this.Datagriwview_danhsach.AllowUserToResizeRows = false;
+            this.Datagriwview_danhsach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Datagriwview_danhsach.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.Datagriwview_danhsach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Datagriwview_danhsach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maphieucol,
             this.phongcol2,
             this.Column2,
-            this.Column7,
             this.Column3,
+            this.Column7,
             this.Column6,
             this.Column5});
-            this.gvdanhsach.Location = new System.Drawing.Point(5, 7);
-            this.gvdanhsach.Margin = new System.Windows.Forms.Padding(4);
-            this.gvdanhsach.Name = "gvdanhsach";
-            this.gvdanhsach.ReadOnly = true;
-            this.gvdanhsach.RowHeadersVisible = false;
-            this.gvdanhsach.RowHeadersWidth = 51;
-            this.gvdanhsach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvdanhsach.Size = new System.Drawing.Size(684, 551);
-            this.gvdanhsach.TabIndex = 0;
-            // 
-            // maphieucol
-            // 
-            this.maphieucol.DataPropertyName = "maphieudat";
-            this.maphieucol.FillWeight = 30F;
-            this.maphieucol.HeaderText = "Mã phiếu";
-            this.maphieucol.MinimumWidth = 6;
-            this.maphieucol.Name = "maphieucol";
-            this.maphieucol.ReadOnly = true;
-            // 
-            // phongcol2
-            // 
-            this.phongcol2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phongcol2.DataPropertyName = "maphong";
-            this.phongcol2.FillWeight = 30F;
-            this.phongcol2.HeaderText = "Phòng";
-            this.phongcol2.MinimumWidth = 6;
-            this.phongcol2.Name = "phongcol2";
-            this.phongcol2.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "tenkhachhang";
-            this.Column2.FillWeight = 60F;
-            this.Column2.HeaderText = "khách hàng";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.DataPropertyName = "sotiencoc";
-            this.Column7.FillWeight = 40F;
-            this.Column7.HeaderText = "Tiền cọc";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "ngaydi";
-            this.Column3.FillWeight = 70F;
-            this.Column3.HeaderText = "Ngày trả phòng";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.DataPropertyName = "songuoi";
-            this.Column6.FillWeight = 30F;
-            this.Column6.HeaderText = "Số người";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column5.FillWeight = 30F;
-            this.Column5.HeaderText = "Chọn";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Text = "Xem";
-            this.Column5.UseColumnTextForButtonValue = true;
-            this.Column5.Width = 62;
+            this.Datagriwview_danhsach.Location = new System.Drawing.Point(5, 7);
+            this.Datagriwview_danhsach.Margin = new System.Windows.Forms.Padding(4);
+            this.Datagriwview_danhsach.Name = "Datagriwview_danhsach";
+            this.Datagriwview_danhsach.ReadOnly = true;
+            this.Datagriwview_danhsach.RowHeadersVisible = false;
+            this.Datagriwview_danhsach.RowHeadersWidth = 51;
+            this.Datagriwview_danhsach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Datagriwview_danhsach.Size = new System.Drawing.Size(684, 551);
+            this.Datagriwview_danhsach.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -303,7 +232,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(700, 663);
+            this.tabPage3.Size = new System.Drawing.Size(700, 683);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Chi tiết";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -378,45 +307,45 @@ namespace QuanLyKhachSan_DoAnWindow
             this.gt});
             this.lsvChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvChiTiet.FullRowSelect = true;
-            listViewGroup3.Header = "KHÁCH HÀNG";
-            listViewGroup3.Name = "listViewGroupKHACHHANG";
-            listViewGroup4.Header = "ĐẶT PHÒNG";
-            listViewGroup4.Name = "listViewGroupDATPHONG";
+            listViewGroup9.Header = "KHÁCH HÀNG";
+            listViewGroup9.Name = "listViewGroupKHACHHANG";
+            listViewGroup10.Header = "ĐẶT PHÒNG";
+            listViewGroup10.Name = "listViewGroupDATPHONG";
             this.lsvChiTiet.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3,
-            listViewGroup4});
+            listViewGroup9,
+            listViewGroup10});
             this.lsvChiTiet.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lsvChiTiet.HideSelection = false;
-            listViewItem11.Group = listViewGroup3;
-            listViewItem12.Group = listViewGroup3;
-            listViewItem12.StateImageIndex = 0;
-            listViewItem13.Group = listViewGroup3;
-            listViewItem13.StateImageIndex = 0;
-            listViewItem14.Group = listViewGroup3;
-            listViewItem14.StateImageIndex = 0;
-            listViewItem15.Group = listViewGroup3;
-            listViewItem15.StateImageIndex = 0;
-            listViewItem16.Group = listViewGroup3;
-            listViewItem16.StateImageIndex = 0;
-            listViewItem17.Group = listViewGroup4;
-            listViewItem17.StateImageIndex = 0;
-            listViewItem18.Group = listViewGroup4;
-            listViewItem18.StateImageIndex = 0;
-            listViewItem19.Group = listViewGroup4;
-            listViewItem19.StateImageIndex = 0;
-            listViewItem20.Group = listViewGroup4;
-            listViewItem20.StateImageIndex = 0;
+            listViewItem41.Group = listViewGroup9;
+            listViewItem42.Group = listViewGroup9;
+            listViewItem42.StateImageIndex = 0;
+            listViewItem43.Group = listViewGroup9;
+            listViewItem43.StateImageIndex = 0;
+            listViewItem44.Group = listViewGroup9;
+            listViewItem44.StateImageIndex = 0;
+            listViewItem45.Group = listViewGroup9;
+            listViewItem45.StateImageIndex = 0;
+            listViewItem46.Group = listViewGroup9;
+            listViewItem46.StateImageIndex = 0;
+            listViewItem47.Group = listViewGroup10;
+            listViewItem47.StateImageIndex = 0;
+            listViewItem48.Group = listViewGroup10;
+            listViewItem48.StateImageIndex = 0;
+            listViewItem49.Group = listViewGroup10;
+            listViewItem49.StateImageIndex = 0;
+            listViewItem50.Group = listViewGroup10;
+            listViewItem50.StateImageIndex = 0;
             this.lsvChiTiet.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem11,
-            listViewItem12,
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16,
-            listViewItem17,
-            listViewItem18,
-            listViewItem19,
-            listViewItem20});
+            listViewItem41,
+            listViewItem42,
+            listViewItem43,
+            listViewItem44,
+            listViewItem45,
+            listViewItem46,
+            listViewItem47,
+            listViewItem48,
+            listViewItem49,
+            listViewItem50});
             this.lsvChiTiet.Location = new System.Drawing.Point(1, 22);
             this.lsvChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.lsvChiTiet.MultiSelect = false;
@@ -459,31 +388,75 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btnHuy.Text = "Xoá";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
-            // DataGridView1
+            // Datagridview_phong
             // 
-            this.DataGridView1.AllowUserToAddRows = false;
-            this.DataGridView1.AllowUserToDeleteRows = false;
-            this.DataGridView1.AllowUserToOrderColumns = true;
-            this.DataGridView1.AllowUserToResizeColumns = false;
-            this.DataGridView1.AllowUserToResizeRows = false;
-            this.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Datagridview_phong.AllowUserToAddRows = false;
+            this.Datagridview_phong.AllowUserToDeleteRows = false;
+            this.Datagridview_phong.AllowUserToOrderColumns = true;
+            this.Datagridview_phong.AllowUserToResizeColumns = false;
+            this.Datagridview_phong.AllowUserToResizeRows = false;
+            this.Datagridview_phong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Datagridview_phong.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.Datagridview_phong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Datagridview_phong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.phongcol1,
             this.maloaicol,
             this.dadatcol,
             this.danhancol});
-            this.DataGridView1.Location = new System.Drawing.Point(8, 62);
-            this.DataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.DataGridView1.Name = "DataGridView1";
-            this.DataGridView1.ReadOnly = true;
-            this.DataGridView1.RowHeadersVisible = false;
-            this.DataGridView1.RowHeadersWidth = 51;
-            this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView1.Size = new System.Drawing.Size(397, 302);
-            this.DataGridView1.TabIndex = 1;
-            this.DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
+            this.Datagridview_phong.Location = new System.Drawing.Point(8, 62);
+            this.Datagridview_phong.Margin = new System.Windows.Forms.Padding(4);
+            this.Datagridview_phong.Name = "Datagridview_phong";
+            this.Datagridview_phong.ReadOnly = true;
+            this.Datagridview_phong.RowHeadersVisible = false;
+            this.Datagridview_phong.RowHeadersWidth = 51;
+            this.Datagridview_phong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Datagridview_phong.Size = new System.Drawing.Size(397, 302);
+            this.Datagridview_phong.TabIndex = 1;
+            this.Datagridview_phong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
+            // 
+            // phongcol1
+            // 
+            this.phongcol1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phongcol1.DataPropertyName = "maphong";
+            this.phongcol1.FillWeight = 40F;
+            this.phongcol1.HeaderText = "Phòng";
+            this.phongcol1.MinimumWidth = 6;
+            this.phongcol1.Name = "phongcol1";
+            this.phongcol1.ReadOnly = true;
+            this.phongcol1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // maloaicol
+            // 
+            this.maloaicol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maloaicol.DataPropertyName = "maloai";
+            this.maloaicol.FillWeight = 50F;
+            this.maloaicol.HeaderText = "Loại";
+            this.maloaicol.MinimumWidth = 6;
+            this.maloaicol.Name = "maloaicol";
+            this.maloaicol.ReadOnly = true;
+            this.maloaicol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dadatcol
+            // 
+            this.dadatcol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dadatcol.DataPropertyName = "dadat";
+            this.dadatcol.FillWeight = 50F;
+            this.dadatcol.HeaderText = "Đã đặt";
+            this.dadatcol.MinimumWidth = 6;
+            this.dadatcol.Name = "dadatcol";
+            this.dadatcol.ReadOnly = true;
+            this.dadatcol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // danhancol
+            // 
+            this.danhancol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.danhancol.DataPropertyName = "danhan";
+            this.danhancol.FillWeight = 50F;
+            this.danhancol.HeaderText = "Đã nhận";
+            this.danhancol.MinimumWidth = 6;
+            this.danhancol.Name = "danhancol";
+            this.danhancol.ReadOnly = true;
+            this.danhancol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // button_tim
             // 
@@ -499,7 +472,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.DataGridView1);
+            this.groupBox1.Controls.Add(this.Datagridview_phong);
             this.groupBox1.Controls.Add(this.button_tim);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.Location = new System.Drawing.Point(31, 368);
@@ -520,6 +493,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_maphieudat.TabIndex = 17;
             this.button_maphieudat.Text = "New";
             this.button_maphieudat.UseVisualStyleBackColor = true;
+            this.button_maphieudat.Click += new System.EventHandler(this.button_maphieudat_Click);
             // 
             // txt_sdtkh
             // 
@@ -621,6 +595,26 @@ namespace QuanLyKhachSan_DoAnWindow
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phiếu đặt phòng";
             // 
+            // txt_maphong
+            // 
+            this.txt_maphong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_maphong.Location = new System.Drawing.Point(195, 147);
+            this.txt_maphong.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_maphong.Name = "txt_maphong";
+            this.txt_maphong.Size = new System.Drawing.Size(207, 29);
+            this.txt_maphong.TabIndex = 27;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.Location = new System.Drawing.Point(31, 150);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(101, 24);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Mã phòng:";
+            // 
             // radio_chuadat
             // 
             this.radio_chuadat.AutoSize = true;
@@ -632,6 +626,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.radio_chuadat.TabIndex = 25;
             this.radio_chuadat.Text = "Chưa đặt trước";
             this.radio_chuadat.UseVisualStyleBackColor = true;
+            this.radio_chuadat.CheckedChanged += new System.EventHandler(this.radio_chuadat_CheckedChanged);
             // 
             // radio_dadat
             // 
@@ -646,6 +641,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.radio_dadat.TabStop = true;
             this.radio_dadat.Text = "Đã đặt trước";
             this.radio_dadat.UseVisualStyleBackColor = true;
+            this.radio_dadat.CheckedChanged += new System.EventHandler(this.radio_dadat_CheckedChanged);
             // 
             // button_maphieuthue
             // 
@@ -656,6 +652,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_maphieuthue.TabIndex = 23;
             this.button_maphieuthue.Text = "New";
             this.button_maphieuthue.UseVisualStyleBackColor = true;
+            this.button_maphieuthue.Click += new System.EventHandler(this.button_maphieuthue_Click);
             // 
             // txt_maphieuthue
             // 
@@ -710,69 +707,76 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label7.TabIndex = 11;
             this.label7.Text = "Ngày thuê phòng:";
             // 
-            // txt_maphong
+            // maphieucol
             // 
-            this.txt_maphong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_maphong.Location = new System.Drawing.Point(195, 147);
-            this.txt_maphong.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_maphong.Name = "txt_maphong";
-            this.txt_maphong.Size = new System.Drawing.Size(207, 29);
-            this.txt_maphong.TabIndex = 27;
+            this.maphieucol.DataPropertyName = "maphieuthue";
+            this.maphieucol.FillWeight = 30F;
+            this.maphieucol.HeaderText = "Mã phiếu";
+            this.maphieucol.MinimumWidth = 6;
+            this.maphieucol.Name = "maphieucol";
+            this.maphieucol.ReadOnly = true;
             // 
-            // label9
+            // phongcol2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(31, 150);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 24);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Mã phòng:";
+            this.phongcol2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phongcol2.DataPropertyName = "maphong";
+            this.phongcol2.FillWeight = 30F;
+            this.phongcol2.HeaderText = "Phòng";
+            this.phongcol2.MinimumWidth = 6;
+            this.phongcol2.Name = "phongcol2";
+            this.phongcol2.ReadOnly = true;
             // 
-            // phongcol1
+            // Column2
             // 
-            this.phongcol1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phongcol1.DataPropertyName = "maphong";
-            this.phongcol1.FillWeight = 40F;
-            this.phongcol1.HeaderText = "Phòng";
-            this.phongcol1.MinimumWidth = 6;
-            this.phongcol1.Name = "phongcol1";
-            this.phongcol1.ReadOnly = true;
-            this.phongcol1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "makhachhang";
+            this.Column2.FillWeight = 60F;
+            this.Column2.HeaderText = "Khách hàng";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // maloaicol
+            // Column3
             // 
-            this.maloaicol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maloaicol.DataPropertyName = "maloai";
-            this.maloaicol.FillWeight = 50F;
-            this.maloaicol.HeaderText = "Loại";
-            this.maloaicol.MinimumWidth = 6;
-            this.maloaicol.Name = "maloaicol";
-            this.maloaicol.ReadOnly = true;
-            this.maloaicol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "ngaythuephong";
+            this.Column3.FillWeight = 70F;
+            this.Column3.HeaderText = "Ngày thuê phòng";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
-            // dadatcol
+            // Column7
             // 
-            this.dadatcol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dadatcol.DataPropertyName = "dadat";
-            this.dadatcol.FillWeight = 50F;
-            this.dadatcol.HeaderText = "Đã đặt";
-            this.dadatcol.MinimumWidth = 6;
-            this.dadatcol.Name = "dadatcol";
-            this.dadatcol.ReadOnly = true;
-            this.dadatcol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.DataPropertyName = "sotiencoc";
+            this.Column7.FillWeight = 40F;
+            this.Column7.HeaderText = "Tiền cọc";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
-            // danhancol
+            // Column6
             // 
-            this.danhancol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.danhancol.DataPropertyName = "danhan";
-            this.danhancol.FillWeight = 50F;
-            this.danhancol.HeaderText = "Đã nhận";
-            this.danhancol.MinimumWidth = 6;
-            this.danhancol.Name = "danhancol";
-            this.danhancol.ReadOnly = true;
-            this.danhancol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "songuoi";
+            this.Column6.FillWeight = 30F;
+            this.Column6.HeaderText = "Số người";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column5.FillWeight = 30F;
+            this.Column5.HeaderText = "Chọn";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Text = "Xem";
+            this.Column5.UseColumnTextForButtonValue = true;
+            this.Column5.Width = 62;
             // 
             // FormThuePhong
             // 
@@ -792,11 +796,11 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Load += new System.EventHandler(this.FormThuePhong_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvdanhsach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Datagriwview_danhsach)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Datagridview_phong)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -811,14 +815,7 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bt_quaylai;
         private System.Windows.Forms.Button bt_them;
-        private System.Windows.Forms.DataGridView gvdanhsach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maphieucol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phongcol2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewButtonColumn Column5;
+        private System.Windows.Forms.DataGridView Datagriwview_danhsach;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBox2;
@@ -834,7 +831,7 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.ColumnHeader gt;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.DataGridView DataGridView1;
+        private System.Windows.Forms.DataGridView Datagridview_phong;
         private System.Windows.Forms.Button button_tim;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button_maphieudat;
@@ -860,6 +857,13 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.DataGridViewTextBoxColumn maloaicol;
         private System.Windows.Forms.DataGridViewTextBoxColumn dadatcol;
         private System.Windows.Forms.DataGridViewTextBoxColumn danhancol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maphieucol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phongcol2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewButtonColumn Column5;
     }
 }
 

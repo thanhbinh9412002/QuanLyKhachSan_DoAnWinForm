@@ -21,5 +21,19 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return tpDAO.Tim_Phong_Trong();
         }
 
+        public DataTable Hien_Thi_Danh_Sach()
+        {
+            return tpDAO.Hien_Thi_Danh_Sach();
+        }
+
+        public int Dem_Ma_Phieu_Dat()
+        {
+            return tpDAO.Dem_Ma_Phieu_Dat();
+        }
+
+        public int Dem_Ma_Phieu_Thue()
+        {
+            return tpDAO.Dem_Ma_Phieu_Thue();
+        }
     }
 }

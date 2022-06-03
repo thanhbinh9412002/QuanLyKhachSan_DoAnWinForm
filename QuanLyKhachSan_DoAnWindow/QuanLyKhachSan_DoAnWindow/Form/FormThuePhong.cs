@@ -18,33 +18,64 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormThuePhong()
         {
             InitializeComponent();
-            
         }
 
         private void FormThuePhong_Load(object sender, EventArgs e)
         {
-            this.DataGridView1.DataSource = tpBUS.Tim_Phong_Trong();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
+            this.Datagridview_phong.DataSource = tpBUS.Tim_Phong_Trong();
+            this.Datagriwview_danhsach.DataSource = tpBUS.Hien_Thi_Danh_Sach();
+            if (radio_dadat.Checked == true)
+            {
+                txt_maphieudat.Enabled = true;
+                button_maphieudat.Enabled = true;
+                txt_maphieuthue.Enabled = false;
+                button_maphieuthue.Enabled = false;
+            }
         }
 
         private void button_tim_Click(object sender, EventArgs e)
         {
-            this.DataGridView1.DataSource = tpBUS.Tim_Phong_Trong();
+            this.Datagridview_phong.DataSource = tpBUS.Tim_Phong_Trong();
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow dr = this.DataGridView1.Rows[e.RowIndex];
+            DataGridViewRow dr = this.Datagridview_phong.Rows[e.RowIndex];
             txt_maphong.Text = dr.Cells[0].Value.ToString();
+        }
+
+        private void radio_dadat_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio_dadat.Checked == true)
+            {
+                txt_maphieudat.Enabled = true;
+                button_maphieudat.Enabled = true;
+                txt_maphieuthue.Enabled = false;
+                button_maphieuthue.Enabled = false;
+                txt_maphieuthue.Clear();
+            }
+        }
+
+        private void radio_chuadat_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio_chuadat.Checked == true)
+            {
+                txt_maphieudat.Enabled = false;
+                button_maphieudat.Enabled = false;
+                txt_maphieuthue.Enabled = true;
+                button_maphieuthue.Enabled = true;
+                txt_maphieudat.Clear();
+            }
+        }
+
+        private void button_maphieudat_Click(object sender, EventArgs e)
+        {
+            txt_maphieudat.Text = "PD" + (tpBUS.Dem_Ma_Phieu_Dat()+1).ToString();
+        }
+
+        private void button_maphieuthue_Click(object sender, EventArgs e)
+        {
+            txt_maphieuthue.Text = "PT" + (tpBUS.Dem_Ma_Phieu_Thue() + 1).ToString();
         }
     }
 }

@@ -25,5 +25,26 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             bang = conn.executeReader(sql, sqlParameters);
             return bang;
         }
+
+        public DataTable Hien_Thi_Danh_Sach()
+        {
+            string sql = "select chitietthuephong.maphieuthue, phieuthuephong.maphong, makhachhang, ngaythuephong, sotiencoc, songuoi from  chitietthuephong, phieuthuephong where chitietthuephong.maphieuthue = phieuthuephong.maphieuthue;";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            DataTable bang = new DataTable();
+            bang = conn.executeReader(sql, sqlParameters);
+            return bang;
+        }
+
+        public int Dem_Ma_Phieu_Dat()
+        {
+            string query = "select count(*) from phieudatphong";
+            return conn.executeCount(query);
+        }
+
+        public int Dem_Ma_Phieu_Thue()
+        {
+            string query = "select count(*) from phieuthuephong";
+            return conn.executeCount(query);
+        }
     }
 }
