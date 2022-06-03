@@ -18,54 +18,54 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             conn = new DBConnection();
         }
         // them tai khoan
-        public void Them_tai_khoan(string ma, string user, string pass, string cv)
+        public void Them_tai_khoan(Tai_khoan tk)
         {
             const string sql = "insert into hethong(passwordtk, manhanvien, username, machucvu )" +
                 " values(@pass, @ma, @user, @cv)";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[3] = new SqlParameter("@cv", SqlDbType.Char);
-            sqlParameters[3].Value = cv;
+            sqlParameters[3].Value = tk.Chuc_vu;
 
             sqlParameters[2] = new SqlParameter("@user", SqlDbType.VarChar);
-            sqlParameters[2].Value = user;
+            sqlParameters[2].Value = tk.Username;
 
             sqlParameters[1] = new SqlParameter("@ma", SqlDbType.Char);
-            sqlParameters[1].Value = ma;
+            sqlParameters[1].Value = tk.Ma_nhan_vien;
 
             sqlParameters[0] = new SqlParameter("@pass", SqlDbType.VarChar);
-            sqlParameters[0].Value = pass;
+            sqlParameters[0].Value = tk.Password;
 
             conn.executeInsertQuery(sql, sqlParameters);
         }
         //Cap nhat tai khoan
-        public void Cap_nhat_tai_khoan(string ma, string user, string pass, string cv)
+        public void Cap_nhat_tai_khoan(Tai_khoan tk)
         {
             const string sql = "update hethong set username = @user, passwordtk = @pass, machucvu = @cv where manhanvien = @ma";
 
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[3] = new SqlParameter("@cv", SqlDbType.Char);
-            sqlParameters[3].Value = cv;
+            sqlParameters[3].Value = tk.Chuc_vu;
 
             sqlParameters[2] = new SqlParameter("@user", SqlDbType.VarChar);
-            sqlParameters[2].Value = user;
+            sqlParameters[2].Value = tk.Username;
 
             sqlParameters[1] = new SqlParameter("@ma", SqlDbType.Char);
-            sqlParameters[1].Value = ma;
+            sqlParameters[1].Value = tk.Ma_nhan_vien;
 
             sqlParameters[0] = new SqlParameter("@pass", SqlDbType.VarChar);
-            sqlParameters[0].Value = pass;
+            sqlParameters[0].Value = tk.Password;
 
 
             conn.executeInsertQuery(sql, sqlParameters);
         }
         //xoa tai khoan
-        public void Xoa_tai_khoan(string ma)
+        public void Xoa_tai_khoan(Tai_khoan tk)
         {
             string sql = "delete from hethong where manhanvien = @ma";
             SqlParameter[] sqlParameter = new SqlParameter[1];
 
             sqlParameter[0] = new SqlParameter("@ma", SqlDbType.Char);
-            sqlParameter[0].Value = ma;
+            sqlParameter[0].Value = tk.Ma_nhan_vien;
 
             conn.executeInsertQuery(sql, sqlParameter);
         }

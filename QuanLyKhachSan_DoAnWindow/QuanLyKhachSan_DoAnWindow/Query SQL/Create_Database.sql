@@ -16,7 +16,7 @@ go
 	insert into hethong Values('lenguyen@', 'NV04', 'NV','07191386')
 	insert into hethong Values('levan@', 'NV05', 'NV','09421386')
 	insert into hethong Values('pvtquang@', 'NV06', 'QL','0123456')
-	insert into hethong Values('thloc@', 'NV07', 'QL','123')
+	insert into hethong Values('loc@', 'NV07', 'QL','123')
 	insert into hethong Values('thanhab@', 'NV08', 'QL','7542153')
 	insert into hethong Values('ntbinh@', 'NV09', 'NV','3456789')
 	insert into hethong Values('hothanh@', 'NV10', 'NV','4751439')
@@ -52,7 +52,7 @@ go
 create table dbo.loaiphong
 (
 		maloai char(10) PRIMARY KEY,
-		gia char(20) NULL,
+		gia int NULL,
 		songuoi int NULL
 )
 go
@@ -108,16 +108,33 @@ create table dbo.trangthaiphong
 		PRIMARY KEY(maphong, trangthai)
 )
 go
+	insert into trangthaiphong Values('P101', 'tot')
 	insert into trangthaiphong Values('P102', 'tot')
-	insert into trangthaiphong Values('P302', 'tot')
+	insert into trangthaiphong Values('P103', 'tot')
+	insert into trangthaiphong Values('P104', 'tot')
 	insert into trangthaiphong Values('P105', 'tot')
-	insert into trangthaiphong Values('P206', 'tot')
-	insert into trangthaiphong Values('P405', 'tot')
-	insert into trangthaiphong Values('P301', 'tot')
-	insert into trangthaiphong Values('P406', 'tot')
-	insert into trangthaiphong Values('P401', 'tot')
-	insert into trangthaiphong Values('P305', 'tot')
+	insert into trangthaiphong Values('P106', 'tot')
+
+	insert into trangthaiphong Values('P201', 'tot')
 	insert into trangthaiphong Values('P202', 'tot')
+	insert into trangthaiphong Values('P203', 'tot')
+	insert into trangthaiphong Values('P204', 'tot')
+	insert into trangthaiphong Values('P205', 'tot')
+	insert into trangthaiphong Values('P206', 'tot')
+
+	insert into trangthaiphong Values('P301', 'tot')
+	insert into trangthaiphong Values('P302', 'tot')
+	insert into trangthaiphong Values('P303', 'tot')
+	insert into trangthaiphong Values('P304', 'tot')
+	insert into trangthaiphong Values('P305', 'tot')
+	insert into trangthaiphong Values('P306', 'tot')
+	
+	insert into trangthaiphong Values('P401', 'tot')
+	insert into trangthaiphong Values('P402', 'tot')
+	insert into trangthaiphong Values('P403', 'tot')
+	insert into trangthaiphong Values('P404', 'tot')
+	insert into trangthaiphong Values('P405', 'tot')
+	insert into trangthaiphong Values('P406', 'tot')
 go
 
 
@@ -187,8 +204,8 @@ go
 	insert into phieudatphong Values('PD01', 'P102', 'pvtquang@')
 	insert into phieudatphong Values('PD02', 'P302', 'pvtquang@')
 	insert into phieudatphong Values('PD03', 'P105', 'pvtquang@')
-	insert into phieudatphong Values('PD04', 'P206', 'thloc@')
-	insert into phieudatphong Values('PD05', 'P405', 'thloc@')
+	insert into phieudatphong Values('PD04', 'P206', 'loc@')
+	insert into phieudatphong Values('PD05', 'P405', 'loc@')
 go
 Alter table phieudatphong WITH CHECK ADD FOREIGN KEY(username) REFERENCES hethong(username)
 go
@@ -223,7 +240,7 @@ create table dbo.dichvu
 (
 		madichvu char(5) PRIMARY KEY,
 		tendichvu varchar(30) NULL,
-		gia char(20) NULL,
+		gia int NULL,
 		donvitinh char(5) NULL
 )
 go
@@ -244,17 +261,17 @@ create table dbo.chitietthuephong
 (
 		maphieuthue char(5) references phieuthuephong(maphieuthue),
 		makhachhang char(5) references khachhang(makhachhang),
-		ngayden date ,
-		ngaydi date ,
+		ngaythuephong date NULL,
+		sotiencoc int NULL,
 		songuoi int NULL,
 		PRIMARY KEY(maphieuthue)
 )
 go
-	insert into chitietthuephong Values('PT01', 'KH01', '2021-10-04', '2021-10-14', 2)
-	insert into chitietthuephong Values('PT02', 'KH02', '2022-04-20', '2022-04-30', 3)
-	insert into chitietthuephong Values('PT03', 'KH03', '2022-01-10', '2022-01-14', 4)
-	insert into chitietthuephong Values('PT04', 'KH04', '2022-03-05', '2022-03-20', 6)
-	insert into chitietthuephong Values('PT05', 'KH05', '2022-04-29', '2022-05-01', 4)
+	insert into chitietthuephong Values('PT01', 'KH01', '2021-10-04','100000', 2)
+	insert into chitietthuephong Values('PT02', 'KH02', '2022-04-20','150000', 3)
+	insert into chitietthuephong Values('PT03', 'KH03', '2022-01-10','100000', 4)
+	insert into chitietthuephong Values('PT04', 'KH04', '2022-03-05','200000', 6)
+	insert into chitietthuephong Values('PT05', 'KH05', '2022-04-29','150000', 4)
 go
 
 
@@ -262,57 +279,76 @@ create table dbo.chitietdatphong
 (
 		maphieudat char(5) references phieudatphong(maphieudat),
 		makhachhang char(5) references khachhang(makhachhang),
-		ngayden date NULL,
-		ngaydi date NULL,
-		sotiencoc char(30) NULL,
+		ngaythuephong date NULL,
+		sotiencoc int NULL,
 		songuoi int NULL,
 		PRIMARY KEY(maphieudat)
 )
 go
-	insert into chitietdatphong Values('PD01', 'KH01', '2021-10-04', '2021-10-14', '100000', 2)
-	insert into chitietdatphong Values('PD02', 'KH02', '2022-04-20', '2022-04-30', '500000', 3)
-	insert into chitietdatphong Values('PD03', 'KH03', '2022-01-10', '2022-01-14', '240000', 4)
-	insert into chitietdatphong Values('PD04', 'KH04', '2022-03-05', '2022-03-20', '150000', 6)
-	insert into chitietdatphong Values('PD05', 'KH05', '2022-04-29', '2022-05-01', '250000', 4)
+	insert into chitietdatphong Values('PD01', 'KH01', '2021-10-04', '100000', 2)
+	insert into chitietdatphong Values('PD02', 'KH02', '2022-04-20', '150000', 3)
+	insert into chitietdatphong Values('PD03', 'KH03', '2022-01-10', '210000', 4)
+	insert into chitietdatphong Values('PD04', 'KH04', '2022-03-05', '125000', 6)
+	insert into chitietdatphong Values('PD05', 'KH05', '2022-04-29', '130000', 4)
 go
 
 create table dbo.hoadon
 (
-		mahoadon char(5),
-		ngaythanhtoan date NULL,
-		tongtien varchar(30) NULL,
-		maphieu char(5),
-		loaiphieu char(5) NULL,
+		mahoadon char(5) PRIMARY KEY,
 		makhachhang char(5) references khachhang(makhachhang),
-		username varchar(30) not NULL,
-		PRIMARY KEY(mahoadon, maphieu)
+		manhanvien char(5) references nhanvien(manhanvien),
+		ngaythanhtoan date NULL,
+		maphieuthue char(5) references phieuthuephong(maphieuthue),
+		sotiencoc int NULL,
+		songayo int NULL,
+		sotienkhuyenmai int NULL,
+		tongtien int NULL,
 )
 go
-insert into hoadon Values('HD01','2021-10-14', '300000' , 'PT01', 'thue', 'KH01', 'thanha@')
-insert into hoadon Values('HD02','2022-04-30','450000' , 'PT02', 'thue', 'KH02', 'nguyenha@')
-insert into hoadon Values('HD03','2022-01-14', '600000' , 'PT03', 'thue', 'KH03', 'vanb@')
-insert into hoadon Values('HD04','2022-03-20', '350000' , 'PT04', 'thue', 'KH04', 'lenguyen@')
-insert into hoadon Values('HD05','2022-05-01', '450000' , 'PT05', 'thue', 'KH05', 'levan@')
-insert into hoadon Values('HD06','2022-02-20', '700000' , 'PD01', 'dat', 'KH06', 'pvtquang@')
-insert into hoadon Values('HD07','2022-03-12', '250000' , 'PD02', 'dat', 'KH07', 'thloc@')
-insert into hoadon Values('HD08','2022-01-10', '650000' , 'PD03', 'dat', 'KH08', 'thanhab@')
-insert into hoadon Values('HD09','2021-12-29', '550000' , 'PD04', 'dat', 'KH09', 'ntbinh@')
-insert into hoadon Values('HD10','2021-10-19', '460000' , 'PD05', 'dat', 'KH10', 'hothanh@')
+insert into hoadon Values('HD01', 'KH01', 'NV01','2021-10-14', 'PT01', '100000', 10, '100000','300000')
+insert into hoadon Values('HD02','KH02', 'NV02','2022-04-30' , 'PT02', '150000', 10,'80000','450000')
+insert into hoadon Values('HD03','KH03', 'NV03','2022-01-14', 'PT03', '100000', 4,'120000', '600000')
+insert into hoadon Values('HD04','KH04', 'NV04','2022-05-02', 'PT04', '200000', 15,'110000', '350000' )
+insert into hoadon Values('HD05','KH05', 'NV05','2022-05-01', 'PT05', '150000', 3, '89000', '450000')
 go
-Alter table hoadon WITH CHECK ADD FOREIGN KEY(username) REFERENCES hethong(username)
-go
-
 
 create table dbo.chitietdichvu
 (
+		mahoadon char(5) references hoadon(mahoadon),
+		maphieuthue char(5) references phieuthuephong(maphieuthue),
 		madichvu char(5) references dichvu(madichvu),
-		maphong char(5) references phong(maphong),
-		soluong int NULL
+		soluong int NULL,
+		PRIMARY KEY( mahoadon, maphieuthue, madichvu)
 )
 go
-	insert into chitietdichvu Values('DV01', 'P102', 2)
-	insert into chitietdichvu Values('DV02', 'P302', 3)
-	insert into chitietdichvu Values('DV03', 'P206', 1)
-	insert into chitietdichvu Values('DV04', 'P102', 4)
-	insert into chitietdichvu Values('DV05', 'P301', 2)
+	insert into chitietdichvu Values('HD01','PT01','DV01', 2)
+	insert into chitietdichvu Values('HD01','PT01','DV02', 3)
+	insert into chitietdichvu Values('HD01','PT01','DV03', 1)
+	insert into chitietdichvu Values('HD01','PT01','DV08', 4)
+	insert into chitietdichvu Values('HD01','PT01','DV05', 2)
+	insert into chitietdichvu Values('HD01','PT01','DV04', 2)
+	insert into chitietdichvu Values('HD01','PT01','DV09', 3)
+	insert into chitietdichvu Values('HD02','PT02','DV02', 1)
+	insert into chitietdichvu Values('HD02','PT02','DV07', 4)
+	insert into chitietdichvu Values('HD02','PT02','DV05', 2)
+	insert into chitietdichvu Values('HD02','PT02','DV01', 2)
+	insert into chitietdichvu Values('HD02','PT02','DV04', 3)
+	insert into chitietdichvu Values('HD03','PT03','DV03', 1)
+	insert into chitietdichvu Values('HD03','PT03','DV04', 4)
+	insert into chitietdichvu Values('HD03','PT03','DV05', 2)
+	insert into chitietdichvu Values('HD03','PT03','DV07', 2)
+	insert into chitietdichvu Values('HD04','PT04','DV10', 3)
+	insert into chitietdichvu Values('HD04','PT04','DV09', 1)
+	insert into chitietdichvu Values('HD04','PT04','DV04', 4)
+	insert into chitietdichvu Values('HD04','PT04','DV03', 2)
+	insert into chitietdichvu Values('HD04','PT04','DV02', 1)
+	insert into chitietdichvu Values('HD05','PT05','DV01', 4)
+	insert into chitietdichvu Values('HD05','PT05','DV09', 2)
+	insert into chitietdichvu Values('HD05','PT05','DV03', 2)
+	insert into chitietdichvu Values('HD05','PT05','DV02', 3)
+	insert into chitietdichvu Values('HD05','PT05','DV06', 1)
+	insert into chitietdichvu Values('HD05','PT05','DV07', 4)
+	insert into chitietdichvu Values('HD05','PT05','DV10', 2)
+	insert into chitietdichvu Values('HD05','PT05','DV08', 1)
+	insert into chitietdichvu Values('HD05','PT05','DV04', 4)
 go

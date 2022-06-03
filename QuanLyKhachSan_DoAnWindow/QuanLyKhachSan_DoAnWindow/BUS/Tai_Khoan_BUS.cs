@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyKhachSan_DoAnWindow.DAO;
+using QuanLyKhachSan_DoAnWindow.Class;
 using System.Data;
 using System.Windows.Forms;
 
@@ -24,14 +25,14 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return false;    //neu ko có nhan vien nay
         }
         //them tai khoan
-        public void themTK(string ma, string user, string pass, string cv)
+        public void themTK(Tai_khoan tk)
         {
             //------kiem tra-------
             //nếu mã đã có trong bảng NV nhưng ko có trong bảng TK -> thêm vô, được thêm nhiều tài khoản
             //nếu chưa có mã trong bảng NV nhưng có mã tronng bảng TK -> lỗi, báo lỗi chưa có nhân viên này
-            if (checkNV(ma))
+            if (checkNV(tk.Ma_nhan_vien))
             {
-                tkDAO.Them_tai_khoan(ma, user, pass, cv);
+                tkDAO.Them_tai_khoan(tk);
             }
             else
             {
@@ -39,14 +40,14 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             }
         }
         //cap nhat tai khoan
-        public void capnhatTK(string ma, string user, string pass, string cv)
+        public void capnhatTK(Tai_khoan tk)
         {
-            tkDAO.Cap_nhat_tai_khoan(ma, user, pass, cv);
+            tkDAO.Cap_nhat_tai_khoan(tk);
         }
         //xoa tai khoan
-        public void xoaTK(string ma)
+        public void xoaTK(Tai_khoan tk)
         {
-            tkDAO.Xoa_tai_khoan(ma);
+            tkDAO.Xoa_tai_khoan(tk);
         }
         // day du lieu len grib view
         public void upTK(DataGridView data, string user = "")

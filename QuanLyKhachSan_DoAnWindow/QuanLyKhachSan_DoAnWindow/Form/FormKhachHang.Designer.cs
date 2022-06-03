@@ -44,6 +44,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gvKhachhang = new System.Windows.Forms.DataGridView();
+            this.makhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenkhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnd_passport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coquan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -56,14 +64,6 @@
             this.bt_datphong = new System.Windows.Forms.Button();
             this.bt_thuephong = new System.Windows.Forms.Button();
             this.bt_Traphong = new System.Windows.Forms.Button();
-            this.makhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenkhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnd_passport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coquan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvKhachhang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,6 @@
             this.txtCoquan.Name = "txtCoquan";
             this.txtCoquan.Size = new System.Drawing.Size(186, 24);
             this.txtCoquan.TabIndex = 34;
-            this.txtCoquan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCoquan_KeyDown);
             // 
             // txtSodt
             // 
@@ -84,7 +83,6 @@
             this.txtSodt.Name = "txtSodt";
             this.txtSodt.Size = new System.Drawing.Size(186, 24);
             this.txtSodt.TabIndex = 33;
-            this.txtSodt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSodt_KeyDown);
             // 
             // txtDiachi
             // 
@@ -93,7 +91,6 @@
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(186, 24);
             this.txtDiachi.TabIndex = 32;
-            this.txtDiachi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDiachi_KeyDown);
             // 
             // txtCmnd
             // 
@@ -102,7 +99,6 @@
             this.txtCmnd.Name = "txtCmnd";
             this.txtCmnd.Size = new System.Drawing.Size(186, 24);
             this.txtCmnd.TabIndex = 31;
-            this.txtCmnd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCmnd_KeyDown);
             // 
             // label7
             // 
@@ -166,7 +162,7 @@
             this.rdNu.Size = new System.Drawing.Size(45, 22);
             this.rdNu.TabIndex = 55;
             this.rdNu.TabStop = true;
-            this.rdNu.Text = "Nữ";
+            this.rdNu.Text = "Nu";
             this.rdNu.UseVisualStyleBackColor = true;
             // 
             // rdNam
@@ -247,6 +243,70 @@
             this.gvKhachhang.Size = new System.Drawing.Size(684, 199);
             this.gvKhachhang.TabIndex = 62;
             this.gvKhachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvKhachhang_CellClick);
+            // 
+            // makhachhang
+            // 
+            this.makhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.makhachhang.DataPropertyName = "makhachhang";
+            this.makhachhang.HeaderText = "Mã KH";
+            this.makhachhang.Name = "makhachhang";
+            this.makhachhang.ReadOnly = true;
+            this.makhachhang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // tenkhachhang
+            // 
+            this.tenkhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenkhachhang.DataPropertyName = "tenkhachhang";
+            this.tenkhachhang.HeaderText = "Họ và tên";
+            this.tenkhachhang.Name = "tenkhachhang";
+            this.tenkhachhang.ReadOnly = true;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.HeaderText = "Giới tính";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
+            // 
+            // cmnd_passport
+            // 
+            this.cmnd_passport.DataPropertyName = "cmnd_passport";
+            this.cmnd_passport.HeaderText = "CMND, passport";
+            this.cmnd_passport.Name = "cmnd_passport";
+            this.cmnd_passport.ReadOnly = true;
+            // 
+            // diachi
+            // 
+            this.diachi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
+            // 
+            // coquan
+            // 
+            this.coquan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.coquan.DataPropertyName = "coquan";
+            this.coquan.HeaderText = "Cơ quan";
+            this.coquan.Name = "coquan";
+            this.coquan.ReadOnly = true;
+            // 
+            // sodienthoai
+            // 
+            this.sodienthoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sodienthoai.DataPropertyName = "sodienthoai";
+            this.sodienthoai.HeaderText = "SĐT";
+            this.sodienthoai.Name = "sodienthoai";
+            this.sodienthoai.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // txtTimkiem
             // 
@@ -395,70 +455,6 @@
             this.bt_Traphong.Text = "Trả phòng";
             this.bt_Traphong.UseVisualStyleBackColor = true;
             this.bt_Traphong.Click += new System.EventHandler(this.bt_Traphong_Click);
-            // 
-            // makhachhang
-            // 
-            this.makhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.makhachhang.DataPropertyName = "makhachhang";
-            this.makhachhang.HeaderText = "Mã KH";
-            this.makhachhang.Name = "makhachhang";
-            this.makhachhang.ReadOnly = true;
-            this.makhachhang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // tenkhachhang
-            // 
-            this.tenkhachhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenkhachhang.DataPropertyName = "tenkhachhang";
-            this.tenkhachhang.HeaderText = "Họ và tên";
-            this.tenkhachhang.Name = "tenkhachhang";
-            this.tenkhachhang.ReadOnly = true;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Giới tính";
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.ReadOnly = true;
-            // 
-            // cmnd_passport
-            // 
-            this.cmnd_passport.DataPropertyName = "cmnd_passport";
-            this.cmnd_passport.HeaderText = "CMND, passport";
-            this.cmnd_passport.Name = "cmnd_passport";
-            this.cmnd_passport.ReadOnly = true;
-            // 
-            // diachi
-            // 
-            this.diachi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.diachi.DataPropertyName = "diachi";
-            this.diachi.HeaderText = "Địa chỉ";
-            this.diachi.Name = "diachi";
-            this.diachi.ReadOnly = true;
-            // 
-            // coquan
-            // 
-            this.coquan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.coquan.DataPropertyName = "coquan";
-            this.coquan.HeaderText = "Cơ quan";
-            this.coquan.Name = "coquan";
-            this.coquan.ReadOnly = true;
-            // 
-            // sodienthoai
-            // 
-            this.sodienthoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sodienthoai.DataPropertyName = "sodienthoai";
-            this.sodienthoai.HeaderText = "SĐT";
-            this.sodienthoai.Name = "sodienthoai";
-            this.sodienthoai.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
             // 
             // FormKhachHang
             // 

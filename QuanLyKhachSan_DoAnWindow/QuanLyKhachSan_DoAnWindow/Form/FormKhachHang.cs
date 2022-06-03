@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using QuanLyKhachSan_DoAnWindow.BUS;
+using QuanLyKhachSan_DoAnWindow.Class;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
@@ -18,10 +19,13 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormMain fmMain;
         public FormDatPhong fmDP;
         public FormThuePhong fmTP;
-        public FormKhachHang()
+        private Khach_Hang KH;
+        private string username;
+        public FormKhachHang(string user ="")
         {
             InitializeComponent();
-            LoadView();
+            Load_ThongTin();
+            this.username = user;
         }
         private void LoadView()          // Load datagirbview
         {
@@ -49,25 +53,41 @@ namespace QuanLyKhachSan_DoAnWindow
             txtEmail.Text = "";
             LoadView();
         }
-        private void btnThem_Click(object sender, EventArgs e)          // thêm khách hàng
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            string gt = (rdNam.Checked ? rdNam.Text : rdNu.Text);
-            KHBUS.themKH(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text, txtCoquan.Text, txtSodt.Text, txtEmail.Text);
-            Load_ThongTin();
+            BasicFuntions(1);
         }
             
-        private void btnSua_Click(object sender, EventArgs e)           // cập nhật khách  hàng
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            BasicFuntions(2);
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            BasicFuntions(3);
+        }
+
+        private void BasicFuntions(int i) // chuc nang co ban
         {
             string gt = (rdNam.Checked ? rdNam.Text : rdNu.Text);
-            KHBUS.capnhatKH(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text, txtCoquan.Text, txtSodt.Text, txtEmail.Text);
+            KH = new Khach_Hang(txtMkh.Text, txtTenkh.Text, gt, txtCmnd.Text, txtDiachi.Text, txtCoquan.Text, txtSodt.Text, txtEmail.Text);
+            switch (i)
+            {
+                case 1:
+                    KHBUS.themKH(KH);           //thêm khach hang
+                    Load_ThongTin();
+                    break;
+                case 2:
+                    KHBUS.capnhatKH(KH);        //cap nhat khach hang
+                    break;
+                case 3:
+                    KHBUS.xoaKH(KH);            //xoa khach hang
+                    break;
+            }
             Load_ThongTin();
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)       // xóa khách hàng
-        {
-            KHBUS.xoaKH(txtMkh.Text);
-            Load_ThongTin();
-        }
 
         private void gvKhachhang_CellClick(object sender, DataGridViewCellEventArgs e)        // click vào girbview các textbox sẽ hiển thị nội dung
         {
@@ -95,49 +115,13 @@ namespace QuanLyKhachSan_DoAnWindow
             gvKhachhang.Sort(gvKhachhang.Columns[0], ListSortDirection.Ascending);
         }
 
-        private void gvKhachhang_KeyDown(object sender, KeyEventArgs e)  
-        {
-            Load_ThongTin();
-        }
+        
 
         private void txtTimkiem_KeyDown(object sender, KeyEventArgs e)  //enter se tim kiem   
         {
             if (e.KeyCode == Keys.Enter)
             {
                 KHBUS.TimKiemKH(gvKhachhang, txtTimkiem.Text);
-            }
-        }
-
-        private void txtCmnd_KeyDown(object sender, KeyEventArgs e) // enter chuyen sang textbox diachi
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtDiachi.Focus();
-            }
-        }
-
-        private void txtDiachi_KeyDown(object sender, KeyEventArgs e) // enter chuyen sang textbox coquan
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtCoquan.Focus();
-            }
-
-        }
-
-        private void txtCoquan_KeyDown(object sender, KeyEventArgs e)   //enter chuyen sang textbox sdt
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtSodt.Focus();
-            }
-        }
-
-        private void txtSodt_KeyDown(object sender, KeyEventArgs e) //enter chuyen sang textbox email
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtEmail.Focus();
             }
         }
 
@@ -148,18 +132,24 @@ namespace QuanLyKhachSan_DoAnWindow
 
         public bool checksdt(string sdt)
         {
-            if (KHBUS.Checksdt(sdt))
-                return true;
+            if (!string.IsNullOrEmpty(sdt))
+            {
+                Khach_Hang kh = KHBUS.ThongtinKH(sdt);
+                if (kh.So_dien_thoai == sdt)
+                    return true;
+                MessageBox.Show("Số điện thoại này chưa có trong dữ liệu khách hàng");
+            }
             return false;
         }
 
         private void bt_datphong_Click(object sender, EventArgs e)
         {
-            fmDP = new FormDatPhong();
+            fmDP = new FormDatPhong(username);
             if (!string.IsNullOrEmpty(txtSodt.Text))
             {
                 fmDP.laythongtinKH(txtSodt.Text);
                 fmDP.fmKH = this;
+                fmDP.Text = "Đặt phòng - " + username;
                 fmDP.ShowDialog();
             }
             else

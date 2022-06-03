@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyKhachSan_DoAnWindow.DAO;
+using QuanLyKhachSan_DoAnWindow.Class;
 using System.Windows.Forms;
+using System.Data;
 
 namespace QuanLyKhachSan_DoAnWindow.BUS
 {
@@ -15,17 +17,17 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             khDAO = new Khach_Hang_DAO();
         }
-        public void themKH(string maKH, string tenKH, string gtKH, string cmnd, string address, string coquan, string sdt, string email)
+        public void themKH(Khach_Hang kh)
         {
-            khDAO.themKhachHang(maKH, tenKH, gtKH, cmnd, address, coquan, sdt, email);
+            khDAO.themKhachHang(kh);
         }
-        public void xoaKH(string maKH)
+        public void xoaKH(Khach_Hang kh)
         {
-            khDAO.xoaKhachHang(maKH);
+            khDAO.xoaKhachHang(kh);
         }
-        public void capnhatKH(string maKH, string tenKH, string gtKH, string cmnd, string address, string coquan, string sdt, string email)
+        public void capnhatKH(Khach_Hang kh)
         {
-            khDAO.capnhatKhachHang(maKH, tenKH, gtKH, cmnd, address, coquan, sdt, email);
+            khDAO.capnhatKhachHang(kh);
         }
         public void LoadData(DataGridView data)
         {
@@ -39,13 +41,25 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             data.DataSource = khDAO.loadData(tenKH);
         }
-        public bool Checksdt(string sdt)
+    
+        public Khach_Hang ThongtinKH(string sdt)
         {
-            if(sdt == khDAO.Picksdt(sdt))
-            {
-                return true;
-            }
-            return false;
+            DataTable data = khDAO.KH(sdt);
+
+            DataRow row = data.Rows[0];
+
+            Khach_Hang kh = new Khach_Hang(
+                row["makhachhang"].ToString(),
+                row["tenkhachhang"].ToString(),
+                row["gioitinh"].ToString(),
+                row["cmnd_passport"].ToString(),
+                row["diachi"].ToString(),
+                row["coquan"].ToString(),
+                row["sodienthoai"].ToString(),
+                row["email"].ToString()
+             );
+
+            return kh;
         }
     }
 }

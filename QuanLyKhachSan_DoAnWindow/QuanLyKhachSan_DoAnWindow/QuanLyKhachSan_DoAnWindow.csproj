@@ -65,6 +65,7 @@
     <Compile Include="Class\Khach_Hang.cs" />
     <Compile Include="Class\Nhan_Vien.cs" />
     <Compile Include="Class\Phong.cs" />
+    <Compile Include="Class\Tai_khoan.cs" />
     <Compile Include="Class\Thue_Phong.cs" />
     <Compile Include="Class\Vat_Tu.cs" />
     <Compile Include="DAO\Bao_Cao_DAO.cs" />

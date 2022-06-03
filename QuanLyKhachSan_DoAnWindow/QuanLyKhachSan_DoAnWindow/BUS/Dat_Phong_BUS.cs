@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyKhachSan_DoAnWindow.DAO;
+using QuanLyKhachSan_DoAnWindow.Class;
 using System.Data;
 using System.Windows.Forms;
 
@@ -12,11 +13,9 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
     internal class Dat_Phong_BUS
     {
         private Dat_Phong_DAO dpDAO;
-        private Khach_Hang_DAO khDAO;
         public Dat_Phong_BUS()
         {
             dpDAO = new Dat_Phong_DAO();
-            khDAO = new Khach_Hang_DAO();
         }
 
         public int Count_Ma_Phieu()
@@ -64,15 +63,26 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             }
             data.Clear();
         }
-        public void Phieudat(string mapd, string maphong, string username, string hinhthuc)
+        //them phieu
+        
+        public void themPhieu(Dat_Phong dp, string maphong)
         {
-            dpDAO.Themphieu(mapd, maphong, username);
-            dpDAO.upPhong(maphong, hinhthuc);
+            dpDAO.themPhieuDat(dp);
+            dpDAO.themchitietPhieuDat(dp);
+            dpDAO.capnhatcodatphong(maphong);
         }
-        public void chitietphieu(string maphieu, string sdt, string songuoi, string tiencoc, DateTime di, DateTime den)
+
+        //xoa phieu
+        public void xoaPhieu(string maphieu, string maphong)
         {
-            string makh = khDAO.PickMakh(sdt);
-            dpDAO.themchitiet(maphieu, makh, songuoi, tiencoc, di, den);
+            dpDAO.xoachitietPhieuDat(maphieu);
+            dpDAO.xoaPhieuDat(maphieu);
+            dpDAO.capnhatkhongdatphong(maphong);
+        }
+        //tim kiem theo ten khach hang
+        public void TimkiemKH(string tenKH, DataGridView view)
+        {
+            view.DataSource = dpDAO.laybangtimkiem(tenKH);
         }
     }
 }

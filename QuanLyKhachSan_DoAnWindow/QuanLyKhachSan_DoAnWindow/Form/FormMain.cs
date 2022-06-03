@@ -122,14 +122,16 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void mnKhachhang_Click(object sender, EventArgs e)
         {
-            fmKH = new FormKhachHang();
+            fmKH = new FormKhachHang(musername);
             fmKH.fmMain = this;
+            fmKH.Text = "Quản lý khách hàng - " + musername;
             fmKH.ShowDialog();
             loadthongtin();
         }
         private void mnDatphong_Click(object sender, EventArgs e)
         {
-            fmDP = new FormDatPhong();
+            fmDP = new FormDatPhong(musername);
+            fmDP.Text = "Đặt phòng - " + musername;
             fmDP.fmMain = this;
             fmDP.ShowDialog();
             loadthongtin();
@@ -171,6 +173,7 @@ namespace QuanLyKhachSan_DoAnWindow
         private void mnNhanVien_Click(object sender, EventArgs e)
         {
             fmNV = new FormNhanVien();
+            fmNV.Text = "Quản lý nhân viên - " + musername;
             fmNV.fmMain = this;
             fmNV.ShowDialog();
         }
@@ -195,7 +198,7 @@ namespace QuanLyKhachSan_DoAnWindow
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                         e.RowIndex >= 0)                // kiem tra co click vao button ko
             {
-                fmDP = new FormDatPhong();
+                fmDP = new FormDatPhong(musername);
                 fmDP.fmMain = this;
                 fmDP.ShowDialog();
             }    

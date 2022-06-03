@@ -40,9 +40,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgv_hoadon = new System.Windows.Forms.DataGridView();
-            this.quanLyKhachSanDataSet4 = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSet4();
             this.hoadonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hoadonTableAdapter = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSet4TableAdapters.hoadonTableAdapter();
             this.Mahoadon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tenkhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnd_passport = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +57,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_hoadon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoadonBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,19 +166,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.dtgv_hoadon.Size = new System.Drawing.Size(689, 212);
             this.dtgv_hoadon.TabIndex = 0;
             // 
-            // quanLyKhachSanDataSet4
-            // 
-            this.quanLyKhachSanDataSet4.DataSetName = "QuanLyKhachSanDataSet4";
-            this.quanLyKhachSanDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // hoadonBindingSource
             // 
             this.hoadonBindingSource.DataMember = "hoadon";
-            this.hoadonBindingSource.DataSource = this.quanLyKhachSanDataSet4;
-            // 
-            // hoadonTableAdapter
-            // 
-            this.hoadonTableAdapter.ClearBeforeFill = true;
             // 
             // Mahoadon
             // 
@@ -261,7 +248,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_hoadon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoadonBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -279,9 +265,7 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dtgv_hoadon;
-        private QuanLyKhachSanDataSet4 quanLyKhachSanDataSet4;
         private System.Windows.Forms.BindingSource hoadonBindingSource;
-        private QuanLyKhachSanDataSet4TableAdapters.hoadonTableAdapter hoadonTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mahoadon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tenkhachhang;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnd_passport;
