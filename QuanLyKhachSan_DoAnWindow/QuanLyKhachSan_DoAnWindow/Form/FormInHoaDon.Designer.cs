@@ -166,9 +166,8 @@ namespace QuanLyKhachSan_DoAnWindow
             this.dtgv_hoadon.Size = new System.Drawing.Size(689, 212);
             this.dtgv_hoadon.TabIndex = 0;
             // 
-            // hoadonBindingSource
+            // hoadonTableAdapter
             // 
-            this.hoadonBindingSource.DataMember = "hoadon";
             // 
             // Mahoadon
             // 

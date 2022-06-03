@@ -222,5 +222,145 @@ namespace QuanLyKhachSan_DoAnWindow
         {
 
         }
+
+        private void radio_offline_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_songuoi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_ngaydi_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_ngayden_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radio_online_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_tiencoc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_sdtkh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmapd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvdp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lsvChiTiet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
