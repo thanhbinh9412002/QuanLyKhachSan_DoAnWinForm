@@ -63,8 +63,8 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
         public void Xoa_Phong(string maphong)
         {
-            const string sql = "delete from chitietthuephong where maphong=@maphong; " +
-                               "delete from chitietdatphong where maphong =@maphong; " +
+            const string sql = "delete from phieuthuephong where maphong=@maphong; " +
+                               "delete from phieudatphong where maphong =@maphong; " +
                                "delete from trangthaiphong where maphong = @maphong;" +
                                "delete from phong where maphong = @maphong; ";
             SqlParameter[] sqlParameters = new SqlParameter[1];
@@ -118,7 +118,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
         public string Lay_Ma_Phong(string maloai)
         {
-            const string sql = "select maphong from phong where maloai=@maloai";
+            const string sql = "select count(maphong) from phong where maloai=@maloai";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@maloai", System.Data.SqlDbType.VarChar);
             sqlParameters[0].Value = Convert.ToString(maloai);
@@ -128,7 +128,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
         public string Lay_Ma_Vat_Tu(string maloai)
         {
-            const string sql = "select mavattu from chitietvattu where maloaiphong=@maloai";
+            const string sql = "select count(mavattu) from chitietvattu where maloai=@maloai";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@maloai", System.Data.SqlDbType.VarChar);
             sqlParameters[0].Value = Convert.ToString(maloai);
@@ -140,15 +140,17 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         {
             string maphong = Lay_Ma_Phong(maloai);
             var pgBUS = new Phong_DAO();
-            if (maphong != null)
+            if (maphong != "0")
             {
                 MessageBox.Show("Bạn chưa xoá các phòng liên quan đến loại phòng này!");
+                return;
             }
             string mavattu = Lay_Ma_Vat_Tu(maloai);
             var vtBUS = new Vat_Tu_DAO();
-            if (mavattu != null)
+            if (mavattu != "0")
             {
                 MessageBox.Show("Bạn chưa xoá các vật tư liên quan đến loại phòng này!");
+                return;
             }
 
             const string sql = "delete from loaiphong where maloai=@maloai;";

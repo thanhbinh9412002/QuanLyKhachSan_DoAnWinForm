@@ -49,14 +49,6 @@ namespace QuanLyKhachSan_DoAnWindow
             string maphieu = combo_maphieuthue.SelectedValue.ToString();
             string dulieu = dvBUS.Lay_Ma_Phong(maphieu);
             txt_maphong.Text = dulieu;
-            dulieu = dvBUS.Lay_Ma_Dich_Vu(maphieu);
-            combo_madichvu.Text = dulieu;
-            dulieu = dvBUS.Lay_Ngay(maphieu);
-            txt_date.Text = dulieu;
-            dulieu = dvBUS.Lay_So_Luong(maphieu);
-            txt_soluong.Text = dulieu;
-            dulieu = dvBUS.Lay_Ten_DV(dvBUS.Lay_Ma_Dich_Vu(maphieu));
-            txt_tendichvu.Text = dulieu;
             this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 
@@ -72,21 +64,21 @@ namespace QuanLyKhachSan_DoAnWindow
         private void button_themdvphong_Click(object sender, EventArgs e)
         {
             var dvBUS = new Dich_Vu_BUS();
-            dvBUS.Them_DV_Phong(combo_maphieuthue.Text, txt_maphong.Text, combo_madichvu.Text, txt_date.Text, txt_soluong.Text);
+            dvBUS.Them_DV_Phong(combo_maphieuthue.Text, txt_mahoadon.Text, combo_madichvu.Text, txt_soluong.Text);
             this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 
         private void button_suadvphong_Click(object sender, EventArgs e)
         {
             var dvBUS = new Dich_Vu_BUS();
-            dvBUS.Sua_DV_Phong(combo_maphieuthue.Text, txt_maphong.Text, combo_madichvu.Text, txt_date.Text, txt_soluong.Text);
+            dvBUS.Sua_DV_Phong(combo_maphieuthue.Text, txt_mahoadon.Text, combo_madichvu.Text, txt_soluong.Text);
             this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 
         private void button_xoadvphong_Click(object sender, EventArgs e)
         {
             var dvBUS = new Dich_Vu_BUS();
-            dvBUS.Xoa_DV_Phong(combo_maphieuthue.Text, txt_maphong.Text);
+            dvBUS.Xoa_DV_Phong(combo_maphieuthue.Text);
             this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 
@@ -114,7 +106,6 @@ namespace QuanLyKhachSan_DoAnWindow
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow dr = this.dataGridView1.Rows[e.RowIndex];
-            combo_maphieuthue.Text = dr.Cells[0].Value.ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

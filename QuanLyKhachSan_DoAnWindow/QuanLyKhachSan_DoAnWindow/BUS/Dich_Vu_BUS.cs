@@ -46,10 +46,6 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return dvDAO.Lay_Ma_Phong(maphieuthue);
         }
 
-        public string Lay_Ngay(string maphieuthue)
-        {
-            return dvDAO.Lay_Ngay(maphieuthue);
-        }
 
         public string Lay_So_Luong(string maphieuthue)
         {
@@ -66,19 +62,19 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return dvDAO.Lay_Ten_DV(madichvu);
         }
 
-        public void Them_DV_Phong(string maphieuthue, string maphong, string madichvu, string ngay, string soluong)
+        public void Them_DV_Phong(string maphieuthue, string mahoadon, string madichvu, string soluong)
         {
-            dvDAO.Them_DV_Phong(maphieuthue, maphong, madichvu, ngay, soluong);
+            dvDAO.Them_DV_Phong(maphieuthue, mahoadon, madichvu, soluong);
         }
 
-        public void Sua_DV_Phong(string maphieuthue, string maphong, string madichvu, string ngay, string soluong)
+        public void Sua_DV_Phong(string maphieuthue, string mahoadon, string madichvu, string soluong)
         {
-            dvDAO.Sua_DV_Phong(maphieuthue, maphong, madichvu, ngay, soluong);
+            dvDAO.Sua_DV_Phong(maphieuthue, mahoadon, madichvu, soluong);
         }
 
-        public void Xoa_DV_Phong(string maphieuthue, string maphong)
+        public void Xoa_DV_Phong(string maphieuthue)
         {
-            dvDAO.Xoa_DV_Phong(maphieuthue, maphong);
+            dvDAO.Xoa_DV_Phong(maphieuthue);
         }
 
         public void Them_DV(string madichvu, string tendichvu, string gia, string donvitinh)
