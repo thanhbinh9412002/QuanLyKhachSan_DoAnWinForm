@@ -70,7 +70,10 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void FormBaoCao_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyKhachSanDataSet.hoadon' table. You can move, or remove it, as needed.
+            this.hoadonTableAdapter.Fill(this.quanLyKhachSanDataSet.hoadon);
             // TODO: This line of code loads data into the 'quanLyKhachSanDataSet5.hoadon' table. You can move, or remove it, as needed.
+            //this.hoadonTableAdapter.Fill(this.quanLyKhachSanDataSet5.hoadon);
 
         }
     }

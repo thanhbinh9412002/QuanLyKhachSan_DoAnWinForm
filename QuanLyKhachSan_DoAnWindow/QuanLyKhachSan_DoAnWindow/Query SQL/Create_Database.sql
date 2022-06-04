@@ -6,7 +6,7 @@ create table dbo.hethong
 (
 		username varchar(30) PRIMARY KEY,
 		manhanvien char(5) NULL,
-		machucvu char(5) NULL,  --loc them
+		machucvu char(5) NULL, 
 		passwordtk varchar(30) NULL
 )
 go
@@ -320,37 +320,38 @@ create table dbo.chitietdichvu
 		maphieuthue char(5) references phieuthuephong(maphieuthue),
 		madichvu char(5) references dichvu(madichvu),
 		soluong int NULL,
+		thanhtien int NULL,
 		PRIMARY KEY( mahoadon, maphieuthue, madichvu)
 )
 go
-	insert into chitietdichvu Values('HD01','PT01','DV01', 2)
-	insert into chitietdichvu Values('HD01','PT01','DV02', 3)
-	insert into chitietdichvu Values('HD01','PT01','DV03', 1)
-	insert into chitietdichvu Values('HD01','PT01','DV08', 4)
-	insert into chitietdichvu Values('HD01','PT01','DV05', 2)
-	insert into chitietdichvu Values('HD01','PT01','DV04', 2)
-	insert into chitietdichvu Values('HD01','PT01','DV09', 3)
-	insert into chitietdichvu Values('HD02','PT02','DV02', 1)
-	insert into chitietdichvu Values('HD02','PT02','DV07', 4)
-	insert into chitietdichvu Values('HD02','PT02','DV05', 2)
-	insert into chitietdichvu Values('HD02','PT02','DV01', 2)
-	insert into chitietdichvu Values('HD02','PT02','DV04', 3)
-	insert into chitietdichvu Values('HD03','PT03','DV03', 1)
-	insert into chitietdichvu Values('HD03','PT03','DV04', 4)
-	insert into chitietdichvu Values('HD03','PT03','DV05', 2)
-	insert into chitietdichvu Values('HD03','PT03','DV07', 2)
-	insert into chitietdichvu Values('HD04','PT04','DV10', 3)
-	insert into chitietdichvu Values('HD04','PT04','DV09', 1)
-	insert into chitietdichvu Values('HD04','PT04','DV04', 4)
-	insert into chitietdichvu Values('HD04','PT04','DV03', 2)
-	insert into chitietdichvu Values('HD04','PT04','DV02', 1)
-	insert into chitietdichvu Values('HD05','PT05','DV01', 4)
-	insert into chitietdichvu Values('HD05','PT05','DV09', 2)
-	insert into chitietdichvu Values('HD05','PT05','DV03', 2)
-	insert into chitietdichvu Values('HD05','PT05','DV02', 3)
-	insert into chitietdichvu Values('HD05','PT05','DV06', 1)
-	insert into chitietdichvu Values('HD05','PT05','DV07', 4)
-	insert into chitietdichvu Values('HD05','PT05','DV10', 2)
-	insert into chitietdichvu Values('HD05','PT05','DV08', 1)
-	insert into chitietdichvu Values('HD05','PT05','DV04', 4)
+	insert into chitietdichvu Values('HD01','PT01','DV01', 2, '10000')
+	insert into chitietdichvu Values('HD01','PT01','DV02', 3, '60000')
+	insert into chitietdichvu Values('HD01','PT01','DV03', 1, '50000')
+	insert into chitietdichvu Values('HD01','PT01','DV08', 4, '120000')
+	insert into chitietdichvu Values('HD01','PT01','DV05', 2, '70000')
+	insert into chitietdichvu Values('HD01','PT01','DV04', 2, '600000')
+	insert into chitietdichvu Values('HD01','PT01','DV09', 3, '300000')
+	insert into chitietdichvu Values('HD02','PT02','DV02', 1, '20000')
+	insert into chitietdichvu Values('HD02','PT02','DV07', 4, '40000')
+	insert into chitietdichvu Values('HD02','PT02','DV05', 2, '140000')
+	insert into chitietdichvu Values('HD02','PT02','DV01', 2, '10000')
+	insert into chitietdichvu Values('HD02','PT02','DV04', 3, '900000')
+	insert into chitietdichvu Values('HD03','PT03','DV03', 1, '50000')
+	insert into chitietdichvu Values('HD03','PT03','DV04', 4, '1200000')
+	insert into chitietdichvu Values('HD03','PT03','DV05', 2, '140000')
+	insert into chitietdichvu Values('HD03','PT03','DV07', 2, '20000')
+	insert into chitietdichvu Values('HD04','PT04','DV10', 3, '60000')
+	insert into chitietdichvu Values('HD04','PT04','DV09', 1, '100000')
+	insert into chitietdichvu Values('HD04','PT04','DV04', 4, '1200000')
+	insert into chitietdichvu Values('HD04','PT04','DV03', 2, '100000')
+	insert into chitietdichvu Values('HD04','PT04','DV02', 1, '20000')
+	insert into chitietdichvu Values('HD05','PT05','DV01', 4, '20000')
+	insert into chitietdichvu Values('HD05','PT05','DV09', 2, '200000')
+	insert into chitietdichvu Values('HD05','PT05','DV03', 2, '100000')
+	insert into chitietdichvu Values('HD05','PT05','DV02', 3, '60000')
+	insert into chitietdichvu Values('HD05','PT05','DV06', 1, '20000')
+	insert into chitietdichvu Values('HD05','PT05','DV07', 4, '40000')
+	insert into chitietdichvu Values('HD05','PT05','DV10', 2, '40000')
+	insert into chitietdichvu Values('HD05','PT05','DV08', 1, '30000')
+	insert into chitietdichvu Values('HD05','PT05','DV04', 4, '1200000')
 go
