@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("KHÁCH HÀNG", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ĐẶT PHÒNG", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("KHÁCH HÀNG", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ĐẶT PHÒNG", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Mã khách hàng",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Tên khách hàng",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Giới tính",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "CMND/Passport",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Địa chỉ",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Điện thoại",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Ngày thuê phòng",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Số người",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Tiền cọc",
             ""}, -1);
             this.txt_tiencoc = new System.Windows.Forms.TextBox();
@@ -102,6 +102,7 @@
             this.danhancol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radiobutton = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtedit = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvdanhsach)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -420,6 +421,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.txtedit);
             this.tabPage3.Controls.Add(this.lvdp);
             this.tabPage3.Controls.Add(this.lsvChiTiet);
             this.tabPage3.Controls.Add(this.btnSua);
@@ -483,42 +485,42 @@
             this.gt});
             this.lsvChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvChiTiet.FullRowSelect = true;
-            listViewGroup5.Header = "KHÁCH HÀNG";
-            listViewGroup5.Name = "listViewGroupKHACHHANG";
-            listViewGroup6.Header = "ĐẶT PHÒNG";
-            listViewGroup6.Name = "listViewGroupDATPHONG";
+            listViewGroup1.Header = "KHÁCH HÀNG";
+            listViewGroup1.Name = "listViewGroupKHACHHANG";
+            listViewGroup2.Header = "ĐẶT PHÒNG";
+            listViewGroup2.Name = "listViewGroupDATPHONG";
             this.lsvChiTiet.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup1,
+            listViewGroup2});
             this.lsvChiTiet.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lsvChiTiet.HideSelection = false;
-            listViewItem19.Group = listViewGroup5;
-            listViewItem20.Group = listViewGroup5;
-            listViewItem20.StateImageIndex = 0;
-            listViewItem21.Group = listViewGroup5;
-            listViewItem21.StateImageIndex = 0;
-            listViewItem22.Group = listViewGroup5;
-            listViewItem22.StateImageIndex = 0;
-            listViewItem23.Group = listViewGroup5;
-            listViewItem23.StateImageIndex = 0;
-            listViewItem24.Group = listViewGroup5;
-            listViewItem24.StateImageIndex = 0;
-            listViewItem25.Group = listViewGroup6;
-            listViewItem25.StateImageIndex = 0;
-            listViewItem26.Group = listViewGroup6;
-            listViewItem26.StateImageIndex = 0;
-            listViewItem27.Group = listViewGroup6;
-            listViewItem27.StateImageIndex = 0;
+            listViewItem1.Group = listViewGroup1;
+            listViewItem2.Group = listViewGroup1;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.Group = listViewGroup1;
+            listViewItem3.StateImageIndex = 0;
+            listViewItem4.Group = listViewGroup1;
+            listViewItem4.StateImageIndex = 0;
+            listViewItem5.Group = listViewGroup1;
+            listViewItem5.StateImageIndex = 0;
+            listViewItem6.Group = listViewGroup1;
+            listViewItem6.StateImageIndex = 0;
+            listViewItem7.Group = listViewGroup2;
+            listViewItem7.StateImageIndex = 0;
+            listViewItem8.Group = listViewGroup2;
+            listViewItem8.StateImageIndex = 0;
+            listViewItem9.Group = listViewGroup2;
+            listViewItem9.StateImageIndex = 0;
             this.lsvChiTiet.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem19,
-            listViewItem20,
-            listViewItem21,
-            listViewItem22,
-            listViewItem23,
-            listViewItem24,
-            listViewItem25,
-            listViewItem26,
-            listViewItem27});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9});
             this.lsvChiTiet.Location = new System.Drawing.Point(1, 18);
             this.lsvChiTiet.MultiSelect = false;
             this.lsvChiTiet.Name = "lsvChiTiet";
@@ -527,6 +529,10 @@
             this.lsvChiTiet.TabIndex = 12;
             this.lsvChiTiet.UseCompatibleStateImageBehavior = false;
             this.lsvChiTiet.View = System.Windows.Forms.View.Details;
+            this.lsvChiTiet.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lsvChiTiet_KeyUp);
+            this.lsvChiTiet.Leave += new System.EventHandler(this.lsvChiTiet_Leave);
+            this.lsvChiTiet.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lsvChiTiet_MouseDown);
+            this.lsvChiTiet.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lsvChiTiet_MouseUp);
             // 
             // tt
             // 
@@ -636,6 +642,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm phòng trống";
             // 
+            // txtedit
+            // 
+            this.txtedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtedit.Location = new System.Drawing.Point(100, 34);
+            this.txtedit.Name = "txtedit";
+            this.txtedit.Size = new System.Drawing.Size(174, 20);
+            this.txtedit.TabIndex = 14;
+            // 
             // FormDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,6 +669,7 @@
             this.tabPage2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -707,5 +722,6 @@
         private System.Windows.Forms.TextBox txt_timkiem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDEL;
+        private System.Windows.Forms.TextBox txtedit;
     }
 }

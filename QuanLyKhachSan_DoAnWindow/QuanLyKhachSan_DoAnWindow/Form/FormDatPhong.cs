@@ -222,5 +222,62 @@ namespace QuanLyKhachSan_DoAnWindow
         {
 
         }
+        //##################################################################################################//
+        //##################################################################################################//
+
+        ListViewItem.ListViewSubItem SelectedLSI;
+
+        private void lsvChiTiet_MouseUp(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo i = lsvChiTiet.HitTest(e.X, e.Y);
+            SelectedLSI = i.SubItem;
+            if (SelectedLSI == null)
+                return;
+            int border = 0;
+            switch (lsvChiTiet.BorderStyle)
+            {
+                case BorderStyle.FixedSingle: border = 1; break;
+                case BorderStyle.Fixed3D:   border = 2; break;
+            }
+
+            int CellWidth = SelectedLSI.Bounds.Width;
+            int CellHeight = SelectedLSI.Bounds.Height;
+            int CellLeft = border + lsvChiTiet.Left + i.SubItem.Bounds.Left;
+            int CellTop = lsvChiTiet.Top + i.SubItem.Bounds.Top;
+            // first column
+            if (i.SubItem == i.Item.SubItems[0])
+                CellWidth = lsvChiTiet.Columns[0].Width;
+            txtedit.Location = new Point(CellLeft, CellTop);
+            txtedit.Size = new Size(CellWidth, CellHeight);
+            txtedit.Visible = true;
+            txtedit.BringToFront();
+            txtedit.Text = i.SubItem.Text;
+            txtedit.Select();
+            txtedit.SelectAll();
+        }
+
+        private void lsvChiTiet_MouseDown(object sender, MouseEventArgs e)
+        {
+            HideTextEditor();
+        }
+
+        private void lsvChiTiet_KeyUp(object sender, KeyEventArgs e)
+        {
+            HideTextEditor();
+        }
+
+        private void lsvChiTiet_Leave(object sender, EventArgs e)
+        {
+            HideTextEditor();
+        }
+
+        private void HideTextEditor()
+        {
+            txtedit.Visible = false;
+            if (SelectedLSI != null)
+                SelectedLSI.Text = txtedit.Text;
+            SelectedLSI = null;
+            txtedit.Clear();
+        }
     }
 }
