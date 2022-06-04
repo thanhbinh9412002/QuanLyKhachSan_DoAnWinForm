@@ -90,10 +90,10 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             if (tpBUS.Dem_Ma_Phieu_Dat() + 1 < 10)
             {
-                txt_maphieudat.Text = "PDT0" + (tpBUS.Dem_Ma_Phieu_Dat() + 1).ToString();
+                txt_maphieudat.Text = "PD0" + (tpBUS.Dem_Ma_Phieu_Dat() + 1).ToString();
             }
             else
-                txt_maphieudat.Text = "PDT" + (tpBUS.Dem_Ma_Phieu_Dat() + 1).ToString();
+                txt_maphieudat.Text = "PD" + (tpBUS.Dem_Ma_Phieu_Dat() + 1).ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

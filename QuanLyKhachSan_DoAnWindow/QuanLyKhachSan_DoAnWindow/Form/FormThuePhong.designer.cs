@@ -30,6 +30,8 @@ namespace QuanLyKhachSan_DoAnWindow
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.bt_quaylai = new System.Windows.Forms.Button();
@@ -95,8 +97,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_songuoi = new System.Windows.Forms.TextBox();
             this.date_ngaythuephong = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagriwview_danhsach)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -127,6 +127,30 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage2.Size = new System.Drawing.Size(700, 683);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh sách";
+            // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSua.Location = new System.Drawing.Point(393, 628);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(107, 37);
+            this.btnSua.TabIndex = 20;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHuy.Location = new System.Drawing.Point(535, 628);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(107, 37);
+            this.btnHuy.TabIndex = 19;
+            this.btnHuy.Text = "Xoá";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click_1);
             // 
             // txt_timkiem
             // 
@@ -335,9 +359,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_songuoi2.Location = new System.Drawing.Point(118, 100);
             this.txt_songuoi2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_songuoi2.Name = "txt_songuoi2";
-            this.txt_songuoi2.Size = new System.Drawing.Size(116, 24);
+            this.txt_songuoi2.Size = new System.Drawing.Size(70, 24);
             this.txt_songuoi2.TabIndex = 39;
-            this.txt_songuoi2.Text = "txt_songuoi2";
+            this.txt_songuoi2.Text = "1,2,3,...";
             // 
             // txt_tiencoc2
             // 
@@ -346,9 +370,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_tiencoc2.Location = new System.Drawing.Point(417, 99);
             this.txt_tiencoc2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_tiencoc2.Name = "txt_tiencoc2";
-            this.txt_tiencoc2.Size = new System.Drawing.Size(109, 24);
+            this.txt_tiencoc2.Size = new System.Drawing.Size(55, 24);
             this.txt_tiencoc2.TabIndex = 38;
-            this.txt_tiencoc2.Text = "txt_tiencoc2";
+            this.txt_tiencoc2.Text = "000...";
             // 
             // txt_ngaythue2
             // 
@@ -357,9 +381,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_ngaythue2.Location = new System.Drawing.Point(176, 60);
             this.txt_ngaythue2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_ngaythue2.Name = "txt_ngaythue2";
-            this.txt_ngaythue2.Size = new System.Drawing.Size(126, 24);
+            this.txt_ngaythue2.Size = new System.Drawing.Size(110, 24);
             this.txt_ngaythue2.TabIndex = 37;
-            this.txt_ngaythue2.Text = "txt_ngaythue2";
+            this.txt_ngaythue2.Text = "mm/dd/yyyy";
             // 
             // txt_maphieudat2
             // 
@@ -368,9 +392,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_maphieudat2.Location = new System.Drawing.Point(453, 26);
             this.txt_maphieudat2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_maphieudat2.Name = "txt_maphieudat2";
-            this.txt_maphieudat2.Size = new System.Drawing.Size(147, 24);
+            this.txt_maphieudat2.Size = new System.Drawing.Size(50, 24);
             this.txt_maphieudat2.TabIndex = 36;
-            this.txt_maphieudat2.Text = "txt_maphieudat2";
+            this.txt_maphieudat2.Text = "PD...";
             // 
             // txt_maphieuthue2
             // 
@@ -379,9 +403,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_maphieuthue2.Location = new System.Drawing.Point(152, 25);
             this.txt_maphieuthue2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_maphieuthue2.Name = "txt_maphieuthue2";
-            this.txt_maphieuthue2.Size = new System.Drawing.Size(159, 24);
+            this.txt_maphieuthue2.Size = new System.Drawing.Size(49, 24);
             this.txt_maphieuthue2.TabIndex = 35;
-            this.txt_maphieuthue2.Text = "txt_maphieuthue2";
+            this.txt_maphieuthue2.Text = "PT...";
             // 
             // label18
             // 
@@ -468,9 +492,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_diachi.Location = new System.Drawing.Point(377, 94);
             this.txt_diachi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_diachi.Name = "txt_diachi";
-            this.txt_diachi.Size = new System.Drawing.Size(88, 24);
+            this.txt_diachi.Size = new System.Drawing.Size(140, 24);
             this.txt_diachi.TabIndex = 34;
-            this.txt_diachi.Text = "txt_diachi";
+            this.txt_diachi.Text = "Đường A,B,C,...";
             // 
             // txt_sdt
             // 
@@ -479,9 +503,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_sdt.Location = new System.Drawing.Point(68, 94);
             this.txt_sdt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_sdt.Name = "txt_sdt";
-            this.txt_sdt.Size = new System.Drawing.Size(135, 24);
+            this.txt_sdt.Size = new System.Drawing.Size(35, 24);
             this.txt_sdt.TabIndex = 33;
-            this.txt_sdt.Text = "txt_sodienthoai";
+            this.txt_sdt.Text = "0...";
             // 
             // txt_cmnd
             // 
@@ -490,9 +514,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_cmnd.Location = new System.Drawing.Point(433, 58);
             this.txt_cmnd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_cmnd.Name = "txt_cmnd";
-            this.txt_cmnd.Size = new System.Drawing.Size(86, 24);
+            this.txt_cmnd.Size = new System.Drawing.Size(55, 24);
             this.txt_cmnd.TabIndex = 32;
-            this.txt_cmnd.Text = "txt_cmnd";
+            this.txt_cmnd.Text = "000...";
             // 
             // txt_gioitinh
             // 
@@ -501,9 +525,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_gioitinh.Location = new System.Drawing.Point(99, 58);
             this.txt_gioitinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_gioitinh.Name = "txt_gioitinh";
-            this.txt_gioitinh.Size = new System.Drawing.Size(98, 24);
+            this.txt_gioitinh.Size = new System.Drawing.Size(80, 24);
             this.txt_gioitinh.TabIndex = 31;
-            this.txt_gioitinh.Text = "txt_gioitinh";
+            this.txt_gioitinh.Text = "Nam/Nữ";
             // 
             // txt_hovaten
             // 
@@ -512,9 +536,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_hovaten.Location = new System.Drawing.Point(390, 25);
             this.txt_hovaten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_hovaten.Name = "txt_hovaten";
-            this.txt_hovaten.Size = new System.Drawing.Size(105, 24);
+            this.txt_hovaten.Size = new System.Drawing.Size(90, 24);
             this.txt_hovaten.TabIndex = 30;
-            this.txt_hovaten.Text = "txt_hovaten";
+            this.txt_hovaten.Text = "Họ và tên";
             // 
             // txt_makhachhang
             // 
@@ -523,9 +547,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_makhachhang.Location = new System.Drawing.Point(88, 26);
             this.txt_makhachhang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_makhachhang.Name = "txt_makhachhang";
-            this.txt_makhachhang.Size = new System.Drawing.Size(158, 24);
+            this.txt_makhachhang.Size = new System.Drawing.Size(51, 24);
             this.txt_makhachhang.TabIndex = 29;
-            this.txt_makhachhang.Text = "txt_makhachhang";
+            this.txt_makhachhang.Text = "KH...";
             // 
             // label15
             // 
@@ -911,30 +935,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label7.Size = new System.Drawing.Size(161, 24);
             this.label7.TabIndex = 11;
             this.label7.Text = "Ngày thuê phòng:";
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSua.Location = new System.Drawing.Point(393, 628);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(107, 37);
-            this.btnSua.TabIndex = 20;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnHuy.Location = new System.Drawing.Point(535, 628);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(107, 37);
-            this.btnHuy.TabIndex = 19;
-            this.btnHuy.Text = "Xoá";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click_1);
             // 
             // FormThuePhong
             // 
