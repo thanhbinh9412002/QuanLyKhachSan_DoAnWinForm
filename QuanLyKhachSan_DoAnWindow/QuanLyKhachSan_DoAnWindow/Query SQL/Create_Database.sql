@@ -20,6 +20,7 @@ go
 	insert into hethong Values('thanhab@', 'NV08', 'QL','7542153')
 	insert into hethong Values('ntbinh@', 'NV09', 'NV','3456789')
 	insert into hethong Values('hothanh@', 'NV10', 'NV','4751439')
+	insert into hethong Values('an@', 'NV11', 'QL','123')
 go
 
 
@@ -44,6 +45,7 @@ go
 	insert into nhanvien Values('NV08', 'ho x', '2002-01-04', 'nu', 'lam dong', '0426978169', 'le tan')
 	insert into nhanvien Values('NV09', 'nguyen n', '2000-07-08', 'nu', 'binh dinh', '7513578169', 'quan li')
 	insert into nhanvien Values('NV10', 'le n', '2000-06-15', 'nam', 'dong thap', '4268578169', 'le tan')
+	insert into nhanvien Values('NV11', 'Nguyen Thuy An', '2000-06-15', 'nu', 'dong thap', '4268578168', 'Tester')
 go
 Alter table hethong WITH CHECK ADD FOREIGN KEY(manhanvien) REFERENCES nhanvien(manhanvien)
 go
