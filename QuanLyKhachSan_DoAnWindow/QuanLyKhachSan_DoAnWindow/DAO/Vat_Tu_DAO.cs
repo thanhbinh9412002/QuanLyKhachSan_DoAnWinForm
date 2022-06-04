@@ -29,7 +29,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
         public DataTable Tim_Vat_Tu(string maloaiphong, string mavattu)
         {
-            string sql = "select chitietvattu.mavattu,tenvattu,soluong from vattu,chitietvattu where vattu.mavattu = chitietvattu.mavattu and chitietvattu.maloaiphong=@maloaiphong  and vattu.mavattu like '%" + mavattu + "%'";
+            string sql = "select chitietvattu.mavattu,tenvattu,soluong from vattu,chitietvattu where vattu.mavattu = chitietvattu.mavattu and chitietvattu.maloai=@maloaiphong  and vattu.mavattu like '%" + mavattu + "%'";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@maloaiphong", System.Data.SqlDbType.VarChar);
             sqlParameters[0].Value = Convert.ToString(maloaiphong);
@@ -40,7 +40,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
         public void Them_Vat_Tu(string maloaiphong, string mavattu, string tenvattu, string soluong)
         {
-            const string sql = "insert into vattu(mavattu,tenvattu) values (@mavattu,@tenvattu); insert into chitietvattu(maloaiphong, mavattu, soluong) values(@maloaiphong, @mavattu, @soluong)";
+            const string sql = "insert into vattu(mavattu,tenvattu) values (@mavattu,@tenvattu); insert into chitietvattu(maloai, mavattu, soluong) values(@maloaiphong, @mavattu, @soluong)";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@mavattu", System.Data.SqlDbType.VarChar);
             sqlParameters[0].Value = Convert.ToString(mavattu);
@@ -59,7 +59,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
         public void Sua_Vat_Tu(string maloaiphong, string mavattu, string tenvattu, string soluong)
         {
-            const string sql = "update vattu set tenvattu=@tenvattu where mavattu=@mavattu; update chitietvattu set soluong=@soluong where maloaiphong=@maloaiphong and mavattu=@mavattu";
+            const string sql = "update vattu set tenvattu=@tenvattu where mavattu=@mavattu; update chitietvattu set soluong=@soluong where maloai=@maloaiphong and mavattu=@mavattu";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@tenvattu", System.Data.SqlDbType.VarChar);
             sqlParameters[0].Value = Convert.ToString(tenvattu);
@@ -78,7 +78,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
         public void Xoa_Vat_Tu(string mavattu, string maloaiphong)
         {
-            const string sql = "delete from chitietvattu where mavattu=@mavattu and maloaiphong=@maloaiphong; " +
+            const string sql = "delete from chitietvattu where mavattu=@mavattu and maloai=@maloaiphong; " +
                                "delete from vattu where mavattu=@mavattu; ";
             SqlParameter[] sqlParameters = new SqlParameter[2];
 
