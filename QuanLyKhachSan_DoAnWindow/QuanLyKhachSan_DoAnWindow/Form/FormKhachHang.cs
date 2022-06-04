@@ -19,6 +19,7 @@ namespace QuanLyKhachSan_DoAnWindow
         public FormMain fmMain;
         public FormDatPhong fmDP;
         public FormThuePhong fmTP;
+        public FormInHoaDon fmhoadon;
         private Khach_Hang KH;
         private string username;
         public FormKhachHang(string user ="")
@@ -141,33 +142,48 @@ namespace QuanLyKhachSan_DoAnWindow
             }
             return false;
         }
-
+        private bool checkDatphong(string makh)
+        {
+            if (KHBUS.CheckKH(makh))
+                return true;
+            return false;
+        }
         private void bt_datphong_Click(object sender, EventArgs e)
         {
-            fmDP = new FormDatPhong(username);
-            if (!string.IsNullOrEmpty(txtSodt.Text))
+            if (checkDatphong(txtMkh.Text))
             {
-                fmDP.laythongtinKH(txtSodt.Text);
-                fmDP.fmKH = this;
-                fmDP.Text = "Đặt phòng - " + username;
-                fmDP.ShowDialog();
+                MessageBox.Show("Khách hàng này đã đặt phòng!");
             }
             else
             {
-                MessageBox.Show("Hiện chưa có số điện thoại");
-            }
+                fmDP = new FormDatPhong(username);
+                if (!string.IsNullOrEmpty(txtSodt.Text))
+                {
+                    fmDP.laythongtinKH(txtSodt.Text);
+                    fmDP.fmKH = this;
+                    fmDP.Text = "Đặt phòng - " + username;
+                    fmDP.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Hiện chưa có số điện thoại");
+                }
+            }    
+              
         }
 
         private void bt_thuephong_Click(object sender, EventArgs e)
         {
             fmTP = new FormThuePhong();
-            //fmTP.fmKH = this;
+            fmTP.fmKH = this;
             fmTP.ShowDialog();
         }
 
         private void bt_Traphong_Click(object sender, EventArgs e)
         {
-
+            fmhoadon = new FormInHoaDon();
+            fmhoadon.fmKH = this;
+            fmhoadon.ShowDialog();
         }
     }
 }

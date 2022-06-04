@@ -160,5 +160,15 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
                             "order by ngaythuephong DESC";
             return conn.executeLoadData(sql);
         }    
+
+        //kiem tra khach hang co trong danh sach dat phong
+        public string CheckKH(string ma)
+        {
+            string query = "select makhachhang from chitietdatphong where makhachhang = @ma";
+            SqlParameter[] sqlParameter = new SqlParameter[1];
+            sqlParameter[0] = new SqlParameter("@ma", SqlDbType.Char);
+            sqlParameter[0].Value = ma;
+            return Convert.ToString(conn.executeScalar(query, sqlParameter));
+        }
     }
 }

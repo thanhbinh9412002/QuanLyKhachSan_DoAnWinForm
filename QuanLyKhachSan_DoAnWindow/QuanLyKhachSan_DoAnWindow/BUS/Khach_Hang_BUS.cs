@@ -13,9 +13,11 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
     internal class Khach_Hang_BUS
     {
         private Khach_Hang_DAO khDAO;
+        private Dat_Phong_DAO dpDAO;
         public Khach_Hang_BUS()
         {
             khDAO = new Khach_Hang_DAO();
+            dpDAO = new Dat_Phong_DAO();
         }
         public void themKH(Khach_Hang kh)
         {
@@ -60,6 +62,12 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
              );
 
             return kh;
+        }
+        public bool CheckKH(string ma)
+        {
+            if( ma == dpDAO.CheckKH(ma))
+                return true;
+            return false;
         }
     }
 }

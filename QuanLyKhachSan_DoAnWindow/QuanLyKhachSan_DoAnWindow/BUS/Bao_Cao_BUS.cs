@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyKhachSan_DoAnWindow.Class;
 
 namespace QuanLyKhachSan_DoAnWindow.BUS
 {
@@ -19,17 +20,25 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return bcDAO.Lay_Du_Lieu_0();
         }
-        public DataTable Lay_Du_Lieu_1(string thoigian)
+        public DataTable Lay_Du_Lieu_1(string ngay, string thang, string nam)
         {
-            return bcDAO.Lay_Du_Lieu_1(thoigian);
+            return bcDAO.Lay_Du_Lieu_1(ngay, thang, nam);
         }
-        public string Lay_Du_Lieu_2(string thoigian, string chon)
+        public DataTable Lay_Du_Lieu_2(string thang, string nam)
         {
-            return bcDAO.Lay_Du_Lieu_2(thoigian, chon);
+            return bcDAO.Lay_Du_Lieu_2(thang, nam);
         }
-        public string Lay_Du_Lieu_3(string thoigian, string chon)
+        public DataTable Lay_Du_Lieu_3(string nam)
         {
-            return bcDAO.Lay_Du_Lieu_3(thoigian, chon);
+            return bcDAO.Lay_Du_Lieu_3(nam);
+        }
+        public string Lay_Du_Lieu_4(string ngay, string thang, string nam, string chon)
+        {
+            return bcDAO.Lay_Du_Lieu_4(ngay, thang, nam, chon);
+        }
+        public string Lay_Du_Lieu_5(string ngay, string thang, string nam, string chon)
+        {
+            return bcDAO.Lay_Du_Lieu_5(ngay, thang, nam, chon);
         }
     }
 }
