@@ -50,5 +50,35 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return tpDAO.Lay_SDT_KH(makhachhang);
         }
+
+        public string Lay_MaKH_SDT(string sodienthoai)
+        {
+            return tpDAO.Lay_MaKH_SDT(sodienthoai);
+        }
+
+        public void Them_Phieu_Thue(string maphieu, string maphong, string username)
+        {
+            tpDAO.Them_Phieu_Thue(maphieu, maphong, username);
+        }
+
+        public void Sua_Phieu_Thue(string maphieu, string maphong)
+        {
+            tpDAO.Sua_Phieu_Thue(maphieu,maphong);
+        }
+
+        public void Them_Phieu_Thue_Chi_Tiet(string maphieu, string makhachhang, string ngaythuephong, string sotiencoc, string songuoi)
+        {
+            tpDAO.Them_Phieu_Thue_Chi_Tiet(maphieu, makhachhang, ngaythuephong, sotiencoc, songuoi);   
+        }
+
+        public void Sua_Phieu_Thue_Chi_Tiet(string maphieu, string makhachhang, string ngaythuephong, string sotiencoc, string songuoi)
+        {
+            tpDAO.Sua_Phieu_Thue_Chi_Tiet(maphieu, makhachhang, ngaythuephong, sotiencoc, songuoi);
+        }
+
+        public void Xoa_Phieu_Thue(string maphieu)
+        {
+            tpDAO.Xoa_Phieu_Thue(maphieu);
+        }
     }
 }
