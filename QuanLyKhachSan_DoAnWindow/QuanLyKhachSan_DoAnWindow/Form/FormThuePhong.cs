@@ -109,6 +109,12 @@ namespace QuanLyKhachSan_DoAnWindow
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                         e.RowIndex >= 0)                // kiem tra co click vao button ko
             {
+                txt_maphong.Text = dr.Cells[2].Value.ToString();
+                txt_tiencoc.Text = dr.Cells[5].Value.ToString();
+                txt_songuoi.Text = dr.Cells[6].Value.ToString();
+                var datex = DateTime.Parse(dr.Cells[4].Value.ToString());
+                date_ngaythuephong.Value = datex;
+                txt_sdtkh.Text = tpBUS.Lay_SDT_KH(dr.Cells[3].Value.ToString());
                 tabControl1.SelectedTab = tabPage3;         // chuyen qua xem chi tiet
                 this.Datagriwview_danhsach2.DataSource = tpBUS.Hien_Thi_Phong(maphong);
                 Khach_Hang kh = khBUS.ThongtinKH(txt_sdtkh.Text);
@@ -148,7 +154,14 @@ namespace QuanLyKhachSan_DoAnWindow
             var date = DateTime.Parse(dr.Cells[4].Value.ToString());
             date_ngaythuephong.Value = date;
             txt_sdtkh.Text = tpBUS.Lay_SDT_KH(dr.Cells[3].Value.ToString());
-
+            this.Datagriwview_danhsach2.DataSource = tpBUS.Hien_Thi_Phong(maphong);
+            Khach_Hang khx = khBUS.ThongtinKH(txt_sdtkh.Text);
+            txt_makhachhang.Text = khx.Ma_khach_hang;
+            txt_gioitinh.Text = khx.Gioi_tinh;
+            txt_sdt.Text = khx.So_dien_thoai;
+            txt_hovaten.Text = khx.Ten_khach_hang;
+            txt_cmnd.Text = khx.Cmnd_passport;
+            txt_diachi.Text = khx.Dia_chi;
             Load_Data();
         }
 
