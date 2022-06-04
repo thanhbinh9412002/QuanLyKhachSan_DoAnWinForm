@@ -14,6 +14,7 @@ namespace QuanLyKhachSan_DoAnWindow
     public partial class FormThuePhong : Form
     {
         public FormMain fmMain;
+        public FormKhachHang fmKH;
         private Thue_Phong_BUS tpBUS = new Thue_Phong_BUS();
         public FormThuePhong()
         {
