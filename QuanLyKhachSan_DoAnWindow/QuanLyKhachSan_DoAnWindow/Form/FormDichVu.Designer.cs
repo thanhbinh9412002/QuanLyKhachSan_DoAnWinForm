@@ -32,8 +32,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.combo_maphieuthue = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_date = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_soluong = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -43,15 +41,16 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_xoadvphong = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_maphong = new System.Windows.Forms.Label();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txt_maphong = new System.Windows.Forms.TextBox();
             this.txt_tendichvu = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.combo_madichvu = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
             this.txt_timkiem2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_madichvu2 = new System.Windows.Forms.TextBox();
@@ -66,7 +65,8 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_xoadv = new System.Windows.Forms.Button();
             this.button_suadv = new System.Windows.Forms.Button();
             this.button_themdv = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
+            this.txt_mahoadon = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -95,32 +95,16 @@ namespace QuanLyKhachSan_DoAnWindow
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 92);
+            this.label2.Location = new System.Drawing.Point(5, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã phòng:";
             // 
-            // txt_date
-            // 
-            this.txt_date.Location = new System.Drawing.Point(133, 36);
-            this.txt_date.Name = "txt_date";
-            this.txt_date.Size = new System.Drawing.Size(121, 22);
-            this.txt_date.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(133, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Ngày:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(130, 90);
+            this.label5.Location = new System.Drawing.Point(3, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 9;
@@ -128,7 +112,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // txt_soluong
             // 
-            this.txt_soluong.Location = new System.Drawing.Point(133, 109);
+            this.txt_soluong.Location = new System.Drawing.Point(6, 168);
             this.txt_soluong.Name = "txt_soluong";
             this.txt_soluong.Size = new System.Drawing.Size(121, 22);
             this.txt_soluong.TabIndex = 8;
@@ -197,10 +181,12 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txt_mahoadon);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.txt_maphong);
             this.tabPage1.Controls.Add(this.txt_timkiem);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.txt_maphong);
             this.tabPage1.Controls.Add(this.txt_tendichvu);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.combo_madichvu);
@@ -209,8 +195,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage1.Controls.Add(this.combo_maphieuthue);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.txt_date);
-            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.txt_soluong);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.button_themdvphong);
@@ -223,6 +207,15 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dịch vụ phòng";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txt_maphong
+            // 
+            this.txt_maphong.AutoSize = true;
+            this.txt_maphong.Location = new System.Drawing.Point(5, 82);
+            this.txt_maphong.Name = "txt_maphong";
+            this.txt_maphong.Size = new System.Drawing.Size(82, 16);
+            this.txt_maphong.TabIndex = 30;
+            this.txt_maphong.Text = "Mã phòng txt";
             // 
             // txt_timkiem
             // 
@@ -250,17 +243,10 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label11.TabIndex = 27;
             this.label11.Text = "Bảng dịch vụ theo phòng hiện tại";
             // 
-            // txt_maphong
-            // 
-            this.txt_maphong.Location = new System.Drawing.Point(6, 111);
-            this.txt_maphong.Name = "txt_maphong";
-            this.txt_maphong.Size = new System.Drawing.Size(121, 22);
-            this.txt_maphong.TabIndex = 26;
-            // 
             // txt_tendichvu
             // 
             this.txt_tendichvu.AutoSize = true;
-            this.txt_tendichvu.Location = new System.Drawing.Point(133, 189);
+            this.txt_tendichvu.Location = new System.Drawing.Point(133, 216);
             this.txt_tendichvu.Name = "txt_tendichvu";
             this.txt_tendichvu.Size = new System.Drawing.Size(93, 16);
             this.txt_tendichvu.TabIndex = 25;
@@ -269,7 +255,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(133, 169);
+            this.label10.Location = new System.Drawing.Point(133, 196);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 16);
             this.label10.TabIndex = 24;
@@ -278,7 +264,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // combo_madichvu
             // 
             this.combo_madichvu.FormattingEnabled = true;
-            this.combo_madichvu.Location = new System.Drawing.Point(6, 186);
+            this.combo_madichvu.Location = new System.Drawing.Point(6, 213);
             this.combo_madichvu.Name = "combo_madichvu";
             this.combo_madichvu.Size = new System.Drawing.Size(121, 24);
             this.combo_madichvu.TabIndex = 21;
@@ -287,7 +273,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 169);
+            this.label9.Location = new System.Drawing.Point(6, 196);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(74, 16);
             this.label9.TabIndex = 22;
@@ -317,6 +303,15 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dịch vụ";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(558, 2);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(129, 16);
+            this.label14.TabIndex = 48;
+            this.label14.Text = "Bảng dịch vụ hiện tại";
             // 
             // txt_timkiem2
             // 
@@ -440,14 +435,21 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button_themdv.UseVisualStyleBackColor = true;
             this.button_themdv.Click += new System.EventHandler(this.button_themdv_Click);
             // 
-            // label14
+            // txt_mahoadon
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(558, 2);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(129, 16);
-            this.label14.TabIndex = 48;
-            this.label14.Text = "Bảng dịch vụ hiện tại";
+            this.txt_mahoadon.Location = new System.Drawing.Point(6, 124);
+            this.txt_mahoadon.Name = "txt_mahoadon";
+            this.txt_mahoadon.Size = new System.Drawing.Size(121, 22);
+            this.txt_mahoadon.TabIndex = 31;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 16);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Mã hoá đơn";
             // 
             // FormDichVu
             // 
@@ -475,8 +477,6 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.ComboBox combo_maphieuthue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_date;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_soluong;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -503,12 +503,14 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label txt_tendichvu;
         private System.Windows.Forms.TextBox txt_madichvu2;
-        private System.Windows.Forms.TextBox txt_maphong;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_timkiem;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_timkiem2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label txt_maphong;
+        private System.Windows.Forms.TextBox txt_mahoadon;
+        private System.Windows.Forms.Label label4;
     }
 }
