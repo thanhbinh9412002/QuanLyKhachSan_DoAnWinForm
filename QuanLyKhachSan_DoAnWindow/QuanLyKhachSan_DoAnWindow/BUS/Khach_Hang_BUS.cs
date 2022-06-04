@@ -4,28 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyKhachSan_DoAnWindow.DAO;
+using QuanLyKhachSan_DoAnWindow.Class;
 using System.Windows.Forms;
+using System.Data;
 
 namespace QuanLyKhachSan_DoAnWindow.BUS
 {
     internal class Khach_Hang_BUS
     {
         private Khach_Hang_DAO khDAO;
+        private Dat_Phong_DAO dpDAO;
         public Khach_Hang_BUS()
         {
             khDAO = new Khach_Hang_DAO();
+            dpDAO = new Dat_Phong_DAO();
         }
-        public void themKH(string maKH, string tenKH, string gtKH, string cmnd, string address, string coquan, string sdt, string email)
+        public void themKH(Khach_Hang kh)
         {
-            khDAO.themKhachHang(maKH, tenKH, gtKH, cmnd, address, coquan, sdt, email);
+            khDAO.themKhachHang(kh);
         }
-        public void xoaKH(string maKH)
+        public void xoaKH(Khach_Hang kh)
         {
-            khDAO.xoaKhachHang(maKH);
+            khDAO.xoaKhachHang(kh);
         }
-        public void capnhatKH(string maKH, string tenKH, string gtKH, string cmnd, string address, string coquan, string sdt, string email)
+        public void capnhatKH(Khach_Hang kh)
         {
-            khDAO.capnhatKhachHang(maKH, tenKH, gtKH, cmnd, address, coquan, sdt, email);
+            khDAO.capnhatKhachHang(kh);
         }
         public void LoadData(DataGridView data)
         {
@@ -38,6 +42,32 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         public void TimKiemKH(DataGridView data, string tenKH)
         {
             data.DataSource = khDAO.loadData(tenKH);
+        }
+    
+        public Khach_Hang ThongtinKH(string sdt)
+        {
+            DataTable data = khDAO.KH(sdt);
+
+            DataRow row = data.Rows[0];
+
+            Khach_Hang kh = new Khach_Hang(
+                row["makhachhang"].ToString(),
+                row["tenkhachhang"].ToString(),
+                row["gioitinh"].ToString(),
+                row["cmnd_passport"].ToString(),
+                row["diachi"].ToString(),
+                row["coquan"].ToString(),
+                row["sodienthoai"].ToString(),
+                row["email"].ToString()
+             );
+
+            return kh;
+        }
+        public bool CheckKH(string ma)
+        {
+            if( ma == dpDAO.CheckKH(ma))
+                return true;
+            return false;
         }
     }
 }

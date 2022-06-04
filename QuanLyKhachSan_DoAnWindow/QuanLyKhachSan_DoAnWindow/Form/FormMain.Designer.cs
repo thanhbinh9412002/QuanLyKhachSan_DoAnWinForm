@@ -38,6 +38,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.lblUser = new System.Windows.Forms.Label();
@@ -167,12 +172,60 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(698, 354);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "maphong";
+            this.Column1.FillWeight = 30F;
+            this.Column1.HeaderText = "Phòng";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "maloai";
+            this.Column2.FillWeight = 60F;
+            this.Column2.HeaderText = "Loại phòng";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "dadat";
+            this.Column3.FillWeight = 40F;
+            this.Column3.HeaderText = "Đã đặt";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "danhan";
+            this.Column4.FillWeight = 40F;
+            this.Column4.HeaderText = "Đã nhận";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.FillWeight = 30F;
+            this.Column5.HeaderText = "Chọn";
+            this.Column5.Name = "Column5";
+            this.Column5.Text = "Xem";
+            this.Column5.UseColumnTextForButtonValue = true;
             // 
             // imageList1
             // 
@@ -269,14 +322,14 @@
             // mnKhachhang
             // 
             this.mnKhachhang.Name = "mnKhachhang";
-            this.mnKhachhang.Size = new System.Drawing.Size(154, 22);
+            this.mnKhachhang.Size = new System.Drawing.Size(180, 22);
             this.mnKhachhang.Text = "Khách hàng";
             this.mnKhachhang.Click += new System.EventHandler(this.mnKhachhang_Click);
             // 
             // mnInhoadon
             // 
             this.mnInhoadon.Name = "mnInhoadon";
-            this.mnInhoadon.Size = new System.Drawing.Size(154, 22);
+            this.mnInhoadon.Size = new System.Drawing.Size(180, 22);
             this.mnInhoadon.Text = "In hóa đơn";
             this.mnInhoadon.Click += new System.EventHandler(this.mnInhoadon_Click);
             // 
@@ -292,14 +345,14 @@
             // mnDatphong
             // 
             this.mnDatphong.Name = "mnDatphong";
-            this.mnDatphong.Size = new System.Drawing.Size(154, 22);
+            this.mnDatphong.Size = new System.Drawing.Size(180, 22);
             this.mnDatphong.Text = "Đặt phòng";
             this.mnDatphong.Click += new System.EventHandler(this.mnDatphong_Click);
             // 
             // mnThuephong
             // 
             this.mnThuephong.Name = "mnThuephong";
-            this.mnThuephong.Size = new System.Drawing.Size(154, 22);
+            this.mnThuephong.Size = new System.Drawing.Size(180, 22);
             this.mnThuephong.Text = "Thuê phòng";
             this.mnThuephong.Click += new System.EventHandler(this.mnThuephong_Click);
             // 
@@ -448,6 +501,11 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mnDangxuat;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewButtonColumn Column5;
     }
 }
 

@@ -16,6 +16,7 @@ namespace QuanLyKhachSan_DoAnWindow
     public partial class FormInHoaDon : Form
     {
         public FormMain fmMain;
+        public FormKhachHang fmKH;
         public string tmp;
         public FormInHoaDon()
         {

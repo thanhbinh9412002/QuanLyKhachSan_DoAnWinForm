@@ -18,32 +18,32 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             conn = new DBConnection();
         }
         //them nhan vien
-        public void themNV(string ma, string ten, string gt, DateTime date, string diachi, string sdt, string chucvu)
+        public void themNV(Nhan_Vien nv)
         {
             string sql = "insert into nhanvien(manhanvien, tennhanvien, ngaysinh, phai, diachi, phone, chucvu)" +
                 "values(@ma, @ten, @date, @gt, @diachi, @phone, @chucvu)";
             SqlParameter[] sqlParameter = new SqlParameter[7];
 
             sqlParameter[0] = new SqlParameter("@ma", SqlDbType.Char);
-            sqlParameter[0].Value = ma;
+            sqlParameter[0].Value = nv.Ma_nhan_vien;
             sqlParameter[1] = new SqlParameter("@ten", SqlDbType.VarChar);
-            sqlParameter[1].Value = ten;
+            sqlParameter[1].Value = nv.Ten_nhan_vien;
             sqlParameter[2] = new SqlParameter("@date", SqlDbType.DateTime);
-            sqlParameter[2].Value = date;
+            sqlParameter[2].Value = nv.Ngay_sinh;
             sqlParameter[3] = new SqlParameter("@gt", SqlDbType.VarChar);
-            sqlParameter[3].Value = gt;
+            sqlParameter[3].Value = nv.Phai;
             sqlParameter[4] = new SqlParameter("@diachi", SqlDbType.VarChar);
-            sqlParameter[4].Value = diachi;
+            sqlParameter[4].Value = nv.Dia_chi;
             sqlParameter[5] = new SqlParameter("@phone", SqlDbType.VarChar);
-            sqlParameter[5].Value = sdt;
+            sqlParameter[5].Value = nv.Phone;
             sqlParameter[6] = new SqlParameter("@chucvu", SqlDbType.VarChar);
-            sqlParameter[6].Value = chucvu;
+            sqlParameter[6].Value = nv.Chuc_vu;
 
             conn.executeInsertQuery(sql, sqlParameter);
 
         }
         //cap nhat nhan vien
-        public void capnhatNV(string ma, string ten, string gt, DateTime date, string diachi, string sdt, string chucvu)
+        public void capnhatNV(Nhan_Vien nv)
         {
             string sql = "update nhanvien set tennhanvien = @ten, ngaysinh = @date, phai = @gt, diachi = @diachi, phone = @phone, chucvu = @chucvu" +
                 " where manhanvien = @ma";
@@ -51,30 +51,30 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             SqlParameter[] sqlParameter = new SqlParameter[7];
 
             sqlParameter[0] = new SqlParameter("@ma", SqlDbType.Char);
-            sqlParameter[0].Value = ma;
+            sqlParameter[0].Value = nv.Ma_nhan_vien;
             sqlParameter[1] = new SqlParameter("@ten", SqlDbType.VarChar);
-            sqlParameter[1].Value = ten;
+            sqlParameter[1].Value = nv.Ten_nhan_vien;
             sqlParameter[2] = new SqlParameter("@date", SqlDbType.DateTime);
-            sqlParameter[2].Value = date;
+            sqlParameter[2].Value = nv.Ngay_sinh;
             sqlParameter[3] = new SqlParameter("@gt", SqlDbType.VarChar);
-            sqlParameter[3].Value = gt;
+            sqlParameter[3].Value = nv.Phai;
             sqlParameter[4] = new SqlParameter("@diachi", SqlDbType.VarChar);
-            sqlParameter[4].Value = diachi;
+            sqlParameter[4].Value = nv.Dia_chi;
             sqlParameter[5] = new SqlParameter("@phone", SqlDbType.VarChar);
-            sqlParameter[5].Value = sdt;
+            sqlParameter[5].Value = nv.Phone;
             sqlParameter[6] = new SqlParameter("@chucvu", SqlDbType.VarChar);
-            sqlParameter[6].Value = chucvu;
+            sqlParameter[6].Value = nv.Chuc_vu;
 
             conn.executeInsertQuery(sql, sqlParameter);
         }
         //xoa nhan vien
-        public void xoaNV(string ma)
+        public void xoaNV(Nhan_Vien nv)
         {
             string sql = "delete from nhanvien where manhanvien = @ma";
             SqlParameter[] sqlParameter = new SqlParameter[1];
 
             sqlParameter[0] = new SqlParameter("@ma", SqlDbType.Char);
-            sqlParameter[0].Value = ma;
+            sqlParameter[0].Value = nv.Ma_nhan_vien;
 
             conn.executeInsertQuery(sql, sqlParameter);
         }

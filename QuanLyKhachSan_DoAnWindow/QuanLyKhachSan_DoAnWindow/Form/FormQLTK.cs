@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyKhachSan_DoAnWindow.BUS;
+using QuanLyKhachSan_DoAnWindow.Class;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
@@ -15,6 +16,7 @@ namespace QuanLyKhachSan_DoAnWindow
     {
         public FormMain fmMain;
         public FormNhanVien fmNhanVien;
+        private Tai_khoan TK;
         private Tai_Khoan_BUS tkBUS = new Tai_Khoan_BUS();
         public FormQLTK()
         {
@@ -41,22 +43,32 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            tkBUS.themTK(cbMaNv.Text, txtTenkh.Text, txtMkh.Text, cb_chucvu.Text);
-            Load_Thongtin();
+            BasicFunstion(1);       //1 = them tai khoan
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            tkBUS.capnhatTK(cbMaNv.Text, txtTenkh.Text, txtMkh.Text, cb_chucvu.Text);
-            Load_Thongtin();
+
+            BasicFunstion(2);       //2 = cap nhat tai khoan
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            tkBUS.xoaTK(cbMaNv.Text);
-            Load_Thongtin();
+
+            BasicFunstion(3);       //3 = xoa tai khoan
         }
 
+        private void BasicFunstion(int i)
+        {
+            TK = new Tai_khoan(cbMaNv.Text, txtTenkh.Text, txtMkh.Text, cb_chucvu.Text);
+            switch (i)
+            {
+                case 1: tkBUS.themTK(TK);       break;      //them tai khoan
+                case 2: tkBUS.capnhatTK(TK);    break;      //cap nhat tai khoan
+                case 3: tkBUS.xoaTK(TK);        break;      //xoa tai khoan
+            }
+            Load_Thongtin();
+        }
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
         {
             tkBUS.upTK(gvQLTKNV, txtTimkiem.Text);

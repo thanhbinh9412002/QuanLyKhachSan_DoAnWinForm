@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyKhachSan_DoAnWindow.BUS;
+using QuanLyKhachSan_DoAnWindow.Class;
 
 namespace QuanLyKhachSan_DoAnWindow
 {
@@ -15,14 +16,16 @@ namespace QuanLyKhachSan_DoAnWindow
     {
         public FormQLTK fmQLTK;
         public FormMain fmMain;
-        private Nhan_Vien_BUS nvBUS = new Nhan_Vien_BUS();
+        private Nhan_Vien_BUS nvBUS;
+        private Nhan_Vien NV;
         public FormNhanVien()
         {
+            nvBUS = new Nhan_Vien_BUS();
             InitializeComponent();
             LoadNV();
         }
         
-        private void LoadNV()        //  show nhan vien
+        private void LoadNV()        //show nhan vien
         {
             nvBUS.upNV(gvNhanvien);
             LoadManv();
@@ -32,7 +35,7 @@ namespace QuanLyKhachSan_DoAnWindow
             txtMaNV.Text = "NV" + nvBUS.updateMa();
             txtMaNV.Enabled = false;
         }
-        private void Load_ThongTin()
+        private void Load_ThongTin()    //chay tat ca du lieu can thiet
         {
             LoadNV();
             txtTenNV.Text = "";
@@ -51,24 +54,36 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void btThem_Click(object sender, EventArgs e)       // them nhan vien
         {
-            string gt = (rbnam.Checked ? rbnam.Text : rbnu.Text);
-            nvBUS.ThemNV(txtMaNV.Text, txtTenNV.Text, gt, dtngaysinh.Value, txtdiachi.Text, txtsdt.Text, txtchucvu.Text);
-            Load_ThongTin();
+            BasicFunstion(1);
         }
 
         private void btsua_Click(object sender, EventArgs e)        //cap nhat nhan vien
         {
-            string gt = (rbnam.Checked ? rbnam.Text : rbnu.Text);
-            nvBUS.CapNhatNV(txtMaNV.Text, txtTenNV.Text, gt, dtngaysinh.Value, txtdiachi.Text, txtsdt.Text, txtchucvu.Text);
-            Load_ThongTin();
+            BasicFunstion(2);
         }
 
         private void btXoa_Click(object sender, EventArgs e)        // xoa nhan vien
         {
-            nvBUS.XoaNV(txtMaNV.Text);
+            BasicFunstion(3);
+        }
+        private void BasicFunstion(int i)           //tong hop cac chuc nang co ban
+        {
+            string gt = (rbnam.Checked ? rbnam.Text : rbnu.Text);
+            NV = new Nhan_Vien(txtMaNV.Text, txtTenNV.Text, dtngaysinh.Value, gt, txtdiachi.Text, txtsdt.Text, txtchucvu.Text);
+            switch (i)
+            {
+                case 1:
+                    nvBUS.ThemNV(NV);
+                    break;
+                case 2:
+                    nvBUS.CapNhatNV(NV);
+                    break;
+                case 3:
+                    nvBUS.XoaNV(NV);
+                    break;
+            }
             Load_ThongTin();
         }
-
         private void txtTimkiem_TextChanged(object sender, EventArgs e)     // tim kiem theo ten nhan vien
         {
             nvBUS.upNV(gvNhanvien, txtTimkiem.Text);

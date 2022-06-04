@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyKhachSan_DoAnWindow.DAO;
-using System.Data;
-using System.Data.SqlClient;
+using QuanLyKhachSan_DoAnWindow.Class;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSan_DoAnWindow.BUS
@@ -18,19 +17,19 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             nvDAO = new Nhan_Vien_DAO();
         }
         //them nhan vien
-        public void ThemNV(string ma, string ten, string gt, DateTime date, string diachi, string sdt, string chucvu)
+        public void ThemNV(Nhan_Vien nv)
         {
-            nvDAO.themNV(ma, ten, gt, date, diachi, sdt, chucvu);
+            nvDAO.themNV(nv);
         }
         //cap nhat nhan vien
-        public void CapNhatNV(string ma, string ten, string gt, DateTime date, string diachi, string sdt, string chucvu)
+        public void CapNhatNV(Nhan_Vien nv)
         {
-            nvDAO.capnhatNV(ma, ten, gt, date, diachi, sdt, chucvu);
+            nvDAO.capnhatNV(nv);
         }
         //xoa nhan vien
-        public void XoaNV(string ma)
+        public void XoaNV(Nhan_Vien nv)
         {
-            nvDAO.xoaNV(ma);
+            nvDAO.xoaNV(nv);
         }
         // day du lieu len gribview
         public void upNV(DataGridView data, string tenNV = "")

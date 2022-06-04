@@ -65,6 +65,7 @@
     <Compile Include="Class\Khach_Hang.cs" />
     <Compile Include="Class\Nhan_Vien.cs" />
     <Compile Include="Class\Phong.cs" />
+    <Compile Include="Class\Tai_khoan.cs" />
     <Compile Include="Class\Thue_Phong.cs" />
     <Compile Include="Class\Vat_Tu.cs" />
     <Compile Include="DAO\Bao_Cao_DAO.cs" />
@@ -79,6 +80,12 @@
     <Compile Include="DAO\Thue_Phong_DAO.cs" />
     <Compile Include="DAO\Vat_Tu_DAO.cs" />
     <Compile Include="DataProvider\DataProvider.cs" />
+    <Compile Include="Form\FormDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDatPhong.designer.cs">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormInHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,12 +152,6 @@
     <Compile Include="Form\FormDoiMK.Designer.cs">
       <DependentUpon>FormDoiMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormDatPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FormDatPhong.Designer.cs">
-      <DependentUpon>FormDatPhong.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FormThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,38 +166,11 @@
     </Compile>
     <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyKhachSanDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyKhachSanDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyKhachSanDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyKhachSanDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyKhachSanDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyKhachSanDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyKhachSanDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyKhachSanDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyKhachSanDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyKhachSanDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyKhachSanDataSet5.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form\FormBaoCao.resx">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormDatPhong.resx">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormDichVu.resx">
       <DependentUpon>FormDichVu.cs</DependentUpon>
@@ -228,9 +202,6 @@
     <EmbeddedResource Include="Form\FormDoiMK.resx">
       <DependentUpon>FormDoiMK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormDatPhong.resx">
-      <DependentUpon>FormDatPhong.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormThongTin.resx">
       <DependentUpon>FormThongTin.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,72 +226,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyKhachSanDataSet.xsc">
-      <DependentUpon>QuanLyKhachSanDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyKhachSanDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyKhachSanDataSet.xss">
-      <DependentUpon>QuanLyKhachSanDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet1.xsc">
-      <DependentUpon>QuanLyKhachSanDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyKhachSanDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyKhachSanDataSet1.xss">
-      <DependentUpon>QuanLyKhachSanDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet2.xsc">
-      <DependentUpon>QuanLyKhachSanDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyKhachSanDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyKhachSanDataSet2.xss">
-      <DependentUpon>QuanLyKhachSanDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet3.xsc">
-      <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyKhachSanDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyKhachSanDataSet3.xss">
-      <DependentUpon>QuanLyKhachSanDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet4.xsc">
-      <DependentUpon>QuanLyKhachSanDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyKhachSanDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyKhachSanDataSet4.xss">
-      <DependentUpon>QuanLyKhachSanDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet5.xsc">
-      <DependentUpon>QuanLyKhachSanDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyKhachSanDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyKhachSanDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyKhachSanDataSet5.xss">
-      <DependentUpon>QuanLyKhachSanDataSet5.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

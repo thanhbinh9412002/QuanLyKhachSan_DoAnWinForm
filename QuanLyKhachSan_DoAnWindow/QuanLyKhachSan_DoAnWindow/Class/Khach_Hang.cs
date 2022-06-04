@@ -17,7 +17,7 @@ namespace QuanLyKhachSan_DoAnWindow.Class
         private string so_dien_thoai;
         private string email;
 
-        Khach_Hang(string ma_khach_hang,
+        public Khach_Hang(string ma_khach_hang,
                    string ten_khach_hang,
                    string gioi_tinh,
                    string cmnd_passport,
