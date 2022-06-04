@@ -117,7 +117,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_inhoadon.TabIndex = 8;
             this.btn_inhoadon.Text = "In hóa đơn";
             this.btn_inhoadon.UseVisualStyleBackColor = true;
-            this.btn_inhoadon.Click += new System.EventHandler(this.btn_inhoadon_Click);
             // 
             // panel1
             // 

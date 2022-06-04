@@ -49,10 +49,6 @@ namespace QuanLyKhachSan_DoAnWindow
             string maphieu = combo_maphieuthue.SelectedValue.ToString();
             string dulieu = dvBUS.Lay_Ma_Phong(maphieu);
             txt_maphong.Text = dulieu;
-            dulieu = dvBUS.Lay_So_Luong(maphieu);
-            txt_soluong.Text = dulieu;
-            dulieu = dvBUS.Lay_Ten_DV(dvBUS.Lay_Ma_Dich_Vu(maphieu));
-            txt_tendichvu.Text = dulieu;
             this.dataGridView1.DataSource = dvBUS.Tim_Phieu_Thue_Phong(txt_timkiem.Text);
         }
 

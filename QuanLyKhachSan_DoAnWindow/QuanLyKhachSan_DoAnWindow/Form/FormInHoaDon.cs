@@ -99,43 +99,43 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             // TODO: This line of code loads data into the 'quanLyKhachSanDataSet4.hoadon' table. You can move, or remove it, as needed.
             //this.hoadonTableAdapter.Fill(this.quanLyKhachSanDataSet4.hoadon);
-            var hdBUS = new Hoa_Don_BUS();
-            btn_them.Enabled = true;
-            btn_in.Enabled = false;
-            btn_huy.Enabled = false;
-            btn_quaylai.Enabled = true;
-            //btn_timkiem.Enabled = true;
-            btn_thanhtoan.Enabled = false;
-            btn_luu.Enabled = false;
-            txt_mahoadon.ReadOnly = true;
-            txt_tendichvu.ReadOnly = true;
-            txt_dongia.ReadOnly = true;
-            txt_thanhtien.ReadOnly = true;
-            txt_tongtien.ReadOnly = true;
-            txt_thanhtien.Text = "0";
-            txt_tongtien.Text = "0";
-            txt_tkhoadon.Enabled = true;
+            //var hdBUS = new Hoa_Don_BUS();
+            //btn_them.Enabled = true;
+            //btn_in.Enabled = false;
+            //btn_huy.Enabled = false;
+            //btn_quaylai.Enabled = true;
+            ////btn_timkiem.Enabled = true;
+            //btn_thanhtoan.Enabled = false;
+            //btn_luu.Enabled = false;
+            //txt_mahoadon.ReadOnly = true;
+            //txt_tendichvu.ReadOnly = true;
+            //txt_dongia.ReadOnly = true;
+            //txt_thanhtien.ReadOnly = true;
+            //txt_tongtien.ReadOnly = true;
+            //txt_thanhtien.Text = "0";
+            //txt_tongtien.Text = "0";
+            //txt_tkhoadon.Enabled = true;
 
-            // load dữ liệu từ data sang combobox mã khách hàng
-            cbb_makhachhang.DataSource = hdBUS.Lay_Ma_Khach_Hang();
-            cbb_makhachhang.DisplayMember = "makhachhang";
-            cbb_makhachhang.ValueMember = "makhachhang";
-            // load dữ liệu từ data sang combobox mã nhân viên
-            cbb_manhanvien.DataSource = hdBUS.Lay_Ma_Nhan_Vien();
-            cbb_manhanvien.DisplayMember = "manhanvien";
-            cbb_manhanvien.ValueMember = "manhanvien";
-            // load dữ liệu từ data sang combobox mã phiếu thuê
-            cbb_maphieuthue.DataSource = hdBUS.Lay_Ma_Phieu_Thue();
-            cbb_maphieuthue.DisplayMember = "maphieuthue";
-            cbb_maphieuthue.ValueMember = "maphieuthue";
-            // load dữ liệu từ data sang combobox mã dịch vụ
-            cbb_madichvu.DataSource = hdBUS.Lay_Ma_Dich_Vu();
-            cbb_madichvu.DisplayMember = "madichvu";
-            cbb_madichvu.ValueMember = "madichvu";
-            //load dữ liệu từ data sang combobox só tiền đã cọc
-            cbb_sotiencoc.DataSource = hdBUS.Lay_So_Tien_Coc();
-            cbb_sotiencoc.DisplayMember = "sotiencoc";
-            cbb_sotiencoc.ValueMember = "sotiencoc";
+            //// load dữ liệu từ data sang combobox mã khách hàng
+            //cbb_makhachhang.DataSource = hdBUS.Lay_Ma_Khach_Hang();
+            //cbb_makhachhang.DisplayMember = "makhachhang";
+            //cbb_makhachhang.ValueMember = "makhachhang";
+            //// load dữ liệu từ data sang combobox mã nhân viên
+            //cbb_manhanvien.DataSource = hdBUS.Lay_Ma_Nhan_Vien();
+            //cbb_manhanvien.DisplayMember = "manhanvien";
+            //cbb_manhanvien.ValueMember = "manhanvien";
+            //// load dữ liệu từ data sang combobox mã phiếu thuê
+            //cbb_maphieuthue.DataSource = hdBUS.Lay_Ma_Phieu_Thue();
+            //cbb_maphieuthue.DisplayMember = "maphieuthue";
+            //cbb_maphieuthue.ValueMember = "maphieuthue";
+            //// load dữ liệu từ data sang combobox mã dịch vụ
+            //cbb_madichvu.DataSource = hdBUS.Lay_Ma_Dich_Vu();
+            //cbb_madichvu.DisplayMember = "madichvu";
+            //cbb_madichvu.ValueMember = "madichvu";
+            ////load dữ liệu từ data sang combobox só tiền đã cọc
+            //cbb_sotiencoc.DataSource = hdBUS.Lay_So_Tien_Coc();
+            //cbb_sotiencoc.DisplayMember = "sotiencoc";
+            //cbb_sotiencoc.ValueMember = "sotiencoc";
 
         }
 
@@ -152,24 +152,24 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void txt_tkhoadon_TextChanged(object sender, EventArgs e)
         {
-            var hdBUS = new Hoa_Don_BUS();
-            this.dtgv_hoadon.DataSource = hdBUS.Lay_Danh_Sach_Hoa_Don(txt_tkhoadon.Text);
+            //var hdBUS = new Hoa_Don_BUS();
+            //this.dtgv_hoadon.DataSource = hdBUS.Lay_Danh_Sach_Hoa_Don(txt_tkhoadon.Text);
         }
 
         private void ResestValue()
         {
-            txt_mahoadon.ResetText();
-            cbb_manhanvien.ResetText();
-            cbb_maphieuthue.ResetText();
-            cbb_khuyenmai.ResetText();
-            cbb_makhachhang.ResetText();
-            cbb_madichvu.ResetText();
-            txt_soluong.ResetText();
-            txt_tendichvu.ResetText();
-            txt_dongia.ResetText();
-            txt_thanhtien.Text = "0";
-            txt_tongtien.Text = "0";
-            dtpk_ngaythanhtoan.Value = DateTime.Today;
+            //txt_mahoadon.ResetText();
+            //cbb_manhanvien.ResetText();
+            //cbb_maphieuthue.ResetText();
+            //cbb_khuyenmai.ResetText();
+            //cbb_makhachhang.ResetText();
+            //cbb_madichvu.ResetText();
+            //txt_soluong.ResetText();
+            //txt_tendichvu.ResetText();
+            //txt_dongia.ResetText();
+            //txt_thanhtien.Text = "0";
+            //txt_tongtien.Text = "0";
+            //dtpk_ngaythanhtoan.Value = DateTime.Today;
         }
 
         public static string Tao_Ma_Hoa_Don(string tiento)
@@ -198,49 +198,49 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            var hdBUS = new Hoa_Don_BUS();
-            btn_them.Enabled = false;
-            btn_huy.Enabled = false;
-            btn_luu.Enabled = true;
-            btn_in.Enabled = false;
-            ResestValue();
-            txt_mahoadon.Text = Tao_Ma_Hoa_Don("HD");
-            dtgv_hoadon.DataSource = hdBUS.Lay_Cac_Cot();
-            dtgv_hoadon.Columns[0].HeaderText = "Mã hóa đơn";
-            dtgv_hoadon.Columns[1].HeaderText = "Mã khách hàng";
-            dtgv_hoadon.Columns[2].HeaderText = "Mã nhân viên";
-            dtgv_hoadon.Columns[3].HeaderText = "Ngày thanh toán";
-            dtgv_hoadon.Columns[4].HeaderText = "Mã phiếu thuê";
-            dtgv_hoadon.Columns[5].HeaderText = "Số tiền đặt cọc";
-            dtgv_hoadon.Columns[6].HeaderText = "Số ngày ở";
-            dtgv_hoadon.Columns[7].HeaderText = "Số tiền khuyến mãi";
-            dtgv_hoadon.Columns[8].HeaderText = "Thành tiền";
+            //var hdBUS = new Hoa_Don_BUS();
+            //btn_them.Enabled = false;
+            //btn_huy.Enabled = false;
+            //btn_luu.Enabled = true;
+            //btn_in.Enabled = false;
+            //ResestValue();
+            //txt_mahoadon.Text = Tao_Ma_Hoa_Don("HD");
+            //dtgv_hoadon.DataSource = hdBUS.Lay_Cac_Cot();
+            //dtgv_hoadon.Columns[0].HeaderText = "Mã hóa đơn";
+            //dtgv_hoadon.Columns[1].HeaderText = "Mã khách hàng";
+            //dtgv_hoadon.Columns[2].HeaderText = "Mã nhân viên";
+            //dtgv_hoadon.Columns[3].HeaderText = "Ngày thanh toán";
+            //dtgv_hoadon.Columns[4].HeaderText = "Mã phiếu thuê";
+            //dtgv_hoadon.Columns[5].HeaderText = "Số tiền đặt cọc";
+            //dtgv_hoadon.Columns[6].HeaderText = "Số ngày ở";
+            //dtgv_hoadon.Columns[7].HeaderText = "Số tiền khuyến mãi";
+            //dtgv_hoadon.Columns[8].HeaderText = "Thành tiền";
         }
 
         private void cbb_madichvu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var hdBUS = new Hoa_Don_BUS();
-            string madichvu = cbb_madichvu.SelectedItem.ToString();
-            txt_tendichvu.Text = hdBUS.Lay_Ten_Dich_Vu(madichvu);
-            txt_dongia.Text = hdBUS.Lay_Gia_Dich_Vu(madichvu);
-            label16.Text = hdBUS.Lay_Don_Vi_Dich_Vu(madichvu);
-            label17.Text = hdBUS.Lay_Don_Vi_Dich_Vu(madichvu);
+            //var hdBUS = new Hoa_Don_BUS();
+            //string madichvu = cbb_madichvu.SelectedItem.ToString();
+            //txt_tendichvu.Text = hdBUS.Lay_Ten_Dich_Vu(madichvu);
+            //txt_dongia.Text = hdBUS.Lay_Gia_Dich_Vu(madichvu);
+            //label16.Text = hdBUS.Lay_Don_Vi_Dich_Vu(madichvu);
+            //label17.Text = hdBUS.Lay_Don_Vi_Dich_Vu(madichvu);
             
 
         }
 
         private void btn_luu_Click(object sender, EventArgs e)
         {
-            var hdBUS = new Hoa_Don_BUS();
-            string txt_makhachhang = cbb_makhachhang.SelectedItem.ToString();
-            string txt_manhanvien = cbb_manhanvien.SelectedItem.ToString();
-            string txt_maphieuthue = cbb_maphieuthue.SelectedItem.ToString();
-            string txt_madichvu = cbb_madichvu.SelectedItem.ToString();
-            int txt_tiendatcoc = int.Parse(cbb_sotiencoc.SelectedItem.ToString());
-            DateTime txt_ngaythanhtoan = dtpk_ngaythanhtoan.Value;
-            string songayo = hdBUS.Tinh_Tong_So_Ngay_O(txt_makhachhang, txt_ngaythanhtoan).ToString();
-            int txt_songayo = int.Parse(songayo);
-            string tmp = cbb_khuyenmai.SelectedItem.ToString();
+            //var hdBUS = new Hoa_Don_BUS();
+            //string txt_makhachhang = cbb_makhachhang.SelectedItem.ToString();
+            //string txt_manhanvien = cbb_manhanvien.SelectedItem.ToString();
+            //string txt_maphieuthue = cbb_maphieuthue.SelectedItem.ToString();
+            //string txt_madichvu = cbb_madichvu.SelectedItem.ToString();
+            //int txt_tiendatcoc = int.Parse(cbb_sotiencoc.SelectedItem.ToString());
+            //DateTime txt_ngaythanhtoan = dtpk_ngaythanhtoan.Value;
+            //string songayo = hdBUS.Tinh_Tong_So_Ngay_O(txt_makhachhang, txt_ngaythanhtoan).ToString();
+            //int txt_songayo = int.Parse(songayo);
+            //string tmp = cbb_khuyenmai.SelectedItem.ToString();
             //string tongtien = txt_tongtien.Text;
             /*string txt_sotienkhuyenmai = Tinh_So_Tien_Khuyen_Mai(tmp, tongtien).ToString();
             int txt_tongtien = int.Parse(txt_tongtien.ToString());

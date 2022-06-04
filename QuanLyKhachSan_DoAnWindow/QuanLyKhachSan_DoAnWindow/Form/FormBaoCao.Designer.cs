@@ -55,9 +55,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgv_danhsach = new System.Windows.Forms.DataGridView();
-            this.quanLyKhachSanDataSet5 = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSet5();
             this.hoadonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hoadonTableAdapter = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSet5TableAdapters.hoadonTableAdapter();
             this.mahoadonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaythanhtoanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,7 +69,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_danhsach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoadonBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -356,17 +353,13 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // quanLyKhachSanDataSet5
             // 
-            this.quanLyKhachSanDataSet5.DataSetName = "QuanLyKhachSanDataSet5";
-            this.quanLyKhachSanDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // hoadonBindingSource
             // 
             this.hoadonBindingSource.DataMember = "hoadon";
-            this.hoadonBindingSource.DataSource = this.quanLyKhachSanDataSet5;
             // 
             // hoadonTableAdapter
             // 
-            this.hoadonTableAdapter.ClearBeforeFill = true;
             // 
             // mahoadonDataGridViewTextBoxColumn
             // 
@@ -423,7 +416,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_danhsach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoadonBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -454,9 +446,7 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dtgv_danhsach;
-        private QuanLyKhachSanDataSet5 quanLyKhachSanDataSet5;
         private System.Windows.Forms.BindingSource hoadonBindingSource;
-        private QuanLyKhachSanDataSet5TableAdapters.hoadonTableAdapter hoadonTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahoadonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaythanhtoanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongtienDataGridViewTextBoxColumn;
