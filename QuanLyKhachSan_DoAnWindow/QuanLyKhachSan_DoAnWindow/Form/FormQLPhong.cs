@@ -91,8 +91,12 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var pgBUS = new Phong_BUS();
-            pgBUS.Xoa_Phong(txt_maphong.Text);
+            DialogResult dialogResult = MessageBox.Show("Phòng: " + txt_maphong.Text + "; Loại phòng: " + combo_loaiphong.Text, "Bạn có chắc muốn xoá phòng này?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var pgBUS = new Phong_BUS();
+                pgBUS.Xoa_Phong(txt_maphong.Text);
+            }
             var htBUS = new He_Thong_BUS();
             DataTable room = htBUS.Lay_Data_phong();
             this.dataGriwView1.DataSource = room;
@@ -154,7 +158,11 @@ namespace QuanLyKhachSan_DoAnWindow
         private void button5_Click(object sender, EventArgs e)
         {
             var pgBUS = new Phong_BUS();
-            pgBUS.Xoa_Loai_Phong(txt_maloai2.Text);
+            DialogResult dialogResult = MessageBox.Show("Loại phòng: " + txt_maloai2.Text + "; Số người: " + txt_songuoi.Text + "; Giá: " + txt_gia.Text, "Bạn có chắc muốn xoá loại phòng này?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                pgBUS.Xoa_Loai_Phong(txt_maloai2.Text);
+            }
             var htBUS = new He_Thong_BUS();
             DataTable room = pgBUS.Tim_Loai_Phong(txt_timkiem2.Text); ;
             this.dataGriwView2.DataSource = room;
