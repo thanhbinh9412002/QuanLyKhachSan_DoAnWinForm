@@ -137,7 +137,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
 
         public DataTable Hien_Thi_Danh_Sach()
         {
-            string sql = "select chitietthuephong.maphieuthue, phieuthuephong.maphong, makhachhang, ngaythuephong, sotiencoc, songuoi from  chitietthuephong, phieuthuephong where chitietthuephong.maphieuthue = phieuthuephong.maphieuthue;";
+            string sql = "select chitietthuephong.maphieuthue, phieuthuephong.maphong, khachhang.sodienthoai, ngaythuephong, sotiencoc, songuoi from  chitietthuephong, phieuthuephong, khachhang where chitietthuephong.maphieuthue = phieuthuephong.maphieuthue and chitietthuephong.makhachhang = khachhang.makhachhang;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable bang = new DataTable();
             bang = conn.executeReader(sql, sqlParameters);

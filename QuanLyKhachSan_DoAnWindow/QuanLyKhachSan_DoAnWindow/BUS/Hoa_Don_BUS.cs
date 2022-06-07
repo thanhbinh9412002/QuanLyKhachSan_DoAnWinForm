@@ -20,6 +20,12 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return hdDAO.Lay_Ma_Khach_Hang();
         }
+
+        public DataTable ThongTinKhachHang(string mahoadon)
+        {
+            return hdDAO.ThongTinKhachHang(mahoadon);
+        }
+
         public DataTable Lay_Ma_Nhan_Vien()
         {
             return hdDAO.Lay_Ma_Nhan_Vien();
@@ -52,6 +58,12 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return hdDAO.Tinhsongayo(makhachhang, ngaythanhtoan);
         }
+
+        public void Them_Chi_Tiet_Dich_Vu(Hoa_Don hd)
+        {
+            hdDAO.Them_Chi_Tiet_Dich_Vu(hd);
+        }
+
         public void Luu_Hoa_Don(Hoa_Don hd)
         {
             hdDAO.Luu_Hoa_Don(hd);

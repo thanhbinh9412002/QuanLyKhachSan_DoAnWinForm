@@ -173,6 +173,7 @@
     </Compile>
     <EmbeddedResource Include="Form\FormBaoCao.resx">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormDatPhong.resx">
       <DependentUpon>FormDatPhong.cs</DependentUpon>

@@ -37,13 +37,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.bt_quaylai = new System.Windows.Forms.Button();
             this.bt_them = new System.Windows.Forms.Button();
             this.Datagriwview_danhsach = new System.Windows.Forms.DataGridView();
-            this.maphieucol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phongcol2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.Datagriwview_danhsach2 = new System.Windows.Forms.DataGridView();
@@ -97,6 +90,13 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_songuoi = new System.Windows.Forms.TextBox();
             this.date_ngaythuephong = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.maphieucol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phongcol2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagriwview_danhsach)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -222,77 +222,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Datagriwview_danhsach.Size = new System.Drawing.Size(684, 551);
             this.Datagriwview_danhsach.TabIndex = 0;
             this.Datagriwview_danhsach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Datagriwview_danhsach_CellContentClick);
-            // 
-            // maphieucol
-            // 
-            this.maphieucol.DataPropertyName = "maphieuthue";
-            this.maphieucol.FillWeight = 30F;
-            this.maphieucol.HeaderText = "Mã phiếu";
-            this.maphieucol.MinimumWidth = 6;
-            this.maphieucol.Name = "maphieucol";
-            this.maphieucol.ReadOnly = true;
-            // 
-            // phongcol2
-            // 
-            this.phongcol2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phongcol2.DataPropertyName = "maphong";
-            this.phongcol2.FillWeight = 30F;
-            this.phongcol2.HeaderText = "Phòng";
-            this.phongcol2.MinimumWidth = 6;
-            this.phongcol2.Name = "phongcol2";
-            this.phongcol2.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "makhachhang";
-            this.Column2.FillWeight = 60F;
-            this.Column2.HeaderText = "Khách hàng";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "ngaythuephong";
-            this.Column3.FillWeight = 70F;
-            this.Column3.HeaderText = "Ngày thuê phòng";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.DataPropertyName = "sotiencoc";
-            this.Column7.FillWeight = 40F;
-            this.Column7.HeaderText = "Tiền cọc";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.DataPropertyName = "songuoi";
-            this.Column6.FillWeight = 30F;
-            this.Column6.HeaderText = "Số người";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column5.FillWeight = 30F;
-            this.Column5.HeaderText = "Chọn";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Text = "Xem";
-            this.Column5.UseColumnTextForButtonValue = true;
-            this.Column5.Width = 62;
             // 
             // tabControl1
             // 
@@ -936,6 +865,77 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label7.TabIndex = 11;
             this.label7.Text = "Ngày thuê phòng:";
             // 
+            // maphieucol
+            // 
+            this.maphieucol.DataPropertyName = "maphieuthue";
+            this.maphieucol.FillWeight = 30F;
+            this.maphieucol.HeaderText = "Mã phiếu";
+            this.maphieucol.MinimumWidth = 6;
+            this.maphieucol.Name = "maphieucol";
+            this.maphieucol.ReadOnly = true;
+            // 
+            // phongcol2
+            // 
+            this.phongcol2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phongcol2.DataPropertyName = "maphong";
+            this.phongcol2.FillWeight = 30F;
+            this.phongcol2.HeaderText = "Phòng";
+            this.phongcol2.MinimumWidth = 6;
+            this.phongcol2.Name = "phongcol2";
+            this.phongcol2.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "sodienthoai";
+            this.Column2.FillWeight = 60F;
+            this.Column2.HeaderText = "SĐT";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "ngaythuephong";
+            this.Column3.FillWeight = 70F;
+            this.Column3.HeaderText = "Ngày thuê phòng";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.DataPropertyName = "sotiencoc";
+            this.Column7.FillWeight = 40F;
+            this.Column7.HeaderText = "Tiền cọc";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "songuoi";
+            this.Column6.FillWeight = 30F;
+            this.Column6.HeaderText = "Số người";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column5.FillWeight = 30F;
+            this.Column5.HeaderText = "Chọn";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Text = "Xem";
+            this.Column5.UseColumnTextForButtonValue = true;
+            this.Column5.Width = 62;
+            // 
             // FormThuePhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1005,13 +1005,6 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.DataGridViewTextBoxColumn maloaicol;
         private System.Windows.Forms.DataGridViewTextBoxColumn dadatcol;
         private System.Windows.Forms.DataGridViewTextBoxColumn danhancol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maphieucol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phongcol2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -1040,6 +1033,13 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Label txt_makhachhang;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maphieucol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phongcol2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewButtonColumn Column5;
     }
 }
 

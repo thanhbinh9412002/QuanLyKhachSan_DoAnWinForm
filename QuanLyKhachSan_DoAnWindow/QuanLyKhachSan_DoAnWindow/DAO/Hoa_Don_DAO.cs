@@ -34,6 +34,9 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             mnv = conn.executeReader(sql, sqlParameters);
             return mnv;
         }
+
+
+
         public DataTable Lay_Ma_Phieu_Thue()
         {
             string sql = "select maphieuthue from phieuthuephong";
@@ -110,7 +113,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         {
             // chèn dữ lệu vào bảng hóa đơn
             const string sql1 = "insert into hoadon(mahoadon, makhachhang, manhanvien, ngaythanhtoan, maphieuthue, sotiencoc, songayo, sotienkhuyenmai, tongtien)" +
-                "values (@mahoadon, @makhachhang, @manhanvien, @ngaythanhtoan, @maphieuthue, @sotiencoc, @ songayo, @sotienkhuyenmai, @tongtien)";
+                "values (@mahoadon, @makhachhang, @manhanvien, @ngaythanhtoan, @maphieuthue, @sotiencoc, @songayo, @sotienkhuyenmai, @tongtien)";
             SqlParameter[] sqlParameters1 = new SqlParameter[9];
             sqlParameters1[0] = new SqlParameter("@mahoadon", System.Data.SqlDbType.VarChar);
             sqlParameters1[0].Value = hd.Ma_hoa_don;
@@ -140,27 +143,6 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             sqlParameters1[8].Value = hd.Tong_tien;
 
             conn.executeInsertQuery(sql1, sqlParameters1);
-
-            //chèn dữ liệu vào bảng chitietdichvu
-            const string sql2 = "insert into chitietdichvu(mahoadon, maphieuthue, madichvu, soluong, thanhtien)" +
-                "values(@mahoadon, @maphieuthue, @madichvu, @soluong, @thanhtien)";
-            SqlParameter[] sqlParameters2 = new SqlParameter[5];
-            sqlParameters2[0] = new SqlParameter("@mahoadon", System.Data.SqlDbType.VarChar);
-            sqlParameters2[0].Value = hd.Ma_hoa_don;
-
-            sqlParameters2[1] = new SqlParameter("@maphieuthue", System.Data.SqlDbType.VarChar);
-            sqlParameters2[1].Value = hd.Ma_phieu_thue;
-
-            sqlParameters2[2] = new SqlParameter("@madichvu", System.Data.SqlDbType.VarChar);
-            sqlParameters2[2].Value = hd.Ma_dich_vu;
-
-            sqlParameters2[3] = new SqlParameter("@soluong", System.Data.SqlDbType.Int);
-            sqlParameters2[3].Value = hd.So_luong;
-
-            sqlParameters2[4] = new SqlParameter("@thanhtien", System.Data.SqlDbType.Int);
-            sqlParameters2[4].Value = hd.Thanh_tien;
-
-            conn.executeInsertQuery(sql2, sqlParameters2);
         }
 
         public string Lay_Ten_Dich_Vu(string madichvu)
@@ -196,8 +178,8 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         public void Them_Chi_Tiet_Dich_Vu(Hoa_Don hd)
         {
             const string sql = "insert into chitietdichvu(mahoadon, maphieuthue, madichvu, soluong, thanhtien) " +
-                "values(@mahoadon, @maphieuthue, @madichvu, @soluong, @thanhtien)";
-            SqlParameter[] sqlParameters = new SqlParameter[9];
+                "values (@mahoadon, @maphieuthue, @madichvu, @soluong, @thanhtien)";
+            SqlParameter[] sqlParameters = new SqlParameter[5];
             sqlParameters[0] = new SqlParameter("@mahoadon", System.Data.SqlDbType.VarChar);
             sqlParameters[0].Value = hd.Ma_hoa_don;
 

@@ -20,7 +20,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         }
         public DataTable Lay_Du_Lieu_0()   // lấy dữ liệu để thực hiện việc thống kê hết tất cả
         {
-            string sql = "select mahoadon, ngaythanhtoan, tongtien, maphieu, loaiphieu, makhachhang  from hoadon ";
+            string sql = "select * from hoadon ";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable hoadon = new DataTable();
             hoadon = conn.executeReader(sql, sqlParameters);
@@ -28,7 +28,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         }
         public DataTable Lay_Du_Lieu_1(string ngay, string thang, string nam)   // lấy dữ liệu để thực hiện việc thống kê theo ngay
         {
-            string sql = "select mahoadon, ngaythanhtoan, tongtien, maphieu, loaiphieu, makhachhang  from hoadon where DAY(ngaythanhtoan)='" + ngay + "' and MONTH(ngaythanhtoan)='" + thang + "' and YEAR(ngaythanhtoan)='" + nam + "'";
+            string sql = "select *  from hoadon where DAY(ngaythanhtoan)='" + ngay + "' and MONTH(ngaythanhtoan)='" + thang + "' and YEAR(ngaythanhtoan)='" + nam + "'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable hoadon = new DataTable();
             hoadon = conn.executeReader(sql, sqlParameters);
@@ -36,15 +36,15 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         }
         public DataTable Lay_Du_Lieu_2(string thang, string nam)   // lấy dữ liệu để thực hiện việc thống kê theo thang
         {
-            string sql = "select mahoadon, ngaythanhtoan, tongtien, maphieu, loaiphieu, makhachhang  from hoadon where MONTH(ngaythanhtoan)='" + thang + "' and YEAR(ngaythanhtoan)='" + nam + "'";
+            string sql = "select *  from hoadon where MONTH(ngaythanhtoan)='" + thang + "' and YEAR(ngaythanhtoan)='" + nam + "'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable hoadon = new DataTable();
             hoadon = conn.executeReader(sql, sqlParameters);
             return hoadon;
         }
-        public DataTable Lay_Du_Lieu_3 (string nam)   // lấy dữ liệu để thực hiện việc thống kê theo nam
+        public DataTable Lay_Du_Lieu_3(string nam)   // lấy dữ liệu để thực hiện việc thống kê theo nam
         {
-            string sql = "select mahoadon, ngaythanhtoan, tongtien, maphieu, loaiphieu, makhachhang  from hoadon where YEAR(ngaythanhtoan)='" + nam + "'";
+            string sql = "select *  from hoadon where YEAR(ngaythanhtoan)='" + nam + "'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable hoadon = new DataTable();
             hoadon = conn.executeReader(sql, sqlParameters);
