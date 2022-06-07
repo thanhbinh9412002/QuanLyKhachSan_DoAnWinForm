@@ -29,7 +29,6 @@ namespace QuanLyKhachSan_DoAnWindow
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_songayo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -75,7 +74,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_tongtien = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dtgv_hoadon = new System.Windows.Forms.DataGridView();
-            this.hoadonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_huytk = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -85,7 +83,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_hoadon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoadonBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,7 +114,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // txt_songayo
             // 
-            this.txt_songayo.Location = new System.Drawing.Point(552, 24);
+            this.txt_songayo.Location = new System.Drawing.Point(601, 20);
             this.txt_songayo.Name = "txt_songayo";
             this.txt_songayo.Size = new System.Drawing.Size(80, 20);
             this.txt_songayo.TabIndex = 16;
@@ -125,7 +122,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(482, 27);
+            this.label15.Location = new System.Drawing.Point(537, 24);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(55, 13);
             this.label15.TabIndex = 15;
@@ -134,7 +131,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(485, 94);
+            this.label14.Location = new System.Drawing.Point(519, 92);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(73, 13);
             this.label14.TabIndex = 14;
@@ -164,7 +161,7 @@ namespace QuanLyKhachSan_DoAnWindow
             "90",
             "95",
             "100"});
-            this.cbb_sotiencoc.Location = new System.Drawing.Point(552, 91);
+            this.cbb_sotiencoc.Location = new System.Drawing.Point(602, 85);
             this.cbb_sotiencoc.Name = "cbb_sotiencoc";
             this.cbb_sotiencoc.Size = new System.Drawing.Size(79, 21);
             this.cbb_sotiencoc.TabIndex = 13;
@@ -178,7 +175,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // dtpk_ngaythanhtoan
             // 
-            this.dtpk_ngaythanhtoan.Location = new System.Drawing.Point(320, 53);
+            this.dtpk_ngaythanhtoan.Location = new System.Drawing.Point(372, 52);
             this.dtpk_ngaythanhtoan.Name = "dtpk_ngaythanhtoan";
             this.dtpk_ngaythanhtoan.Size = new System.Drawing.Size(168, 20);
             this.dtpk_ngaythanhtoan.TabIndex = 11;
@@ -187,7 +184,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(369, 90);
+            this.label12.Location = new System.Drawing.Point(415, 85);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(21, 16);
             this.label12.TabIndex = 10;
@@ -217,7 +214,7 @@ namespace QuanLyKhachSan_DoAnWindow
             "90",
             "95",
             "100"});
-            this.cbb_khuyenmai.Location = new System.Drawing.Point(320, 87);
+            this.cbb_khuyenmai.Location = new System.Drawing.Point(371, 84);
             this.cbb_khuyenmai.Name = "cbb_khuyenmai";
             this.cbb_khuyenmai.Size = new System.Drawing.Size(43, 21);
             this.cbb_khuyenmai.TabIndex = 9;
@@ -225,7 +222,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // cbb_maphieuthue
             // 
             this.cbb_maphieuthue.FormattingEnabled = true;
-            this.cbb_maphieuthue.Location = new System.Drawing.Point(320, 23);
+            this.cbb_maphieuthue.Location = new System.Drawing.Point(372, 21);
             this.cbb_maphieuthue.Name = "cbb_maphieuthue";
             this.cbb_maphieuthue.Size = new System.Drawing.Size(94, 21);
             this.cbb_maphieuthue.TabIndex = 8;
@@ -243,13 +240,13 @@ namespace QuanLyKhachSan_DoAnWindow
             this.cbb_makhachhang.FormattingEnabled = true;
             this.cbb_makhachhang.Location = new System.Drawing.Point(107, 55);
             this.cbb_makhachhang.Name = "cbb_makhachhang";
-            this.cbb_makhachhang.Size = new System.Drawing.Size(80, 21);
+            this.cbb_makhachhang.Size = new System.Drawing.Size(134, 21);
             this.cbb_makhachhang.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(223, 94);
+            this.label6.Location = new System.Drawing.Point(285, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 5;
@@ -258,7 +255,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(223, 59);
+            this.label5.Location = new System.Drawing.Point(277, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 4;
@@ -267,7 +264,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(223, 27);
+            this.label4.Location = new System.Drawing.Point(277, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 3;
@@ -488,6 +485,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_thanhtoan.TabIndex = 24;
             this.btn_thanhtoan.Text = "Thanh toán";
             this.btn_thanhtoan.UseVisualStyleBackColor = true;
+            this.btn_thanhtoan.Click += new System.EventHandler(this.btn_thanhtoan_Click);
             // 
             // btn_in
             // 
@@ -507,7 +505,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_huy.TabIndex = 22;
             this.btn_huy.Text = "Hủy";
             this.btn_huy.UseVisualStyleBackColor = true;
-            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
+            //this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // btn_luu
             // 
@@ -562,6 +560,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.dtgv_hoadon.RowHeadersWidth = 51;
             this.dtgv_hoadon.Size = new System.Drawing.Size(708, 150);
             this.dtgv_hoadon.TabIndex = 0;
+            this.dtgv_hoadon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_hoadon_CellContentClick);
             // 
             // groupBox3
             // 
@@ -606,7 +605,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 690);
+            this.ClientSize = new System.Drawing.Size(743, 609);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -623,7 +622,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_hoadon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoadonBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -636,7 +634,6 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.BindingSource hoadonBindingSource;
         private System.Windows.Forms.TextBox txt_mahoadon;
         private System.Windows.Forms.DateTimePicker dtpk_ngaythanhtoan;
         private System.Windows.Forms.Label label12;
