@@ -1137,7 +1137,7 @@ SELECT mahoadon, makhachhang, manhanvien, ngaythanhtoan, maphieuthue, sotiencoc,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyKhachSan_DoAnWindow.Properties.Settings.Default.QuanLyKhachSanConnectionString;
+            this._connection.ConnectionString = global::QuanLyKhachSan_DoAnWindow.Properties.Settings.Default.cnnStr;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
