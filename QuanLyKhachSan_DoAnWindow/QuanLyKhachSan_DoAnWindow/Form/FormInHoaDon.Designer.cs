@@ -141,9 +141,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label14.Location = new System.Drawing.Point(647, 116);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 16);
+            this.label14.Size = new System.Drawing.Size(89, 16);
             this.label14.TabIndex = 14;
-            this.label14.Text = "Số tiền cọc";
+            this.label14.Text = "Số tiền phòng";
             // 
             // cbb_sotiencoc
             // 

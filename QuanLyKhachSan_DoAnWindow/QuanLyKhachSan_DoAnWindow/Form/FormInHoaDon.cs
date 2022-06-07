@@ -110,8 +110,6 @@ namespace QuanLyKhachSan_DoAnWindow
             txt_dongia.ReadOnly = true;
             txt_thanhtien.ReadOnly = true;
             txt_tongtien.ReadOnly = true;
-            txt_thanhtien.Text = "0";
-            txt_tongtien.Text = "0";
             txt_tkhoadon.Enabled = true;
 
             // load dữ liệu từ data sang combobox mã khách hàng
@@ -148,8 +146,6 @@ namespace QuanLyKhachSan_DoAnWindow
             txt_soluong.ResetText();
             txt_tendichvu.ResetText();
             txt_dongia.ResetText();
-            txt_thanhtien.Text = "0";
-            txt_tongtien.Text = "0";
             dtpk_ngaythanhtoan.Value = DateTime.Today;
         }
 
@@ -186,11 +182,10 @@ namespace QuanLyKhachSan_DoAnWindow
         private void btn_them_Click_1(object sender, EventArgs e)
         {
             var hdBUS = new Hoa_Don_BUS();
-            btn_them.Enabled = false;
+            btn_them.Enabled = true;
             cbb_madichvu.Enabled = true;
             btn_huy.Enabled = true;
             btn_luu.Enabled = true;
-            ResestValue();
             txt_mahoadon.Text = Tao_Ma_Hoa_Don("HD");
             dtgv_hoadon.DataSource = hdBUS.Lay_Cac_Cot(txt_mahoadon.Text);
             dtgv_hoadon.Columns[0].HeaderText = "Mã hóa đơn";
@@ -213,8 +208,9 @@ namespace QuanLyKhachSan_DoAnWindow
             hd.Ma_phieu_thue = cbb_maphieuthue.Text;
             hd.So_tien_coc = int.Parse(cbb_sotiencoc.Text);
             hd.So_ngay_o = int.Parse(txt_songayo.Text);
-            int sotienkhuyenmai = int.Parse(cbb_khuyenmai.Text) * int.Parse(cbb_sotiencoc.Text);
-            hd.So_tien_khuyen_mai = sotienkhuyenmai;
+            float khuyenmai = float.Parse(cbb_khuyenmai.Text) * float.Parse(cbb_sotiencoc.Text) / 100;
+            int khuyenmai_int = (int)khuyenmai;
+            hd.So_tien_khuyen_mai = khuyenmai_int;
             hd.Tong_tien = int.Parse(txt_tongtien.Text);
 
             hd.Ma_dich_vu = cbb_madichvu.Text;
@@ -357,12 +353,20 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void txt_soluong_TextChanged(object sender, EventArgs e)
         {
-            txt_thanhtien.Text = (int.Parse(txt_dongia.Text) * int.Parse(txt_soluong.Text)).ToString();
-
+            if (txt_soluong.Text.Length != 0 && txt_dongia.Text.Length != 0)
+            {
+                txt_thanhtien.Text = (int.Parse(txt_dongia.Text) * int.Parse(txt_soluong.Text)).ToString();
+            }
         }
 
         private void txt_thanhtien_TextChanged(object sender, EventArgs e)
         {
+            if (txt_thanhtien.Text.Length != 0 && cbb_sotiencoc.Text.Length != 0 && cbb_khuyenmai.Text.Length != 0 && txt_songayo.Text.Length != 0)
+            {
+                float khuyenmai = float.Parse(cbb_khuyenmai.Text) * float.Parse(cbb_sotiencoc.Text) / 100;
+                int khuyenmai_int = (int)Math.Round(khuyenmai);
+                txt_tongtien.Text = (int.Parse(cbb_sotiencoc.Text) * int.Parse(txt_songayo.Text) + int.Parse(txt_thanhtien.Text) + khuyenmai_int).ToString();
+            }
         }
     }
 }
