@@ -33,10 +33,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_danhan = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_dadat = new System.Windows.Forms.TextBox();
             this.combo_loaiphong = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -61,6 +57,8 @@ namespace QuanLyKhachSan_DoAnWindow
             this.txt_songuoi = new System.Windows.Forms.TextBox();
             this.txt_maloai2 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
+            this.check_dadat = new System.Windows.Forms.CheckBox();
+            this.check_danhan = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriwView1)).BeginInit();
@@ -83,12 +81,10 @@ namespace QuanLyKhachSan_DoAnWindow
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage1.Controls.Add(this.check_danhan);
+            this.tabPage1.Controls.Add(this.check_dadat);
             this.tabPage1.Controls.Add(this.txt_timkiem);
             this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.txt_danhan);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.txt_dadat);
             this.tabPage1.Controls.Add(this.combo_loaiphong);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.button3);
@@ -124,44 +120,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.label10.Size = new System.Drawing.Size(73, 18);
             this.label10.TabIndex = 18;
             this.label10.Text = "Tìm kiếm:";
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(12, 206);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 26);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Đã nhận:";
-            // 
-            // txt_danhan
-            // 
-            this.txt_danhan.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_danhan.Location = new System.Drawing.Point(130, 208);
-            this.txt_danhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_danhan.Name = "txt_danhan";
-            this.txt_danhan.Size = new System.Drawing.Size(161, 24);
-            this.txt_danhan.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(10, 160);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 26);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Đã đặt:";
-            // 
-            // txt_dadat
-            // 
-            this.txt_dadat.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_dadat.Location = new System.Drawing.Point(130, 160);
-            this.txt_dadat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_dadat.Name = "txt_dadat";
-            this.txt_dadat.Size = new System.Drawing.Size(161, 24);
-            this.txt_dadat.TabIndex = 13;
             // 
             // combo_loaiphong
             // 
@@ -448,6 +406,26 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // check_dadat
+            // 
+            this.check_dadat.AutoSize = true;
+            this.check_dadat.Location = new System.Drawing.Point(51, 170);
+            this.check_dadat.Name = "check_dadat";
+            this.check_dadat.Size = new System.Drawing.Size(73, 22);
+            this.check_dadat.TabIndex = 20;
+            this.check_dadat.Text = "Đã đặt";
+            this.check_dadat.UseVisualStyleBackColor = true;
+            // 
+            // check_danhan
+            // 
+            this.check_danhan.AutoSize = true;
+            this.check_danhan.Location = new System.Drawing.Point(161, 170);
+            this.check_danhan.Name = "check_danhan";
+            this.check_danhan.Size = new System.Drawing.Size(85, 22);
+            this.check_danhan.TabIndex = 21;
+            this.check_danhan.Text = "Đã nhận";
+            this.check_danhan.UseVisualStyleBackColor = true;
+            // 
             // FormQLPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -498,10 +476,6 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.TextBox txt_songuoi;
         private System.Windows.Forms.TextBox txt_maloai2;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_danhan;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_dadat;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
@@ -509,6 +483,8 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_timkiem2;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox check_danhan;
+        private System.Windows.Forms.CheckBox check_dadat;
     }
 }
 

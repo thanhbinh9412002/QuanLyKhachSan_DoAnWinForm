@@ -28,15 +28,21 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             return phieuthue;
         }
 
-        public void Them_Phong(string maphong, string maloai)
+        public void Them_Phong(string maphong, string maloai, string dadat, string danhan)
         {
-            const string sql = "insert into phong(maphong, maloai, dadat, danhan) values(@maphong, @maloai, 'khong', 'khong')";
-            SqlParameter[] sqlParameters = new SqlParameter[2];
+            const string sql = "insert into phong(maphong, maloai, dadat, danhan) values(@maphong, @maloai, @dadat, @danhan)";
+            SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@maphong", System.Data.SqlDbType.VarChar);
             sqlParameters[0].Value = Convert.ToString(maphong);
 
             sqlParameters[1] = new SqlParameter("@maloai", System.Data.SqlDbType.VarChar);
             sqlParameters[1].Value = Convert.ToString(maloai);
+
+            sqlParameters[2] = new SqlParameter("@dadat", System.Data.SqlDbType.VarChar);
+            sqlParameters[2].Value = Convert.ToString(dadat);
+
+            sqlParameters[3] = new SqlParameter("@danhan", System.Data.SqlDbType.VarChar);
+            sqlParameters[3].Value = Convert.ToString(danhan);
 
             conn.executeInsertQuery(sql, sqlParameters);
         }
