@@ -315,7 +315,7 @@ namespace QuanLyKhachSan_DoAnWindow
                 btn_in.Enabled = true;
                 string t1 = "khong";
                 string t2 = "khong";
-                //hdBUS.TraPhong(txt_mahoadon.Text, t1, t2);
+                hdBUS.TraPhong(txt_mahoadon.Text, t1, t2);
             }
         }
 
