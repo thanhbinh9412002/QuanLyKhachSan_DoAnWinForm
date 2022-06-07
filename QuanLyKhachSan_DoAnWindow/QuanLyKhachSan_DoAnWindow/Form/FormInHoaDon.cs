@@ -307,10 +307,16 @@ namespace QuanLyKhachSan_DoAnWindow
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
             var hdBUS = new Hoa_Don_BUS();
-            btn_in.Enabled = true;
-            string t1 = "khong";
-            string t2 = "khong";
-            //hdBUS.TraPhong(txt_mahoadon.Text, t1, t2);
+            string ten = hdBUS.TenKhachHang(txt_mahoadon.Text);
+            string sdt = hdBUS.SoDienThoai(txt_mahoadon.Text);
+            DialogResult dialogResult = MessageBox.Show("Tên khách hàng là : <" + ten + "> có số điện thoại là <" + sdt, "> .Bạn có chắc chắn muốn thanh toán hóa đơn phải không ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                btn_in.Enabled = true;
+                string t1 = "khong";
+                string t2 = "khong";
+                //hdBUS.TraPhong(txt_mahoadon.Text, t1, t2);
+            }
         }
 
         private void dtgv_hoadon_CellContentClick(object sender, DataGridViewCellEventArgs e)
