@@ -25,6 +25,8 @@ namespace QuanLyKhachSan_DoAnWindow
             combo_maloaiphong.DisplayMember = "maloai";
             combo_maloaiphong.ValueMember = "maloai";
             combo_maloaiphong.BindingContext = this.BindingContext;
+            combo_maloaiphong.SelectedIndex = 1;
+            this.dataGridView1.DataSource = vtBUS.Tim_Vat_Tu(combo_maloaiphong.Text, txt_timkiem.Text);
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -44,7 +46,11 @@ namespace QuanLyKhachSan_DoAnWindow
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             var vtBUS = new Vat_Tu_BUS();
-            vtBUS.Xoa_Vat_Tu(txt_mavattu.Text, combo_maloaiphong.Text);
+            DialogResult dialogResult = MessageBox.Show("Mã loại phòng: " + combo_maloaiphong.Text + "; Tên vật tư: " + txt_tenvattu.Text, "Bạn có chắc muốn xoá vật tư này?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                vtBUS.Xoa_Vat_Tu(txt_mavattu.Text, combo_maloaiphong.Text);
+            }
             this.dataGridView1.DataSource = vtBUS.Tim_Vat_Tu(combo_maloaiphong.Text, txt_timkiem.Text);
         }
 
