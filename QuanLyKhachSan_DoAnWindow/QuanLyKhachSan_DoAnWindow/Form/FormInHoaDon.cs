@@ -99,18 +99,6 @@ namespace QuanLyKhachSan_DoAnWindow
             // TODO: This line of code loads data into the 'quanLyKhachSanDataSet4.hoadon' table. You can move, or remove it, as needed.
             //this.hoadonTableAdapter.Fill(this.quanLyKhachSanDataSet4.hoadon);
             var hdBUS = new Hoa_Don_BUS();
-            btn_them.Enabled = true;
-            //btn_in.Enabled = false;
-            btn_quaylai.Enabled = true;
-            btn_huytk.Enabled = false;
-            btn_thanhtoan.Enabled = false;
-            btn_luu.Enabled = false;
-            txt_mahoadon.ReadOnly = true;
-            txt_tendichvu.ReadOnly = true;
-            txt_dongia.ReadOnly = true;
-            txt_thanhtien.ReadOnly = true;
-            txt_tongtien.ReadOnly = true;
-            txt_tkhoadon.Enabled = true;
 
             // load dữ liệu từ data sang combobox mã khách hàng
             cbb_makhachhang.DataSource = hdBUS.Lay_Ma_Khach_Hang();
@@ -133,6 +121,7 @@ namespace QuanLyKhachSan_DoAnWindow
             cbb_sotiencoc.DisplayMember = "sotiencoc";
             cbb_sotiencoc.ValueMember = "sotiencoc";
 
+            cbb_madichvu.SelectedIndex = 0;
         }
 
         private void ResestValue()
@@ -182,10 +171,6 @@ namespace QuanLyKhachSan_DoAnWindow
         private void btn_them_Click_1(object sender, EventArgs e)
         {
             var hdBUS = new Hoa_Don_BUS();
-            btn_them.Enabled = true;
-            cbb_madichvu.Enabled = true;
-            btn_huy.Enabled = true;
-            btn_luu.Enabled = true;
             txt_mahoadon.Text = Tao_Ma_Hoa_Don("HD");
             dtgv_hoadon.DataSource = hdBUS.Lay_Cac_Cot(txt_mahoadon.Text);
             dtgv_hoadon.Columns[0].HeaderText = "Mã hóa đơn";
@@ -220,16 +205,10 @@ namespace QuanLyKhachSan_DoAnWindow
             hdBUS.Luu_Hoa_Don(hd);
             hdBUS.Them_Chi_Tiet_Dich_Vu(hd);
 
-
-            btn_luu.Enabled = false;
-            btn_them.Enabled = true;
-
         }
 
         private void txt_tkhoadon_TextChanged(object sender, EventArgs e)
         {
-            btn_them.Enabled = false;
-            btn_huytk.Enabled = true;
             var hdBUS = new Hoa_Don_BUS();
             this.dtgv_hoadon.DataSource = hdBUS.Lay_Danh_Sach_Hoa_Don(txt_tkhoadon.Text);
         }
@@ -347,7 +326,6 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void btn_huytk_Click(object sender, EventArgs e)
         {
-            btn_them.Enabled = true;
             txt_tkhoadon.ResetText();
         }
 
@@ -367,6 +345,23 @@ namespace QuanLyKhachSan_DoAnWindow
                 int khuyenmai_int = (int)Math.Round(khuyenmai);
                 txt_tongtien.Text = (int.Parse(cbb_sotiencoc.Text) * int.Parse(txt_songayo.Text) + int.Parse(txt_thanhtien.Text) + khuyenmai_int).ToString();
             }
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            txt_mahoadon.Clear();
+            txt_tongtien.Clear();
+            cbb_makhachhang.SelectedIndex = 0;
+            cbb_khuyenmai.SelectedIndex = 0;
+            cbb_madichvu.SelectedIndex = 0;
+            cbb_manhanvien.SelectedIndex = 0;
+            cbb_maphieuthue.SelectedIndex = 0;
+            cbb_sotiencoc.SelectedIndex = 0;
+            txt_dongia.Clear();
+            txt_soluong.Clear();
+            txt_songayo.Clear();
+            txt_tendichvu.Clear();
+            txt_thanhtien.Clear();
         }
     }
 }
