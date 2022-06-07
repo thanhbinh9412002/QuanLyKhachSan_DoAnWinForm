@@ -66,7 +66,10 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            BasicFuntions(3);
+            if (MessageBox.Show("Xác minh trước khi tiến hành" + "\n\n" + "Bạn có muốn tiếp tục" + "\n" + "Xóa khách hàng này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                BasicFuntions(3);
+            }
         }
 
         private void BasicFuntions(int i) // chuc nang co ban

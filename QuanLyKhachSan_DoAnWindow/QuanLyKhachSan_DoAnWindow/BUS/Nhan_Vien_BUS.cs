@@ -37,10 +37,10 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             data.DataSource = nvDAO.LoadBangNV(tenNV);
         }
         //cap nhat ma nhan vien
-        public string updateMa()
+        public int updateMa()
         {
-            int count = nvDAO.CountMa() + 1;
-            return count.ToString();
+            string strma = nvDAO.CountMa();
+            return Convert.ToInt32(strma.Substring(2)) + 1;
         }
     }
 }

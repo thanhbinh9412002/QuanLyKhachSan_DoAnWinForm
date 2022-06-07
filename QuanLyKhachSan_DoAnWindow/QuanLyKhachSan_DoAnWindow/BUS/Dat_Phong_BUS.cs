@@ -20,7 +20,9 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
 
         public int Count_Ma_Phieu()
         {
-            return dpDAO.Count_Ma_Phieu();
+            string strma = dpDAO.Count_Ma_Phieu();
+            string ma = strma.Substring(2);
+            return Convert.ToInt32(ma) + 1;
         }
 
         public DataTable Tim_Phong_Trong()

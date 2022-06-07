@@ -36,7 +36,6 @@ namespace QuanLyKhachSan_DoAnWindow
             else
             {
                 MessageBox.Show("Đăng nhập không thành công! Vui lòng kiểm tra lại");
-                txt_username.ResetText();
                 txt_password.ResetText();
                 txt_username.Focus();
             }

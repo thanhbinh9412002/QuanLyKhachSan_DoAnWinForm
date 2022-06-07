@@ -37,7 +37,9 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         }
         public int CoutKH()
         {
-            return khDAO.coutKH();
+            string strma = khDAO.coutKH();
+            string ma = strma.Substring(2);
+            return  Convert.ToInt32(ma);
         }
         public void TimKiemKH(DataGridView data, string tenKH)
         {

@@ -107,10 +107,11 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         }
 
         // tra ve so luong khach hang hien co
-        public int coutKH()
+        public string coutKH()
         {
-            string query = "select count(*) from khachhang";
-            return conn.executeCount(query);
+            string query = "SELECT Max(makhachhang) FROM khachhang";
+            SqlParameter[] sql = new SqlParameter[0];
+            return Convert.ToString(conn.executeScalar(query, sql));
         }
 
         public DataTable KH(string sdt)         //lay thong tin kh theo sdt

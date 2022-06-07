@@ -24,7 +24,12 @@ namespace QuanLyKhachSan_DoAnWindow
             InitializeComponent();
             LoadNV();
         }
-        
+
+
+        private void bt_new_Click(object sender, EventArgs e)
+        {
+            Load_ThongTin();
+        }
         private void LoadNV()        //show nhan vien
         {
             nvBUS.upNV(gvNhanvien);
@@ -32,7 +37,7 @@ namespace QuanLyKhachSan_DoAnWindow
         }
         private void LoadManv()     //cap nhat ma nhan vien
         {
-            txtMaNV.Text = "NV" + nvBUS.updateMa();
+            txtMaNV.Text = "NV" + Convert.ToString(nvBUS.updateMa());
             txtMaNV.Enabled = false;
         }
         private void Load_ThongTin()    //chay tat ca du lieu can thiet
@@ -64,7 +69,10 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void btXoa_Click(object sender, EventArgs e)        // xoa nhan vien
         {
-            BasicFunstion(3);
+            if (MessageBox.Show("Xác minh trước khi tiến hành" + "\n\n" + "Bạn có muốn tiếp tục" + "\n" + "Xóa nhân viên này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                BasicFunstion(3);
+            }
         }
         private void BasicFunstion(int i)           //tong hop cac chuc nang co ban
         {
@@ -105,11 +113,6 @@ namespace QuanLyKhachSan_DoAnWindow
             txtdiachi.Text = row.Cells[4].Value.ToString();
             txtsdt.Text = row.Cells[5].Value.ToString();
             txtchucvu.Text = row.Cells[6].Value.ToString();
-        }
-
-        private void FormNhanVien_Click(object sender, EventArgs e)     //chuyen ve form ban dau
-        {
-            Load_ThongTin();
         }
     }
 }

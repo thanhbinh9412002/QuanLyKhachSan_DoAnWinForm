@@ -38,6 +38,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtngaysinh = new System.Windows.Forms.DateTimePicker();
             this.rbnu = new System.Windows.Forms.RadioButton();
             this.rbnam = new System.Windows.Forms.RadioButton();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
@@ -58,7 +59,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btsua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.bt_QLTK = new System.Windows.Forms.Button();
-            this.dtngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.bt_new = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvNhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -131,6 +132,7 @@ namespace QuanLyKhachSan_DoAnWindow
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bt_new);
             this.panel1.Controls.Add(this.dtngaysinh);
             this.panel1.Controls.Add(this.rbnu);
             this.panel1.Controls.Add(this.rbnam);
@@ -152,6 +154,15 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(549, 198);
             this.panel1.TabIndex = 1;
+            // 
+            // dtngaysinh
+            // 
+            this.dtngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtngaysinh.Location = new System.Drawing.Point(124, 109);
+            this.dtngaysinh.Name = "dtngaysinh";
+            this.dtngaysinh.Size = new System.Drawing.Size(138, 20);
+            this.dtngaysinh.TabIndex = 18;
+            this.dtngaysinh.Value = new System.DateTime(2022, 5, 14, 0, 0, 0, 0);
             // 
             // rbnu
             // 
@@ -344,14 +355,15 @@ namespace QuanLyKhachSan_DoAnWindow
             this.bt_QLTK.UseVisualStyleBackColor = true;
             this.bt_QLTK.Click += new System.EventHandler(this.bt_QLTK_Click);
             // 
-            // dtngaysinh
+            // bt_new
             // 
-            this.dtngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtngaysinh.Location = new System.Drawing.Point(124, 109);
-            this.dtngaysinh.Name = "dtngaysinh";
-            this.dtngaysinh.Size = new System.Drawing.Size(138, 20);
-            this.dtngaysinh.TabIndex = 18;
-            this.dtngaysinh.Value = new System.DateTime(2022, 5, 14, 0, 0, 0, 0);
+            this.bt_new.Location = new System.Drawing.Point(278, 9);
+            this.bt_new.Name = "bt_new";
+            this.bt_new.Size = new System.Drawing.Size(51, 20);
+            this.bt_new.TabIndex = 19;
+            this.bt_new.Text = "New";
+            this.bt_new.UseVisualStyleBackColor = true;
+            this.bt_new.Click += new System.EventHandler(this.bt_new_Click);
             // 
             // FormNhanVien
             // 
@@ -367,7 +379,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Name = "FormNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân viên";
-            this.Click += new System.EventHandler(this.FormNhanVien_Click);
             ((System.ComponentModel.ISupportInitialize)(this.gvNhanvien)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -407,5 +418,6 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button bt_QLTK;
         private System.Windows.Forms.DateTimePicker dtngaysinh;
+        private System.Windows.Forms.Button bt_new;
     }
 }

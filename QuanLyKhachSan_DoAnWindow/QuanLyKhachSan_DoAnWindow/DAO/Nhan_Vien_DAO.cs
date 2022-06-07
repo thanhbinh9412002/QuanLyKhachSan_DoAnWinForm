@@ -87,10 +87,11 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         }
 
         // dem so luong nhan vien
-        public int CountMa()
+        public string CountMa()
         {
-            string query = "select count(*) from nhanvien";
-            return conn.executeCount(query);
+            string query = "SELECT Max(manhanvien) FROM nhanvien";
+            SqlParameter[] sql = new SqlParameter[0];
+            return Convert.ToString(conn.executeScalar(query, sql));
         }
 
         // check co nhan vien ko 

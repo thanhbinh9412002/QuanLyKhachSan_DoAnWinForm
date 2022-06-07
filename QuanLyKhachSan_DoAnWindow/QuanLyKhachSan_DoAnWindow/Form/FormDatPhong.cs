@@ -29,7 +29,7 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void bt_MaPD_Click(object sender, EventArgs e)          //nút New để tạo mã phiếu mới
         {
-            string maphieudat = "PD" + (dpBUS.Count_Ma_Phieu() + 1).ToString();
+            string maphieudat = "PD" + Convert.ToString(dpBUS.Count_Ma_Phieu());
             txtmapd.Text = maphieudat;
             loadtable_phong();
             clearInfo();

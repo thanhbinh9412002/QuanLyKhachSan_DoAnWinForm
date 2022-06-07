@@ -18,10 +18,11 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             conn = new DBConnection();
         }
 
-        public int Count_Ma_Phieu()
+        public string Count_Ma_Phieu()
         {
-            string query = "select count(*) from phieudatphong";
-            return conn.executeCount(query);
+            string query = "SELECT MAX(maphieudat) FROM phieudatphong";
+            SqlParameter[] sql = new SqlParameter[0];
+            return Convert.ToString(conn.executeScalar(query, sql));
         }
 
         public DataTable Tim_Phong_Trong()
