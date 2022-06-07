@@ -80,6 +80,10 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return hdDAO.Lay_Don_Vi_Dich_Vu(madichvu);
         }
+        public void TraPhong(string mahoadon, string dadat, string danhan)
+        {
+            hdDAO.TraPhong(mahoadon, dadat, danhan);
+        }
         // dùng để xuất ra excel
 
         public string TenKhachHang(string mahoadon)

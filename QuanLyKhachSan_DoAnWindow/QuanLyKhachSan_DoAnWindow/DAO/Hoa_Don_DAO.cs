@@ -35,7 +35,24 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             return mnv;
         }
 
+        public void TraPhong(string mahoadon, string dadat, string danhan)
+        {
 
+            const string sql = "update phong a join phieuthuephong b on a.maphong = b.maphong " +
+                "join hoadon c on b.mahoadon = c.mahoadon set dadat = @dadat, danhan = @danhan where mahoadon = @mahoadon";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+
+            sqlParameters[0] = new SqlParameter("@mahoadon", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(mahoadon);
+
+            sqlParameters[1] = new SqlParameter("@dadat", System.Data.SqlDbType.VarChar);
+            sqlParameters[1].Value = Convert.ToString(dadat);
+
+            sqlParameters[2] = new SqlParameter("@danhan", System.Data.SqlDbType.VarChar);
+            sqlParameters[2].Value = Convert.ToString(danhan);
+
+            conn.executeInsertQuery(sql, sqlParameters);
+        }
 
         public DataTable Lay_Ma_Phieu_Thue()
         {
@@ -208,6 +225,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             kh = conn.executeReader(sql, sqlParameters);
             return kh;
         }
+
 
 
         // Cho phần excel
