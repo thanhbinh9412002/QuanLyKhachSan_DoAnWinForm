@@ -51,7 +51,11 @@ namespace QuanLyKhachSan_DoAnWindow
         private void button_xoadv_Click(object sender, EventArgs e)
         {
             var dvBUS = new Dich_Vu_BUS();
-            dvBUS.Xoa_DV(txt_madichvu2.Text);
+            DialogResult dialogResult = MessageBox.Show("Mã DV: " + txt_madichvu2.Text + "; Tên DV: " + txt_tendichvu2.Text, "Bạn có chắc muốn xoá dịch vụ này?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                dvBUS.Xoa_DV(txt_madichvu2.Text);
+            }
             this.dataGridView2.DataSource = dvBUS.Lay_Data_Bang_2();
         }
 

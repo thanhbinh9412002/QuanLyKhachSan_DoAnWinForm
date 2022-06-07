@@ -26,6 +26,11 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             return tpDAO.Hien_Thi_Danh_Sach();
         }
 
+        public DataTable Hien_Thi_Danh_Sach_2()
+        {
+            return tpDAO.Hien_Thi_Danh_Sach_2();
+        }
+
         public DataTable Hien_Thi_Danh_Sach(string maphieu)
         {
             return tpDAO.Hien_Thi_Danh_Sach(maphieu);
@@ -54,6 +59,11 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         public string Lay_MaKH_SDT(string sodienthoai)
         {
             return tpDAO.Lay_MaKH_SDT(sodienthoai);
+        }
+
+        public void Sua_Phong(string maphong, string danhan)
+        {
+            tpDAO.Sua_Phong(maphong, danhan);
         }
 
         public void Them_Phieu_Thue(string maphieu, string maphong, string username)

@@ -16,9 +16,9 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
             pgDAO = new Phong_DAO();
         }
 
-        public void Them_Phong(string maphong, string maloai)
+        public void Them_Phong(string maphong, string maloai, string dadat, string danhan)
         {
-            pgDAO.Them_Phong(maphong, maloai);
+            pgDAO.Them_Phong(maphong, maloai, dadat, danhan);
         }
 
         public DataTable Lay_Ma_Loai()

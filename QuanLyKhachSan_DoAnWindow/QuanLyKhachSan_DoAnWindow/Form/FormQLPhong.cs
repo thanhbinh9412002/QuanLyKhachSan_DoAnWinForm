@@ -14,6 +14,7 @@ namespace QuanLyKhachSan_DoAnWindow
     public partial class FormQLPhong : Form
     {
         public FormMain fmMain;
+        private string dadat = "khong", danhan = "khong";
         public FormQLPhong()
         {
             InitializeComponent();
@@ -41,7 +42,23 @@ namespace QuanLyKhachSan_DoAnWindow
         private void btnThem_Click(object sender, EventArgs e)
         {
             var pgBUS = new Phong_BUS();
-            pgBUS.Them_Phong(txt_maphong.Text, combo_loaiphong.Text);
+            if (check_dadat.Checked == true)
+            {
+                dadat = "co";
+            }
+            else
+            {
+                dadat = "khong";
+            }
+            if (check_danhan.Checked == true)
+            {
+                danhan = "co";
+            }
+            else
+            {
+                danhan = "khong";
+            }
+            pgBUS.Them_Phong(txt_maphong.Text, combo_loaiphong.Text, dadat, danhan);
             var htBUS = new He_Thong_BUS();
             DataTable room = htBUS.Lay_Data_phong();
             this.dataGriwView1.DataSource = room;
@@ -50,7 +67,23 @@ namespace QuanLyKhachSan_DoAnWindow
         private void button2_Click(object sender, EventArgs e)
         {
             var pgBUS = new Phong_BUS();
-            pgBUS.Sua_Phong(txt_maphong.Text, combo_loaiphong.Text, txt_dadat.Text, txt_danhan.Text);
+            if (check_dadat.Checked == true)
+            {
+                dadat = "co";
+            }
+            else
+            {
+                dadat = "khong";
+            }
+            if (check_danhan.Checked == true)
+            {
+                danhan = "co";
+            }
+            else
+            {
+                danhan = "khong";
+            }
+            pgBUS.Sua_Phong(txt_maphong.Text, combo_loaiphong.Text, dadat, danhan);
             var htBUS = new He_Thong_BUS();
             DataTable room = htBUS.Lay_Data_phong();
             this.dataGriwView1.DataSource = room;
@@ -58,8 +91,12 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var pgBUS = new Phong_BUS();
-            pgBUS.Xoa_Phong(txt_maphong.Text);
+            DialogResult dialogResult = MessageBox.Show("Phòng: " + txt_maphong.Text + "; Loại phòng: " + combo_loaiphong.Text, "Bạn có chắc muốn xoá phòng này?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var pgBUS = new Phong_BUS();
+                pgBUS.Xoa_Phong(txt_maphong.Text);
+            }
             var htBUS = new He_Thong_BUS();
             DataTable room = htBUS.Lay_Data_phong();
             this.dataGriwView1.DataSource = room;
@@ -82,8 +119,22 @@ namespace QuanLyKhachSan_DoAnWindow
             DataGridViewRow dr = this.dataGriwView1.Rows[e.RowIndex];
             txt_maphong.Text = dr.Cells[0].Value.ToString();
             combo_loaiphong.Text = dr.Cells[1].Value.ToString();
-            txt_dadat.Text = dr.Cells[2].Value.ToString();
-            txt_danhan.Text = dr.Cells[3].Value.ToString();
+            if (dr.Cells[2].Value.ToString().Contains("co"))
+            {
+                check_dadat.Checked = true;
+            }
+            else
+            {
+                check_dadat.Checked = false;
+            }
+            if (dr.Cells[3].Value.ToString().Contains("co"))
+            {
+                check_danhan.Checked = true;
+            }
+            else
+            {
+                check_danhan.Checked = false;
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -107,7 +158,11 @@ namespace QuanLyKhachSan_DoAnWindow
         private void button5_Click(object sender, EventArgs e)
         {
             var pgBUS = new Phong_BUS();
-            pgBUS.Xoa_Loai_Phong(txt_maloai2.Text);
+            DialogResult dialogResult = MessageBox.Show("Loại phòng: " + txt_maloai2.Text + "; Số người: " + txt_songuoi.Text + "; Giá: " + txt_gia.Text, "Bạn có chắc muốn xoá loại phòng này?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                pgBUS.Xoa_Loai_Phong(txt_maloai2.Text);
+            }
             var htBUS = new He_Thong_BUS();
             DataTable room = pgBUS.Tim_Loai_Phong(txt_timkiem2.Text); ;
             this.dataGriwView2.DataSource = room;

@@ -37,6 +37,20 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
             return Convert.ToString(temp);
         }
 
+        public void Sua_Phong(string maphong, string danhan)
+        {
+            const string sql = "update phong set  danhan=@danhan where maphong=@maphong";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            sqlParameters[0] = new SqlParameter("@danhan", System.Data.SqlDbType.VarChar);
+            sqlParameters[0].Value = Convert.ToString(danhan);
+
+            sqlParameters[1] = new SqlParameter("@maphong", System.Data.SqlDbType.VarChar);
+            sqlParameters[1].Value = Convert.ToString(maphong);
+
+            conn.executeInsertQuery(sql, sqlParameters);
+        }
+
         public void Them_Phieu_Thue(string maphieu, string maphong, string username)
         {
             const string sql = "insert into phieuthuephong(maphieuthue, maphong, username) values (@maphieuthue, @maphong, @username)";
@@ -138,6 +152,15 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         public DataTable Hien_Thi_Danh_Sach()
         {
             string sql = "select chitietthuephong.maphieuthue, phieuthuephong.maphong, khachhang.sodienthoai, ngaythuephong, sotiencoc, songuoi from  chitietthuephong, phieuthuephong, khachhang where chitietthuephong.maphieuthue = phieuthuephong.maphieuthue and chitietthuephong.makhachhang = khachhang.makhachhang;";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            DataTable bang = new DataTable();
+            bang = conn.executeReader(sql, sqlParameters);
+            return bang;
+        }
+
+        public DataTable Hien_Thi_Danh_Sach_2()
+        {
+            string sql = "select chitietdatphong.maphieudat, phieudatphong.maphong, khachhang.sodienthoai, ngaythuephong, sotiencoc, songuoi from  chitietdatphong, phieudatphong, khachhang where chitietdatphong.maphieudat = phieudatphong.maphieudat and chitietdatphong.makhachhang = khachhang.makhachhang;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             DataTable bang = new DataTable();
             bang = conn.executeReader(sql, sqlParameters);

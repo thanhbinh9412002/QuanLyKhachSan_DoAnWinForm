@@ -26,18 +26,16 @@ namespace QuanLyKhachSan_DoAnWindow
             string pass = txt_password.Text;
             if (pass == password && pass != "" && password != "")
             {
-                MessageBox.Show("Đăng nhập thành công!");
                 fmMain.musername = txt_username.Text;
                 fmMain.mchucvu = "admin";
                 fmMain.mfullname = htBUS.Lay_Ten_Nhan_Vien(txt_username.Text);
                 this.Close();
             }
-            //else if( password != "" && pass == )
             else
             {
                 MessageBox.Show("Đăng nhập không thành công! Vui lòng kiểm tra lại");
                 txt_password.ResetText();
-                txt_username.Focus();
+                txt_password.Focus();
             }
 
 
