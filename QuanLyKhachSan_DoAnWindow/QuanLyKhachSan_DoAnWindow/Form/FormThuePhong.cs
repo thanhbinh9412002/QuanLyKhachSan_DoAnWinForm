@@ -181,8 +181,13 @@ namespace QuanLyKhachSan_DoAnWindow
                 tpBUS.Them_Phieu_Thue_Chi_Tiet(txt_maphieuthue.Text, makhachhang, date_ngaythuephong.Text, txt_tiencoc.Text, txt_songuoi.Text);
                 tpBUS.Sua_Phong(txt_maphong.Text, "co");
             }
-
             Load_Data();
+            txt_maphieudat.Clear();
+            txt_maphieuthue.Clear();
+            txt_maphong.Clear();
+            txt_sdtkh.Clear();
+            txt_tiencoc.Clear();
+            txt_songuoi.Clear();
 
         }
 
@@ -193,13 +198,17 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void btnHuy_Click_1(object sender, EventArgs e)
         {
-            if (radio_dadat.Checked == true)
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xoá thông tin này?", "Message", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                tpBUS.Xoa_Phieu_Thue(txt_maphieudat.Text);
-            }
-            else
-            {
-                tpBUS.Xoa_Phieu_Thue(txt_maphieuthue.Text);
+                if (radio_dadat.Checked == true)
+                {
+                    tpBUS.Xoa_Phieu_Thue(txt_maphieudat.Text);
+                }
+                else
+                {
+                    tpBUS.Xoa_Phieu_Thue(txt_maphieuthue.Text);
+                }
             }
             txt_maphieudat.Clear();
             txt_maphieuthue.Clear();
@@ -226,6 +235,12 @@ namespace QuanLyKhachSan_DoAnWindow
                 tpBUS.Sua_Phong(txt_maphong.Text, "co");
             }
             Load_Data();
+            txt_maphieudat.Clear();
+            txt_maphieuthue.Clear();
+            txt_maphong.Clear();
+            txt_sdtkh.Clear();
+            txt_tiencoc.Clear();
+            txt_songuoi.Clear();
         }
 
         private void Datagriwview_danhsach3_CellContentClick(object sender, DataGridViewCellEventArgs e)
