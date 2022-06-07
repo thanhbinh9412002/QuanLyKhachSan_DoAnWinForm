@@ -26,22 +26,11 @@ namespace QuanLyKhachSan_DoAnWindow.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QuanLyKhachSan;Integrated Secu" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyKhachSan;Integrated Secu" +
             "rity=True")]
         public string cnnStr {
             get {
                 return ((string)(this["cnnStr"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QuanLyKhachSan;Integrated Secu" +
-            "rity=True")]
-        public string QuanLyKhachSanConnectionString {
-            get {
-                return ((string)(this["QuanLyKhachSanConnectionString"]));
             }
         }
     }

@@ -77,11 +77,9 @@ namespace QuanLyKhachSan_DoAnWindow.DataProvider
             {
                 sqlCommand.CommandType = CommandType.Text;
                 sqlCommand.Parameters.AddRange(sqlParameter);
-                connection = new SqlConnection("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
                 DataTable dt = new DataTable();
                 try
                 {
-                    connection.Open();
                     SqlDataReader dataReader = sqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
                     dt.Load(dataReader);
                 }
