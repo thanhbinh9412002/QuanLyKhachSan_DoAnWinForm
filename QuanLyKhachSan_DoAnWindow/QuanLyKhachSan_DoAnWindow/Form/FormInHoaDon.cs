@@ -22,8 +22,77 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             InitializeComponent();
             var hdBUS = new Hoa_Don_BUS();
-            //this.dataGridView1.DataSource = hdBUS.Lay_Du_Lieu(txt_theomahoadon.Text);
+            this.dtgv_hoadon.DataSource = hdBUS.Lay_Danh_Sach_Hoa_Don(txt_tkhoadon.Text);
         }
+
+        public static string ChuyenSoSangChu(string sNumber)
+        {
+            int mLen, mDigit;
+            string mTemp = "";
+            string[] mNumText;
+            //Xóa các dấu "," nếu có
+            sNumber = sNumber.Replace(",", "");
+            mNumText = "không;một;hai;ba;bốn;năm;sáu;bảy;tám;chín".Split(';');
+            mLen = sNumber.Length - 1; // trừ 1 vì thứ tự đi từ 0
+            for (int i = 0; i <= mLen; i++)
+            {
+                mDigit = Convert.ToInt32(sNumber.Substring(i, 1));
+                mTemp = mTemp + " " + mNumText[mDigit];
+                if (mLen == i) // Chữ số cuối cùng không cần xét tiếp break; 
+                    switch ((mLen - i) % 9)
+                    {
+                        case 0:
+                            mTemp = mTemp + " tỷ";
+                            if (sNumber.Substring(i + 1, 3) == "000") i = i + 3;
+                            if (sNumber.Substring(i + 1, 3) == "000") i = i + 3;
+                            if (sNumber.Substring(i + 1, 3) == "000") i = i + 3;
+                            break;
+                        case 6:
+                            mTemp = mTemp + " triệu";
+                            if (sNumber.Substring(i + 1, 3) == "000") i = i + 3;
+                            if (sNumber.Substring(i + 1, 3) == "000") i = i + 3;
+                            break;
+                        case 3:
+                            mTemp = mTemp + " nghìn";
+                            if (sNumber.Substring(i + 1, 3) == "000") i = i + 3;
+                            break;
+                        default:
+                            switch ((mLen - i) % 3)
+                            {
+                                case 2:
+                                    mTemp = mTemp + " trăm";
+                                    break;
+                                case 1:
+                                    mTemp = mTemp + " mươi";
+                                    break;
+                            }
+                            break;
+                    }
+            }
+            //Loại bỏ trường hợp x00
+            mTemp = mTemp.Replace("không mươi không ", "");
+            mTemp = mTemp.Replace("không mươi không", ""); //Loại bỏ trường hợp 00x 
+            mTemp = mTemp.Replace("không mươi ", "linh "); //Loại bỏ trường hợp x0, x>=2
+            mTemp = mTemp.Replace("mươi không", "mươi");
+            //Fix trường hợp 10
+            mTemp = mTemp.Replace("một mươi", "mười");
+            //Fix trường hợp x4, x>=2
+            mTemp = mTemp.Replace("mươi bốn", "mươi tư");
+            //Fix trường hợp x04
+            mTemp = mTemp.Replace("linh bốn", "linh tư");
+            //Fix trường hợp x5, x>=2
+            mTemp = mTemp.Replace("mươi năm", "mươi lăm");
+            //Fix trường hợp x1, x>=2
+            mTemp = mTemp.Replace("mươi một", "mươi mốt");
+            //Fix trường hợp x15
+            mTemp = mTemp.Replace("mười năm", "mười lăm");
+            //Bỏ ký tự space
+            mTemp = mTemp.Trim();
+            //Viết hoa ký tự đầu tiên
+            mTemp = mTemp.Substring(0, 1).ToUpper() + mTemp.Substring(1) + " đồng";
+            return mTemp;
+        }
+
 
         private void FormInHoaDon_Load(object sender, EventArgs e)
         {
@@ -32,14 +101,11 @@ namespace QuanLyKhachSan_DoAnWindow
             var hdBUS = new Hoa_Don_BUS();
             btn_them.Enabled = true;
             //btn_in.Enabled = false;
-            btn_huy.Enabled = false;
             btn_quaylai.Enabled = true;
-            btn_themdichvu.Enabled = false;
             btn_huytk.Enabled = false;
             btn_thanhtoan.Enabled = false;
             btn_luu.Enabled = false;
-            cbb_madichvu.Enabled = false;
-            //txt_mahoadon.ReadOnly = true;
+            txt_mahoadon.ReadOnly = true;
             txt_tendichvu.ReadOnly = true;
             txt_dongia.ReadOnly = true;
             txt_thanhtien.ReadOnly = true;
@@ -103,14 +169,14 @@ namespace QuanLyKhachSan_DoAnWindow
             return key;
         }
 
-        public static int Tinh_So_Tien_Khuyen_Mai(string khuyenmai,string tongtien)
+        public static int Tinh_So_Tien_Khuyen_Mai(string khuyenmai, string tongtien)
         {
             int sokhuyenmai = int.Parse(khuyenmai);
             int sotongtien = int.Parse(tongtien);
             int key = sotongtien * sokhuyenmai / 100;
             return key;
         }
-            
+
 
         private void btn_quaylai_Click(object sender, EventArgs e)
         {
@@ -122,10 +188,8 @@ namespace QuanLyKhachSan_DoAnWindow
             var hdBUS = new Hoa_Don_BUS();
             btn_them.Enabled = false;
             cbb_madichvu.Enabled = true;
-            btn_huy.Enabled = false;
+            btn_huy.Enabled = true;
             btn_luu.Enabled = true;
-            //btn_in.Enabled = false;
-            btn_themdichvu.Enabled = true;
             ResestValue();
             txt_mahoadon.Text = Tao_Ma_Hoa_Don("HD");
             dtgv_hoadon.DataSource = hdBUS.Lay_Cac_Cot(txt_mahoadon.Text);
@@ -135,29 +199,34 @@ namespace QuanLyKhachSan_DoAnWindow
             dtgv_hoadon.Columns[3].HeaderText = "Số lượng";
             dtgv_hoadon.Columns[4].HeaderText = "Đơn giá";
             dtgv_hoadon.Columns[5].HeaderText = "Thành tiền";
-           
+            this.dtgv_hoadon.DataSource = hdBUS.Lay_Danh_Sach_Hoa_Don(txt_tkhoadon.Text);
         }
 
         private void btn_luu_Click_1(object sender, EventArgs e)
         {
-           /* var hdBUS = new Hoa_Don_BUS();
-            string txt_makhachhang = cbb_makhachhang.SelectedValue.ToString();
-            string txt_manhanvien = cbb_manhanvien.SelectedItem.ToString();
-            string txt_maphieuthue = cbb_maphieuthue.SelectedItem.ToString();
-            string txt_madichvu = cbb_madichvu.SelectedItem.ToString();
-            int txt_tiendatcoc = int.Parse(cbb_sotiencoc.SelectedItem.ToString());
-            DateTime txt_ngaythanhtoan = dtpk_ngaythanhtoan.Value;
-            string songayo = hdBUS.Tinh_Tong_So_Ngay_O(txt_makhachhang, txt_ngaythanhtoan).ToString();
-            int txt_songayo = int.Parse(songayo);
-            string tmp = cbb_khuyenmai.SelectedItem.ToString();
-            //string tongtien = txt_tongtien.Text;
-            *//*string txt_sotienkhuyenmai = Tinh_So_Tien_Khuyen_Mai(tmp, tongtien).ToString();
-            int txt_tongtien = int.Parse(txt_tongtien.ToString());
-            int txt_khuyenmai = int.Parse(txt_sotienkhuyenmai);*//*
+            var hdBUS = new Hoa_Don_BUS();
+            Hoa_Don hd = new Hoa_Don();
+            hd.Ma_hoa_don = txt_mahoadon.Text;
+            hd.Ma_khach_hang = cbb_makhachhang.Text;
+            hd.Ma_nhan_vien = cbb_manhanvien.Text;
+            hd.Ngay_thanh_toan = dtpk_ngaythanhtoan.Text;
+            hd.Ma_phieu_thue = cbb_maphieuthue.Text;
+            hd.So_tien_coc = int.Parse(cbb_sotiencoc.Text);
+            hd.So_ngay_o = int.Parse(txt_songayo.Text);
+            int sotienkhuyenmai = int.Parse(cbb_khuyenmai.Text) * int.Parse(cbb_sotiencoc.Text);
+            hd.So_tien_khuyen_mai = sotienkhuyenmai;
+            hd.Tong_tien = int.Parse(txt_tongtien.Text);
 
-            //string txt_mahoadon = txt_mahoadon.Text.ToString();
-            *//*hd = new Hoa_Don(txt_mahoadon, txt_makhachhang, txt_manhanvien, txt_ngaythanhtoan,
-                txt_maphieuthue, txt_tiendatcoc, txt_songayo, txt_khuyenmai, txt_tongtien, txt_madichvu, txt_tendichvu, );*/
+            hd.Ma_dich_vu = cbb_madichvu.Text;
+            hd.So_luong = int.Parse(txt_soluong.Text);
+            hd.Thanh_tien = int.Parse(txt_thanhtien.Text);
+
+            hdBUS.Luu_Hoa_Don(hd);
+            hdBUS.Them_Chi_Tiet_Dich_Vu(hd);
+
+
+            btn_luu.Enabled = false;
+            btn_them.Enabled = true;
 
         }
 
@@ -171,13 +240,13 @@ namespace QuanLyKhachSan_DoAnWindow
 
         private void btn_in_Click(object sender, EventArgs e)
         {
-            int cot = 0;
-            int hang = 0;
             var hdBUS = new Hoa_Don_BUS();
             COMExcel.Application exApp = new COMExcel.Application();
             COMExcel.Workbook exBook; //Trong 1 chương trình Excel có nhiều Workbook
             COMExcel.Worksheet exSheet; //Trong 1 Workbook có nhiều Worksheet
             COMExcel.Range exRange;
+            int hang = 0, cot = 0;
+            DataTable tblThongtinHD, tblThongtinHang;
             exBook = exApp.Workbooks.Add(COMExcel.XlWBATemplate.xlWBATWorksheet);
             exSheet = exBook.Worksheets[1];
             // Định dạng chung
@@ -202,29 +271,22 @@ namespace QuanLyKhachSan_DoAnWindow
             exRange.Range["C2:E2"].Font.ColorIndex = 3; //Màu đỏ
             exRange.Range["C2:E2"].MergeCells = true;
             exRange.Range["C2:E2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            exRange.Range["C2:E2"].Value = "HÓA ĐƠN";
+            exRange.Range["C2:E2"].Value = "HÓA ĐƠN BÁN";
+            tblThongtinHD = hdBUS.ThongTinKhachHang(txt_mahoadon.Text);
             exRange.Range["B6:C9"].Font.Size = 12;
-            exRange.Range["B6:B6"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exRange.Range["B6:B6"].Value = "Mã hóa đơn:";
             exRange.Range["C6:E6"].MergeCells = true;
-            exRange.Range["C6:E6"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            exRange.Range["C6:E6"].Value = txt_mahoadon.Text.ToString();
-            exRange.Range["B7:B7"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["C6:E6"].Value = tblThongtinHD.Rows[0][0].ToString();
             exRange.Range["B7:B7"].Value = "Tên Khách hàng:";
             exRange.Range["C7:E7"].MergeCells = true;
-            exRange.Range["C7:E7"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            exRange.Range["C7:E7"].Value = hdBUS.TenKhachHang(txt_mahoadon.Text);
-            exRange.Range["B8:B8"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["C7:E7"].Value = tblThongtinHD.Rows[0][3].ToString();
             exRange.Range["B8:B8"].Value = "Địa chỉ:";
             exRange.Range["C8:E8"].MergeCells = true;
-            exRange.Range["C8:E8"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            exRange.Range["C8:E8"].Value = hdBUS.DiaChi(txt_mahoadon.Text);
-            exRange.Range["B9:B9"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["C8:E8"].Value = tblThongtinHD.Rows[0][4].ToString();
             exRange.Range["B9:B9"].Value = "Điện thoại:";
             exRange.Range["C9:E9"].MergeCells = true;
-            exRange.Range["C9:E9"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            exRange.Range["C9:E9"].Value = hdBUS.SoDienThoai(txt_mahoadon.Text);
-            exRange.Range["C9:E9"].MergeCells = true;
+            exRange.Range["C9:E9"].Value = tblThongtinHD.Rows[0][5].ToString();
+            tblThongtinHang = hdBUS.ThongTinHoaDon(txt_mahoadon.Text);
             exRange.Range["A11:F11"].Font.Bold = true;
             exRange.Range["A11:F11"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exRange.Range["C11:F11"].ColumnWidth = 12;
@@ -234,9 +296,7 @@ namespace QuanLyKhachSan_DoAnWindow
             exRange.Range["D11:D11"].Value = "Số lượng";
             exRange.Range["E11:E11"].Value = "Giá";
             exRange.Range["F11:F11"].Value = "Thành tiền";
-            int tmp = int.Parse(hdBUS.SoDichVu(txt_mahoadon.Text));
-            DataTable tblThongtinHang = hdBUS.ThongTinHoaDon(txt_mahoadon.Text);
-            for (hang = 0; hang < tmp; hang++)
+            for (hang = 0; hang < tblThongtinHang.Rows.Count; hang++)
             {
                 //Điền số thứ tự vào cột 1 từ dòng 12
                 exSheet.Cells[1][hang + 12] = hang + 1;
@@ -244,7 +304,7 @@ namespace QuanLyKhachSan_DoAnWindow
                 //Điền thông tin hàng từ cột thứ 2, dòng 12
                 {
                     exSheet.Cells[cot + 2][hang + 12] = tblThongtinHang.Rows[hang][cot].ToString();
-                    if (cot == 3) exSheet.Cells[cot + 2][hang + 12] = tblThongtinHang.Rows[hang][cot].ToString();
+                    if (cot == 3) exSheet.Cells[cot + 2][hang + 12] = tblThongtinHang.Rows[hang][cot].ToString() + "%";
                 }
             }
             exRange = exSheet.Cells[cot][hang + 14];
@@ -252,13 +312,18 @@ namespace QuanLyKhachSan_DoAnWindow
             exRange.Value2 = "Tổng tiền:";
             exRange = exSheet.Cells[cot + 1][hang + 14];
             exRange.Font.Bold = true;
-            exRange.Value2 = hdBUS.TongTien(txt_mahoadon.Text);
+            exRange.Value2 = tblThongtinHD.Rows[0][2].ToString();
             exRange = exSheet.Cells[1][hang + 15]; //Ô A1 
+            exRange.Range["A1:F1"].MergeCells = true;
+            exRange.Range["A1:F1"].Font.Bold = true;
+            exRange.Range["A1:F1"].Font.Italic = true;
+            exRange.Range["A1:F1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignRight;
+            exRange.Range["A1:F1"].Value = "Bằng chữ: " + ChuyenSoSangChu(tblThongtinHD.Rows[0][2].ToString());
             exRange = exSheet.Cells[4][hang + 17]; //Ô A1 
             exRange.Range["A1:C1"].MergeCells = true;
             exRange.Range["A1:C1"].Font.Italic = true;
             exRange.Range["A1:C1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            DateTime d = DateTime.Now;
+            DateTime d = Convert.ToDateTime(tblThongtinHD.Rows[0][1]);
             exRange.Range["A1:C1"].Value = "Hồ Chí Minh, ngày " + d.Day + " tháng " + d.Month + " năm " + d.Year;
             exRange.Range["A2:C2"].MergeCells = true;
             exRange.Range["A2:C2"].Font.Italic = true;
@@ -267,11 +332,11 @@ namespace QuanLyKhachSan_DoAnWindow
             exRange.Range["A6:C6"].MergeCells = true;
             exRange.Range["A6:C6"].Font.Italic = true;
             exRange.Range["A6:C6"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            exRange.Range["A6:C6"].Value = hdBUS.NhanVienBan(txt_mahoadon.Text);
-            exSheet.Name = "Hóa đơn khách sạn";
+            exRange.Range["A6:C6"].Value = tblThongtinHD.Rows[0][6];
+            exSheet.Name = "Hóa đơn nhập";
             exApp.Visible = true;
         }
-    
+
 
         private void cbb_madichvu_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -290,15 +355,14 @@ namespace QuanLyKhachSan_DoAnWindow
             txt_tkhoadon.ResetText();
         }
 
-        private void btn_themdichvu_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void txt_soluong_TextChanged(object sender, EventArgs e)
         {
             txt_thanhtien.Text = (int.Parse(txt_dongia.Text) * int.Parse(txt_soluong.Text)).ToString();
 
+        }
+
+        private void txt_thanhtien_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

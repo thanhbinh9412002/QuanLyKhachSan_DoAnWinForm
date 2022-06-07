@@ -34,6 +34,10 @@ namespace QuanLyKhachSan_DoAnWindow.Class
         private TextBox txt_tendichvu;
         private object p;
 
+        public Hoa_Don()
+        {
+
+        }
         public Hoa_Don(string mahoadon, string makhachhang, string manhanvien, string ngaythanhtoan, string maphieuthue,
             int sotiencoc, int songayo, int sotienkhuyenmai, int tongtien, string madichvu, int soluong, int thanhtien)
         {
