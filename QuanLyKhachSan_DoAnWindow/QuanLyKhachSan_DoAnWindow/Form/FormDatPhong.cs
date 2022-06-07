@@ -118,14 +118,17 @@ namespace QuanLyKhachSan_DoAnWindow
             {
                 foreach (DataGridViewRow row in DataGridView1.Rows)     // chay vong lap tat ca hang
                 {
-                    row.Cells["radiobutton"].Value = false;             //cho tat ca hang la false value
-                    if(row.Index == e.RowIndex)             // neu hang do la hang duoc chon thi gan true value
+                    if(row.Index == e.RowIndex && !Convert.ToBoolean(row.Cells["radiobutton"].Value))             // neu hang do la hang duoc chon thi gan true value
                     {
                         row.Cells["radiobutton"].Value = !Convert.ToBoolean(row.Cells["radiobutton"].EditedFormattedValue);
                         if (Convert.ToBoolean(row.Cells["radiobutton"].Value))          // thong bao so phong da chon
                         {
                             MessageBox.Show("Bạn chọn phòng: " + row.Cells[1].Value);
                         }
+                    }
+                    else
+                    {
+                        row.Cells["radiobutton"].Value = false;             //cho tat ca hang la false value
                     }
                 }
             }   
@@ -216,11 +219,6 @@ namespace QuanLyKhachSan_DoAnWindow
             {
                 loadthongtin();
             }
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-
         }
         //##################################################################################################//
         //##################################################################################################//
