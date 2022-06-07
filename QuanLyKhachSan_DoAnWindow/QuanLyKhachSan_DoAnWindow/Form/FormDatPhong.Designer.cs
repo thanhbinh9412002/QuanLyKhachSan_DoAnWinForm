@@ -94,7 +94,6 @@
             this.lsvChiTiet = new System.Windows.Forms.ListView();
             this.tt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSua = new System.Windows.Forms.Button();
             this.DataGridView1 = new System.Windows.Forms.DataGridView();
             this.phongcol1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maloaicol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,7 +101,6 @@
             this.danhancol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radiobutton = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtedit = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvdanhsach)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -421,10 +419,8 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.txtedit);
             this.tabPage3.Controls.Add(this.lvdp);
             this.tabPage3.Controls.Add(this.lsvChiTiet);
-            this.tabPage3.Controls.Add(this.btnSua);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
@@ -445,10 +441,10 @@
             this.lvdp.FullRowSelect = true;
             this.lvdp.GridLines = true;
             this.lvdp.HideSelection = false;
-            this.lvdp.Location = new System.Drawing.Point(1, 271);
+            this.lvdp.Location = new System.Drawing.Point(4, 332);
             this.lvdp.Name = "lvdp";
             this.lvdp.Scrollable = false;
-            this.lvdp.Size = new System.Drawing.Size(516, 155);
+            this.lvdp.Size = new System.Drawing.Size(516, 168);
             this.lvdp.TabIndex = 13;
             this.lvdp.UseCompatibleStateImageBehavior = false;
             this.lvdp.View = System.Windows.Forms.View.Details;
@@ -483,7 +479,7 @@
             this.lsvChiTiet.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.tt,
             this.gt});
-            this.lsvChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsvChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvChiTiet.FullRowSelect = true;
             listViewGroup1.Header = "KHÁCH HÀNG";
             listViewGroup1.Name = "listViewGroupKHACHHANG";
@@ -521,18 +517,14 @@
             listViewItem7,
             listViewItem8,
             listViewItem9});
-            this.lsvChiTiet.Location = new System.Drawing.Point(1, 18);
+            this.lsvChiTiet.Location = new System.Drawing.Point(3, 5);
             this.lsvChiTiet.MultiSelect = false;
             this.lsvChiTiet.Name = "lsvChiTiet";
             this.lsvChiTiet.Scrollable = false;
-            this.lsvChiTiet.Size = new System.Drawing.Size(517, 247);
+            this.lsvChiTiet.Size = new System.Drawing.Size(517, 321);
             this.lsvChiTiet.TabIndex = 12;
             this.lsvChiTiet.UseCompatibleStateImageBehavior = false;
             this.lsvChiTiet.View = System.Windows.Forms.View.Details;
-            this.lsvChiTiet.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lsvChiTiet_KeyUp);
-            this.lsvChiTiet.Leave += new System.EventHandler(this.lsvChiTiet_Leave);
-            this.lsvChiTiet.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lsvChiTiet_MouseDown);
-            this.lsvChiTiet.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lsvChiTiet_MouseUp);
             // 
             // tt
             // 
@@ -543,17 +535,6 @@
             // 
             this.gt.Text = "Giá trị";
             this.gt.Width = 464;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSua.Location = new System.Drawing.Point(100, 449);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(80, 30);
-            this.btnSua.TabIndex = 11;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // DataGridView1
             // 
@@ -642,14 +623,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm phòng trống";
             // 
-            // txtedit
-            // 
-            this.txtedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtedit.Location = new System.Drawing.Point(100, 34);
-            this.txtedit.Name = "txtedit";
-            this.txtedit.Size = new System.Drawing.Size(174, 20);
-            this.txtedit.TabIndex = 14;
-            // 
             // FormDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -669,7 +642,6 @@
             this.tabPage2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -701,7 +673,6 @@
         private System.Windows.Forms.ColumnHeader gt;
         private System.Windows.Forms.Button bt_quaylai;
         private System.Windows.Forms.Button bt_them;
-        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.TextBox txt_sdtkh;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.DataGridViewTextBoxColumn phongcol1;
@@ -722,6 +693,5 @@
         private System.Windows.Forms.TextBox txt_timkiem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDEL;
-        private System.Windows.Forms.TextBox txtedit;
     }
 }

@@ -20,6 +20,12 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return hdDAO.Lay_Ma_Khach_Hang();
         }
+
+        public DataTable ThongTinKhachHang(string mahoadon)
+        {
+            return hdDAO.ThongTinKhachHang(mahoadon);
+        }
+
         public DataTable Lay_Ma_Nhan_Vien()
         {
             return hdDAO.Lay_Ma_Nhan_Vien();
@@ -36,9 +42,9 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return hdDAO.Lay_Danh_Sach_Hoa_Don(mahoadon);
         }
-        public DataTable Lay_Cac_Cot()
+        public DataTable Lay_Cac_Cot(string mahoadon)
         {
-            return hdDAO.Lay_Cac_Cot();
+            return hdDAO.Lay_Cac_Cot(mahoadon);
         }
         public string Lay_Ma_Hoa_Don()
         {
@@ -52,6 +58,12 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return hdDAO.Tinhsongayo(makhachhang, ngaythanhtoan);
         }
+
+        public void Them_Chi_Tiet_Dich_Vu(Hoa_Don hd)
+        {
+            hdDAO.Them_Chi_Tiet_Dich_Vu(hd);
+        }
+
         public void Luu_Hoa_Don(Hoa_Don hd)
         {
             hdDAO.Luu_Hoa_Don(hd);
@@ -68,10 +80,35 @@ namespace QuanLyKhachSan_DoAnWindow.BUS
         {
             return hdDAO.Lay_Don_Vi_Dich_Vu(madichvu);
         }
+        // dùng để xuất ra excel
 
-        /* public DataTable Chitiethoadon(string mahoadon)
-         {
-             return hdDAO.Chitiethoadon(mahoadon);
-         }*/
+        public string TenKhachHang(string mahoadon)
+        {
+            return hdDAO.TenKhachHang(mahoadon);
+        }
+        public string SoDienThoai(string mahoadon)
+        {
+            return hdDAO.SoDienThoai(mahoadon);
+        }
+        public string DiaChi(string mahoadon)
+        {
+            return hdDAO.DiaChi(mahoadon);
+        }
+        public string SoDichVu(string mahoadon)
+        {
+            return hdDAO.SoDichVu(mahoadon);
+        }
+        public DataTable ThongTinHoaDon(string mahoadon)
+        {
+            return hdDAO.ThongTinHoaDon(mahoadon);
+        }
+        public string TongTien(string mahoadon)
+        {
+            return hdDAO.TongTien(mahoadon);
+        }
+        public string NhanVienBan(string mahoadon)
+        {
+            return hdDAO.NhanVienBan(mahoadon);
+        }
     }
 }

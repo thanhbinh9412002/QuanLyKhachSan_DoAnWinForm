@@ -55,15 +55,18 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgv_danhsach = new System.Windows.Forms.DataGridView();
-            this.quanLyKhachSanDataSet5 = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSet5();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manhanvienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maphieuthueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotiencocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songayoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotienkhuyenmaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoadonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hoadonTableAdapter = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSet5TableAdapters.hoadonTableAdapter();
-            this.mahoadonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaythanhtoanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongtienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maphieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loaiphieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makhachhangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quanLyKhachSanDataSet = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSet();
+            this.hoadonTableAdapter = new QuanLyKhachSan_DoAnWindow.QuanLyKhachSanDataSetTableAdapters.hoadonTableAdapter();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -71,8 +74,8 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_danhsach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoadonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -334,12 +337,15 @@ namespace QuanLyKhachSan_DoAnWindow
             this.dtgv_danhsach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_danhsach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_danhsach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mahoadonDataGridViewTextBoxColumn,
-            this.ngaythanhtoanDataGridViewTextBoxColumn,
-            this.tongtienDataGridViewTextBoxColumn,
-            this.maphieuDataGridViewTextBoxColumn,
-            this.loaiphieuDataGridViewTextBoxColumn,
-            this.makhachhangDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.manhanvienDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn3,
+            this.maphieuthueDataGridViewTextBoxColumn,
+            this.sotiencocDataGridViewTextBoxColumn,
+            this.songayoDataGridViewTextBoxColumn,
+            this.sotienkhuyenmaiDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn4});
             this.dtgv_danhsach.DataSource = this.hoadonBindingSource;
             this.dtgv_danhsach.Location = new System.Drawing.Point(6, 21);
             this.dtgv_danhsach.Name = "dtgv_danhsach";
@@ -354,55 +360,73 @@ namespace QuanLyKhachSan_DoAnWindow
             this.dtgv_danhsach.Size = new System.Drawing.Size(554, 228);
             this.dtgv_danhsach.TabIndex = 0;
             // 
-            // quanLyKhachSanDataSet5
+            // dataGridViewTextBoxColumn1
             // 
-            this.quanLyKhachSanDataSet5.DataSetName = "QuanLyKhachSanDataSet5";
-            this.quanLyKhachSanDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "mahoadon";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã hóa đơn";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "makhachhang";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Mã khách hàng";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // manhanvienDataGridViewTextBoxColumn
+            // 
+            this.manhanvienDataGridViewTextBoxColumn.DataPropertyName = "manhanvien";
+            this.manhanvienDataGridViewTextBoxColumn.HeaderText = "Mã nhân viên";
+            this.manhanvienDataGridViewTextBoxColumn.Name = "manhanvienDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ngaythanhtoan";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày thanh toán";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // maphieuthueDataGridViewTextBoxColumn
+            // 
+            this.maphieuthueDataGridViewTextBoxColumn.DataPropertyName = "maphieuthue";
+            this.maphieuthueDataGridViewTextBoxColumn.HeaderText = "Mã phiếu thuê";
+            this.maphieuthueDataGridViewTextBoxColumn.Name = "maphieuthueDataGridViewTextBoxColumn";
+            // 
+            // sotiencocDataGridViewTextBoxColumn
+            // 
+            this.sotiencocDataGridViewTextBoxColumn.DataPropertyName = "sotiencoc";
+            this.sotiencocDataGridViewTextBoxColumn.HeaderText = "Số tiền cọc";
+            this.sotiencocDataGridViewTextBoxColumn.Name = "sotiencocDataGridViewTextBoxColumn";
+            // 
+            // songayoDataGridViewTextBoxColumn
+            // 
+            this.songayoDataGridViewTextBoxColumn.DataPropertyName = "songayo";
+            this.songayoDataGridViewTextBoxColumn.HeaderText = "Số ngày ở";
+            this.songayoDataGridViewTextBoxColumn.Name = "songayoDataGridViewTextBoxColumn";
+            // 
+            // sotienkhuyenmaiDataGridViewTextBoxColumn
+            // 
+            this.sotienkhuyenmaiDataGridViewTextBoxColumn.DataPropertyName = "sotienkhuyenmai";
+            this.sotienkhuyenmaiDataGridViewTextBoxColumn.HeaderText = "Số tiền khuyến mãi";
+            this.sotienkhuyenmaiDataGridViewTextBoxColumn.Name = "sotienkhuyenmaiDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "tongtien";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tổng tiền";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // hoadonBindingSource
             // 
             this.hoadonBindingSource.DataMember = "hoadon";
-            this.hoadonBindingSource.DataSource = this.quanLyKhachSanDataSet5;
+            this.hoadonBindingSource.DataSource = this.quanLyKhachSanDataSet;
+            // 
+            // quanLyKhachSanDataSet
+            // 
+            this.quanLyKhachSanDataSet.DataSetName = "QuanLyKhachSanDataSet";
+            this.quanLyKhachSanDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // hoadonTableAdapter
             // 
             this.hoadonTableAdapter.ClearBeforeFill = true;
-            // 
-            // mahoadonDataGridViewTextBoxColumn
-            // 
-            this.mahoadonDataGridViewTextBoxColumn.DataPropertyName = "mahoadon";
-            this.mahoadonDataGridViewTextBoxColumn.HeaderText = "Mã hóa đơn";
-            this.mahoadonDataGridViewTextBoxColumn.Name = "mahoadonDataGridViewTextBoxColumn";
-            // 
-            // ngaythanhtoanDataGridViewTextBoxColumn
-            // 
-            this.ngaythanhtoanDataGridViewTextBoxColumn.DataPropertyName = "ngaythanhtoan";
-            this.ngaythanhtoanDataGridViewTextBoxColumn.HeaderText = "Ngày thanh toán";
-            this.ngaythanhtoanDataGridViewTextBoxColumn.Name = "ngaythanhtoanDataGridViewTextBoxColumn";
-            // 
-            // tongtienDataGridViewTextBoxColumn
-            // 
-            this.tongtienDataGridViewTextBoxColumn.DataPropertyName = "tongtien";
-            this.tongtienDataGridViewTextBoxColumn.HeaderText = "Tổng tiền";
-            this.tongtienDataGridViewTextBoxColumn.Name = "tongtienDataGridViewTextBoxColumn";
-            // 
-            // maphieuDataGridViewTextBoxColumn
-            // 
-            this.maphieuDataGridViewTextBoxColumn.DataPropertyName = "maphieu";
-            this.maphieuDataGridViewTextBoxColumn.HeaderText = "Mã phiếu";
-            this.maphieuDataGridViewTextBoxColumn.Name = "maphieuDataGridViewTextBoxColumn";
-            // 
-            // loaiphieuDataGridViewTextBoxColumn
-            // 
-            this.loaiphieuDataGridViewTextBoxColumn.DataPropertyName = "loaiphieu";
-            this.loaiphieuDataGridViewTextBoxColumn.HeaderText = "Loại phiếu";
-            this.loaiphieuDataGridViewTextBoxColumn.Name = "loaiphieuDataGridViewTextBoxColumn";
-            // 
-            // makhachhangDataGridViewTextBoxColumn
-            // 
-            this.makhachhangDataGridViewTextBoxColumn.DataPropertyName = "makhachhang";
-            this.makhachhangDataGridViewTextBoxColumn.HeaderText = "Mã khách hàng";
-            this.makhachhangDataGridViewTextBoxColumn.Name = "makhachhangDataGridViewTextBoxColumn";
             // 
             // FormBaoCao
             // 
@@ -423,8 +447,8 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_danhsach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoadonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyKhachSanDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,14 +478,24 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dtgv_danhsach;
-        private QuanLyKhachSanDataSet5 quanLyKhachSanDataSet5;
-        private System.Windows.Forms.BindingSource hoadonBindingSource;
-        private QuanLyKhachSanDataSet5TableAdapters.hoadonTableAdapter hoadonTableAdapter;
+        //private QuanLyKhachSanDataSet5TableAdapters.hoadonTableAdapter hoadonTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahoadonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaythanhtoanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongtienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maphieuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loaiphieuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn makhachhangDataGridViewTextBoxColumn;
+        private QuanLyKhachSanDataSet quanLyKhachSanDataSet;
+        private System.Windows.Forms.BindingSource hoadonBindingSource;
+        private QuanLyKhachSanDataSetTableAdapters.hoadonTableAdapter hoadonTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manhanvienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maphieuthueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotiencocDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn songayoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotienkhuyenmaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
