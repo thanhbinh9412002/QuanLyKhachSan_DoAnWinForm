@@ -476,12 +476,6 @@ namespace QuanLyKhachSan_DoAnWindow
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         //private QuanLyKhachSanDataSet5TableAdapters.hoadonTableAdapter hoadonTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mahoadonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaythanhtoanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tongtienDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maphieuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loaiphieuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn makhachhangDataGridViewTextBoxColumn;
         private QuanLyKhachSanDataSet quanLyKhachSanDataSet;
         private System.Windows.Forms.BindingSource hoadonBindingSource;
         private QuanLyKhachSanDataSetTableAdapters.hoadonTableAdapter hoadonTableAdapter;

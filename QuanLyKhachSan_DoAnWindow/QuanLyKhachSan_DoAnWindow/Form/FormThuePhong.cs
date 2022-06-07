@@ -27,6 +27,7 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             this.Datagridview_phong.DataSource = tpBUS.Tim_Phong_Trong();
             this.Datagriwview_danhsach.DataSource = tpBUS.Hien_Thi_Danh_Sach();
+            this.Datagriwview_danhsach3.DataSource = tpBUS.Hien_Thi_Danh_Sach_2();
             if (radio_dadat.Checked == true)
             {
                 txt_maphieudat.Enabled = true;
@@ -39,6 +40,7 @@ namespace QuanLyKhachSan_DoAnWindow
         {
             this.Datagridview_phong.DataSource = tpBUS.Tim_Phong_Trong();
             this.Datagriwview_danhsach.DataSource = tpBUS.Hien_Thi_Danh_Sach();
+            this.Datagriwview_danhsach3.DataSource = tpBUS.Hien_Thi_Danh_Sach_2();
         }
 
         private void button_tim_Click(object sender, EventArgs e)
@@ -125,21 +127,20 @@ namespace QuanLyKhachSan_DoAnWindow
                 txt_cmnd.Text = kh.Cmnd_passport;
                 txt_diachi.Text = kh.Dia_chi;
             }
-            if (dr.Cells[1].Value.ToString().Contains("PDT"))
+            if (dr.Cells[1].Value.ToString().Contains("PD"))
             {
-                txt_maphieudat.Text = dr.Cells[1].Value.ToString();
                 radio_dadat.Checked = true;
+                txt_maphieudat.Text = dr.Cells[1].Value.ToString();
                 txt_maphieudat2.Text = dr.Cells[1].Value.ToString();
                 txt_maphieuthue2.Text = "NULL";
                 txt_ngaythue2.Text = dr.Cells[4].Value.ToString();
                 txt_tiencoc2.Text = dr.Cells[5].Value.ToString();
                 txt_songuoi2.Text = dr.Cells[6].Value.ToString();
             }
-                
             else
             {
-                txt_maphieuthue.Text = dr.Cells[1].Value.ToString();
                 radio_chuadat.Checked = true;
+                txt_maphieuthue.Text = dr.Cells[1].Value.ToString();
                 txt_maphieuthue2.Text = dr.Cells[1].Value.ToString();
                 txt_maphieudat2.Text = "NULL";
                 txt_ngaythue2.Text = dr.Cells[4].Value.ToString();
@@ -172,12 +173,15 @@ namespace QuanLyKhachSan_DoAnWindow
             {
                 tpBUS.Them_Phieu_Thue(txt_maphieudat.Text, txt_maphong.Text, fmMain.musername);
                 tpBUS.Them_Phieu_Thue_Chi_Tiet(txt_maphieudat.Text, makhachhang, date_ngaythuephong.Text, txt_tiencoc.Text, txt_songuoi.Text);
+                tpBUS.Sua_Phong(txt_maphong.Text, "co");
             }
             else
             {
                 tpBUS.Them_Phieu_Thue(txt_maphieuthue.Text, txt_maphong.Text, fmMain.musername);
                 tpBUS.Them_Phieu_Thue_Chi_Tiet(txt_maphieuthue.Text, makhachhang, date_ngaythuephong.Text, txt_tiencoc.Text, txt_songuoi.Text);
+                tpBUS.Sua_Phong(txt_maphong.Text, "co");
             }
+
             Load_Data();
 
         }
@@ -213,12 +217,63 @@ namespace QuanLyKhachSan_DoAnWindow
             {
                 tpBUS.Sua_Phieu_Thue(txt_maphieudat.Text, txt_maphong.Text);
                 tpBUS.Sua_Phieu_Thue_Chi_Tiet(txt_maphieudat.Text, makhachhang, date_ngaythuephong.Text, txt_tiencoc.Text, txt_songuoi.Text);
+                tpBUS.Sua_Phong(txt_maphong.Text, "co");
             }
             else
             {
                 tpBUS.Sua_Phieu_Thue(txt_maphieuthue.Text, txt_maphong.Text);
                 tpBUS.Sua_Phieu_Thue_Chi_Tiet(txt_maphieuthue.Text, makhachhang, date_ngaythuephong.Text, txt_tiencoc.Text, txt_songuoi.Text);
+                tpBUS.Sua_Phong(txt_maphong.Text, "co");
             }
+            Load_Data();
+        }
+
+        private void Datagriwview_danhsach3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dr = this.Datagriwview_danhsach3.Rows[e.RowIndex];
+            string maphong = dr.Cells[2].Value.ToString();
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                        e.RowIndex >= 0)                // kiem tra co click vao button ko
+            {
+                txt_maphong.Text = dr.Cells[2].Value.ToString();
+                txt_tiencoc.Text = dr.Cells[5].Value.ToString();
+                txt_songuoi.Text = dr.Cells[6].Value.ToString();
+                var datex = DateTime.Parse(dr.Cells[4].Value.ToString());
+                date_ngaythuephong.Value = datex;
+                txt_sdtkh.Text = dr.Cells[3].Value.ToString();
+                tabControl1.SelectedTab = tabPage3;         // chuyen qua xem chi tiet
+                this.Datagriwview_danhsach2.DataSource = tpBUS.Hien_Thi_Phong(maphong);
+                Khach_Hang kh = khBUS.ThongtinKH(txt_sdtkh.Text);
+                txt_makhachhang.Text = kh.Ma_khach_hang;
+                txt_gioitinh.Text = kh.Gioi_tinh;
+                txt_sdt.Text = kh.So_dien_thoai;
+                txt_hovaten.Text = kh.Ten_khach_hang;
+                txt_cmnd.Text = kh.Cmnd_passport;
+                txt_diachi.Text = kh.Dia_chi;
+            }
+            radio_dadat.Checked = true;
+            txt_maphieudat.Text = dr.Cells[1].Value.ToString();
+            txt_maphieudat2.Text = dr.Cells[1].Value.ToString();
+            txt_maphieuthue2.Text = "NULL";
+            txt_ngaythue2.Text = dr.Cells[4].Value.ToString();
+            txt_tiencoc2.Text = dr.Cells[5].Value.ToString();
+            txt_songuoi2.Text = dr.Cells[6].Value.ToString();
+
+            txt_maphong.Text = dr.Cells[2].Value.ToString();
+            txt_tiencoc.Text = dr.Cells[5].Value.ToString();
+            txt_songuoi.Text = dr.Cells[6].Value.ToString();
+            var date = DateTime.Parse(dr.Cells[4].Value.ToString());
+            date_ngaythuephong.Value = date;
+            txt_sdtkh.Text = dr.Cells[3].Value.ToString();
+            this.Datagriwview_danhsach2.DataSource = tpBUS.Hien_Thi_Phong(maphong);
+            Khach_Hang khx = khBUS.ThongtinKH(txt_sdtkh.Text);
+            txt_makhachhang.Text = khx.Ma_khach_hang;
+            txt_gioitinh.Text = khx.Gioi_tinh;
+            txt_sdt.Text = khx.So_dien_thoai;
+            txt_hovaten.Text = khx.Ten_khach_hang;
+            txt_cmnd.Text = khx.Cmnd_passport;
+            txt_diachi.Text = khx.Dia_chi;
             Load_Data();
         }
     }
