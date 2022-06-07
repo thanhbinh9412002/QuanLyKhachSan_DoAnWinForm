@@ -610,6 +610,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormInHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hóa đơn";
             this.Load += new System.EventHandler(this.FormInHoaDon_Load);
             this.groupBox1.ResumeLayout(false);
