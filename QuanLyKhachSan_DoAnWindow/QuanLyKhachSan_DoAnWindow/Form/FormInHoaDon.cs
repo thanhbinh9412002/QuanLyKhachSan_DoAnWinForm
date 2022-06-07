@@ -31,12 +31,12 @@ namespace QuanLyKhachSan_DoAnWindow
             //this.hoadonTableAdapter.Fill(this.quanLyKhachSanDataSet4.hoadon);
             var hdBUS = new Hoa_Don_BUS();
             btn_them.Enabled = true;
-            //btn_in.Enabled = false;
+            btn_in.Enabled = false;
             btn_quaylai.Enabled = true;
             btn_huytk.Enabled = false;
             btn_thanhtoan.Enabled = false;
             btn_luu.Enabled = false;
-            //txt_mahoadon.ReadOnly = true;
+            txt_mahoadon.ReadOnly = true;
             txt_tendichvu.ReadOnly = true;
             txt_dongia.ReadOnly = true;
             txt_thanhtien.ReadOnly = true;
@@ -307,17 +307,21 @@ namespace QuanLyKhachSan_DoAnWindow
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
             var hdBUS = new Hoa_Don_BUS();
+            btn_in.Enabled = true;
             string t1 = "khong";
             string t2 = "khong";
-            hdBUS.TraPhong(txt_mahoadon.Text, t1, t2);
+            //hdBUS.TraPhong(txt_mahoadon.Text, t1, t2);
         }
 
         private void dtgv_hoadon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var hdBUS = new Hoa_Don_BUS();
             DataGridViewRow row = new DataGridViewRow();
             row = dtgv_hoadon.Rows[e.RowIndex];
             txt_mahoadon.Text = Convert.ToString(row.Cells["mahoadon"].Value);
             btn_thanhtoan.Enabled = true;
+            txt_tongtien.Text = hdBUS.TongTien(txt_mahoadon.Text);
+            lb_donvi1.Text = "dong";
         }
     }
 }

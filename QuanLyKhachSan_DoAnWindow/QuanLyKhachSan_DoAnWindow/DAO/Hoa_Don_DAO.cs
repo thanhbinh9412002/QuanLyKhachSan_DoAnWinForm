@@ -39,7 +39,7 @@ namespace QuanLyKhachSan_DoAnWindow.DAO
         {
 
             const string sql = "update phong a join phieuthuephong b on a.maphong = b.maphong " +
-                "join hoadon c on b.mahoadon = c.mahoadon set dadat = @dadat, danhan = @danhan where mahoadon = @mahoadon";
+                "join hoadon c on b.mahoadon = c.mahoadon set a.dadat = @dadat, a.danhan = @danhan where b.mahoadon = @mahoadon";
             SqlParameter[] sqlParameters = new SqlParameter[3];
 
             sqlParameters[0] = new SqlParameter("@mahoadon", System.Data.SqlDbType.VarChar);

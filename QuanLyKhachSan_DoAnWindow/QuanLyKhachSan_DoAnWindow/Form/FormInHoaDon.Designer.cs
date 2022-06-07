@@ -505,7 +505,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_huy.TabIndex = 22;
             this.btn_huy.Text = "Hủy";
             this.btn_huy.UseVisualStyleBackColor = true;
-            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
+            //this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // btn_luu
             // 
