@@ -126,6 +126,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.button1.TabIndex = 33;
             this.button1.Text = "Quay lại";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormThongTin
             // 
@@ -140,7 +141,11 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbllogo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormThongTin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trợ giúp";
             this.ResumeLayout(false);
 

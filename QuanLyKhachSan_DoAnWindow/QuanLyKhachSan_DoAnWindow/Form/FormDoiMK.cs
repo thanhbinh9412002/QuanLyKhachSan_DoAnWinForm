@@ -41,5 +41,10 @@ namespace QuanLyKhachSan_DoAnWindow
                 MessageBox.Show("Vui lòng kiểm tra lại mật khẩu!");
             }
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

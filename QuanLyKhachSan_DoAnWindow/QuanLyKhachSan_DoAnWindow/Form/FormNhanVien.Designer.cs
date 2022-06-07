@@ -38,6 +38,7 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bt_new = new System.Windows.Forms.Button();
             this.dtngaysinh = new System.Windows.Forms.DateTimePicker();
             this.rbnu = new System.Windows.Forms.RadioButton();
             this.rbnam = new System.Windows.Forms.RadioButton();
@@ -59,7 +60,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btsua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.bt_QLTK = new System.Windows.Forms.Button();
-            this.bt_new = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvNhanvien)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -154,6 +154,16 @@ namespace QuanLyKhachSan_DoAnWindow
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(549, 198);
             this.panel1.TabIndex = 1;
+            // 
+            // bt_new
+            // 
+            this.bt_new.Location = new System.Drawing.Point(278, 9);
+            this.bt_new.Name = "bt_new";
+            this.bt_new.Size = new System.Drawing.Size(51, 20);
+            this.bt_new.TabIndex = 19;
+            this.bt_new.Text = "New";
+            this.bt_new.UseVisualStyleBackColor = true;
+            this.bt_new.Click += new System.EventHandler(this.bt_new_Click);
             // 
             // dtngaysinh
             // 
@@ -355,16 +365,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.bt_QLTK.UseVisualStyleBackColor = true;
             this.bt_QLTK.Click += new System.EventHandler(this.bt_QLTK_Click);
             // 
-            // bt_new
-            // 
-            this.bt_new.Location = new System.Drawing.Point(278, 9);
-            this.bt_new.Name = "bt_new";
-            this.bt_new.Size = new System.Drawing.Size(51, 20);
-            this.bt_new.TabIndex = 19;
-            this.bt_new.Text = "New";
-            this.bt_new.UseVisualStyleBackColor = true;
-            this.bt_new.Click += new System.EventHandler(this.bt_new_Click);
-            // 
             // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +376,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gvNhanvien);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân viên";

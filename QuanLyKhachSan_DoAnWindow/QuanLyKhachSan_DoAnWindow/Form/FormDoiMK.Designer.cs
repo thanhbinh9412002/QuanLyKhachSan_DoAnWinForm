@@ -43,82 +43,76 @@
             this.batloi = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.batloi)).BeginInit();
             this.SuspendLayout();
-            
             // 
             // txtMkm2
             // 
-            this.txtMkm2.Location = new System.Drawing.Point(196, 179);
-            this.txtMkm2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMkm2.Location = new System.Drawing.Point(147, 145);
+            this.txtMkm2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMkm2.Name = "txtMkm2";
-            this.txtMkm2.Size = new System.Drawing.Size(180, 22);
+            this.txtMkm2.Size = new System.Drawing.Size(136, 20);
             this.txtMkm2.TabIndex = 21;
             this.txtMkm2.UseSystemPasswordChar = true;
             // 
             // txtMkm
             // 
-            this.txtMkm.Location = new System.Drawing.Point(196, 140);
-            this.txtMkm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMkm.Location = new System.Drawing.Point(147, 114);
+            this.txtMkm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMkm.Name = "txtMkm";
-            this.txtMkm.Size = new System.Drawing.Size(180, 22);
+            this.txtMkm.Size = new System.Drawing.Size(136, 20);
             this.txtMkm.TabIndex = 20;
             this.txtMkm.UseSystemPasswordChar = true;
             // 
             // txtMkc
             // 
-            this.txtMkc.Location = new System.Drawing.Point(196, 100);
-            this.txtMkc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMkc.Location = new System.Drawing.Point(147, 81);
+            this.txtMkc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMkc.Name = "txtMkc";
-            this.txtMkc.Size = new System.Drawing.Size(180, 22);
+            this.txtMkc.Size = new System.Drawing.Size(136, 20);
             this.txtMkc.TabIndex = 19;
             this.txtMkc.UseSystemPasswordChar = true;
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(192, 67);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUser.Location = new System.Drawing.Point(144, 54);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(86, 16);
+            this.lblUser.Size = new System.Drawing.Size(70, 13);
             this.lblUser.TabIndex = 18;
             this.lblUser.Text = "txt_username";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 183);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(16, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 16);
+            this.label5.Size = new System.Drawing.Size(112, 13);
             this.label5.TabIndex = 17;
             this.label5.Text = "Nhập lại mật khẩu mới";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 144);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(16, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 16);
+            this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 16;
             this.label4.Text = "Mật khẩu mới";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 104);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(16, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 16);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 15;
             this.label3.Text = "Mật khẩu cũ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 67);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(16, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 16);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "Tên đăng nhập";
             // 
@@ -127,29 +121,29 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(96, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(72, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 39);
+            this.label1.Size = new System.Drawing.Size(173, 31);
             this.label1.TabIndex = 13;
             this.label1.Text = "Đổi mật khẩu";
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(57, 229);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHuy.Location = new System.Drawing.Point(43, 186);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(100, 35);
+            this.btnHuy.Size = new System.Drawing.Size(75, 28);
             this.btnHuy.TabIndex = 12;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXacnhan
             // 
-            this.btnXacnhan.Location = new System.Drawing.Point(248, 229);
-            this.btnXacnhan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnXacnhan.Location = new System.Drawing.Point(186, 186);
+            this.btnXacnhan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXacnhan.Name = "btnXacnhan";
-            this.btnXacnhan.Size = new System.Drawing.Size(100, 35);
+            this.btnXacnhan.Size = new System.Drawing.Size(75, 28);
             this.btnXacnhan.TabIndex = 11;
             this.btnXacnhan.Text = "Xác nhận";
             this.btnXacnhan.UseVisualStyleBackColor = true;
@@ -161,9 +155,9 @@
             // 
             // FormDoiMK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 280);
+            this.ClientSize = new System.Drawing.Size(300, 228);
             this.Controls.Add(this.txtMkm2);
             this.Controls.Add(this.txtMkm);
             this.Controls.Add(this.txtMkc);
@@ -175,12 +169,17 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXacnhan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormDoiMK";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đổi mật khẩu";
+            this.Load += new System.EventHandler(this.FormDoiMK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.batloi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.Load += new System.EventHandler(this.FormDoiMK_Load);
 
         }
 

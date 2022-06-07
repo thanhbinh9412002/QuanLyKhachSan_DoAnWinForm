@@ -322,14 +322,14 @@
             // mnKhachhang
             // 
             this.mnKhachhang.Name = "mnKhachhang";
-            this.mnKhachhang.Size = new System.Drawing.Size(180, 22);
+            this.mnKhachhang.Size = new System.Drawing.Size(154, 22);
             this.mnKhachhang.Text = "Khách hàng";
             this.mnKhachhang.Click += new System.EventHandler(this.mnKhachhang_Click);
             // 
             // mnInhoadon
             // 
             this.mnInhoadon.Name = "mnInhoadon";
-            this.mnInhoadon.Size = new System.Drawing.Size(180, 22);
+            this.mnInhoadon.Size = new System.Drawing.Size(154, 22);
             this.mnInhoadon.Text = "In hóa đơn";
             this.mnInhoadon.Click += new System.EventHandler(this.mnInhoadon_Click);
             // 
@@ -345,14 +345,14 @@
             // mnDatphong
             // 
             this.mnDatphong.Name = "mnDatphong";
-            this.mnDatphong.Size = new System.Drawing.Size(180, 22);
+            this.mnDatphong.Size = new System.Drawing.Size(154, 22);
             this.mnDatphong.Text = "Đặt phòng";
             this.mnDatphong.Click += new System.EventHandler(this.mnDatphong_Click);
             // 
             // mnThuephong
             // 
             this.mnThuephong.Name = "mnThuephong";
-            this.mnThuephong.Size = new System.Drawing.Size(180, 22);
+            this.mnThuephong.Size = new System.Drawing.Size(154, 22);
             this.mnThuephong.Text = "Thuê phòng";
             this.mnThuephong.Click += new System.EventHandler(this.mnThuephong_Click);
             // 
@@ -370,28 +370,28 @@
             // mnPhong
             // 
             this.mnPhong.Name = "mnPhong";
-            this.mnPhong.Size = new System.Drawing.Size(180, 22);
+            this.mnPhong.Size = new System.Drawing.Size(141, 22);
             this.mnPhong.Text = "Phòng";
             this.mnPhong.Click += new System.EventHandler(this.mnPhong_Click);
             // 
             // mnVattu
             // 
             this.mnVattu.Name = "mnVattu";
-            this.mnVattu.Size = new System.Drawing.Size(180, 22);
+            this.mnVattu.Size = new System.Drawing.Size(141, 22);
             this.mnVattu.Text = "Vật tư";
             this.mnVattu.Click += new System.EventHandler(this.mnVattu_Click);
             // 
             // mnDichvu
             // 
             this.mnDichvu.Name = "mnDichvu";
-            this.mnDichvu.Size = new System.Drawing.Size(180, 22);
+            this.mnDichvu.Size = new System.Drawing.Size(141, 22);
             this.mnDichvu.Text = "Dịch vụ";
             this.mnDichvu.Click += new System.EventHandler(this.mnDichvu_Click);
             // 
             // mnNhanVien
             // 
             this.mnNhanVien.Name = "mnNhanVien";
-            this.mnNhanVien.Size = new System.Drawing.Size(180, 22);
+            this.mnNhanVien.Size = new System.Drawing.Size(141, 22);
             this.mnNhanVien.Text = "Nhân viên";
             this.mnNhanVien.Click += new System.EventHandler(this.mnNhanVien_Click);
             // 
@@ -447,8 +447,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(18, 500);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

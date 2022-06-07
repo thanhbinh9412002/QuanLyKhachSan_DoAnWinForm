@@ -15,10 +15,11 @@ namespace QuanLyKhachSan_DoAnWindow
     public partial class FormBaoCao : Form
     {
         public FormMain fmMain;
-        //public Bao_Cao bc;
         public FormBaoCao()
         {
             InitializeComponent();
+            var bcBUS = new Bao_Cao_BUS();
+            dtgv_danhsach.DataSource = bcBUS.Lay_Du_Lieu_0();
         }
 
         private void btn_thongke_Click(object sender, EventArgs e)

@@ -319,10 +319,11 @@ namespace QuanLyKhachSan_DoAnWindow
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Teal;
             this.label9.Location = new System.Drawing.Point(267, 23);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(230, 24);
+            this.label9.Size = new System.Drawing.Size(305, 29);
             this.label9.TabIndex = 18;
             this.label9.Text = "THANH TOÁN HÓA ĐƠN";
             // 
@@ -505,7 +506,6 @@ namespace QuanLyKhachSan_DoAnWindow
             this.btn_huy.TabIndex = 22;
             this.btn_huy.Text = "Hủy";
             this.btn_huy.UseVisualStyleBackColor = true;
-            //this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // btn_luu
             // 
@@ -609,6 +609,9 @@ namespace QuanLyKhachSan_DoAnWindow
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormInHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hóa đơn";

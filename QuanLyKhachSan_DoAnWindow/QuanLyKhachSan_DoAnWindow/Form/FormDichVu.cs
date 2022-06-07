@@ -14,9 +14,11 @@ namespace QuanLyKhachSan_DoAnWindow
     public partial class FormDichVu : Form
     {
         public FormMain fmMain;
-        public FormDichVu()
+        private string username;
+        public FormDichVu(string user = "")
         {
             InitializeComponent();
+            this.username = user;
         }
 
         private void button1_Click(object sender, EventArgs e)

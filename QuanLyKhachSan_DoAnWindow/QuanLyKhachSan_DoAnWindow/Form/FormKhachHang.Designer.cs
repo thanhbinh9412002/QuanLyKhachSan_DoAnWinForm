@@ -472,6 +472,9 @@
             this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.gvKhachhang);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin khách hàng";
